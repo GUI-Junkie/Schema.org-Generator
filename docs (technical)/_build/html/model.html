@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Model &mdash; Schema Generator 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Schema Generator 0.1 documentation" href="index.html" />
+    <link rel="next" title="View" href="view.html" />
+    <link rel="prev" title="Welcome to the Schema Generator documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="view.html" title="View"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to the Schema Generator documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-model.schema">
+<span id="model"></span><h1>Model<a class="headerlink" href="#module-model.schema" title="Permalink to this headline">¶</a></h1>
+<p>Model of the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">
+Model View Controller</a> <img src="./_images/external_link.png" title="external link" alt="external link" /></p>
+<p>Contains the classes for the</p>
+<ul class="simple">
+<li>Hierarchy</li>
+<li>Schemas</li>
+</ul>
+<dl class="class">
+<dt id="model.schema.Hierarchy">
+<em class="property">class </em><tt class="descclassname">model.schema.</tt><tt class="descname">Hierarchy</tt><a class="headerlink" href="#model.schema.Hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class:  Hierarchy</p>
+<p>Goal:   Get the whole hierarchy of Schema.org</p>
+<ul class="simple">
+<li>_schemas contains the actual schemas</li>
+<li>_hierarchy contains a list of lists to maintain the same order as Schema.org</li>
+<li>_property_types contains the input types</li>
+<li>_version check to see whether a new version of Schema.org has been published</li>
+</ul>
+<dl class="method">
+<dt id="model.schema.Hierarchy.get_schema">
+<tt class="descname">get_schema</tt><big>(</big><em>thing</em><big>)</big><a class="headerlink" href="#model.schema.Hierarchy.get_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public function to obtain one schema</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>thing</strong> &#8211; string, name of the schema to retrieve</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">schema</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model.schema.Hierarchy.hierarchy">
+<tt class="descname">hierarchy</tt><a class="headerlink" href="#model.schema.Hierarchy.hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public function to obtain the hierarchy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">hierarchy- list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model.schema.SchemaClass">
+<em class="property">class </em><tt class="descclassname">model.schema.</tt><tt class="descname">SchemaClass</tt><big>(</big><em>thing</em>, <em>callback=None</em><big>)</big><a class="headerlink" href="#model.schema.SchemaClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class:  SchemaClass</p>
+<p>Goal:   Get the properties and property types of a schema</p>
+<ul class="simple">
+<li>_html (can) contain the html of the schema</li>
+<li>parent contains a list of parents (complete with hierarchy)</li>
+<li>properties contains the properties and property types</li>
+<li>name</li>
+<li>_callback optional callback function for thread-safety (used by the <a class="reference internal" href="schema_bot.html">Schema bot</a>)</li>
+<li>is_alive indicator for the <a class="reference internal" href="schema_bot.html">Schema bot</a></li>
+</ul>
+<dl class="method">
+<dt id="model.schema.SchemaClass.clean">
+<tt class="descname">clean</tt><big>(</big><big>)</big><a class="headerlink" href="#model.schema.SchemaClass.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method used before dump to reduce the size of the pickle file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model.schema.SchemaClass.generator_callback">
+<tt class="descname">generator_callback</tt><big>(</big><em>s_gen=None</em><big>)</big><a class="headerlink" href="#model.schema.SchemaClass.generator_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method called by the SchemaClassGenerator after finishing</p>
+<ul class="simple">
+<li>is_alive becomes False</li>
+<li>the html gets analyzed</li>
+<li>if there is a callback, it&#8217;s called (from <a class="reference internal" href="schema_bot.html">Schema bot</a>)</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>s_gen</strong> &#8211; the SchemaClassGenerator or nothing</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model.schema.SchemaClass.get_parent_class">
+<tt class="descname">get_parent_class</tt><a class="headerlink" href="#model.schema.SchemaClass.get_parent_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method to get all parents of one schema used by <a class="reference internal" href="schema_bot.html">Schema bot</a> to create the hierarchy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of lists</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="model.schema.SchemaClass.get_schema_body">
+<tt class="descname">get_schema_body</tt><big>(</big><big>)</big><a class="headerlink" href="#model.schema.SchemaClass.get_schema_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method called by SchemaView.<a class="reference internal"
+href="view.html#view.schema_view.SchemaView.show_schema_properties">show_schema_properties</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">html</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="model.schema.SchemaClass.start">
+<tt class="descname">start</tt><big>(</big><em>b_immediate=False</em><big>)</big><a class="headerlink" href="#model.schema.SchemaClass.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to get Schema from file</p>
+<p>Otherwise, tries to get it from Internet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>b_immediate</strong> &#8211; Optional, if <tt class="docutils literal"><span class="pre">True</span></tt> will force <tt class="docutils literal"><span class="pre">join()</span></tt> on the Thread</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model.schema.SchemaClassGenerator">
+<em class="property">class </em><tt class="descclassname">model.schema.</tt><tt class="descname">SchemaClassGenerator</tt><big>(</big><em>thing</em>, <em>generator_callback</em><big>)</big><a class="headerlink" href="#model.schema.SchemaClassGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class:  SchemaClassGenerator</p>
+<p>Goal:   Get the markup of a schema thread-safe. This class can be started concurrently by the <a class="reference internal" href="schema_bot.html">Schema bot</a></p>
+<ul class="simple">
+<li>html from URL after <tt class="docutils literal"><span class="pre">decode(&quot;utf-8&quot;)</span></tt></li>
+<li>name of the schema</li>
+<li>callback from SchemaClass</li>
+</ul>
+<dl class="method">
+<dt id="model.schema.SchemaClassGenerator.run">
+<tt class="descname">run</tt><big>(</big><big>)</big><a class="headerlink" href="#model.schema.SchemaClassGenerator.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the thread</p>
+<p>Get the schema markup from the Internet</p>
+<p>Call the SchemaClass back when done</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-default-port-8000">Starting the server at default port 8000</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-another-port">Starting the server at another port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#shutting-down-the-server">Shutting down the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#restarting-the-server">Restarting the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache2 configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html#conf">.conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html">Schema bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#starting-the-bot">Starting the bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#restarting-the-server-s">Restarting the server(s)</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to the <cite>Schema Generator</cite> documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="view.html"
+                        title="next chapter">View</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/model.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="view.html" title="View"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to the Schema Generator documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, Hans Polak.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

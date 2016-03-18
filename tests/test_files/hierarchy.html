@@ -1,0 +1,2329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hierarchy</title>
+        <link rel="stylesheet" type="text/css" href="http://schema.org/docs/schemaorg.css" />
+        <script type="text/javascript" defer src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script type="text/javascript" async src="/schema.js"></script>
+        <style>
+            .button a{background:#990000}
+            #selectionbar a:hover {background:#4B0000}
+            .header {position:fixed;width:100%;top:0px}
+        </style>
+    </head>
+    <body onload="javascript:onLoad('');" style="height:40em;min-height:20em">
+        <div class="header">
+            <div id="container">
+                <div id="intro">
+                    <div id="pageHeader">
+                        <div class="wrapper">
+                            <div id="sitename">
+                            <h1>
+                                <a href="/">schema.org &lt;Generator&gt;</a>
+                            </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="selectionbar">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="http://schema.org/docs/documents.html">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="http://schema.org/docs/schemas.html">Schemas</a>
+                        </li>
+                        <li class="button" id="ClearButton" style="display:none">
+                            <a href="javascript:ClearData();">Clear Data</a>
+                        </li>
+                        <li class="button" id="RecoveryButton" style="display:none">
+                            <a href="javascript:RecoverData();">Recover Data</a>
+                        </li>
+                        <li class="button" id="GenerateButton" style="display:none">
+                            <a href="javascript:GenerateSchema();">Generate Schema</a>
+                        </li>
+                        <li class="button" id="SaveButton" style="display:none">
+                            <a href="javascript:SaveSchema();">Save Schema</a>
+                        </li>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:left;margin-top:11em">
+            <form method="POST" action="/GenerateSchema">
+                <ul>
+<li>
+<a href="/Thing">Thing</a>
+<ul>
+<li>
+<a href="/Action">Action</a>
+<ul>
+<li>
+<a href="/AchieveAction">AchieveAction</a>
+<ul>
+<li>
+<a href="/LoseAction">LoseAction</a>
+</li>
+<li>
+<a href="/TieAction">TieAction</a>
+</li>
+<li>
+<a href="/WinAction">WinAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/AssessAction">AssessAction</a>
+<ul>
+<li>
+<a href="/ChooseAction">ChooseAction</a>
+<ul>
+<li>
+<a href="/VoteAction">VoteAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/IgnoreAction">IgnoreAction</a>
+</li>
+<li>
+<a href="/ReactAction">ReactAction</a>
+<ul>
+<li>
+<a href="/AgreeAction">AgreeAction</a>
+</li>
+<li>
+<a href="/DisagreeAction">DisagreeAction</a>
+</li>
+<li>
+<a href="/DislikeAction">DislikeAction</a>
+</li>
+<li>
+<a href="/EndorseAction">EndorseAction</a>
+</li>
+<li>
+<a href="/LikeAction">LikeAction</a>
+</li>
+<li>
+<a href="/WantAction">WantAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ReviewAction">ReviewAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ConsumeAction">ConsumeAction</a>
+<ul>
+<li>
+<a href="/DrinkAction">DrinkAction</a>
+</li>
+<li>
+<a href="/EatAction">EatAction</a>
+</li>
+<li>
+<a href="/InstallAction">InstallAction</a>
+</li>
+<li>
+<a href="/ListenAction">ListenAction</a>
+</li>
+<li>
+<a href="/ReadAction">ReadAction</a>
+</li>
+<li>
+<a href="/UseAction">UseAction</a>
+<ul>
+<li>
+<a href="/WearAction">WearAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ViewAction">ViewAction</a>
+</li>
+<li>
+<a href="/WatchAction">WatchAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ControlAction">ControlAction</a>
+<ul>
+<li>
+<a href="/ActivateAction">ActivateAction</a>
+</li>
+<li>
+<a href="/DeactivateAction">DeactivateAction</a>
+</li>
+<li>
+<a href="/ResumeAction">ResumeAction</a>
+</li>
+<li>
+<a href="/SuspendAction">SuspendAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/CreateAction">CreateAction</a>
+<ul>
+<li>
+<a href="/CookAction">CookAction</a>
+</li>
+<li>
+<a href="/DrawAction">DrawAction</a>
+</li>
+<li>
+<a href="/FilmAction">FilmAction</a>
+</li>
+<li>
+<a href="/PaintAction">PaintAction</a>
+</li>
+<li>
+<a href="/PhotographAction">PhotographAction</a>
+</li>
+<li>
+<a href="/WriteAction">WriteAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FindAction">FindAction</a>
+<ul>
+<li>
+<a href="/CheckAction">CheckAction</a>
+</li>
+<li>
+<a href="/DiscoverAction">DiscoverAction</a>
+</li>
+<li>
+<a href="/TrackAction">TrackAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/InteractAction">InteractAction</a>
+<ul>
+<li>
+<a href="/BefriendAction">BefriendAction</a>
+</li>
+<li>
+<a href="/CommunicateAction">CommunicateAction</a>
+<ul>
+<li>
+<a href="/AskAction">AskAction</a>
+</li>
+<li>
+<a href="/CheckInAction">CheckInAction</a>
+</li>
+<li>
+<a href="/CheckOutAction">CheckOutAction</a>
+</li>
+<li>
+<a href="/CommentAction">CommentAction</a>
+</li>
+<li>
+<a href="/InformAction">InformAction</a>
+<ul>
+<li>
+<a href="/ConfirmAction">ConfirmAction</a>
+</li>
+<li>
+<a href="/RsvpAction">RsvpAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/InviteAction">InviteAction</a>
+</li>
+<li>
+<a href="/ReplyAction">ReplyAction</a>
+</li>
+<li>
+<a href="/ShareAction">ShareAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FollowAction">FollowAction</a>
+</li>
+<li>
+<a href="/JoinAction">JoinAction</a>
+</li>
+<li>
+<a href="/LeaveAction">LeaveAction</a>
+</li>
+<li>
+<a href="/MarryAction">MarryAction</a>
+</li>
+<li>
+<a href="/RegisterAction">RegisterAction</a>
+</li>
+<li>
+<a href="/SubscribeAction">SubscribeAction</a>
+</li>
+<li>
+<a href="/UnRegisterAction">UnRegisterAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MoveAction">MoveAction</a>
+<ul>
+<li>
+<a href="/ArriveAction">ArriveAction</a>
+</li>
+<li>
+<a href="/DepartAction">DepartAction</a>
+</li>
+<li>
+<a href="/TravelAction">TravelAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/OrganizeAction">OrganizeAction</a>
+<ul>
+<li>
+<a href="/AllocateAction">AllocateAction</a>
+<ul>
+<li>
+<a href="/AcceptAction">AcceptAction</a>
+</li>
+<li>
+<a href="/AssignAction">AssignAction</a>
+</li>
+<li>
+<a href="/AuthorizeAction">AuthorizeAction</a>
+</li>
+<li>
+<a href="/RejectAction">RejectAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ApplyAction">ApplyAction</a>
+</li>
+<li>
+<a href="/BookmarkAction">BookmarkAction</a>
+</li>
+<li>
+<a href="/PlanAction">PlanAction</a>
+<ul>
+<li>
+<a href="/CancelAction">CancelAction</a>
+</li>
+<li>
+<a href="/ReserveAction">ReserveAction</a>
+</li>
+<li>
+<a href="/ScheduleAction">ScheduleAction</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PlayAction">PlayAction</a>
+<ul>
+<li>
+<a href="/ExerciseAction">ExerciseAction</a>
+</li>
+<li>
+<a href="/PerformAction">PerformAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/SearchAction">SearchAction</a>
+</li>
+<li>
+<a href="/TradeAction">TradeAction</a>
+<ul>
+<li>
+<a href="/BuyAction">BuyAction</a>
+</li>
+<li>
+<a href="/DonateAction">DonateAction</a>
+</li>
+<li>
+<a href="/OrderAction">OrderAction</a>
+</li>
+<li>
+<a href="/PayAction">PayAction</a>
+</li>
+<li>
+<a href="/QuoteAction">QuoteAction</a>
+</li>
+<li>
+<a href="/RentAction">RentAction</a>
+</li>
+<li>
+<a href="/SellAction">SellAction</a>
+</li>
+<li>
+<a href="/TipAction">TipAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/TransferAction">TransferAction</a>
+<ul>
+<li>
+<a href="/BorrowAction">BorrowAction</a>
+</li>
+<li>
+<a href="/DownloadAction">DownloadAction</a>
+</li>
+<li>
+<a href="/GiveAction">GiveAction</a>
+</li>
+<li>
+<a href="/LendAction">LendAction</a>
+</li>
+<li>
+<a href="/ReceiveAction">ReceiveAction</a>
+</li>
+<li>
+<a href="/ReturnAction">ReturnAction</a>
+</li>
+<li>
+<a href="/SendAction">SendAction</a>
+</li>
+<li>
+<a href="/TakeAction">TakeAction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/UpdateAction">UpdateAction</a>
+<ul>
+<li>
+<a href="/AddAction">AddAction</a>
+<ul>
+<li>
+<a href="/InsertAction">InsertAction</a>
+<ul>
+<li>
+<a href="/AppendAction">AppendAction</a>
+</li>
+<li>
+<a href="/PrependAction">PrependAction</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DeleteAction">DeleteAction</a>
+</li>
+<li>
+<a href="/ReplaceAction">ReplaceAction</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/CreativeWork">CreativeWork</a>
+<ul>
+<li>
+<a href="/Article">Article</a>
+<ul>
+<li>
+<a href="/NewsArticle">NewsArticle</a>
+</li>
+<li>
+<a href="/Report">Report</a>
+</li>
+<li>
+<a href="/ScholarlyArticle">ScholarlyArticle</a>
+<ul>
+<li>
+<a href="/MedicalScholarlyArticle">MedicalScholarlyArticle</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/SocialMediaPosting">SocialMediaPosting</a>
+<ul>
+<li>
+<a href="/BlogPosting">BlogPosting</a>
+<ul>
+<li>
+<a href="/LiveBlogPosting">LiveBlogPosting</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DiscussionForumPosting">DiscussionForumPosting</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/TechArticle">TechArticle</a>
+<ul>
+<li>
+<a href="/APIReference">APIReference</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Blog">Blog</a>
+</li>
+<li>
+<a href="/Book">Book</a>
+</li>
+<li>
+<a href="/Clip">Clip</a>
+<ul>
+<li>
+<a href="/MovieClip">MovieClip</a>
+</li>
+<li>
+<a href="/RadioClip">RadioClip</a>
+</li>
+<li>
+<a href="/TVClip">TVClip</a>
+</li>
+<li>
+<a href="/VideoGameClip">VideoGameClip</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Code">Code</a>
+</li>
+<li>
+<a href="/Comment">Comment</a>
+<ul>
+<li>
+<a href="/Answer">Answer</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/CreativeWorkSeason">CreativeWorkSeason</a>
+<ul>
+<li>
+<a href="/RadioSeason">RadioSeason</a>
+</li>
+<li>
+<a href="/TVSeason">TVSeason</a>
+</li>
+<li>
+<a href="/TVSeason">TVSeason</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/CreativeWorkSeries">CreativeWorkSeries</a>
+<ul>
+<li>
+<a href="/BookSeries">BookSeries</a>
+</li>
+<li>
+<a href="/MovieSeries">MovieSeries</a>
+</li>
+<li>
+<a href="/Periodical">Periodical</a>
+</li>
+<li>
+<a href="/RadioSeries">RadioSeries</a>
+</li>
+<li>
+<a href="/TVSeries">TVSeries</a>
+</li>
+<li>
+<a href="/VideoGameSeries">VideoGameSeries</a>
+</li>
+<li>
+<a href="/TVSeries">TVSeries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DataCatalog">DataCatalog</a>
+</li>
+<li>
+<a href="/Dataset">Dataset</a>
+<ul>
+<li>
+<a href="/DataFeed">DataFeed</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Diet">Diet</a>
+</li>
+<li>
+<a href="/EmailMessage">EmailMessage</a>
+</li>
+<li>
+<a href="/Episode">Episode</a>
+<ul>
+<li>
+<a href="/RadioEpisode">RadioEpisode</a>
+</li>
+<li>
+<a href="/TVEpisode">TVEpisode</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ExercisePlan">ExercisePlan</a>
+</li>
+<li>
+<a href="/Game">Game</a>
+<ul>
+<li>
+<a href="/VideoGame">VideoGame</a>
+</li>
+<li>
+<a href="/VideoGame">VideoGame</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Map">Map</a>
+</li>
+<li>
+<a href="/MediaObject">MediaObject</a>
+<ul>
+<li>
+<a href="/AudioObject">AudioObject</a>
+</li>
+<li>
+<a href="/DataDownload">DataDownload</a>
+</li>
+<li>
+<a href="/ImageObject">ImageObject</a>
+<ul>
+<li>
+<a href="/Barcode">Barcode</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MusicVideoObject">MusicVideoObject</a>
+</li>
+<li>
+<a href="/VideoObject">VideoObject</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Movie">Movie</a>
+</li>
+<li>
+<a href="/MusicComposition">MusicComposition</a>
+</li>
+<li>
+<a href="/MusicPlaylist">MusicPlaylist</a>
+<ul>
+<li>
+<a href="/MusicAlbum">MusicAlbum</a>
+</li>
+<li>
+<a href="/MusicRelease">MusicRelease</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MusicRecording">MusicRecording</a>
+</li>
+<li>
+<a href="/Painting">Painting</a>
+</li>
+<li>
+<a href="/Photograph">Photograph</a>
+</li>
+<li>
+<a href="/PublicationIssue">PublicationIssue</a>
+</li>
+<li>
+<a href="/PublicationVolume">PublicationVolume</a>
+</li>
+<li>
+<a href="/Question">Question</a>
+</li>
+<li>
+<a href="/Recipe">Recipe</a>
+</li>
+<li>
+<a href="/Review">Review</a>
+</li>
+<li>
+<a href="/Sculpture">Sculpture</a>
+</li>
+<li>
+<a href="/Season">Season</a>
+</li>
+<li>
+<a href="/Series">Series</a>
+</li>
+<li>
+<a href="/SoftwareApplication">SoftwareApplication</a>
+<ul>
+<li>
+<a href="/MobileApplication">MobileApplication</a>
+</li>
+<li>
+<a href="/WebApplication">WebApplication</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/SoftwareSourceCode">SoftwareSourceCode</a>
+</li>
+<li>
+<a href="/VisualArtwork">VisualArtwork</a>
+</li>
+<li>
+<a href="/WebPage">WebPage</a>
+<ul>
+<li>
+<a href="/AboutPage">AboutPage</a>
+</li>
+<li>
+<a href="/CheckoutPage">CheckoutPage</a>
+</li>
+<li>
+<a href="/CollectionPage">CollectionPage</a>
+<ul>
+<li>
+<a href="/ImageGallery">ImageGallery</a>
+</li>
+<li>
+<a href="/VideoGallery">VideoGallery</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ContactPage">ContactPage</a>
+</li>
+<li>
+<a href="/ItemPage">ItemPage</a>
+</li>
+<li>
+<a href="/MedicalWebPage">MedicalWebPage</a>
+</li>
+<li>
+<a href="/ProfilePage">ProfilePage</a>
+</li>
+<li>
+<a href="/QAPage">QAPage</a>
+</li>
+<li>
+<a href="/SearchResultsPage">SearchResultsPage</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/WebPageElement">WebPageElement</a>
+<ul>
+<li>
+<a href="/SiteNavigationElement">SiteNavigationElement</a>
+</li>
+<li>
+<a href="/Table">Table</a>
+</li>
+<li>
+<a href="/WPAdBlock">WPAdBlock</a>
+</li>
+<li>
+<a href="/WPFooter">WPFooter</a>
+</li>
+<li>
+<a href="/WPHeader">WPHeader</a>
+</li>
+<li>
+<a href="/WPSideBar">WPSideBar</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/WebSite">WebSite</a>
+</li>
+<li>
+<a href="/Diet">Diet</a>
+</li>
+<li>
+<a href="/ExercisePlan">ExercisePlan</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Event">Event</a>
+<ul>
+<li>
+<a href="/BusinessEvent">BusinessEvent</a>
+</li>
+<li>
+<a href="/ChildrensEvent">ChildrensEvent</a>
+</li>
+<li>
+<a href="/ComedyEvent">ComedyEvent</a>
+</li>
+<li>
+<a href="/DanceEvent">DanceEvent</a>
+</li>
+<li>
+<a href="/DeliveryEvent">DeliveryEvent</a>
+</li>
+<li>
+<a href="/EducationEvent">EducationEvent</a>
+</li>
+<li>
+<a href="/ExhibitionEvent">ExhibitionEvent</a>
+</li>
+<li>
+<a href="/Festival">Festival</a>
+</li>
+<li>
+<a href="/FoodEvent">FoodEvent</a>
+</li>
+<li>
+<a href="/LiteraryEvent">LiteraryEvent</a>
+</li>
+<li>
+<a href="/MusicEvent">MusicEvent</a>
+</li>
+<li>
+<a href="/PublicationEvent">PublicationEvent</a>
+<ul>
+<li>
+<a href="/BroadcastEvent">BroadcastEvent</a>
+</li>
+<li>
+<a href="/OnDemandEvent">OnDemandEvent</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/SaleEvent">SaleEvent</a>
+</li>
+<li>
+<a href="/ScreeningEvent">ScreeningEvent</a>
+</li>
+<li>
+<a href="/SocialEvent">SocialEvent</a>
+</li>
+<li>
+<a href="/SportsEvent">SportsEvent</a>
+</li>
+<li>
+<a href="/TheaterEvent">TheaterEvent</a>
+</li>
+<li>
+<a href="/UserInteraction">UserInteraction</a>
+<ul>
+<li>
+<a href="/UserBlocks">UserBlocks</a>
+</li>
+<li>
+<a href="/UserCheckins">UserCheckins</a>
+</li>
+<li>
+<a href="/UserComments">UserComments</a>
+</li>
+<li>
+<a href="/UserDownloads">UserDownloads</a>
+</li>
+<li>
+<a href="/UserLikes">UserLikes</a>
+</li>
+<li>
+<a href="/UserPageVisits">UserPageVisits</a>
+</li>
+<li>
+<a href="/UserPlays">UserPlays</a>
+</li>
+<li>
+<a href="/UserPlusOnes">UserPlusOnes</a>
+</li>
+<li>
+<a href="/UserTweets">UserTweets</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/VisualArtsEvent">VisualArtsEvent</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Intangible">Intangible</a>
+<ul>
+<li>
+<a href="/AlignmentObject">AlignmentObject</a>
+</li>
+<li>
+<a href="/Audience">Audience</a>
+<ul>
+<li>
+<a href="/BusinessAudience">BusinessAudience</a>
+</li>
+<li>
+<a href="/EducationalAudience">EducationalAudience</a>
+</li>
+<li>
+<a href="/MedicalAudience">MedicalAudience</a>
+</li>
+<li>
+<a href="/PeopleAudience">PeopleAudience</a>
+<ul>
+<li>
+<a href="/ParentAudience">ParentAudience</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalAudience">MedicalAudience</a>
+</li>
+<li>
+<a href="/MedicalAudience">MedicalAudience</a>
+</li>
+<li>
+<a href="/MedicalAudience">MedicalAudience</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Brand">Brand</a>
+</li>
+<li>
+<a href="/BroadcastChannel">BroadcastChannel</a>
+<ul>
+<li>
+<a href="/RadioChannel">RadioChannel</a>
+</li>
+<li>
+<a href="/TelevisionChannel">TelevisionChannel</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/BusTrip">BusTrip</a>
+</li>
+<li>
+<a href="/Class">Class</a>
+</li>
+<li>
+<a href="/DataFeedItem">DataFeedItem</a>
+</li>
+<li>
+<a href="/Demand">Demand</a>
+</li>
+<li>
+<a href="/EntryPoint">EntryPoint</a>
+</li>
+<li>
+<a href="/Enumeration">Enumeration</a>
+<ul>
+<li>
+<a href="/ActionStatusType">ActionStatusType</a>
+</li>
+<li>
+<a href="/BoardingPolicyType">BoardingPolicyType</a>
+</li>
+<li>
+<a href="/BookFormatType">BookFormatType</a>
+</li>
+<li>
+<a href="/BusinessEntityType">BusinessEntityType</a>
+</li>
+<li>
+<a href="/BusinessFunction">BusinessFunction</a>
+</li>
+<li>
+<a href="/ContactPointOption">ContactPointOption</a>
+</li>
+<li>
+<a href="/DayOfWeek">DayOfWeek</a>
+</li>
+<li>
+<a href="/DeliveryMethod">DeliveryMethod</a>
+<ul>
+<li>
+<a href="/LockerDelivery">LockerDelivery</a>
+</li>
+<li>
+<a href="/ParcelService">ParcelService</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DrugCostCategory">DrugCostCategory</a>
+</li>
+<li>
+<a href="/DrugPregnancyCategory">DrugPregnancyCategory</a>
+</li>
+<li>
+<a href="/DrugPrescriptionStatus">DrugPrescriptionStatus</a>
+</li>
+<li>
+<a href="/EventStatusType">EventStatusType</a>
+</li>
+<li>
+<a href="/GamePlayMode">GamePlayMode</a>
+</li>
+<li>
+<a href="/GameServerStatus">GameServerStatus</a>
+</li>
+<li>
+<a href="/InfectiousAgentClass">InfectiousAgentClass</a>
+</li>
+<li>
+<a href="/ItemAvailability">ItemAvailability</a>
+</li>
+<li>
+<a href="/ItemListOrderType">ItemListOrderType</a>
+</li>
+<li>
+<a href="/MapCategoryType">MapCategoryType</a>
+</li>
+<li>
+<a href="/MedicalDevicePurpose">MedicalDevicePurpose</a>
+</li>
+<li>
+<a href="/MedicalEnumeration">MedicalEnumeration</a>
+<ul>
+<li>
+<a href="/MedicalEvidenceLevel">MedicalEvidenceLevel</a>
+</li>
+<li>
+<a href="/MedicalImagingTechnique">MedicalImagingTechnique</a>
+</li>
+<li>
+<a href="/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>
+</li>
+<li>
+<a href="/MedicalProcedureType">MedicalProcedureType</a>
+</li>
+<li>
+<a href="/MedicalSpecialty">MedicalSpecialty</a>
+</li>
+<li>
+<a href="/MedicalStudyStatus">MedicalStudyStatus</a>
+</li>
+<li>
+<a href="/MedicalTrialDesign">MedicalTrialDesign</a>
+</li>
+<li>
+<a href="/MedicineSystem">MedicineSystem</a>
+</li>
+<li>
+<a href="/PhysicalActivityCategory">PhysicalActivityCategory</a>
+</li>
+<li>
+<a href="/PhysicalExam">PhysicalExam</a>
+</li>
+<li>
+<a href="/MedicalEvidenceLevel">MedicalEvidenceLevel</a>
+</li>
+<li>
+<a href="/MedicalImagingTechnique">MedicalImagingTechnique</a>
+</li>
+<li>
+<a href="/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>
+</li>
+<li>
+<a href="/MedicalProcedureType">MedicalProcedureType</a>
+</li>
+<li>
+<a href="/MedicalSpecialty">MedicalSpecialty</a>
+</li>
+<li>
+<a href="/MedicalStudyStatus">MedicalStudyStatus</a>
+</li>
+<li>
+<a href="/MedicalTrialDesign">MedicalTrialDesign</a>
+</li>
+<li>
+<a href="/MedicineSystem">MedicineSystem</a>
+</li>
+<li>
+<a href="/PhysicalActivityCategory">PhysicalActivityCategory</a>
+</li>
+<li>
+<a href="/PhysicalExam">PhysicalExam</a>
+</li>
+<li>
+<a href="/MedicalSpecialty">MedicalSpecialty</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DrugCostCategory">DrugCostCategory</a>
+</li>
+<li>
+<a href="/DrugPregnancyCategory">DrugPregnancyCategory</a>
+</li>
+<li>
+<a href="/DrugPrescriptionStatus">DrugPrescriptionStatus</a>
+</li>
+<li>
+<a href="/InfectiousAgentClass">InfectiousAgentClass</a>
+</li>
+<li>
+<a href="/MedicalDevicePurpose">MedicalDevicePurpose</a>
+</li>
+<li>
+<a href="/MusicAlbumProductionType">MusicAlbumProductionType</a>
+</li>
+<li>
+<a href="/MusicAlbumReleaseType">MusicAlbumReleaseType</a>
+</li>
+<li>
+<a href="/MusicReleaseFormatType">MusicReleaseFormatType</a>
+</li>
+<li>
+<a href="/OfferItemCondition">OfferItemCondition</a>
+</li>
+<li>
+<a href="/OrderStatus">OrderStatus</a>
+</li>
+<li>
+<a href="/PaymentMethod">PaymentMethod</a>
+<ul>
+<li>
+<a href="/CreditCard">CreditCard</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PaymentStatusType">PaymentStatusType</a>
+</li>
+<li>
+<a href="/QualitativeValue">QualitativeValue</a>
+<ul>
+<li>
+<a href="/CarUsageType">CarUsageType</a>
+</li>
+<li>
+<a href="/DriveWheelConfigurationValue">DriveWheelConfigurationValue</a>
+</li>
+<li>
+<a href="/SteeringPositionValue">SteeringPositionValue</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ReservationStatusType">ReservationStatusType</a>
+</li>
+<li>
+<a href="/RsvpResponseType">RsvpResponseType</a>
+</li>
+<li>
+<a href="/Specialty">Specialty</a>
+</li>
+<li>
+<a href="/WarrantyScope">WarrantyScope</a>
+</li>
+<li>
+<a href="/MedicalEnumeration">MedicalEnumeration</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Flight">Flight</a>
+</li>
+<li>
+<a href="/GameServer">GameServer</a>
+</li>
+<li>
+<a href="/Invoice">Invoice</a>
+</li>
+<li>
+<a href="/ItemList">ItemList</a>
+<ul>
+<li>
+<a href="/BreadcrumbList">BreadcrumbList</a>
+</li>
+<li>
+<a href="/OfferCatalog">OfferCatalog</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/JobPosting">JobPosting</a>
+</li>
+<li>
+<a href="/Language">Language</a>
+</li>
+<li>
+<a href="/ListItem">ListItem</a>
+</li>
+<li>
+<a href="/Offer">Offer</a>
+<ul>
+<li>
+<a href="/AggregateOffer">AggregateOffer</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Order">Order</a>
+</li>
+<li>
+<a href="/OrderItem">OrderItem</a>
+</li>
+<li>
+<a href="/ParcelDelivery">ParcelDelivery</a>
+</li>
+<li>
+<a href="/Permit">Permit</a>
+<ul>
+<li>
+<a href="/GovernmentPermit">GovernmentPermit</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ProgramMembership">ProgramMembership</a>
+</li>
+<li>
+<a href="/Property">Property</a>
+</li>
+<li>
+<a href="/PropertyValueSpecification">PropertyValueSpecification</a>
+</li>
+<li>
+<a href="/Quantity">Quantity</a>
+<ul>
+<li>
+<a href="/Distance">Distance</a>
+</li>
+<li>
+<a href="/Duration">Duration</a>
+</li>
+<li>
+<a href="/Energy">Energy</a>
+</li>
+<li>
+<a href="/Mass">Mass</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Rating">Rating</a>
+<ul>
+<li>
+<a href="/AggregateRating">AggregateRating</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Reservation">Reservation</a>
+<ul>
+<li>
+<a href="/BusReservation">BusReservation</a>
+</li>
+<li>
+<a href="/EventReservation">EventReservation</a>
+</li>
+<li>
+<a href="/FlightReservation">FlightReservation</a>
+</li>
+<li>
+<a href="/FoodEstablishmentReservation">FoodEstablishmentReservation</a>
+</li>
+<li>
+<a href="/LodgingReservation">LodgingReservation</a>
+</li>
+<li>
+<a href="/RentalCarReservation">RentalCarReservation</a>
+</li>
+<li>
+<a href="/ReservationPackage">ReservationPackage</a>
+</li>
+<li>
+<a href="/TaxiReservation">TaxiReservation</a>
+</li>
+<li>
+<a href="/TrainReservation">TrainReservation</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Role">Role</a>
+<ul>
+<li>
+<a href="/OrganizationRole">OrganizationRole</a>
+<ul>
+<li>
+<a href="/EmployeeRole">EmployeeRole</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PerformanceRole">PerformanceRole</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Seat">Seat</a>
+</li>
+<li>
+<a href="/Service">Service</a>
+<ul>
+<li>
+<a href="/BroadcastService">BroadcastService</a>
+</li>
+<li>
+<a href="/CableOrSatelliteService">CableOrSatelliteService</a>
+</li>
+<li>
+<a href="/GovernmentService">GovernmentService</a>
+</li>
+<li>
+<a href="/Taxi">Taxi</a>
+</li>
+<li>
+<a href="/TaxiService">TaxiService</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ServiceChannel">ServiceChannel</a>
+</li>
+<li>
+<a href="/StructuredValue">StructuredValue</a>
+<ul>
+<li>
+<a href="/ContactPoint">ContactPoint</a>
+<ul>
+<li>
+<a href="/PostalAddress">PostalAddress</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DatedMoneySpecification">DatedMoneySpecification</a>
+</li>
+<li>
+<a href="/EngineSpecification">EngineSpecification</a>
+</li>
+<li>
+<a href="/GeoCoordinates">GeoCoordinates</a>
+</li>
+<li>
+<a href="/GeoShape">GeoShape</a>
+<ul>
+<li>
+<a href="/GeoCircle">GeoCircle</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/InteractionCounter">InteractionCounter</a>
+</li>
+<li>
+<a href="/NutritionInformation">NutritionInformation</a>
+</li>
+<li>
+<a href="/OpeningHoursSpecification">OpeningHoursSpecification</a>
+</li>
+<li>
+<a href="/OwnershipInfo">OwnershipInfo</a>
+</li>
+<li>
+<a href="/PriceSpecification">PriceSpecification</a>
+<ul>
+<li>
+<a href="/DeliveryChargeSpecification">DeliveryChargeSpecification</a>
+</li>
+<li>
+<a href="/PaymentChargeSpecification">PaymentChargeSpecification</a>
+</li>
+<li>
+<a href="/UnitPriceSpecification">UnitPriceSpecification</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PropertyValue">PropertyValue</a>
+</li>
+<li>
+<a href="/QuantitativeValue">QuantitativeValue</a>
+</li>
+<li>
+<a href="/TypeAndQuantityNode">TypeAndQuantityNode</a>
+</li>
+<li>
+<a href="/WarrantyPromise">WarrantyPromise</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Ticket">Ticket</a>
+</li>
+<li>
+<a href="/TrainTrip">TrainTrip</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalEntity">MedicalEntity</a>
+<ul>
+<li>
+<a href="/AnatomicalStructure">AnatomicalStructure</a>
+<ul>
+<li>
+<a href="/Bone">Bone</a>
+</li>
+<li>
+<a href="/BrainStructure">BrainStructure</a>
+</li>
+<li>
+<a href="/Joint">Joint</a>
+</li>
+<li>
+<a href="/Ligament">Ligament</a>
+</li>
+<li>
+<a href="/Muscle">Muscle</a>
+</li>
+<li>
+<a href="/Nerve">Nerve</a>
+</li>
+<li>
+<a href="/Vessel">Vessel</a>
+<ul>
+<li>
+<a href="/Artery">Artery</a>
+</li>
+<li>
+<a href="/LymphaticVessel">LymphaticVessel</a>
+</li>
+<li>
+<a href="/Vein">Vein</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/AnatomicalSystem">AnatomicalSystem</a>
+</li>
+<li>
+<a href="/MedicalCause">MedicalCause</a>
+</li>
+<li>
+<a href="/MedicalCondition">MedicalCondition</a>
+<ul>
+<li>
+<a href="/InfectiousDisease">InfectiousDisease</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalContraindication">MedicalContraindication</a>
+</li>
+<li>
+<a href="/MedicalDevice">MedicalDevice</a>
+</li>
+<li>
+<a href="/MedicalGuideline">MedicalGuideline</a>
+<ul>
+<li>
+<a href="/MedicalGuidelineContraindication">MedicalGuidelineContraindication</a>
+</li>
+<li>
+<a href="/MedicalGuidelineRecommendation">MedicalGuidelineRecommendation</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalIndication">MedicalIndication</a>
+<ul>
+<li>
+<a href="/ApprovedIndication">ApprovedIndication</a>
+</li>
+<li>
+<a href="/PreventionIndication">PreventionIndication</a>
+</li>
+<li>
+<a href="/TreatmentIndication">TreatmentIndication</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalIntangible">MedicalIntangible</a>
+<ul>
+<li>
+<a href="/DDxElement">DDxElement</a>
+</li>
+<li>
+<a href="/DoseSchedule">DoseSchedule</a>
+<ul>
+<li>
+<a href="/MaximumDoseSchedule">MaximumDoseSchedule</a>
+</li>
+<li>
+<a href="/RecommendedDoseSchedule">RecommendedDoseSchedule</a>
+</li>
+<li>
+<a href="/ReportedDoseSchedule">ReportedDoseSchedule</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DrugCost">DrugCost</a>
+</li>
+<li>
+<a href="/DrugLegalStatus">DrugLegalStatus</a>
+</li>
+<li>
+<a href="/DrugStrength">DrugStrength</a>
+</li>
+<li>
+<a href="/MedicalCode">MedicalCode</a>
+</li>
+<li>
+<a href="/MedicalConditionStage">MedicalConditionStage</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalProcedure">MedicalProcedure</a>
+<ul>
+<li>
+<a href="/DiagnosticProcedure">DiagnosticProcedure</a>
+</li>
+<li>
+<a href="/PalliativeProcedure">PalliativeProcedure</a>
+</li>
+<li>
+<a href="/TherapeuticProcedure">TherapeuticProcedure</a>
+</li>
+<li>
+<a href="/DiagnosticProcedure">DiagnosticProcedure</a>
+</li>
+<li>
+<a href="/PalliativeProcedure">PalliativeProcedure</a>
+</li>
+<li>
+<a href="/TherapeuticProcedure">TherapeuticProcedure</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalRiskEstimator">MedicalRiskEstimator</a>
+<ul>
+<li>
+<a href="/MedicalRiskCalculator">MedicalRiskCalculator</a>
+</li>
+<li>
+<a href="/MedicalRiskScore">MedicalRiskScore</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalRiskFactor">MedicalRiskFactor</a>
+</li>
+<li>
+<a href="/MedicalSignOrSymptom">MedicalSignOrSymptom</a>
+<ul>
+<li>
+<a href="/MedicalSign">MedicalSign</a>
+</li>
+<li>
+<a href="/MedicalSymptom">MedicalSymptom</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalStudy">MedicalStudy</a>
+<ul>
+<li>
+<a href="/MedicalObservationalStudy">MedicalObservationalStudy</a>
+</li>
+<li>
+<a href="/MedicalTrial">MedicalTrial</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalTest">MedicalTest</a>
+<ul>
+<li>
+<a href="/BloodTest">BloodTest</a>
+</li>
+<li>
+<a href="/ImagingTest">ImagingTest</a>
+</li>
+<li>
+<a href="/MedicalTestPanel">MedicalTestPanel</a>
+</li>
+<li>
+<a href="/PathologyTest">PathologyTest</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalTherapy">MedicalTherapy</a>
+<ul>
+<li>
+<a href="/DietarySupplement">DietarySupplement</a>
+</li>
+<li>
+<a href="/Drug">Drug</a>
+</li>
+<li>
+<a href="/DrugClass">DrugClass</a>
+</li>
+<li>
+<a href="/LifestyleModification">LifestyleModification</a>
+<ul>
+<li>
+<a href="/PhysicalActivity">PhysicalActivity</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PhysicalTherapy">PhysicalTherapy</a>
+</li>
+<li>
+<a href="/PsychologicalTreatment">PsychologicalTreatment</a>
+</li>
+<li>
+<a href="/RadiationTherapy">RadiationTherapy</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/SuperficialAnatomy">SuperficialAnatomy</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Organization">Organization</a>
+<ul>
+<li>
+<a href="/Airline">Airline</a>
+</li>
+<li>
+<a href="/Corporation">Corporation</a>
+</li>
+<li>
+<a href="/EducationalOrganization">EducationalOrganization</a>
+<ul>
+<li>
+<a href="/CollegeOrUniversity">CollegeOrUniversity</a>
+</li>
+<li>
+<a href="/ElementarySchool">ElementarySchool</a>
+</li>
+<li>
+<a href="/HighSchool">HighSchool</a>
+</li>
+<li>
+<a href="/MiddleSchool">MiddleSchool</a>
+</li>
+<li>
+<a href="/Preschool">Preschool</a>
+</li>
+<li>
+<a href="/School">School</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/GovernmentOrganization">GovernmentOrganization</a>
+</li>
+<li>
+<a href="/LocalBusiness">LocalBusiness</a>
+<ul>
+<li>
+<a href="/AnimalShelter">AnimalShelter</a>
+</li>
+<li>
+<a href="/AutomotiveBusiness">AutomotiveBusiness</a>
+<ul>
+<li>
+<a href="/AutoBodyShop">AutoBodyShop</a>
+</li>
+<li>
+<a href="/AutoDealer">AutoDealer</a>
+</li>
+<li>
+<a href="/AutoPartsStore">AutoPartsStore</a>
+</li>
+<li>
+<a href="/AutoRental">AutoRental</a>
+</li>
+<li>
+<a href="/AutoRepair">AutoRepair</a>
+</li>
+<li>
+<a href="/AutoWash">AutoWash</a>
+</li>
+<li>
+<a href="/GasStation">GasStation</a>
+</li>
+<li>
+<a href="/MotorcycleDealer">MotorcycleDealer</a>
+</li>
+<li>
+<a href="/MotorcycleRepair">MotorcycleRepair</a>
+</li>
+<li>
+<a href="/AutoPartsStore">AutoPartsStore</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ChildCare">ChildCare</a>
+</li>
+<li>
+<a href="/DryCleaningOrLaundry">DryCleaningOrLaundry</a>
+</li>
+<li>
+<a href="/EmergencyService">EmergencyService</a>
+<ul>
+<li>
+<a href="/FireStation">FireStation</a>
+</li>
+<li>
+<a href="/Hospital">Hospital</a>
+</li>
+<li>
+<a href="/PoliceStation">PoliceStation</a>
+</li>
+<li>
+<a href="/Hospital">Hospital</a>
+</li>
+<li>
+<a href="/FireStation">FireStation</a>
+</li>
+<li>
+<a href="/Hospital">Hospital</a>
+</li>
+<li>
+<a href="/PoliceStation">PoliceStation</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/EmploymentAgency">EmploymentAgency</a>
+</li>
+<li>
+<a href="/EntertainmentBusiness">EntertainmentBusiness</a>
+<ul>
+<li>
+<a href="/AdultEntertainment">AdultEntertainment</a>
+</li>
+<li>
+<a href="/AmusementPark">AmusementPark</a>
+</li>
+<li>
+<a href="/ArtGallery">ArtGallery</a>
+</li>
+<li>
+<a href="/Casino">Casino</a>
+</li>
+<li>
+<a href="/ComedyClub">ComedyClub</a>
+</li>
+<li>
+<a href="/MovieTheater">MovieTheater</a>
+</li>
+<li>
+<a href="/NightClub">NightClub</a>
+</li>
+<li>
+<a href="/MovieTheater">MovieTheater</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FinancialService">FinancialService</a>
+<ul>
+<li>
+<a href="/AccountingService">AccountingService</a>
+</li>
+<li>
+<a href="/AutomatedTeller">AutomatedTeller</a>
+</li>
+<li>
+<a href="/BankOrCreditUnion">BankOrCreditUnion</a>
+</li>
+<li>
+<a href="/InsuranceAgency">InsuranceAgency</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FoodEstablishment">FoodEstablishment</a>
+<ul>
+<li>
+<a href="/Bakery">Bakery</a>
+</li>
+<li>
+<a href="/BarOrPub">BarOrPub</a>
+</li>
+<li>
+<a href="/Brewery">Brewery</a>
+</li>
+<li>
+<a href="/CafeOrCoffeeShop">CafeOrCoffeeShop</a>
+</li>
+<li>
+<a href="/FastFoodRestaurant">FastFoodRestaurant</a>
+</li>
+<li>
+<a href="/IceCreamShop">IceCreamShop</a>
+</li>
+<li>
+<a href="/Restaurant">Restaurant</a>
+</li>
+<li>
+<a href="/Winery">Winery</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/GovernmentOffice">GovernmentOffice</a>
+<ul>
+<li>
+<a href="/PostOffice">PostOffice</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HealthAndBeautyBusiness">HealthAndBeautyBusiness</a>
+<ul>
+<li>
+<a href="/BeautySalon">BeautySalon</a>
+</li>
+<li>
+<a href="/DaySpa">DaySpa</a>
+</li>
+<li>
+<a href="/HairSalon">HairSalon</a>
+</li>
+<li>
+<a href="/HealthClub">HealthClub</a>
+</li>
+<li>
+<a href="/NailSalon">NailSalon</a>
+</li>
+<li>
+<a href="/TattooParlor">TattooParlor</a>
+</li>
+<li>
+<a href="/HealthClub">HealthClub</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HomeAndConstructionBusiness">HomeAndConstructionBusiness</a>
+<ul>
+<li>
+<a href="/Electrician">Electrician</a>
+</li>
+<li>
+<a href="/GeneralContractor">GeneralContractor</a>
+</li>
+<li>
+<a href="/HVACBusiness">HVACBusiness</a>
+</li>
+<li>
+<a href="/HousePainter">HousePainter</a>
+</li>
+<li>
+<a href="/Locksmith">Locksmith</a>
+</li>
+<li>
+<a href="/MovingCompany">MovingCompany</a>
+</li>
+<li>
+<a href="/Plumber">Plumber</a>
+</li>
+<li>
+<a href="/RoofingContractor">RoofingContractor</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/InternetCafe">InternetCafe</a>
+</li>
+<li>
+<a href="/LegalService">LegalService</a>
+<ul>
+<li>
+<a href="/Attorney">Attorney</a>
+</li>
+<li>
+<a href="/Notary">Notary</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Library">Library</a>
+</li>
+<li>
+<a href="/LodgingBusiness">LodgingBusiness</a>
+<ul>
+<li>
+<a href="/BedAndBreakfast">BedAndBreakfast</a>
+</li>
+<li>
+<a href="/Hostel">Hostel</a>
+</li>
+<li>
+<a href="/Hotel">Hotel</a>
+</li>
+<li>
+<a href="/Motel">Motel</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalOrganization">MedicalOrganization</a>
+<ul>
+<li>
+<a href="/Dentist">Dentist</a>
+</li>
+<li>
+<a href="/DiagnosticLab">DiagnosticLab</a>
+</li>
+<li>
+<a href="/MedicalClinic">MedicalClinic</a>
+</li>
+<li>
+<a href="/Optician">Optician</a>
+</li>
+<li>
+<a href="/Pharmacy">Pharmacy</a>
+</li>
+<li>
+<a href="/Physician">Physician</a>
+</li>
+<li>
+<a href="/VeterinaryCare">VeterinaryCare</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ProfessionalService">ProfessionalService</a>
+</li>
+<li>
+<a href="/RadioStation">RadioStation</a>
+</li>
+<li>
+<a href="/RealEstateAgent">RealEstateAgent</a>
+</li>
+<li>
+<a href="/RecyclingCenter">RecyclingCenter</a>
+</li>
+<li>
+<a href="/SelfStorage">SelfStorage</a>
+</li>
+<li>
+<a href="/ShoppingCenter">ShoppingCenter</a>
+</li>
+<li>
+<a href="/SportsActivityLocation">SportsActivityLocation</a>
+<ul>
+<li>
+<a href="/BowlingAlley">BowlingAlley</a>
+</li>
+<li>
+<a href="/ExerciseGym">ExerciseGym</a>
+</li>
+<li>
+<a href="/GolfCourse">GolfCourse</a>
+</li>
+<li>
+<a href="/PublicSwimmingPool">PublicSwimmingPool</a>
+</li>
+<li>
+<a href="/SkiResort">SkiResort</a>
+</li>
+<li>
+<a href="/SportsClub">SportsClub</a>
+</li>
+<li>
+<a href="/StadiumOrArena">StadiumOrArena</a>
+</li>
+<li>
+<a href="/TennisComplex">TennisComplex</a>
+</li>
+<li>
+<a href="/StadiumOrArena">StadiumOrArena</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Store">Store</a>
+<ul>
+<li>
+<a href="/BikeStore">BikeStore</a>
+</li>
+<li>
+<a href="/BookStore">BookStore</a>
+</li>
+<li>
+<a href="/ClothingStore">ClothingStore</a>
+</li>
+<li>
+<a href="/ComputerStore">ComputerStore</a>
+</li>
+<li>
+<a href="/ConvenienceStore">ConvenienceStore</a>
+</li>
+<li>
+<a href="/DepartmentStore">DepartmentStore</a>
+</li>
+<li>
+<a href="/ElectronicsStore">ElectronicsStore</a>
+</li>
+<li>
+<a href="/Florist">Florist</a>
+</li>
+<li>
+<a href="/FurnitureStore">FurnitureStore</a>
+</li>
+<li>
+<a href="/GardenStore">GardenStore</a>
+</li>
+<li>
+<a href="/GroceryStore">GroceryStore</a>
+</li>
+<li>
+<a href="/HardwareStore">HardwareStore</a>
+</li>
+<li>
+<a href="/HobbyShop">HobbyShop</a>
+</li>
+<li>
+<a href="/HomeGoodsStore">HomeGoodsStore</a>
+</li>
+<li>
+<a href="/JewelryStore">JewelryStore</a>
+</li>
+<li>
+<a href="/LiquorStore">LiquorStore</a>
+</li>
+<li>
+<a href="/MensClothingStore">MensClothingStore</a>
+</li>
+<li>
+<a href="/MobilePhoneStore">MobilePhoneStore</a>
+</li>
+<li>
+<a href="/MovieRentalStore">MovieRentalStore</a>
+</li>
+<li>
+<a href="/MusicStore">MusicStore</a>
+</li>
+<li>
+<a href="/OfficeEquipmentStore">OfficeEquipmentStore</a>
+</li>
+<li>
+<a href="/OutletStore">OutletStore</a>
+</li>
+<li>
+<a href="/PawnShop">PawnShop</a>
+</li>
+<li>
+<a href="/PetStore">PetStore</a>
+</li>
+<li>
+<a href="/ShoeStore">ShoeStore</a>
+</li>
+<li>
+<a href="/SportingGoodsStore">SportingGoodsStore</a>
+</li>
+<li>
+<a href="/TireShop">TireShop</a>
+</li>
+<li>
+<a href="/ToyStore">ToyStore</a>
+</li>
+<li>
+<a href="/WholesaleStore">WholesaleStore</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/TelevisionStation">TelevisionStation</a>
+</li>
+<li>
+<a href="/TouristInformationCenter">TouristInformationCenter</a>
+</li>
+<li>
+<a href="/TravelAgency">TravelAgency</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/NGO">NGO</a>
+</li>
+<li>
+<a href="/PerformingGroup">PerformingGroup</a>
+<ul>
+<li>
+<a href="/DanceGroup">DanceGroup</a>
+</li>
+<li>
+<a href="/MusicGroup">MusicGroup</a>
+</li>
+<li>
+<a href="/TheaterGroup">TheaterGroup</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/SportsOrganization">SportsOrganization</a>
+<ul>
+<li>
+<a href="/SportsTeam">SportsTeam</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/LocalBusiness">LocalBusiness</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Person">Person</a>
+</li>
+<li>
+<a href="/Place">Place</a>
+<ul>
+<li>
+<a href="/AdministrativeArea">AdministrativeArea</a>
+<ul>
+<li>
+<a href="/City">City</a>
+</li>
+<li>
+<a href="/Country">Country</a>
+</li>
+<li>
+<a href="/State">State</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/CivicStructure">CivicStructure</a>
+<ul>
+<li>
+<a href="/Airport">Airport</a>
+</li>
+<li>
+<a href="/Aquarium">Aquarium</a>
+</li>
+<li>
+<a href="/Beach">Beach</a>
+</li>
+<li>
+<a href="/Bridge">Bridge</a>
+</li>
+<li>
+<a href="/BusStation">BusStation</a>
+</li>
+<li>
+<a href="/BusStop">BusStop</a>
+</li>
+<li>
+<a href="/Campground">Campground</a>
+</li>
+<li>
+<a href="/Cemetery">Cemetery</a>
+</li>
+<li>
+<a href="/Crematorium">Crematorium</a>
+</li>
+<li>
+<a href="/EventVenue">EventVenue</a>
+</li>
+<li>
+<a href="/GovernmentBuilding">GovernmentBuilding</a>
+<ul>
+<li>
+<a href="/CityHall">CityHall</a>
+</li>
+<li>
+<a href="/Courthouse">Courthouse</a>
+</li>
+<li>
+<a href="/DefenceEstablishment">DefenceEstablishment</a>
+</li>
+<li>
+<a href="/Embassy">Embassy</a>
+</li>
+<li>
+<a href="/LegislativeBuilding">LegislativeBuilding</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Museum">Museum</a>
+</li>
+<li>
+<a href="/MusicVenue">MusicVenue</a>
+</li>
+<li>
+<a href="/Park">Park</a>
+</li>
+<li>
+<a href="/ParkingFacility">ParkingFacility</a>
+</li>
+<li>
+<a href="/PerformingArtsTheater">PerformingArtsTheater</a>
+</li>
+<li>
+<a href="/PlaceOfWorship">PlaceOfWorship</a>
+<ul>
+<li>
+<a href="/BuddhistTemple">BuddhistTemple</a>
+</li>
+<li>
+<a href="/CatholicChurch">CatholicChurch</a>
+</li>
+<li>
+<a href="/Church">Church</a>
+</li>
+<li>
+<a href="/HinduTemple">HinduTemple</a>
+</li>
+<li>
+<a href="/Mosque">Mosque</a>
+</li>
+<li>
+<a href="/Synagogue">Synagogue</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Playground">Playground</a>
+</li>
+<li>
+<a href="/RVPark">RVPark</a>
+</li>
+<li>
+<a href="/SubwayStation">SubwayStation</a>
+</li>
+<li>
+<a href="/TaxiStand">TaxiStand</a>
+</li>
+<li>
+<a href="/TrainStation">TrainStation</a>
+</li>
+<li>
+<a href="/Zoo">Zoo</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Landform">Landform</a>
+<ul>
+<li>
+<a href="/BodyOfWater">BodyOfWater</a>
+<ul>
+<li>
+<a href="/Canal">Canal</a>
+</li>
+<li>
+<a href="/LakeBodyOfWater">LakeBodyOfWater</a>
+</li>
+<li>
+<a href="/OceanBodyOfWater">OceanBodyOfWater</a>
+</li>
+<li>
+<a href="/Pond">Pond</a>
+</li>
+<li>
+<a href="/Reservoir">Reservoir</a>
+</li>
+<li>
+<a href="/RiverBodyOfWater">RiverBodyOfWater</a>
+</li>
+<li>
+<a href="/SeaBodyOfWater">SeaBodyOfWater</a>
+</li>
+<li>
+<a href="/Waterfall">Waterfall</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Continent">Continent</a>
+</li>
+<li>
+<a href="/Mountain">Mountain</a>
+</li>
+<li>
+<a href="/Volcano">Volcano</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/LandmarksOrHistoricalBuildings">LandmarksOrHistoricalBuildings</a>
+</li>
+<li>
+<a href="/Residence">Residence</a>
+<ul>
+<li>
+<a href="/ApartmentComplex">ApartmentComplex</a>
+</li>
+<li>
+<a href="/GatedResidenceCommunity">GatedResidenceCommunity</a>
+</li>
+<li>
+<a href="/SingleFamilyResidence">SingleFamilyResidence</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/TouristAttraction">TouristAttraction</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Product">Product</a>
+<ul>
+<li>
+<a href="/IndividualProduct">IndividualProduct</a>
+</li>
+<li>
+<a href="/ProductModel">ProductModel</a>
+</li>
+<li>
+<a href="/SomeProducts">SomeProducts</a>
+</li>
+<li>
+<a href="/Vehicle">Vehicle</a>
+<ul>
+<li>
+<a href="/Car">Car</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </form>
+        </div>
+        
+        <noscript>Your browser does not support JavaScript!</noscript>
+    </body>
+</html>

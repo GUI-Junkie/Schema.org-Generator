@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Controller &mdash; Schema Generator 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Schema Generator 0.1 documentation" href="index.html" />
+    <link rel="next" title="Javascript" href="javascript.html" />
+    <link rel="prev" title="View" href="view.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="javascript.html" title="Javascript"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="view.html" title="View"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-controller">
+<span id="controller"></span><h1>Controller<a class="headerlink" href="#module-controller" title="Permalink to this headline">¶</a></h1>
+<p>Application Server Controller of the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">
+Model View Controller</a> <img src="./_images/external_link.png" title="external link" alt="external link" /></p>
+<p>Contains the classes for the</p>
+<ul class="simple">
+<li>Controller - Controls the flow of requests</li>
+<li>EZContext - Information from the request</li>
+<li>EZQuit - Stops the server</li>
+</ul>
+<p>While under construction, <cite>Schemas</cite> can be stored on the browser using Local Storage</p>
+<p>A valid Schema will be generated.
+It can be validated on Google Developers <a href="https://developers.google.com/structured-data/testing-tool/" target="_blank">
+Structured Data Testing Tool</a> <img src="./_images/external_link.png" title="external link" alt="external link" /></p>
+<dl class="class">
+<dt id="controller.Controller">
+<em class="property">class </em><tt class="descclassname">controller.</tt><tt class="descname">Controller</tt><big>(</big><em>port</em><big>)</big><a class="headerlink" href="#controller.Controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Controller class manages the flow of requests for Generating Schemas</p>
+<dl class="method">
+<dt id="controller.Controller.run_this">
+<tt class="descname">run_this</tt><big>(</big><em>environ</em>, <em>start_response</em><big>)</big><a class="headerlink" href="#controller.Controller.run_this" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method passed to the http demon</p>
+<p>Here is where all GET and POST get treated</p>
+<p>Here is where the Model is invoked</p>
+<p>Here is where the View is invoked</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>environ</strong> &#8211; A <a href="https://docs.python.org/3.5/glossary.html#term-mapping" target="_blank">mapping</a> <img src="./_images/external_link.png" title="external link" alt="external link" /> object representing the string environment concerning the request</li>
+<li><strong>start_response</strong> &#8211; Callable. Used to begin the HTTP response</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Requested page.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="controller.Controller.server_close">
+<tt class="descname">server_close</tt><big>(</big><big>)</big><a class="headerlink" href="#controller.Controller.server_close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method closes the http demon</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="controller.EZContext">
+<em class="property">class </em><tt class="descclassname">controller.</tt><tt class="descname">EZContext</tt><big>(</big><em>environ</em><big>)</big><a class="headerlink" href="#controller.EZContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class containing the information of the current request</p>
+<p>The information can be accessed through the get() method</p>
+<dl class="method">
+<dt id="controller.EZContext.get">
+<tt class="descname">get</tt><big>(</big><em>key</em><big>)</big><a class="headerlink" href="#controller.EZContext.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method to obtain the key from the:</p>
+<blockquote>
+<div><ul class="simple">
+<li>QUERY_STRING: if it&#8217;s a GET request</li>
+<li>wsgi.input: if it&#8217;s a POST request</li>
+</ul>
+<p>For security reasons, GET and POST methods cannot be used interchangeably.</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> &#8211; </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">value or empty string if key not found</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="controller.EZContext.get_keys">
+<tt class="descname">get_keys</tt><a class="headerlink" href="#controller.EZContext.get_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method to obtain <strong>all</strong> the keys</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">all keys</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="controller.EZQuit">
+<em class="property">class </em><tt class="descclassname">controller.</tt><tt class="descname">EZQuit</tt><big>(</big><em>httpd</em><big>)</big><a class="headerlink" href="#controller.EZQuit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuts down the http demon</p>
+<p>Nothing more, nothing less</p>
+<p>Must be an independent thread</p>
+</dd></dl>
+
+</div>
+<div class="section" id="starting-the-server-at-default-port-8000">
+<h1>Starting the server at default port 8000<a class="headerlink" href="#starting-the-server-at-default-port-8000" title="Permalink to this headline">¶</a></h1>
+<p>The Application Server can be started directly from the command line</p>
+<div class="highlight-bash"><div class="highlight"><pre>computer:~<span class="nv">$ </span>./controller.py
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>computer:~<span class="nv">$ </span>python3 controller.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="starting-the-server-at-another-port">
+<h1>Starting the server at another port<a class="headerlink" href="#starting-the-server-at-another-port" title="Permalink to this headline">¶</a></h1>
+<p>A number of Application Servers can be started to serve at different ports.</p>
+<div class="highlight-bash"><div class="highlight"><pre>computer:~<span class="nv">$ </span>./controller.py <span class="m">8001</span> <span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>computer:~<span class="nv">$ </span>python3 controller.py  <span class="m">8001</span> <span class="p">&amp;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shutting-down-the-server">
+<h1>Shutting down the server<a class="headerlink" href="#shutting-down-the-server" title="Permalink to this headline">¶</a></h1>
+<p>The server can be shut down from a browser.</p>
+<div class="highlight-http"><div class="highlight"><pre>http://localhost:port/quit
+</pre></div>
+</div>
+<p>or using Python</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">urllib.error</span> <span class="kn">import</span> <span class="n">URLError</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">urlopen</span><span class="p">(</span><span class="s">&#39;http://localhost:{0}/quit&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">port</span><span class="p">))</span>
+<span class="k">except</span> <span class="n">URLError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="restarting-the-server">
+<h1>Restarting the server<a class="headerlink" href="#restarting-the-server" title="Permalink to this headline">¶</a></h1>
+<p>The server can be shut down from a browser.</p>
+<div class="highlight-http"><div class="highlight"><pre>http://localhost:port/restart
+</pre></div>
+</div>
+<p>or using Python</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">urllib.error</span> <span class="kn">import</span> <span class="n">URLError</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">urlopen</span><span class="p">(</span><span class="s">&#39;http://localhost:{0}/restart&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">port</span><span class="p">))</span>
+<span class="k">except</span> <span class="n">URLError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">View</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#starting-the-server-at-default-port-8000">Starting the server at default port 8000</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#starting-the-server-at-another-port">Starting the server at another port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#shutting-down-the-server">Shutting down the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#restarting-the-server">Restarting the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache2 configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html#conf">.conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html">Schema bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#starting-the-bot">Starting the bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#restarting-the-server-s">Restarting the server(s)</a></li>
+</ul>
+
+  <h3><a href="index.html">Page Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Controller</a></li>
+<li><a class="reference internal" href="#starting-the-server-at-default-port-8000">Starting the server at default port 8000</a></li>
+<li><a class="reference internal" href="#starting-the-server-at-another-port">Starting the server at another port</a></li>
+<li><a class="reference internal" href="#shutting-down-the-server">Shutting down the server</a></li>
+<li><a class="reference internal" href="#restarting-the-server">Restarting the server</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="view.html"
+                        title="previous chapter">View</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="javascript.html"
+                        title="next chapter">Javascript</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/controller.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="javascript.html" title="Javascript"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="view.html" title="View"
+             >previous</a> |</li>
+        <li><a href="index.html">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, Hans Polak.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

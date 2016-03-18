@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to the Schema Generator documentation! &mdash; Schema Generator 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Schema Generator 0.1 documentation" href="#" />
+    <link rel="next" title="Model" href="model.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="Model"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-the-schema-generator-documentation">
+<h1>Welcome to the <cite>Schema Generator</cite> documentation!<a class="headerlink" href="#welcome-to-the-schema-generator-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-default-port-8000">Starting the server at default port 8000</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-another-port">Starting the server at another port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#shutting-down-the-server">Shutting down the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#restarting-the-server">Restarting the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache2 configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html#conf">.conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html">Schema bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#starting-the-bot">Starting the bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#restarting-the-server-s">Restarting the server(s)</a></li>
+</ul>
+</div>
+<p>This software is meant to serve as a tool for creating valid <a href="http://schema.org" target="_blank">schema.org</a> <img src="./_images/external_link.png" title="external link" alt="external link" /> markups. These can then be used by web developers to improve the SEO of the websites they maintain.</p>
+<p>For instance</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">&quot;http://schema.org/Park&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">itemprop=</span><span class="s">geo</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">&quot;http://schema.org/GeoCoordinates&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">&quot;latitude&quot;</span><span class="nt">&gt;</span>44.4279668<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">&quot;longitude&quot;</span><span class="nt">&gt;</span>-110.5906437<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">&quot;hasMap&quot;</span><span class="nt">&gt;</span>http://www.nps.gov/common/commonspot/customcf/apps/maps/showmap.cfm?alphacode=yell&amp;parkname=Yellowstone<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Yellowstone<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span>http://www.nps.gov/yell/index.htm<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div><p>To maintain an up-to-date version of the hierarchy, the <a class="reference internal" href="schema_bot.html">Schema bot</a> can be set-up with a <tt class="docutils literal"><span class="pre">cron</span></tt> job</p>
+<p>The <a class="reference internal" href="controller.html">Application Server</a> can be started, concurrently, listening to different ports. The <a class="reference internal" href="apache.html">Web Server</a> should be configured for load balancing to these different ports.</p>
+<p>Programming languages:</p>
+<ul class="simple">
+<li><a href="https://docs.python.org/3.4/" target="_blank">Python 3.4</a> <img src="./_images/external_link.png" title="external link" alt="external link" /> - All server side code</li>
+<li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Javascript</a> <img src="./_images/external_link.png" title="external link" alt="external link" /> - AJAX functionality and persistence</li>
+</ul>
+</div>
+<div class="section" id="copyright-information">
+<h1>Copyright information<a class="headerlink" href="#copyright-information" title="Permalink to this headline">¶</a></h1>
+<p>Refer to the <a href="Readme.txt">Readme.txt</a> file for © copyright information</p>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="#">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view.html">View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-default-port-8000">Starting the server at default port 8000</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-another-port">Starting the server at another port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#shutting-down-the-server">Shutting down the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#restarting-the-server">Restarting the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache2 configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html#conf">.conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html">Schema bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#starting-the-bot">Starting the bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#restarting-the-server-s">Restarting the server(s)</a></li>
+</ul>
+
+  <h3><a href="#">Page Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to the <cite>Schema Generator</cite> documentation!</a></li>
+<li><a class="reference internal" href="#copyright-information">Copyright information</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="model.html"
+                        title="next chapter">Model</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="Model"
+             >next</a> |</li>
+        <li><a href="#">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, Hans Polak.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

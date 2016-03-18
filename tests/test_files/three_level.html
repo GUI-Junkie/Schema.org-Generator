@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Generated Schema</title>
+        <link rel="stylesheet" type="text/css" href="http://schema.org/docs/schemaorg.css" />
+        <script type="text/javascript" defer src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script type="text/javascript" async src="/schema.js"></script>
+        <style>
+            .button a{background:#990000}
+            #selectionbar a:hover {background:#4B0000}
+            .header {position:fixed;width:100%;top:0px}
+        </style>
+    </head>
+    <body onload="javascript:onLoad('');" style="height:40em;min-height:20em">
+        <div class="header">
+            <div id="container">
+                <div id="intro">
+                    <div id="pageHeader">
+                        <div class="wrapper">
+                            <div id="sitename">
+                            <h1>
+                                <a href="/">schema.org &lt;Generator&gt;</a>
+                            </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="selectionbar">
+                <div class="wrapper">
+                    <ul>
+                        <li>
+                            <a href="http://schema.org/docs/documents.html">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="http://schema.org/docs/schemas.html">Schemas</a>
+                        </li>
+                        <li class="button" id="ClearButton" style="display:none">
+                            <a href="javascript:ClearData();">Clear Data</a>
+                        </li>
+                        <li class="button" id="RecoveryButton" style="display:none">
+                            <a href="javascript:RecoverData();">Recover Data</a>
+                        </li>
+                        <li class="button" id="GenerateButton" style="display:none">
+                            <a href="javascript:GenerateSchema();">Generate Schema</a>
+                        </li>
+                        <li class="button" id="SaveButton" style="display:none">
+                            <a href="javascript:SaveSchema();">Save Schema</a>
+                        </li>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:left;margin-top:11em">
+            <form method="POST" action="/GenerateSchema">
+                <textarea style="width:90%;height:50em">
+<div itemscope itemtype="http://schema.org/TieAction">
+	<span itemprop="additionalType">http://www.www.www</span>
+	<div itemprop=agent itemscope itemtype="http://schema.org/Organization">
+		<span itemprop="additionalType">hahaha</span>
+		<div itemprop=address itemscope itemtype="http://schema.org/PostalAddress">
+			<span itemprop="additionalType">ad1</span>
+			<span itemprop="addressCountry">adcou</span>
+			<span itemprop="addressLocality">adloc</span>
+			<span itemprop="addressRegion">adreg</span>
+		</div>
+	</div>
+	<span itemprop="name">this name</span>
+</div>
+</textarea>
+            </form>
+        </div>
+        <p>You can check the generated Schema <a href="https://developers.google.com/structured-data/testing-tool/" target="_blank">here</a>.</p>
+        <noscript>Your browser does not support JavaScript!</noscript>
+    </body>
+</html>

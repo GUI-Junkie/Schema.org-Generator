@@ -1,0 +1,361 @@
+<div id="mainContent" vocab="http://schema.org/" typeof="rdfs:Class" resource="http://schema.org/QuantitativeValue">
+  <!-- no external mappings noted for this term. -->
+
+<!-- webapp will assemble the rest elsewhere -->
+<!-- Will need at least:  </div></body></html> -->
+<!-- end of genericTermPageHeader.tpl -->
+  
+<h1 class="page-title">
+QuantitativeValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/StructuredValue">StructuredValue</a> &gt; <a   href="/QuantitativeValue">QuantitativeValue</a></span>
+</h4>
+ <div property="rdfs:comment"> A point value or interval for product characteristics and other purposes.</div>
+
+
+ <br/><div>Usage: Between 1000 and 10,000 domains</div>
+
+
+<table class="definition-table">
+        <thead>
+  <tr><th>Property</th><th>Expected Type</th><th>Description</th>               
+  </tr>
+  </thead>
+
+<div>
+        <div id='infobox' style='text-align: right;'><label role="checkbox" for=morecheck><b><span style="cursor: pointer;">[more...]</span></b></label></div>
+        <input type='checkbox' checked="checked" style='display: none' id=morecheck><div id='infomsg' style='background-color: #EEEEEE; text-align: left; padding: 0.5em;'>
+        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/QuantitativeValue&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+QuantitativeValue'>Check for open issues.</a></li><li>'QuantitativeValue' is mentioned in layer: <a href='http://schema.org/QuantitativeValue'>core</a></li><li>'QuantitativeValue' is mentioned in extension layer: <a href='http://auto.schema.org/QuantitativeValue'>auto</a></li></ul>
+</div>
+</div>
+<tr class="supertype">
+     <th class="supertype-name" colspan="3">Properties from <link  property="rdfs:subClassOf" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a></th>
+  
+</tr>
+
+<tbody class="supertype">
+  <tr typeof="rdfs:Property" resource="http://schema.org/additionalProperty">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/additionalProperty">additionalProperty</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br />
+
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/maxValue">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/maxValue">maxValue</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The upper value of some characteristic or property.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/minValue">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/minValue">minValue</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The lower value of some characteristic or property.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/unitCode">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/unitCode">unitCode</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/unitText">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/unitText">unitText</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
+<a href='unitCode'>unitCode</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/value">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/value">value</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="/Boolean">Boolean</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/valueReference">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/valueReference">valueReference</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QualitativeValue" /><a   href="/QualitativeValue">QualitativeValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</td></tr><tr class="supertype">
+     <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
+  
+</tr>
+
+<tbody class="supertype">
+  <tr typeof="rdfs:Property" resource="http://schema.org/additionalType">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/additionalType">additionalType</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/alternateName">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/alternateName">alternateName</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An alias for the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/description">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/description">description</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/image">image</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
+      <br /><br />
+      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
+      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/name">name</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The name of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/potentialAction">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/potentialAction">potentialAction</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Action" /><a   href="/Action">Action</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sameAs">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/sameAs">sameAs</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/url">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/url">url</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">URL of the item.</td></tr>
+
+</table>
+
+<br/><br/>Instances of <a   href="/QuantitativeValue">QuantitativeValue</a> may appear as values for the following properties<br/><table class="definition-table">
+        
+  
+<thead>
+  <tr><th>Property</th><th>On Types</th><th>Description</th>               
+  </tr>
+</thead>
+
+<tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/advanceBookingRequirement">advanceBookingRequirement</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Offer">Offer</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp;</td><td class="prop-desc">The amount of time that is required between accepting the offer and the actual usage of the resource or service. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/cargoVolume">cargoVolume</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.<br />
+Typical unit code(s): LTR for liters, FTQ for cubic foot/feet<br />
+
+Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValue</a> to indicate ranges. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/deliveryLeadTime">deliveryLeadTime</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Offer">Offer</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp;</td><td class="prop-desc">The typical delay between the receipt of the order and the goods leaving the warehouse. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/depth">depth</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/VisualArtwork">VisualArtwork</a>&nbsp;</td><td class="prop-desc">The depth of the item. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/durationOfWarranty">durationOfWarranty</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/WarrantyPromise">WarrantyPromise</a>&nbsp;</td><td class="prop-desc">The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/eligibleDuration">eligibleDuration</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Offer">Offer</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp;</td><td class="prop-desc">The duration for which the given offer is valid. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/eligibleQuantity">eligibleQuantity</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Offer">Offer</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp; or<br/> <a   href="/PriceSpecification">PriceSpecification</a>&nbsp;</td><td class="prop-desc">The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/fuelConsumption">fuelConsumption</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).<br />
+Note 1: There are unfortunately no standard unit codes for liters per 100 km.<br />
+Use <a href="unitText">unitText</a> to indicate the unit of measurement, e.g. L/100 km.
+Note 2: There are two ways of indicating the fuel consumption, <a href="fuelConsumption">fuelConsumption</a> (e.g. 8 liters per 100 km) and <a href="fuelEfficiency">fuelEfficiency</a> (e.g. 30 miles per gallon). They are reciprocal.<br />
+Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use <a href="valueReference">valueReference</a> to link the value for the fuel consumption to another value. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/fuelEfficiency">fuelEfficiency</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).<br />
+Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.<br />
+Use <a href="unitText">unitText</a> to indicate the unit of measurement, e.g. mpg or km/L.
+Note 2: There are two ways of indicating the fuel consumption, <a href="fuelConsumption">fuelConsumption</a> (e.g. 8 liters per 100 km) and <a href="fuelEfficiency">fuelEfficiency</a> (e.g. 30 miles per gallon). They are reciprocal.<br />
+Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use <a href="valueReference">valueReference</a> to link the value for the fuel economy to another value. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/height">height</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/MediaObject">MediaObject</a>&nbsp; or<br/> <a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/Person">Person</a>&nbsp; or<br/> <a   href="/VisualArtwork">VisualArtwork</a>&nbsp;</td><td class="prop-desc">The height of the item. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/inventoryLevel">inventoryLevel</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Offer">Offer</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp; or<br/> <a   href="/SomeProducts">SomeProducts</a>&nbsp;</td><td class="prop-desc">The current approximate inventory level for the item or items. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/mileageFromOdometer">mileageFromOdometer</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The total distance travelled by the particular vehicle since its initial production, as read from its odometer.<br />
+Typical unit code(s): KMT for kilometers, SMI for statute miles </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numAdults">numAdults</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/LodgingReservation">LodgingReservation</a>&nbsp;</td><td class="prop-desc">The number of adults staying in the unit. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numChildren">numChildren</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/LodgingReservation">LodgingReservation</a>&nbsp;</td><td class="prop-desc">The number of children staying in the unit. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numberOfAxles">numberOfAxles</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The number of axles.<br />
+Typical unit code(s): C62 </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numberOfDoors">numberOfDoors</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The number of doors.<br />
+Typical unit code(s): C62 </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numberOfEmployees">numberOfEmployees</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Organization">Organization</a>&nbsp; or<br/> <a   href="/BusinessAudience">BusinessAudience</a>&nbsp;</td><td class="prop-desc">The number of employees in an organization e.g. business. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numberOfForwardGears">numberOfForwardGears</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The total number of forward gears available for the transmission system of the vehicle.<br />
+Typical unit code(s): C62 </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numberOfPlayers">numberOfPlayers</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a   href="/Game">Game</a>&nbsp;</td><td class="prop-desc">Indicate how many people can play this game (minimum, maximum, or range). </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/numberOfPreviousOwners">numberOfPreviousOwners</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The number of owners of the vehicle, including the current one.<br />
+Typical unit code(s): C62 </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/partySize">partySize</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/TaxiReservation">TaxiReservation</a>&nbsp; or<br/> <a   href="/FoodEstablishmentReservation">FoodEstablishmentReservation</a>&nbsp;</td><td class="prop-desc">Number of people the reservation should accommodate. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/valueReference">valueReference</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or<br/> <a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/vehicleSeatingCapacity">vehicleSeatingCapacity</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.<br />
+Typical unit code(s): C62 for persons. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/weight">weight</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc">The weight of the product or person. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/width">width</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/MediaObject">MediaObject</a>&nbsp; or<br/> <a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/VisualArtwork">VisualArtwork</a>&nbsp;</td><td class="prop-desc">The width of the item. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/yearlyRevenue">yearlyRevenue</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/BusinessAudience">BusinessAudience</a>&nbsp;</td><td class="prop-desc">The size of the business in annual revenue. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/yearsInOperation">yearsInOperation</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/BusinessAudience">BusinessAudience</a>&nbsp;</td><td class="prop-desc">The age of the business. </td></tr></table>
+<h4  id="acks">Acknowledgements</h4>
+This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.<br/><p class="version"><b>Schema Version 2.2</b></p>
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-52672119-1', 'auto');ga('send', 'pageview');</script> 
+
+</div>

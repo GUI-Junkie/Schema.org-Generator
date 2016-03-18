@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>View &mdash; Schema Generator 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Schema Generator 0.1 documentation" href="index.html" />
+    <link rel="next" title="Controller" href="controller.html" />
+    <link rel="prev" title="Model" href="model.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="controller.html" title="Controller"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="Model"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-view.schema_view">
+<span id="view"></span><h1>View<a class="headerlink" href="#module-view.schema_view" title="Permalink to this headline">¶</a></h1>
+<p>View of the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">
+Model View Controller</a> <img src="./_images/external_link.png" title="external link" alt="external link" /></p>
+<p>Contains the class for the</p>
+<ul class="simple">
+<li>SchemaView</li>
+</ul>
+<dl class="class">
+<dt id="view.schema_view.SchemaView">
+<em class="property">class </em><tt class="descclassname">view.schema_view.</tt><tt class="descname">SchemaView</tt><a class="headerlink" href="#view.schema_view.SchemaView" title="Permalink to this definition">¶</a></dt>
+<dd><p>SchemaView class handles all output creating valid HTML</p>
+<dl class="staticmethod">
+<dt id="view.schema_view.SchemaView.ajax_properties">
+<em class="property">static </em><tt class="descname">ajax_properties</tt><big>(</big><em>schema</em>, <em>web_hierarchy</em><big>)</big><a class="headerlink" href="#view.schema_view.SchemaView.ajax_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method: creates a section of HTML with the properties of the <tt class="docutils literal"><span class="pre">schema</span></tt></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schema</strong> &#8211; SchemaClass</li>
+<li><strong>web_hierarchy</strong> &#8211; the id of the hierarchy</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">html &lt;li&gt;&lt;/li&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="view.schema_view.SchemaView.generate_schema_output">
+<tt class="descname">generate_schema_output</tt><big>(</big><em>schema_name</em>, <em>ctx</em><big>)</big><a class="headerlink" href="#view.schema_view.SchemaView.generate_schema_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the valid Schema. This can be validated on Google Developers
+<a href="https://developers.google.com/structured-data/testing-tool/" target="_blank">
+Structured Data Testing Tool</a> <img src="./_images/external_link.png" title="external link" alt="external link" /></p>
+<p>The properties with data get placed in their respective divs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ctx</strong> &#8211; Context with the Query_string arguments</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="view.schema_view.SchemaView.get_index">
+<tt class="descname">get_index</tt><big>(</big><em>hierarchy</em><big>)</big><a class="headerlink" href="#view.schema_view.SchemaView.get_index" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Class method: Gets the html for the full hierarchy</dt>
+<dd>Calls the recursive private function _traverse_hierarchy</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>hierarchy</strong> &#8211; The list of lists that&#8217;s the full hierarchy</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">index.html</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="view.schema_view.SchemaView.get_saved_output">
+<em class="property">static </em><tt class="descname">get_saved_output</tt><big>(</big><big>)</big><a class="headerlink" href="#view.schema_view.SchemaView.get_saved_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method for UX experience. Shows the schema has effectively been stored in LocalStorage</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="view.schema_view.SchemaView.show_schema_properties">
+<tt class="descname">show_schema_properties</tt><big>(</big><em>schema</em><big>)</big><a class="headerlink" href="#view.schema_view.SchemaView.show_schema_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method: Creates top level output for a schema</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>schema</strong> &#8211; SchemaClass</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str - html</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="model.html">Model</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-default-port-8000">Starting the server at default port 8000</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#starting-the-server-at-another-port">Starting the server at another port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#shutting-down-the-server">Shutting down the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controller.html#restarting-the-server">Restarting the server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache2 configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apache.html#conf">.conf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html">Schema bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#starting-the-bot">Starting the bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_bot.html#restarting-the-server-s">Restarting the server(s)</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="model.html"
+                        title="previous chapter">Model</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="controller.html"
+                        title="next chapter">Controller</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/view.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="controller.html" title="Controller"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="Model"
+             >previous</a> |</li>
+        <li><a href="index.html">Schema Generator 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, Hans Polak.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
