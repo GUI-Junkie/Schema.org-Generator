@@ -16,6 +16,7 @@ The Bot should be called via a ``cron`` job every 24 hours
 """
 # Refer to the Readme.txt file for © copyright information
 from pickle import dump, load
+from threading import Thread
 from time import sleep
 from urllib.error import URLError
 from urllib.request import urlopen
@@ -24,41 +25,50 @@ from os import getcwd
 from os.path import isdir
 from subprocess import Popen
 from model.schema import SchemaClass
-from view.schema_view import SchemaView
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
 READ_BINARY = 'rb'
 WRITE_BINARY = 'wb'
+MAX_SIMULTANEOUS_THREADS = 50
 
 
-class Bot:
+class Bot(Thread):
     def __init__(self):
-        self._schemas = {}      # Dictionary for rapid access
-        self._version = 0.0     # Version of Schema.org
-        self._is_alive = False
+        Thread.__init__(self)
+        # Public attributes
         self.updated = False
+        self.error = None
+        self.version = 0.0     # Version of Schema.org
+
+        # Private attributes
+        self._is_alive = False
+        self._schemas = {}      # Dictionary for rapid access
 
         self._generator_callback_busy = False   # Blocks callback
         self._threads = 1                       # Will be put at zero on first call, number of running threads
-        self._i_max_simultaneous_threads = 50
         self._i_thread = 0                      # Index of next thread to start
         self._i_max_thread = 0                  # Total number of threads to start
 
-        self.schema_list = []                   # Ordered list, needed to generate the hierarchy correctly
+        self._schema_list = []                  # Ordered list, needed to generate the hierarchy correctly
         self._hierarchy = ['Thing', []]         # Hierarchy, list of lists for ordering output
         self._keys = None
 
+    def run(self):
         is_dirty = False
         try:
             # First load the existing HIERARCHY_FILE
             with open(HIERARCHY_FILE, READ_BINARY) as f:
                 pickle_list = load(f)
-                self._version = pickle_list[0]
+                self.version = pickle_list[0]
                 self._schemas = pickle_list[1]
                 self._hierarchy = pickle_list[2]
         except FileNotFoundError:
             # HIERARCHY_FILE is not there
             is_dirty = True
+        is_dirty = True
+        self.version = 0.0
+        self._schemas = {}
+        self._hierarchy = ['Thing', []]
 
         # Check the version of the Hierarchy against the known version
         i_tries = 0
@@ -77,7 +87,8 @@ class Bot:
 
         if txt is None:
             # Abandon ship
-            exit('Schema bot abandoned. Check Internet connection')
+            self.error = 'Schema bot abandoned. Check Internet connection'
+            return
 
         # Check the version
         # <td class="release"><a href="/version/2.1/">2.1</a><br/>sdo-ganymede<br/>(2015-08-06)</td>
@@ -86,8 +97,8 @@ class Bot:
         ind += txt[ind:].index('href="')
         ind += txt[ind:].index('>') + 1
         version = float(txt[ind:ind + txt[ind:].index('<')])
-        if version > self._version:
-            self._version = version
+        if version > self.version:
+            self.version = version
             is_dirty = True
 
         if is_dirty:
@@ -113,7 +124,7 @@ class Bot:
 
             self._refresh(txt)
         except URLError:
-            print('Warning: http://schema.org/docs/full.html has not been found')
+            self.error = 'Warning: http://schema.org/docs/full.html has not been found'
             self._is_alive = False
 
             # Restore files
@@ -170,10 +181,11 @@ class Bot:
     def _refresh(self, txt):
         # <li class="tbranch" id="Thing"><a href="/Thing">Thing</a>
         if 'class="tbranch" id="Thing"' not in txt:
-            print('Error: class="tbranch" id="Thing" - Not found')
+            self.error = 'Error: class="tbranch" id="Thing" - Not found'
             return  # Incorrect - unlikely
 
-        ind = txt.index('class="tbranch" id="Thing"')  # We're looking for the first element
+        ind = txt.index('id="full_thing_tree"')              # Skip the core, go straight to the full_thing_tree
+        ind += txt[ind:].index('class="tbranch" id="Thing"')   # We're looking for the first element
         # Get all elements
         # Read only 5 elements
         # index = 0
@@ -191,18 +203,32 @@ class Bot:
                 thing = txt[ind:ind + txt[ind:].index('"')]
                 # if thing in ['Game', 'ExercisePlan', 'Diet']:
                 #     pass  # Put a breakpoint here if needed
-                if 'full_thing_tree' == thing:
-                    print('Correxit: full_thing_tree')
+                if 'datatype_tree' == thing:
+                    print('Correxit: datatype_tree')
 
                     # Launch the Threads
                     self._callback()
                     return
-                element = SchemaClass(thing, self._callback)
+                # Check if Extended schema
+                # <li class="tleaf" id="Motorcycle">
+                #   <a title="Extended schema: auto.schema.org"  class="ext ext-auto"
+                #       href="http://auto.schema.org/Motorcycle">Motorcycle</a>
+                tmp = ind + txt[ind:].index('</a>')  # search between <a... and </a>
+                if 'Extended' in txt[ind:tmp]:
+                    # Get the url
+                    ind += txt[ind:].index('href="')
+                    ind += txt[ind:].index('"') + 1
+                    # Now, we have the url
+                    url = txt[ind:ind + txt[ind:].index('"')]
+                    url = url[:url.rindex('/') + 1]
+                    element = SchemaClass(thing, self._callback, url)
+                else:
+                    element = SchemaClass(thing, self._callback)
                 self._schemas[thing] = element
-                self.schema_list.append(thing)
+                self._schema_list.append(thing)
             except Exception as e:
-                print('Error: {0}'.format(e))
-                print('Error exit: {0}'.format(thing))
+                self.error = 'Error: {0}\n'.format(e)
+                self.error += 'Error exit: {0}'.format(thing)
                 return  # Escape While True loop
 
     def _callback(self, element=None):
@@ -221,7 +247,7 @@ class Bot:
         self._threads -= 1
 
         # Start up to x simultaneous threads
-        while self._threads < self._i_max_simultaneous_threads and self._i_thread < self._i_max_thread:
+        while self._threads < MAX_SIMULTANEOUS_THREADS and self._i_thread < self._i_max_thread:
             self._schemas[self._keys[self._i_thread]].start()
             self._i_thread += 1
 
@@ -239,7 +265,7 @@ class Bot:
 
     def _dump(self):
         # Create the hierarchy
-        for thing in self.schema_list:
+        for thing in self._schema_list:
             schema = self._schemas[thing]
             parents = schema.get_parent_class
 
@@ -267,23 +293,15 @@ class Bot:
             hierarchy.append([])
 
         print('Finishing')
-        self.updated = True
         self._is_alive = False
-
-        # Returns the whole hierarchy - Similar to http://schema.org/docs/full.html
-        view = SchemaView()
-        rc = view.get_index(self._hierarchy)
-        # Writes the output to /var/www/schema so Apache can serve it from there onwards
-        # Generate index.html by using http://localhost:8000
-        with open('/var/www/schema/index.html', 'w') as f:
-            f.write(rc)
+        self.updated = True
 
         # Reduce the amount of data saved by eliminating _html
         for schema in self._schemas.values():
             schema.clean()
 
         with open(HIERARCHY_FILE, WRITE_BINARY) as f:
-            dump([self._version, self._schemas, self._hierarchy], f)
+            dump([self.version, self._schemas, self._hierarchy], f)
 
         # Delete old directory (if it exists)
         # sleep(0.1)
@@ -317,6 +335,8 @@ if __name__ == "__main__":
     # Check if file exists
     # Check if version is correct
     b = Bot()
+    b.start()
+    b.join()
 
     # Everything happens while the bot is alive
     while b.is_alive():
@@ -325,7 +345,7 @@ if __name__ == "__main__":
     # Restart the server(s) if the pickle file has been updated
     if b.updated:
         restart(8000)   # Restart server at port 8000
-        restart(8001)   # Etc
+        # restart(8001)   # Etc
     print('Schema Bot - main finished')
 
     # tFin = datetime.now()

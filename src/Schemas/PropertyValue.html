@@ -81,14 +81,14 @@ Standards bodies should promote a standard prefix for the identifiers of propert
 <code property="rdfs:label"><a   href="/value">value</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="/Boolean">Boolean</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/valueReference">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="/Boolean">Boolean</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/valueReference">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/valueReference">valueReference</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QualitativeValue" /><a   href="/QualitativeValue">QualitativeValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/QualitativeValue" /><a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
   
 </tr>
@@ -129,7 +129,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
       <br /><br />
       See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
       <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
@@ -178,7 +178,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
 </th>
  
 <td class="prop-ect">
-<a   href="/Place">Place</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or<br/> <a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp;</td><td class="prop-desc">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br />
+<a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or<br/> <a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br />
 
 Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
  </td></tr><tr>
@@ -193,7 +193,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 </th>
  
 <td class="prop-ect">
-<a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or<br/> <a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr></table>
+<a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr></table>
 <h4  id="acks">Acknowledgements</h4>
 This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 

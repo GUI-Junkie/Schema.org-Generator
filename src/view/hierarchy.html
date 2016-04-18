@@ -2,65 +2,61 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Schema Generator"/>
+        <meta name="robots" content="index, follow"/>
+        <link type="image/png" rel="icon" href="/Favicon.png"/>
         <title>{title}</title>
-        <link rel="stylesheet" type="text/css" href="http://schema.org/docs/schemaorg.css" />
-        <script type="text/javascript" defer src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-        <script type="text/javascript" async src="/schema.js"></script>
-        <style>
-            .button a{{background:#990000}}
-            #selectionbar a:hover {{background:#4B0000}}
-            .header {{position:fixed;width:100%;top:0px}}
-        </style>
+        <link rel="stylesheet" type="text/css" href="/gen_style.css" />
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/schema.js"></script>
     </head>
-    <body onload="javascript:onLoad('{buttons}');" style="height:40em;min-height:20em">
-        <div class="header">
-            <div id="container">
-                <div id="intro">
-                    <div id="pageHeader">
-                        <div class="wrapper">
-                            <div id="sitename">
-                            <h1>
-                                <a href="/">schema.org &lt;Generator&gt;</a>
-                            </h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <body onload="javascript:onLoad('{buttons}');">
+        <a class="logo_link" href="/">
+            <img src="/logo_gen.png" alt="schema.org &lt;Generator&gt;" title="schema.org &lt;Generator&gt;" class="logo"/>
+        </a>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://polak.es/gen_help/index.html" target="_blank">Online help <img src="/external_link.png" alt="external link" title="external link" /></a>
+                    </li>
+                    <li id="SaveButton" style="display:none">
+                        <a href="javascript:SaveSchema();">Save Schema</a>
+                    </li>
+                    <li id="GenerateButton" style="display:none">
+                        <span>Generate</span>
+                        <a href="javascript:GenerateSchema('Microdata');">&nbsp;&nbsp;&nbsp;&nbsp;Microdata</a>
+                        <a href="javascript:GenerateSchema('RDFa');">&nbsp;&nbsp;&nbsp;&nbsp;RDFa</a>
+                        <a href="javascript:GenerateSchema('JSON');">&nbsp;&nbsp;&nbsp;&nbsp;JSON-LD</a>
+                    </li>
+                    <li id="RecoveryButton" style="display:none">
+                        <a href="javascript:RecoverData();">Recover Data</a>
+                    </li>
+                    <li id="ClearButton" style="display:none">
+                        <a href="javascript:ClearData();">Clear Data</a>
+                    </li>
+                    <li>
+                        <a href="http://schema.org/" target="_blank">Schema.org <img src="/external_link.png" alt="external link" title="external link" /></a>
+                    </li>
+                    <li>
+                        <a href="http://polak.es/en/generator.html" target="_blank">About <img src="/external_link.png" alt="external link" title="external link" /></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="right_col" id="right_col">
+                <form method="POST" action="/GenerateSchema">
+                    {form}
+                </form>
+                <br />
             </div>
-            <div id="selectionbar">
-                <div class="wrapper">
-                    <ul>
-                        <li>
-                            <a href="http://schema.org/docs/documents.html">Documentation</a>
-                        </li>
-                        <li>
-                            <a href="http://schema.org/docs/schemas.html">Schemas</a>
-                        </li>
-                        <li class="button" id="ClearButton" style="display:none">
-                            <a href="javascript:ClearData();">Clear Data</a>
-                        </li>
-                        <li class="button" id="RecoveryButton" style="display:none">
-                            <a href="javascript:RecoverData();">Recover Data</a>
-                        </li>
-                        <li class="button" id="GenerateButton" style="display:none">
-                            <a href="javascript:GenerateSchema();">Generate Schema</a>
-                        </li>
-                        <li class="button" id="SaveButton" style="display:none">
-                            <a href="javascript:SaveSchema();">Save Schema</a>
-                        </li>
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="org_right_col">
+            {output}
             </div>
-        </div>
-        <div style="text-align:left;margin-top:11em">
-            <form method="POST" action="/GenerateSchema">
-                {form}
-            </form>
-        </div>
-        {output}
         <noscript>Your browser does not support JavaScript!</noscript>
+        </div>
     </body>
 </html>

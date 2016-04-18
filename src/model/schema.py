@@ -18,7 +18,7 @@ HIERARCHY_FILE = 'Hierarchy.pickle'
 PROPERTY_TYPES = {'Date', 'URL', 'Number', 'Integer', 'Text', 'Boolean', 'Time', 'DateTime'}
 READ_BINARY = 'rb'
 WRITE_BINARY = 'wb'
-
+SCHEMA_ORG = 'http://schema.org/'
 
 class Hierarchy:
     """
@@ -36,6 +36,10 @@ class Hierarchy:
     """
 
     def __init__(self):
+        FILE_NAME = 'model/schema.py'
+        if __file__ != FILE_NAME:
+            BASE_DIR = __file__[:__file__.index(FILE_NAME)]
+
         self._schemas = {}  # Dictionary for rapid access
         self._hierarchy = []  # Hierarchy, list of lists for ordering output
         self._property_types = PROPERTY_TYPES  # Set of basic properties that should be rendered as inputs
@@ -43,7 +47,7 @@ class Hierarchy:
 
         try:
             # First load the existing HIERARCHY_FILE
-            with open(HIERARCHY_FILE, READ_BINARY) as f:
+            with open('{0}{1}'.format(BASE_DIR, HIERARCHY_FILE), READ_BINARY) as f:
                 pickle_list = load(f)
 
             # HIERARCHY_FILE is created by schema_bot
@@ -67,7 +71,7 @@ class Hierarchy:
             # Get the schema from the dictionary
             return self._schemas[thing]
         except KeyError:
-            pass
+            raise SchemaNotFoundError
 
     @property
     def hierarchy(self):
@@ -97,13 +101,14 @@ class SchemaClass:
 
     * is_alive indicator for the |Schema bot|
     """
-    def __init__(self, thing, callback=None):
+    def __init__(self, thing, callback=None, url=SCHEMA_ORG):
         self._html = ''
         self.parent = None
         self.properties = {}
         self.name = thing
         self._callback = callback   # callback from the schema bot
         self.is_alive = False       # Indicator for the schema bot
+        self.url = url
 
     def clean(self):
         """
@@ -141,7 +146,7 @@ class SchemaClass:
                 self.generator_callback()
         except FileNotFoundError:
             # If this is a schema without .html file, create one
-            s_gen = SchemaClassGenerator(self.name, self.generator_callback)
+            s_gen = SchemaClassGenerator(self.name, self.generator_callback, self.url)
 
             self.is_alive = True    # Indicator for the schema bot
             s_gen.start()           # Start the thread
@@ -197,7 +202,8 @@ class SchemaClass:
 
     def _get_properties(self):
         # <div id="mainContent" vocab="http://schema.org/" typeof="rdfs:Class" resource="http://schema.org/Thing">
-        if 'typeof="rdfs:Class"' not in self._html:
+        # if 'typeof="rdfs:Class"' not in self._html
+        if 'id="mainContent"' not in self._html:
             return  # Incorrect - unlikely
 
         ind = 0
@@ -291,11 +297,12 @@ class SchemaClassGenerator(Thread):
     * name of the schema
     * callback from SchemaClass
     """
-    def __init__(self, thing, generator_callback):
+    def __init__(self, thing, generator_callback, url):
         super().__init__()
         self.html = None
         self.name = thing
         self._generator_callback = generator_callback
+        self._url = url
 
     def run(self):
         """
@@ -319,14 +326,17 @@ class SchemaClassGenerator(Thread):
         while i_tries < 9 and self.html is None:
             i_tries += 1
             try:
-                with urlopen('http://schema.org/{0}'.format(self.name)) as req:
+                if self._url != SCHEMA_ORG:
+                    pass
+
+                with urlopen('{0}{1}'.format(self._url, self.name)) as req:
                     self.html = req.read().decode("utf-8")
 
-                    # Strip the superfluous <html> from the text
-                    self.html = self._get_schema_body
+                # Strip the superfluous <html> from the text
+                self.html = self._get_schema_body
 
-                    with open('Schemas/{0}.html'.format(self.name), 'w') as f:
-                        f.write(self.html)
+                with open('Schemas/{0}.html'.format(self.name), 'w') as f:
+                    f.write(self.html)
             except URLError as e:
                 # Wait a millisecond before trying again
                 print('Sleeping {0}'.format(self.name))
@@ -344,3 +354,6 @@ class SchemaClassGenerator(Thread):
         ind = self.html.index('<div id="mainContent"')
         l_ind = self.html.rindex('</body>')
         return self.html[ind:l_ind]
+
+class SchemaNotFoundError(Exception):
+    pass

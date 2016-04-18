@@ -77,7 +77,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/category">category</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PhysicalActivityCategory" /><a   href="/PhysicalActivityCategory">PhysicalActivityCategory</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/color">
+<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PhysicalActivityCategory" /><a   href="/PhysicalActivityCategory">PhysicalActivityCategory</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/color">
     
       <th class="prop-nam" scope="row">
 
@@ -286,14 +286,14 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
       <br /><br />
       See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
       <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
@@ -366,7 +366,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 </th>
  
 <td class="prop-ect">
-<a   href="/Offer">Offer</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp;</td><td class="prop-desc">The item being offered. </td></tr><tr>
+<a   href="/Demand">Demand</a>&nbsp; or<br/> <a   href="/Offer">Offer</a>&nbsp;</td><td class="prop-desc">The item being offered. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/itemShipped">itemShipped</a></code>
 </th>
@@ -378,13 +378,13 @@ Note: Publishers should be aware that applications designed to use specific sche
 </th>
  
 <td class="prop-ect">
-<a   href="/OrderItem">OrderItem</a>&nbsp; or<br/> <a   href="/Order">Order</a>&nbsp;</td><td class="prop-desc">The item ordered. </td></tr><tr>
+<a   href="/Order">Order</a>&nbsp; or<br/> <a   href="/OrderItem">OrderItem</a>&nbsp;</td><td class="prop-desc">The item ordered. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/owns">owns</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/Organization">Organization</a>&nbsp; or<br/> <a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc">Products owned by the organization or person. </td></tr><tr>
+<a   href="/Person">Person</a>&nbsp; or<br/> <a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc">Products owned by the organization or person. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/productSupported">productSupported</a></code>
 </th>
@@ -396,7 +396,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 </th>
  
 <td class="prop-ect">
-<a   href="/OwnershipInfo">OwnershipInfo</a>&nbsp; or<br/> <a   href="/TypeAndQuantityNode">TypeAndQuantityNode</a>&nbsp;</td><td class="prop-desc">The product that this structured value is referring to. </td></tr></table>
+<a   href="/TypeAndQuantityNode">TypeAndQuantityNode</a>&nbsp; or<br/> <a   href="/OwnershipInfo">OwnershipInfo</a>&nbsp;</td><td class="prop-desc">The product that this structured value is referring to. </td></tr></table>
 <br/><b>More specific Types</b><ul><li> <a   href="/IndividualProduct">IndividualProduct</a> </li><li> <a   href="/ProductModel">ProductModel</a> </li><li> <a   href="/SomeProducts">SomeProducts</a> </li><li> <a   href="/Vehicle">Vehicle</a> </li></ul><h4  id="acks">Acknowledgements</h4>
 This class contains derivatives of properties from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 

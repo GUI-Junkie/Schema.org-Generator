@@ -79,9 +79,11 @@ function ShowNextSchema(schema, id)
     http.send(params);
 }
 
-function GenerateSchema()
+function GenerateSchema(type)
 {
-    // Just do it
+    // Set the type
+    var ele = document.getElementById("type");
+    ele.value = type;
     document.forms[0].submit();
 }
 

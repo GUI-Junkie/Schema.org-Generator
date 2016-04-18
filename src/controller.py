@@ -8,8 +8,6 @@ Contains the classes for the
 
 - EZContext - Information from the request
 
-- EZQuit - Stops the server
-
 
 While under construction, `Schemas` can be stored on the browser using Local Storage
 
@@ -18,13 +16,12 @@ It can be validated on Google Developers |Structured Data Testing Tool| |externa
 """
 # Refer to the Readme.txt file for © copyright information
 from wsgiref import handlers, simple_server
-from sys import argv
 from urllib.error import URLError
 from threading import Thread
 from datetime import datetime
-from model.schema import Hierarchy
+from model.schema import Hierarchy, SchemaNotFoundError
+from schema_bot import Bot
 from view.schema_view import SchemaView
-
 
 # Controller class - WSGI
 class Controller(handlers.CGIHandler):
@@ -35,7 +32,7 @@ class Controller(handlers.CGIHandler):
     # Class variable to maintain the 'restart' state
     Restart = False
 
-    def __init__(self, port):
+    def __init__(self):
         """
         Constructor
         Get the Model tier: Hierarchy (from file or construct it from the Internet)
@@ -43,11 +40,18 @@ class Controller(handlers.CGIHandler):
         Start the http demon
         """
         super().__init__()
+        self.cloud = True               # Running on server
+        self.Restart = False            # Don't restart unless it's local
         self.hierarchy = Hierarchy()    # the model
         self.view = SchemaView()        # the view
+        self.schema_bot = None          # Bot to update the model
+        self._httpd = None              # simple server placeholder (for localhost only)
+
+    def run(self, host='localhost', port=8000):
+        self.cloud = False
 
         # Initialize the server deamon
-        self._httpd = simple_server.make_server('', port, self.run_this)
+        self._httpd = simple_server.make_server(host, port, self.__call__)
         print("Serving on port {0}...".format(port))
 
         # Start the server
@@ -74,7 +78,7 @@ class Controller(handlers.CGIHandler):
         """
         self._httpd.server_close()
 
-    def run_this(self, environ, start_response):
+    def __call__(self, environ, start_response):
         """
         Class method passed to the http demon
 
@@ -94,12 +98,10 @@ class Controller(handlers.CGIHandler):
 
             <a href="https://docs.python.org/3.5/glossary.html#term-mapping" target="_blank">mapping</a>
         """
+        path_info = None
         try:
             # Default status
             self.status = '200 OK'
-
-            # Default header
-            self.headers = [('Content-type', 'text/plain; charset=utf-8')]
 
             # Create a context from the environment
             ctx = EZContext(environ)
@@ -108,6 +110,11 @@ class Controller(handlers.CGIHandler):
             # This is not in the ctx
             path_info = environ['PATH_INFO']
             if path_info in ['/quit', '/restart']:
+                # Only quit or restart when localhost
+                if self.cloud:
+                    raise SchemaNotFoundError
+
+                self.headers = [('Content-type', 'text/plain; charset=utf-8')]
                 # Configure Apache to filter out these requests
                 # localhost:port/quit or /restart can then be used
                 if '/restart' == path_info:
@@ -121,15 +128,28 @@ class Controller(handlers.CGIHandler):
                 # Returns a string to the browser
                 # Path info starts with "/"
                 rc = '{0}: {1}'.format(path_info[1:], datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-            elif '.ico' in path_info or '.png' in path_info:
+            elif '.ico' in path_info or '.png' in path_info or '.jpg' in path_info:
                 # This code should be eliminated when used as a module with Apache
                 with open('view{0}'.format(path_info), 'rb') as f:
                     txt = f.read()
-                self.headers = [('Content-type', 'image/png'), ('Content-length', str(len(txt)))]
+
+                if '.ico' in path_info:
+                    self.headers = [('Content-type', 'image/ico'), ('Content-length', str(len(txt)))]
+                elif '.png' in path_info:
+                    self.headers = [('Content-type', 'image/png'), ('Content-length', str(len(txt)))]
+                elif '.jpg' in path_info:
+                    self.headers = [('Content-type', 'image/jpg'), ('Content-length', str(len(txt)))]
+
                 rc = [txt]
-            elif '/schema.js' == path_info:
+            elif '.js' in path_info:
                 # This code should be eliminated when used as a module with Apache
-                with open('view/schema.js') as f:
+                self.headers = [('Content-type', 'text/js; charset=utf-8')]
+                with open('view{0}'.format(path_info)) as f:
+                    rc = f.read()
+            elif '.css' in path_info:
+                # This code should be eliminated when used as a module with Apache
+                self.headers = [('Content-type', 'text/css; charset=utf-8')]
+                with open('view{0}'.format(path_info)) as f:
                     rc = f.read()
             else:
                 # Return html
@@ -137,6 +157,22 @@ class Controller(handlers.CGIHandler):
                 if '/' == path_info or '' == path_info:
                     # Returns the whole hierarchy - Similar to http://schema.org/docs/full.html
                     rc = self.view.get_index(self.hierarchy.hierarchy)
+                elif '/schema_bot' == path_info:
+                    if ctx.get('check'):
+                        rc = self.view.get_schema_bot_ajax(self.schema_bot)
+                        if 'Busy' != rc:
+                            self.schema_bot = None
+                        elif 'Updated' in rc:
+                            self.hierarchy = Hierarchy()
+                            # index = self.view.get_index(self.hierarchy)
+                            # with open('view/index.html', 'w') as f:
+                            #     f.write(index)
+                    else:
+                        # No bot, then start one
+                        if None == self.schema_bot:
+                            self.schema_bot = Bot()
+                            self.schema_bot.start()
+                        rc = self.view.get_schema_bot_html()
                 elif '/SaveSchema' == path_info:
                     # The Schema has been saved in Local Storage
                     # Return a nice message
@@ -145,7 +181,15 @@ class Controller(handlers.CGIHandler):
                     # Put it all together
                     # Output the Scheme the user has constructed
                     # Output a link to the Google Structured Data Testing Tool
-                    rc = self.view.generate_schema_output(ctx.get('path'), ctx)
+                    schema_type = ctx.get('type')
+                    # print(schema_type)
+                    schema = self.hierarchy.get_schema(ctx.get('path'))
+                    if 'RDFa' == schema_type:
+                        rc = self.view.generate_rdfa(schema, ctx)
+                    elif 'JSON' == schema_type:
+                        rc = self.view.generate_json(schema, ctx)
+                    else:
+                        rc = self.view.generate_microdata(schema, ctx)
                 elif ctx.get('next_element'):  # If the Action is POST
                     # AJAX call for the next level down from the top level Scheme the user is constructing
                     schema = self.hierarchy.get_schema(ctx.get('next_element'))
@@ -162,6 +206,10 @@ class Controller(handlers.CGIHandler):
                         self.status = '300 Error'
                         self.headers = [('Content-type', 'text/plain; charset=utf-8')]
                         rc = 'Schema "{0}" not found'.format(path_info[1:])
+        except SchemaNotFoundError:
+            self.status = '300 Error'
+            self.headers = [('Content-type', 'text/plain; charset=utf-8')]
+            rc = 'Schema "{0}" not found'.format(path_info[1:])
         except Exception as err:
             # If something unexpected happens, return a reasonable message
             self.status = '300 Error'
@@ -278,6 +326,7 @@ class EZQuit(Thread):
     def run(self):
         self._httpd.shutdown()
 
+app = Controller()
 
 if __name__ == "__main__":
     from os import chdir
@@ -292,20 +341,19 @@ if __name__ == "__main__":
         chdir(BASE_DIR)
 
     try:
-        listen_port = 8000
-        if len(argv) > 1:
-            listen_port = int(argv[1])
-
         # This will setup the server and start the serve_forever() loop
         # This will block the script until the serve_forever() loop is interrupted
         # Either by localhost:8000/restart or localhost:8000/quit
-        ez = Controller(listen_port)
-        while ez.Restart:
+        app.run()
+        while app.Restart:
             # This will close the server. If it's a restart, this will liberate the socket
-            ez.server_close()
-            ez = Controller(listen_port)
+            app.server_close()
+            app = Controller()
+            app.run()
+
     except KeyboardInterrupt:
         # Silence KeyboardInterrupt exception
         pass
     except Exception as e:
         print(e)
+        exit(-1)
