@@ -177,6 +177,8 @@ class Controller(handlers.CGIHandler):
                     # The Schema has been saved in Local Storage
                     # Return a nice message
                     rc = self.view.get_saved_output()
+                elif '/AddRoles' == path_info:
+                    rc = 'yo!'
                 elif '/GenerateSchema' == path_info:
                     # Put it all together
                     # Output the Scheme the user has constructed
@@ -201,7 +203,12 @@ class Controller(handlers.CGIHandler):
                     # 3. GenerateSchema - Output the schema so it can be used by the user
                     try:
                         schema = self.hierarchy.get_schema(path_info[1:])  # Path info starts with "/"
-                        rc = self.view.show_schema_properties(schema)
+                        breadcrumb = ctx.get('breadcrumb')
+                        if not breadcrumb:
+                            breadcrumb = path_info[1:]
+
+                        list_hierarchy, breadcrumb = self.hierarchy.get_hierarchy(breadcrumb)
+                        rc = self.view.show_schema_properties(schema, list_hierarchy, breadcrumb)
                     except URLError:
                         self.status = '300 Error'
                         self.headers = [('Content-type', 'text/plain; charset=utf-8')]

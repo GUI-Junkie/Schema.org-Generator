@@ -25,33 +25,63 @@ class SchemaView:
         :param hierarchy: The list of lists that's the full hierarchy
         :return: index.html
         """
-        txt = ''
-        txt = self._traverse_hierarchy(txt, hierarchy)
+        txt = '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
+        txt += self._traverse_hierarchy(hierarchy)
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
         return html.format(title='Hierarchy', buttons='', form=txt, output='')
 
-    def _traverse_hierarchy(self, txt, list_hierarchy):
+    def _traverse_hierarchy(self, list_hierarchy):
         """
         method: Lists all Hierarchy elements
                 Recursive
-        :param txt:
         :param list_hierarchy:
         :return:txt (same txt)
         """
         # list_hierarchy contains pairs of elements and lists of children ['Thing', []]
+        txt = ''
         if len(list_hierarchy):
             txt += '<ul>\n'
             x = 0
+            breadcrumb = list_hierarchy[0]
             while x < len(list_hierarchy):
                 txt += '<li>\n'
                 txt += '<a href="/{0}">{0}</a>\n'.format(list_hierarchy[x])
                 # Recursive call
-                txt = self._traverse_hierarchy(txt, list_hierarchy[x + 1])
+                # txt = self._traverse_hierarchy(list_hierarchy[x + 1])
+                txt += self._traverse_lvl(list_hierarchy[x + 1], breadcrumb)
                 x += 2
                 txt += '</li>\n'
             txt += '</ul>\n'
+        return txt
+
+    @staticmethod
+    def _traverse_lvl(list_hierarchy, breadcrumb):
+        """
+        method: Lists all Hierarchy elements
+                Recursive
+        :param list_hierarchy:
+        :return:txt (same txt)
+        """
+        # list_hierarchy contains pairs of elements and lists of children ['Thing', []]
+        txt = '<h4>{0} sub level</h4>'.format(breadcrumb.replace('.', ' - '))
+        num_elements = len(list_hierarchy)
+        if num_elements:
+            x = 0
+            half = num_elements / 2
+
+            while x < num_elements:
+                txt += '<ul class="properties">\n'
+                while x < half:
+                    txt += '<li>\n'
+                    # txt += '<a href="/{0}">{0}</a>\n'.format(list_hierarchy[x])
+                    txt += '<a href="javascript:ShowNextLevel(\'{0}\', \'{1}\');">{0}</a>\n'\
+                        .format(list_hierarchy[x], breadcrumb)
+                    x += 2
+                    txt += '</li>\n'
+                txt += '</ul>\n'
+                half = num_elements
         return txt
 
     @staticmethod
@@ -63,50 +93,61 @@ class SchemaView:
         :param web_hierarchy: the id of the hierarchy
         :return: html <li></li>
         """
-        txt = ''
+        txt = '<div class="table">\n'
         properties = sorted(schema.properties)
         if len(properties):
-            txt += '<ul>\n'
             x = 0
             while x < len(properties):
-                txt += '<li>\n'
+                if x % 2:
+                    txt += '<div class="tr_odd">\n'
+                else:
+                    txt += '<div class="tr_even">\n'
+                txt += '<div class="td">\n'
                 txt += '<a href="{0}{1}" target="_blank">{1} ' \
                        '<img src="/external_link.png" alt="external link" title="external link" />' \
                        '</a>\n'.format(schema.url, properties[x])
                 types = schema.properties[properties[x]]
-                txt += '<ul>\n'
-                txt += '<li>\n'
+                txt += '</div>\n'
+                txt += '<div class="td">\n'
                 txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
                        '<img src="/external_link.png" alt="external link" title="external link" /></a>'
                 txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(web_hierarchy, properties[x], 'Text')
-                txt += '</li>\n'
+                txt += '</div>\n'
 
                 for a_type in types[1]:
                     # If the type is a basic type, let the user fill it out
                     name = '{0}_{1}_{2}'.format(web_hierarchy, properties[x], a_type)
                     if a_type not in PROPERTY_TYPES:
-                        txt += '<li>\n'
+                        txt += '<div class="td">\n'
                         # Div placeholder for AJAX property
-                        txt += '<a href="javascript:ShowNextSchema(\'{0}\', \'{1}\')">{0}</a>\n'.format(a_type, name)
-                        txt += '<div id="{0}"></div>'.format(name)
-                        txt += '</li>\n'
-                txt += '</ul>\n'
+                        txt += '<a href="javascript:ShowNextSchema(\'{0}\', \'{1}\');">{0}</a>\n'.format(a_type, name)
+                        txt += '<div class="td_property" id="{0}"></div>'.format(name)
+                        txt += '</div>\n'
                 x += 1
-                txt += '</li>\n'
-            txt += '</ul>\n'
+                txt += '</div>\n'
+        txt += '</div>\n'
         return txt
 
-    def show_schema_properties(self, schema):
+    def show_schema_properties(self, schema, list_hierarchy, breadcrumb):
         """
         Class method: Creates top level output for a schema
 
         :param schema: SchemaClass
+        :param list_hierarchy:
+        :param breadcrumb:
         :rtype: str - html
         """
         txt = '<input type="hidden" name="path" value="{0}" />'.format(schema.name)
         txt += '<input type="hidden" name="type" id="type" value="" />'
+        txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
+
+        txt += self._traverse_lvl(list_hierarchy, breadcrumb)
+        txt += self._buttons(0)
+
+        txt += '<h4>{0} properties</h4>'.format(schema.name)
         txt += self.ajax_properties(schema, schema.name)
-        txt += '<input type="submit" value="Show Schema" />'
+        txt += '<br />'
+        txt += self._buttons(1)
 
         with open('view/schema_header.html') as f:
             schema_txt = f.read()
@@ -115,6 +156,30 @@ class SchemaView:
         with open(HIERARCHY_FILE) as f:
             html = f.read()
         return html.format(title=schema.name, buttons="schema", form=txt, output=schema_txt)
+
+    @staticmethod
+    def _buttons(id):
+        txt = '<div class="buttons">'
+        txt += '    <ul>'
+        txt += '        <li>'
+        txt += '            <span>Generate:</span>'
+        txt += '            <a href="javascript:GenerateSchema(\'Microdata\');">&nbsp;&nbsp;&nbsp;&nbsp;Microdata</a>'
+        txt += '            <a href="javascript:GenerateSchema(\'RDFa\');">&nbsp;&nbsp;&nbsp;&nbsp;RDFa</a>'
+        txt += '            <a href="javascript:GenerateSchema(\'JSON\');">&nbsp;&nbsp;&nbsp;&nbsp;JSON-LD</a>'
+        txt += '        </li>'
+        txt += '    </ul>'
+        txt += '</div>'
+        # txt += '<div class="buttons">'
+        # txt += '    <ul>'
+        # txt += '        <li>'
+        # txt += '            <span>Add:</span>'
+        # txt += '            <a href="javascript:AddRole({0});">&nbsp;&nbsp;&nbsp;&nbsp;Role to...</a>'.format(id)
+        # txt += '        </li>'
+        # txt += '    </ul>'
+        # txt += '</div>'
+        # txt += '<div id="role_{0}">'.format(id)
+        # txt += '</div>'
+        return txt
 
     def generate_microdata(self, schema, ctx):
         """

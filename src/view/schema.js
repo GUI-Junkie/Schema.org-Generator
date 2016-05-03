@@ -32,6 +32,15 @@ function onLoad(arg)
     }
 }
 
+function getRequest()
+{
+    if(window.XMLHttpRequest) // code for IE7+, Firefox, Chrome, Opera, Safari
+        return new XMLHttpRequest();
+
+    // code for IE6, IE5
+    return new ActiveXObject("Microsoft.XMLHTTP");
+}
+
 function ShowNextSchema(schema, id)
 {
     // Get the next level with AJAX (but only once)
@@ -51,11 +60,7 @@ function ShowNextSchema(schema, id)
     // This code gets executed only once per level
     var params = "next_element=" + schema + "&id=" + id;
 
-    var http;
-    if(window.XMLHttpRequest) // code for IE7+, Firefox, Chrome, Opera, Safari
-        http=new XMLHttpRequest();
-    else    // code for IE6, IE5
-        http=new ActiveXObject("Microsoft.XMLHTTP");
+    var http = getRequest();
 
     // Prepare the request
     http.open("POST", schema, true);
@@ -77,6 +82,62 @@ function ShowNextSchema(schema, id)
 
     // Send the request
     http.send(params);
+}
+
+function AddRole(id)
+{
+    // Get the next level with AJAX (but only once)
+    var div = document.getElementById("role_" + id);
+
+    // If the level has already been obtained, show/hide
+    if(div.innerHTML.length)
+    {
+        if(div.style.display == "block")
+            div.style.display = "none";
+        else
+            div.style.display = "block";
+
+        return;
+    }
+
+    var http = getRequest();
+
+    // Prepare the request
+    http.open("POST", "AddRoles", true);
+
+    // Prepare the proper header information to send along with the request
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    params = '';
+    http.setRequestHeader("Content-length", params.length);
+    http.setRequestHeader("Connection", "close");
+
+    // Prepare function for asynchronous reception
+    http.onreadystatechange=function()
+    {
+        if (http.readyState==4 && http.status==200)
+        {
+            div.innerHTML=http.responseText;
+            div.style.display = "block";
+        }
+    }
+
+    // Send the request
+    http.send(params);
+}
+
+function AddRoleTo(id, property)
+{
+    // Get the next level with AJAX (but only once)
+    var div = document.getElementById("role_" + id);
+    div.style.display = "none";
+}
+
+function ShowNextLevel(schema, breadcrumb)
+{
+    var ele = document.getElementById("breadcrumb");
+    ele.value = breadcrumb + '.' + schema;
+    document.forms[0].action = '/' + schema;
+    document.forms[0].submit();
 }
 
 function GenerateSchema(type)

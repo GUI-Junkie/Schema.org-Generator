@@ -19,6 +19,7 @@ PROPERTY_TYPES = {'Date', 'URL', 'Number', 'Integer', 'Text', 'Boolean', 'Time',
 READ_BINARY = 'rb'
 WRITE_BINARY = 'wb'
 SCHEMA_ORG = 'http://schema.org/'
+# SCHEMA_ORG = 'http://webschemas.org/'
 
 class Hierarchy:
     """
@@ -72,6 +73,24 @@ class Hierarchy:
             return self._schemas[thing]
         except KeyError:
             raise SchemaNotFoundError
+
+    def get_hierarchy(self, breadcrumb):
+        if 'Thing' == breadcrumb:
+            return self._hierarchy[1]
+
+        if '.' in breadcrumb:
+            parents = breadcrumb.split('.')
+        else:
+            parents = '.'.join(self._schemas[breadcrumb].get_parent_class[0])
+            parents = parents.split('.')
+            parents.append(breadcrumb)
+
+        hierarchy = self._hierarchy
+        for x in range(0, len(parents)):
+            # Walk the hierarchy until found
+            hierarchy = hierarchy[hierarchy.index(parents[x]) + 1]
+
+        return hierarchy, '.'.join(parents)
 
     @property
     def hierarchy(self):
@@ -203,6 +222,9 @@ class SchemaClass:
     def _get_properties(self):
         # <div id="mainContent" vocab="http://schema.org/" typeof="rdfs:Class" resource="http://schema.org/Thing">
         # if 'typeof="rdfs:Class"' not in self._html
+        if None is self._html:
+            return
+
         if 'id="mainContent"' not in self._html:
             return  # Incorrect - unlikely
 
