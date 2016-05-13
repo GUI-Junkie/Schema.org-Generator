@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 QualitativeValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/Enumeration">Enumeration</a> &gt; <a   href="/QualitativeValue">QualitativeValue</a></span>
 </h4>
  <div property="rdfs:comment">A predefined value for a product characteristic, e.g. the power cord plug type "US" or the garment sizes "S", "M", "L", and "XL".</div>
@@ -23,7 +23,7 @@ QualitativeValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> 
 <div>
         <div id='infobox' style='text-align: right;'><label role="checkbox" for=morecheck><b><span style="cursor: pointer;">[more...]</span></b></label></div>
         <input type='checkbox' checked="checked" style='display: none' id=morecheck><div id='infomsg' style='background-color: #EEEEEE; text-align: left; padding: 0.5em;'>
-        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/QualitativeValue&entry.882602760=enumeration'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+QualitativeValue'>Check for open issues.</a></li><li>'QualitativeValue' is mentioned in layer: <a href='http://schema.org/QualitativeValue'>core</a></li><li>'QualitativeValue' is mentioned in extension layer: <a href='http://auto.schema.org/QualitativeValue'>auto</a></li></ul>
+        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/QualitativeValue&entry.882602760=enumeration'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+QualitativeValue'>Check for open issues.</a></li><li>'QualitativeValue' is mentioned in layer: <a href='http://schema.org/QualitativeValue'>core</a></li><li>'QualitativeValue' is mentioned in extension layer: <a href='http://auto.schema.org/QualitativeValue'>auto</a></li><li>'QualitativeValue' is mentioned in extension layer: <a href='http://health-lifesci.schema.org/QualitativeValue'>health-lifesci</a></li><li>'QualitativeValue' is mentioned in extension layer: <a href='http://pending.schema.org/QualitativeValue'>pending</a></li></ul>
 </div>
 </div>
 <tr class="supertype">
@@ -39,10 +39,8 @@ QualitativeValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> 
 <code property="rdfs:label"><a   href="/additionalProperty">additionalProperty</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br />
-
-Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
-</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/equal">
+<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br /></p>
+<p>Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/equal">
     
       <th class="prop-nam" scope="row">
 
@@ -91,20 +89,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/valueReference">valueReference</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QualitativeValue" /><a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</td></tr><tr class="supertype">
-     <th class="supertype-name" colspan="3">Properties from <a   href="/Enumeration">Enumeration</a></th>
-  
-</tr>
-
-<tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/supersededBy">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/supersededBy">supersededBy</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Class" /><a   href="/Class">Class</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Property" /><a   href="/Property">Property</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Relates a term (i.e. a property, class or enumeration) to one that supersedes it.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QualitativeValue" /><a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
   
 </tr>
@@ -131,24 +116,28 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -200,7 +189,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 </th>
  
 <td class="prop-ect">
-<a   href="/Vehicle">Vehicle</a>&nbsp; or<br/> <a   href="/EngineSpecification">EngineSpecification</a>&nbsp;</td><td class="prop-desc">The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle. </td></tr><tr>
+<a   href="/EngineSpecification">EngineSpecification</a>&nbsp; or<br/> <a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/greater">greater</a></code>
 </th>
@@ -254,15 +243,15 @@ Note: Publishers should be aware that applications designed to use specific sche
 </th>
  
 <td class="prop-ect">
-<a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr><tr>
+<a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/vehicleTransmission">vehicleTransmission</a></code>
 </th>
  
 <td class="prop-ect">
 <a   href="/Vehicle">Vehicle</a>&nbsp;</td><td class="prop-desc">The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars). </td></tr></table>
-<br/><b>More specific Types</b><ul><li> <a   href="/CarUsageType">CarUsageType</a> </li><li> <a   href="/DriveWheelConfigurationValue">DriveWheelConfigurationValue</a> </li><li> <a   href="/SteeringPositionValue">SteeringPositionValue</a> </li></ul><h4  id="acks">Acknowledgements</h4>
-This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.<br/><p class="version"><b>Schema Version 2.2</b></p>
+<br/><b>More specific Types</b><ul><li> <a   href="/DriveWheelConfigurationValue">DriveWheelConfigurationValue</a> </li><li> <a   href="/SteeringPositionValue">SteeringPositionValue</a> </li></ul><h4>More specific Types available in extensions</h4><ul><li><a title="Extended schema: auto.schema.org"  class="ext ext-auto"  href="http://auto.schema.org/CarUsageType">CarUsageType</a></li></ul><h4  id="acks">Acknowledgement</h4>
+<p>This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.</p><p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

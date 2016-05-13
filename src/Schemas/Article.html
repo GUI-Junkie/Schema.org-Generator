@@ -5,12 +5,12 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/CreativeWork">CreativeWork</a> &gt; <a   href="/Article">Article</a></span>
 </h4>
- <div property="rdfs:comment">An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.
-
-      <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.</div>
+ <div property="rdfs:comment"><p>An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.</p>
+<pre><code>  &lt;br/&gt;&lt;br/&gt;See also &lt;a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html"&gt;blog post&lt;/a&gt;.
+</code></pre></div>
 
 
  <br/><div>Usage: Over 1,000,000 domains</div>
@@ -222,7 +222,7 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/contributor">contributor</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
     
       <th class="prop-nam" scope="row">
 
@@ -320,7 +320,7 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/genre">genre</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
     
       <th class="prop-nam" scope="row">
 
@@ -341,7 +341,7 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
     
       <th class="prop-nam" scope="row">
 
@@ -355,14 +355,14 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/interactivityType">interactivityType</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOnUrl">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOn">
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/isBasedOnUrl">isBasedOnUrl</a></code>
+<code property="rdfs:label"><a   href="/isBasedOn">isBasedOn</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes <a   href="/isBasedOnUrl">isBasedOnUrl</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
     
       <th class="prop-nam" scope="row">
 
@@ -397,7 +397,7 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/license">license</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A license document that applies to this content, typically indicated by URL.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/locationCreated">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A license document that applies to this content, typically indicated by URL.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/locationCreated">
     
       <th class="prop-nam" scope="row">
 
@@ -460,7 +460,7 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/publisher">publisher</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
     
       <th class="prop-nam" scope="row">
 
@@ -495,7 +495,7 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/schemaVersion">schemaVersion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
     
       <th class="prop-nam" scope="row">
 
@@ -530,7 +530,7 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/translator">translator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -585,24 +585,28 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -634,11 +638,12 @@ Article</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a  
 
 </table>
 
-<h4>Available properties in extensions</h4><ul><li>From CreativeWork: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
-</ul><br/><b>More specific Types</b><ul><li> <a   href="/NewsArticle">NewsArticle</a> </li><li> <a   href="/Report">Report</a> </li><li> <a   href="/ScholarlyArticle">ScholarlyArticle</a> </li><li> <a   href="/SocialMediaPosting">SocialMediaPosting</a> </li><li> <a   href="/TechArticle">TechArticle</a> </li></ul><h4  id="acks">Acknowledgements</h4>
-This class contains derivatives of IPTC rNews properties. rNews is a data model of publishing metadata with serializations currently available for RDFa as well as HTML5 Microdata. More information about the IPTC and rNews can be found at <a href=http://rnews.org>rnews.org</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
+<h4>Available properties in extensions</h4><ul><li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://pending.schema.org">pending</a> extension:  <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessMode">accessMode</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessModeSufficient">accessModeSufficient</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessibilitySummary">accessibilitySummary</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/contentReferenceTime">contentReferenceTime</a></li>
+</ul><br/><b>More specific Types</b><ul><li> <a   href="/BlogPosting">BlogPosting</a> </li><li> <a   href="/NewsArticle">NewsArticle</a> </li><li> <a   href="/Report">Report</a> </li><li> <a   href="/ScholarlyArticle">ScholarlyArticle</a> </li><li> <a   href="/SocialMediaPosting">SocialMediaPosting</a> </li><li> <a   href="/TechArticle">TechArticle</a> </li></ul><h4  id="acks">Acknowledgement</h4>
+<p>This class contains derivatives of IPTC rNews properties. rNews is a data model of publishing metadata with serializations currently available for RDFa as well as HTML5 Microdata. More information about the IPTC and rNews can be found at <a href=http://rnews.org>rnews.org</a>.</p><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-1"><a id="example-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -716,7 +721,7 @@ This article has been tweeted 1203 times and contains 78 user comments.
 
 </div>
 
-<span id="bib-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="bib-1"><a id="bib-1">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -831,7 +836,7 @@ This article has been tweeted 1203 times and contains 78 user comments.
 
 </div>
 
-<span id="bib-2"></span><div class='ds-selector-tabs ds-selector'>
+<div title="bib-2"><a id="bib-2">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1005,7 +1010,7 @@ This article has been tweeted 1203 times and contains 78 user comments.
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/CreativeWork">CreativeWork</a> &gt; <a   href="/MediaObject">MediaObject</a> &gt; <a   href="/VideoObject">VideoObject</a></span>
 </h4>
  <div property="rdfs:comment">A video file.</div>
@@ -39,7 +39,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/actor">actor</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/actors">actors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/caption">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/actors">actors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/caption">
     
       <th class="prop-nam" scope="row">
 
@@ -53,14 +53,14 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/director">director</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/directors">directors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/musicBy">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/directors">directors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/musicBy">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/musicBy">musicBy</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/MusicGroup" /><a   href="/MusicGroup">MusicGroup</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The composer of the soundtrack.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/thumbnail">
+<link  property="rangeIncludes" href="http://schema.org/MusicGroup" /><a   href="/MusicGroup">MusicGroup</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The composer of the soundtrack.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/thumbnail">
     
       <th class="prop-nam" scope="row">
 
@@ -164,7 +164,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/height">height</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The height of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/playerType">
+<link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The height of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/playerType">
     
       <th class="prop-nam" scope="row">
 
@@ -206,7 +206,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/width">width</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The width of the item.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The width of the item.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/CreativeWork">CreativeWork</a></th>
   
 </tr>
@@ -296,7 +296,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/author">author</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
     
       <th class="prop-nam" scope="row">
 
@@ -352,14 +352,14 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/contributor">contributor</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/copyrightHolder">copyrightHolder</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
     
       <th class="prop-nam" scope="row">
 
@@ -373,7 +373,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/creator">creator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
     
       <th class="prop-nam" scope="row">
 
@@ -450,7 +450,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/genre">genre</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
     
       <th class="prop-nam" scope="row">
 
@@ -471,7 +471,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
     
       <th class="prop-nam" scope="row">
 
@@ -485,14 +485,14 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/interactivityType">interactivityType</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOnUrl">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOn">
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/isBasedOnUrl">isBasedOnUrl</a></code>
+<code property="rdfs:label"><a   href="/isBasedOn">isBasedOn</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes <a   href="/isBasedOnUrl">isBasedOnUrl</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
     
       <th class="prop-nam" scope="row">
 
@@ -562,21 +562,21 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/position">position</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The position of an item in a series or sequence of items.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/producer">
+<link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The position of an item in a series or sequence of items.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/producer">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/producer">producer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/provider">provider</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
     
       <th class="prop-nam" scope="row">
 
@@ -590,7 +590,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/publisher">publisher</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
     
       <th class="prop-nam" scope="row">
 
@@ -625,7 +625,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/schemaVersion">schemaVersion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
     
       <th class="prop-nam" scope="row">
 
@@ -660,7 +660,7 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/translator">translator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -715,24 +715,28 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -778,305 +782,19 @@ VideoObject</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; 
 </th>
  
 <td class="prop-ect">
-<a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/CreativeWorkSeason">CreativeWorkSeason</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp;</td><td class="prop-desc">The trailer of a movie or tv/radio series, season, episode, etc. </td></tr><tr>
+<a   href="/CreativeWorkSeason">CreativeWorkSeason</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp;</td><td class="prop-desc">The trailer of a movie or tv/radio series, season, episode, etc. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/video">video</a></code>
 </th>
  
 <td class="prop-ect">
 <a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc">An embedded video object. </td></tr></table>
-<h4>Available properties in extensions</h4><ul><li>From CreativeWork: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
-</ul><h4  id="acks">Acknowledgements</h4>
-This class contains derivatives of IPTC rNews properties. rNews is a data model of publishing metadata with serializations currently available for RDFa as well as HTML5 Microdata. More information about the IPTC and rNews can be found at <a href=http://rnews.org>rnews.org</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
+<h4>Available properties in extensions</h4><ul><li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://pending.schema.org">pending</a> extension:  <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessMode">accessMode</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessModeSufficient">accessModeSufficient</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessibilitySummary">accessibilitySummary</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/contentReferenceTime">contentReferenceTime</a></li>
+</ul><h4  id="acks">Acknowledgement</h4>
+<p>This class contains derivatives of IPTC rNews properties. rNews is a data model of publishing metadata with serializations currently available for RDFa as well as HTML5 Microdata. More information about the IPTC and rNews can be found at <a href=http://rnews.org>rnews.org</a>.</p><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="eg-14"></span><div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt;Foo Fighters&lt;/h1&gt;
-&lt;h2&gt;Video: Interview with the Foo Fighters&lt;/h2&gt;
-&lt;object ...&gt;
-  &lt;param ...&gt;
-  &lt;embed type="application/x-shockwave-flash" ...&gt;
-&lt;/object&gt;
-Catch this exclusive interview with Dave Grohl and the Foo Fighters
- about their new album, Rope.
-&lt;h2&gt;Songs&lt;/h2&gt;
-Rope
- Length: 4:05 - 14300 plays
-&lt;a href="foo-fighters-rope-play.html"&gt;Play&lt;/a&gt;
-&lt;a href="foo-fighters-rope-buy.html"&gt;Buy&lt;/a&gt;
-From album: &lt;a href="foo-fighters-wasting-light.html"&gt;Wasting Light&lt;/a&gt;
-Everlong
- Length: 6:33 - 11700 plays
-&lt;a href="foo-fighters-everlong-play.html"&gt;Play&lt;/a&gt;
-&lt;a href="foo-fighters-everlong-buy.html"&gt;Buy&lt;/a&gt;
-From album: &lt;a href="foo-fighters-color-and-shape.html"&gt;The Color And The Shape&lt;/a&gt;
-&lt;h2&gt;Upcoming shows&lt;/h2&gt;
-&lt;a href="foo-fighters-may20-fedexforum"&gt;FedExForum&lt;/a&gt;
-Memphis, TN, US
-May 20
-&lt;a href="ticketworlds.com/foofighters/may20-2011"&gt;Buy tickets&lt;/a&gt;
-&lt;a href="foo-fighters-may23-midamericacenter"&gt;Mid America Center&lt;/a&gt;
-Council Bluffs, IA, US
-May 23
-&lt;a href="ticketworlds.com/foofighters/may23-2011"&gt;Buy tickets&lt;/a&gt;
-&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
-&lt;a href="foofighters-1.jpg"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-2.jpg"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-3.jpg"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
-&lt;h2&gt;Comments:&lt;/h2&gt;
-Excited about seeing them in concert next week. -Lawrence , Jan 23
-I dig their latest single. -Mary, Jan 19
-Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicGroup"&gt;
-&lt;h1 itemprop="name"&gt;Foo Fighters&lt;/h1&gt;
-&lt;div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"&gt;
-  &lt;h2&gt;Video: &lt;span itemprop="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
-  &lt;meta itemprop="duration" content="T1M33S" /&gt;
-  &lt;meta itemprop="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
-  &lt;object ...&gt;
-    &lt;param ...&gt;
-    &lt;embed type="application/x-shockwave-flash" ...&gt;
-  &lt;/object&gt;
-  &lt;span itemprop="description"&gt;Catch this exclusive interview with
-    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
-&lt;/div&gt;
-&lt;h2&gt;Songs&lt;/h2&gt;
-&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-  &lt;span itemprop="name"&gt;Rope&lt;/span&gt;
-  &lt;meta itemprop="url" content ="foo-fighters-rope.html"&gt;
-  Length: &lt;meta itemprop="duration" content="PT4M5S"&gt;4:05 -
-  14300 plays
-  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta itemprop="userInteractionCount" content="14300" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-rope-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-rope-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-wasting-light.html"
-    itemprop="inAlbum"&gt;Wasting Light&lt;/a&gt;
-&lt;/div&gt;
-&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-  &lt;span itemprop="name"&gt;Everlong&lt;/span&gt;
-  &lt;meta itemprop="url" content ="foo-fighters-everlong.html"&gt;
-  Length: &lt;meta itemprop="duration" content="PT6M33S"&gt;6:33 -
-  11700 plays
-  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta itemprop="userInteractionCount" content="11700" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-everlong-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-everlong-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-color-and-shape.html"
-    itemprop="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;Upcoming shows&lt;/h2&gt;
-&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
-  &lt;a href="foo-fighters-may20-fedexforum" itemprop="url"&gt;
-    &lt;span itemprop="name"&gt;FedExForum&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span itemprop="location"&gt;Memphis, TN, US&lt;/span&gt;
-  &lt;meta itemprop="startDate" content="2011-05-20"&gt;May 20
-  &lt;a href="ticketmaster.com/foofighters/may20-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
-  &lt;a href="foo-fighters-may23-midamericacenter" itemprop="url"&gt;
-    &lt;span itemprop="name"&gt;Mid America Center&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span itemprop="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
-  &lt;meta itemprop="startDate" content="2011-05-23"&gt;May 23
-  &lt;a href="ticketmaster.com/foofighters/may23-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
-&lt;a href="foofighters-1.jpg" itemprop="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-2.jpg" itemprop="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-3.jpg" itemprop="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
-&lt;h2&gt;Comments:&lt;/h2&gt;
-Excited about seeing them in concert next week. -Lawrence , Jan 23
-I dig their latest single. -Mary, Jan 19
-&lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-  &lt;meta itemprop="interactionType" content="http://schema.org/CommentAction" /&gt;
-  &lt;meta itemprop="userInteractionCount" content="18" /&gt;
-&lt;/div&gt;
-Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicGroup"&gt;
-&lt;h1 property="name"&gt;Foo Fighters&lt;/h1&gt;
-&lt;div property="video" typeof="VideoObject"&gt;
-  &lt;h2&gt;Video: &lt;span property="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
-  &lt;meta property="duration" content="T1M33S" /&gt;
-  &lt;meta property="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
-  &lt;object ...&gt;
-    &lt;param ...&gt;
-    &lt;embed type="application/x-shockwave-flash" ...&gt;
-  &lt;/object&gt;
-  &lt;span property="description"&gt;Catch this exclusive interview with
-    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
-&lt;/div&gt;
-&lt;h2&gt;Songs&lt;/h2&gt;
-&lt;div property="track" typeof="MusicRecording"&gt;
-  &lt;span property="name"&gt;Rope&lt;/span&gt;
-  &lt;meta property="url" content ="foo-fighters-rope.html"&gt;
-  Length: &lt;meta property="duration" content="PT4M5S"&gt;4:05 -
-  14300 plays
-  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
-    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta property="userInteractionCount" content="14300" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-rope-play.html" property="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-rope-buy.html" property="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-wasting-light.html"
-    property="inAlbum"&gt;Wasting Light&lt;/a&gt;
-&lt;/div&gt;
-&lt;div property="track" typeof="MusicRecording"&gt;
-  &lt;span property="name"&gt;Everlong&lt;/span&gt;
-  &lt;meta property="url" content ="foo-fighters-everlong.html"&gt;
-  Length: &lt;meta property="duration" content="PT6M33S"&gt;6:33 -
-  11700 plays
-  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
-    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta property="userInteractionCount" content="11700" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-everlong-play.html" property="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-everlong-buy.html" property="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-color-and-shape.html"
-    property="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;Upcoming shows&lt;/h2&gt;
-&lt;div property="event" typeof="Event"&gt;
-  &lt;a href="foo-fighters-may20-fedexforum" property="url"&gt;
-    &lt;span property="name"&gt;FedExForum&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span property="location"&gt;Memphis, TN, US&lt;/span&gt;
-  &lt;meta property="startDate" content="2011-05-20"&gt;May 20
-  &lt;a href="ticketmaster.com/foofighters/may20-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;div property="event" typeof="Event"&gt;
-  &lt;a href="foo-fighters-may23-midamericacenter" property="url"&gt;
-    &lt;span property="name"&gt;Mid America Center&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span property="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
-  &lt;meta property="startDate" content="2011-05-23"&gt;May 23
-  &lt;a href="ticketmaster.com/foofighters/may23-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
-&lt;a href="foofighters-1.jpg" property="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-2.jpg" property="image"&gt;&lt;img
- alt="Thumbnail and linked photo of Foo Fighters band"
- src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-3.jpg" property="image"&gt;&lt;img
- alt="Thumbnail and linked photo of Foo Fighters band"
- src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
-&lt;h2&gt;Comments:&lt;/h2&gt;
-Excited about seeing them in concert next week. -Lawrence , Jan 23
-I dig their latest single. -Mary, Jan 19
-&lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
-  &lt;meta property="interactionType" content="http://schema.org/CommentAction" /&gt;
-  &lt;meta property="userInteractionCount" content="18" /&gt;
-&lt;/div&gt;
-Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org",
-  "@type": "MusicGroup",
-  "event": [
-    {
-      "@type": "Event",
-      "location": "Memphis, TN, US",
-      "offers": "ticketmaster.com/foofighters/may20-2011",
-      "startDate": "2011-05-20",
-      "url": "foo-fighters-may20-fedexforum"
-    },
-    {
-      "@type": "Event",
-      "location": "Council Bluffs, IA, US",
-      "offers": "ticketmaster.com/foofighters/may23-2011",
-      "startDate": "2011-05-23",
-      "url": "foo-fighters-may23-midamericacenter"
-    }
-  ],
-  "image": [
-    "foofighters-1.jpg",
-    "foofighters-2.jpg",
-    "foofighters-3.jpg"
-  ],
-  "interactionStatistic: {
-    "@type": "InteractionCounter",
-    "interactionType": "http://schema.org/CommentAction",
-    "userInteractionCount": "18",
-  },
-  "name": "Foo Fighters",
-  "track": [
-    {
-      "@type": "MusicRecording",
-      "audio": "foo-fighters-rope-play.html",
-      "duration": "PT4M5S",
-      "inAlbum": "foo-fighters-wasting-light.html",
-      "interactionStatistic: {
-        "@type": "InteractionCounter",
-        "interactionType": "http://schema.org/ListenAction",
-        "userInteractionCount": "14300",
-      }
-    },
-      "name": "Rope",
-      "offers": "foo-fighters-rope-buy.html",
-      "url": "foo-fighters-rope.html"
-    },
-    {
-      "@type": "MusicRecording",
-      "audio": "foo-fighters-everlong-play.html",
-      "duration": "PT6M33S",
-      "inAlbum": "foo-fighters-color-and-shape.html",
-      "name": "Everlong",
-      "interactionStatistic: {
-        "@type": "InteractionCounter",
-        "interactionType": "http://schema.org/ListenAction",
-        "userInteractionCount": "11700",
-      },
-      "offers": "foo-fighters-everlong-buy.html",
-      "url": "foo-fighters-everlong.html"
-    }
-  ],
-  "video": {
-    "@type": "VideoObject",
-    "description": "Catch this exclusive interview with Dave Grohl and the Foo Fighters about their new album, Rope.",
-    "duration": "T1M33S",
-    "name": "Interview with the Foo Fighters",
-    "thumbnail": "foo-fighters-interview-thumb.jpg"
-  }
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<span id="interaction-counter-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="interaction-counter-1"><a id="interaction-counter-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1266,7 +984,287 @@ Facebook: 1024 likes
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<div title="eg-14"><a id="eg-14">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt;Foo Fighters&lt;/h1&gt;
+&lt;h2&gt;Video: Interview with the Foo Fighters&lt;/h2&gt;
+&lt;object ...&gt;
+  &lt;param ...&gt;
+  &lt;embed type="application/x-shockwave-flash" ...&gt;
+&lt;/object&gt;
+Catch this exclusive interview with Dave Grohl and the Foo Fighters
+ about their new album, Rope.
+&lt;h2&gt;Songs&lt;/h2&gt;
+Rope
+ Length: 4:05 - 14300 plays
+&lt;a href="foo-fighters-rope-play.html"&gt;Play&lt;/a&gt;
+&lt;a href="foo-fighters-rope-buy.html"&gt;Buy&lt;/a&gt;
+From album: &lt;a href="foo-fighters-wasting-light.html"&gt;Wasting Light&lt;/a&gt;
+Everlong
+ Length: 6:33 - 11700 plays
+&lt;a href="foo-fighters-everlong-play.html"&gt;Play&lt;/a&gt;
+&lt;a href="foo-fighters-everlong-buy.html"&gt;Buy&lt;/a&gt;
+From album: &lt;a href="foo-fighters-color-and-shape.html"&gt;The Color And The Shape&lt;/a&gt;
+&lt;h2&gt;Upcoming shows&lt;/h2&gt;
+&lt;a href="foo-fighters-may20-fedexforum"&gt;FedExForum&lt;/a&gt;
+Memphis, TN, US
+May 20
+&lt;a href="ticketworlds.com/foofighters/may20-2011"&gt;Buy tickets&lt;/a&gt;
+&lt;a href="foo-fighters-may23-midamericacenter"&gt;Mid America Center&lt;/a&gt;
+Council Bluffs, IA, US
+May 23
+&lt;a href="ticketworlds.com/foofighters/may23-2011"&gt;Buy tickets&lt;/a&gt;
+&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="foofighters-1.jpg"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-2.jpg"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-3.jpg"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
+&lt;h2&gt;Comments:&lt;/h2&gt;
+Excited about seeing them in concert next week. -Lawrence , Jan 23
+I dig their latest single. -Mary, Jan 19
+Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicGroup"&gt;
+&lt;h1 itemprop="name"&gt;Foo Fighters&lt;/h1&gt;
+&lt;div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"&gt;
+  &lt;h2&gt;Video: &lt;span itemprop="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
+  &lt;meta itemprop="duration" content="T1M33S" /&gt;
+  &lt;meta itemprop="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
+  &lt;object ...&gt;
+    &lt;param ...&gt;
+    &lt;embed type="application/x-shockwave-flash" ...&gt;
+  &lt;/object&gt;
+  &lt;span itemprop="description"&gt;Catch this exclusive interview with
+    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;Songs&lt;/h2&gt;
+&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+  &lt;span itemprop="name"&gt;Rope&lt;/span&gt;
+  &lt;link itemprop="url" href="foo-fighters-rope.html"&gt;
+  Length: &lt;meta itemprop="duration" content="PT4M5S"&gt;4:05 -
+  14300 plays
+  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta itemprop="userInteractionCount" content="14300" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-rope-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-rope-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-wasting-light.html"
+    itemprop="inAlbum"&gt;Wasting Light&lt;/a&gt;
+&lt;/div&gt;
+&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+  &lt;span itemprop="name"&gt;Everlong&lt;/span&gt;
+  &lt;link itemprop="url" href="foo-fighters-everlong.html"&gt;
+  Length: &lt;meta itemprop="duration" content="PT6M33S"&gt;6:33 -
+  11700 plays
+  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta itemprop="userInteractionCount" content="11700" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-everlong-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-everlong-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-color-and-shape.html"
+    itemprop="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;Upcoming shows&lt;/h2&gt;
+&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
+  &lt;a href="foo-fighters-may20-fedexforum" itemprop="url"&gt;
+    &lt;span itemprop="name"&gt;FedExForum&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span itemprop="location"&gt;Memphis, TN, US&lt;/span&gt;
+  &lt;meta itemprop="startDate" content="2011-05-20"&gt;May 20
+  &lt;a href="ticketmaster.com/foofighters/may20-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
+  &lt;a href="foo-fighters-may23-midamericacenter" itemprop="url"&gt;
+    &lt;span itemprop="name"&gt;Mid America Center&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span itemprop="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
+  &lt;meta itemprop="startDate" content="2011-05-23"&gt;May 23
+  &lt;a href="ticketmaster.com/foofighters/may23-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="foofighters-1.jpg" itemprop="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-2.jpg" itemprop="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-3.jpg" itemprop="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
+&lt;h2&gt;Comments:&lt;/h2&gt;
+Excited about seeing them in concert next week. -Lawrence , Jan 23
+I dig their latest single. -Mary, Jan 19
+&lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+  &lt;meta itemprop="interactionType" content="http://schema.org/CommentAction" /&gt;
+  &lt;meta itemprop="userInteractionCount" content="18" /&gt;
+&lt;/div&gt;
+Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicGroup"&gt;
+&lt;h1 property="name"&gt;Foo Fighters&lt;/h1&gt;
+&lt;div property="video" typeof="VideoObject"&gt;
+  &lt;h2&gt;Video: &lt;span property="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
+  &lt;meta property="duration" content="T1M33S" /&gt;
+  &lt;meta property="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
+  &lt;object ...&gt;
+    &lt;param ...&gt;
+    &lt;embed type="application/x-shockwave-flash" ...&gt;
+  &lt;/object&gt;
+  &lt;span property="description"&gt;Catch this exclusive interview with
+    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;Songs&lt;/h2&gt;
+&lt;div property="track" typeof="MusicRecording"&gt;
+  &lt;span property="name"&gt;Rope&lt;/span&gt;
+  &lt;meta property="url" content ="foo-fighters-rope.html"&gt;
+  Length: &lt;meta property="duration" content="PT4M5S"&gt;4:05 -
+  14300 plays
+  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
+    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta property="userInteractionCount" content="14300" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-rope-play.html" property="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-rope-buy.html" property="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-wasting-light.html"
+    property="inAlbum"&gt;Wasting Light&lt;/a&gt;
+&lt;/div&gt;
+&lt;div property="track" typeof="MusicRecording"&gt;
+  &lt;span property="name"&gt;Everlong&lt;/span&gt;
+  &lt;meta property="url" content ="foo-fighters-everlong.html"&gt;
+  Length: &lt;meta property="duration" content="PT6M33S"&gt;6:33 -
+  11700 plays
+  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
+    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta property="userInteractionCount" content="11700" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-everlong-play.html" property="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-everlong-buy.html" property="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-color-and-shape.html"
+    property="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;Upcoming shows&lt;/h2&gt;
+&lt;div property="event" typeof="Event"&gt;
+  &lt;a href="foo-fighters-may20-fedexforum" property="url"&gt;
+    &lt;span property="name"&gt;FedExForum&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span property="location"&gt;Memphis, TN, US&lt;/span&gt;
+  &lt;meta property="startDate" content="2011-05-20"&gt;May 20
+  &lt;a href="ticketmaster.com/foofighters/may20-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;div property="event" typeof="Event"&gt;
+  &lt;a href="foo-fighters-may23-midamericacenter" property="url"&gt;
+    &lt;span property="name"&gt;Mid America Center&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span property="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
+  &lt;meta property="startDate" content="2011-05-23"&gt;May 23
+  &lt;a href="ticketmaster.com/foofighters/may23-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="foofighters-1.jpg" property="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-2.jpg" property="image"&gt;&lt;img
+ alt="Thumbnail and linked photo of Foo Fighters band"
+ src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-3.jpg" property="image"&gt;&lt;img
+ alt="Thumbnail and linked photo of Foo Fighters band"
+ src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
+&lt;h2&gt;Comments:&lt;/h2&gt;
+Excited about seeing them in concert next week. -Lawrence , Jan 23
+I dig their latest single. -Mary, Jan 19
+&lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
+  &lt;meta property="interactionType" content="http://schema.org/CommentAction" /&gt;
+  &lt;meta property="userInteractionCount" content="18" /&gt;
+&lt;/div&gt;
+Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org",
+  "@type": "MusicGroup",
+  "event": [{
+    "@type": "Event",
+    "location": "Memphis, TN, US",
+    "offers": "ticketmaster.com/foofighters/may20-2011",
+    "startDate": "2011-05-20",
+    "url": "foo-fighters-may20-fedexforum"
+  }, {
+    "@type": "Event",
+    "location": "Council Bluffs, IA, US",
+    "offers": "ticketmaster.com/foofighters/may23-2011",
+    "startDate": "2011-05-23",
+    "url": "foo-fighters-may23-midamericacenter"
+  }],
+  "image": [
+    "foofighters-1.jpg",
+    "foofighters-2.jpg",
+    "foofighters-3.jpg"
+  ],
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "http://schema.org/CommentAction",
+    "userInteractionCount": "18"
+  },
+  "name": "Foo Fighters",
+  "track": [{
+    "@type": "MusicRecording",
+    "audio": "foo-fighters-rope-play.html",
+    "duration": "PT4M5S",
+    "inAlbum": "foo-fighters-wasting-light.html",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "http://schema.org/ListenAction",
+      "userInteractionCount": "14300"
+    },
+    "name": "Rope",
+    "offers": "foo-fighters-rope-buy.html",
+    "url": "foo-fighters-rope.html"
+  }, {
+    "@type": "MusicRecording",
+    "audio": "foo-fighters-everlong-play.html",
+    "duration": "PT6M33S",
+    "inAlbum": "foo-fighters-color-and-shape.html",
+    "name": "Everlong",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "http://schema.org/ListenAction",
+      "userInteractionCount": "11700"
+    },
+    "offers": "foo-fighters-everlong-buy.html",
+    "url": "foo-fighters-everlong.html"
+  }],
+  "video": {
+    "@type": "VideoObject",
+    "description": "Catch this exclusive interview with Dave Grohl and the Foo Fighters about their new album, Rope.",
+    "duration": "T1M33S",
+    "name": "Interview with the Foo Fighters",
+    "thumbnail": "foo-fighters-interview-thumb.jpg"
+  }
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

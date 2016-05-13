@@ -5,10 +5,10 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 FoodEstablishmentReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/Reservation">Reservation</a> &gt; <a   href="/FoodEstablishmentReservation">FoodEstablishmentReservation</a></span>
 </h4>
- <div property="rdfs:comment">A reservation to dine at a food-related business.</div>
+ <div property="rdfs:comment">A reservation to dine at a food-related business.Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.</div>
 
 
  <br/><div>Usage: Fewer than 10 domains</div>
@@ -39,25 +39,23 @@ FoodEstablishmentReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing
 <code property="rdfs:label"><a   href="/endTime">endTime</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.
-
-Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/partySize">
+<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to <em>December</em>.</p>
+<p>Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/partySize">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/partySize">partySize</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Number of people the reservation should accommodate.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startTime">
+<link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Number of people the reservation should accommodate.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startTime">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/startTime">startTime</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.
-
-Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from <em>January</em> to December.</p>
+<p>Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Reservation">Reservation</a></th>
   
 </tr>
@@ -140,7 +138,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 <code property="rdfs:label"><a   href="/totalPrice">totalPrice</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/PriceSpecification" /><a   href="/PriceSpecification">PriceSpecification</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total price for the reservation or ticket, including applicable taxes, shipping, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/underName">
+<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PriceSpecification" /><a   href="/PriceSpecification">PriceSpecification</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total price for the reservation or ticket, including applicable taxes, shipping, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/underName">
     
       <th class="prop-nam" scope="row">
 
@@ -174,24 +172,28 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -225,7 +227,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 
 <br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-1"><a id="example-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -280,7 +282,7 @@ WC2E 7PG
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

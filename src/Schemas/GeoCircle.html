@@ -5,13 +5,12 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 GeoCircle</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/StructuredValue">StructuredValue</a> &gt; <a   href="/GeoShape">GeoShape</a> &gt; <a   href="/GeoCircle">GeoCircle</a></span>
 </h4>
  <div property="rdfs:comment">A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
           it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
-          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
-       </div>
+          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.</div>
 
 
  <br/><div>Usage: Fewer than 10 domains</div>
@@ -49,7 +48,7 @@ GeoCircle</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 <code property="rdfs:label"><a   href="/geoRadius">geoRadius</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/GeoShape">GeoShape</a></th>
   
 </tr>
@@ -69,7 +68,7 @@ GeoCircle</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 <code property="rdfs:label"><a   href="/addressCountry">addressCountry</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Country" /><a   href="/Country">Country</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/box">
+<link  property="rangeIncludes" href="http://schema.org/Country" /><a   href="/Country">Country</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/box">
     
       <th class="prop-nam" scope="row">
 
@@ -138,7 +137,14 @@ GeoCircle</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
@@ -152,10 +158,7 @@ GeoCircle</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -189,7 +192,7 @@ GeoCircle</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 
 <br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="service-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="service-1"><a id="service-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -262,7 +265,7 @@ Car for hire driver #123 is within 50 meters of a given location, but is moving.
 
 </div>
 
-<span id="offer-4"></span><div class='ds-selector-tabs ds-selector'>
+<div title="offer-4"><a id="offer-4">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -291,7 +294,7 @@ delivers within 5 km of its store with a minimum order of $20.
         &lt;meta itemprop="streetAddress" content="123 Main Street" /&gt;
         &lt;meta itemprop="addressLocality" content="Cambridge" /&gt;
         &lt;meta itemprop="addressRegion" content="MA" /&gt;
-        &lt;meta itemprop="postalCode" cotent="02142" /&gt;
+        &lt;meta itemprop="postalCode" content="02142" /&gt;
       &lt;/div&gt;
       &lt;meta itemprop="geoRadius" content="5000" /&gt;
     &lt;/div&gt;
@@ -328,7 +331,7 @@ delivers within 5 km of its store with a minimum order of $20.
           &lt;meta property="streetAddress" content="123 Main Street" /&gt;
           &lt;meta property="addressLocality" content="Cambridge" /&gt;
           &lt;meta property="addressRegion" content="MA" /&gt;
-          &lt;meta property="postalCode" cotent="02142" /&gt;
+          &lt;meta property="postalCode" content="02142" /&gt;
         &lt;/div&gt;
         &lt;meta property="geoRadius" content="5000" /&gt;
       &lt;/div&gt;
@@ -375,7 +378,7 @@ delivers within 5 km of its store with a minimum order of $20.
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -5,10 +5,14 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 OpeningHoursSpecification</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/StructuredValue">StructuredValue</a> &gt; <a   href="/OpeningHoursSpecification">OpeningHoursSpecification</a></span>
 </h4>
- <div property="rdfs:comment">A structured value providing information about the opening hours of a place or a certain service inside a place.</div>
+ <div property="rdfs:comment">A structured value providing information about the opening hours of a place or a certain service inside a place.
+<br />
+The place is <b>open</b> if the <a href="/opens">opens</a> property is specified, and <b>closed</b> otherwise.
+<br />
+If the value for the <a href="/closes">closes</a> property is less than the value for the <a href="/opens">opens</a> property then the hour range is assumed to span over the next day.</div>
 
 
  <br/><div>Usage: Between 10,000 and 50,000 domains</div>
@@ -67,7 +71,7 @@ OpeningHoursSpecification</h1><h4><span class='breadcrumbs'><a   href="/Thing">T
 <code property="rdfs:label"><a   href="/validThrough">validThrough</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The end of the validity of offer, price specification, or opening hours data.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
   
 </tr>
@@ -94,24 +98,28 @@ OpeningHoursSpecification</h1><h4><span class='breadcrumbs'><a   href="/Thing">T
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -163,11 +171,19 @@ OpeningHoursSpecification</h1><h4><span class='breadcrumbs'><a   href="/Thing">T
 </th>
  
 <td class="prop-ect">
-<a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc">The opening hours of a certain place. </td></tr></table>
-<h4  id="acks">Acknowledgements</h4>
-This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
+<a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc">The opening hours of a certain place. </td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/specialOpeningHoursSpecification">specialOpeningHoursSpecification</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc">The special opening hours of a certain place.
+<br />
+Use this to explicitly override general opening hours brought in scope by <a href="/openingHoursSpecification">openingHoursSpecification</a> or <a href="/openingHours">openingHours</a>. </td></tr></table>
+<h4  id="acks">Acknowledgement</h4>
+<p>This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.</p><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="library-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="library-1"><a id="library-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -208,31 +224,31 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
 &lt;h1 itemprop="name"&gt;Music Resource Centre&lt;/h1&gt;
 &lt;h2&gt;Opening hours&lt;/h2&gt;
 &lt;div itemprop="openingHoursSpecification" itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-&lt;link property="itemprop" href="http://purl.org/goodrelations/v1#Monday" /&gt;Monday: 
+&lt;link itemprop="dayOfWeek" href="http://schema.org/Monday" /&gt;Monday: 
 &lt;time itemprop="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time itemprop="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div itemprop="openingHoursSpecification" itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-&lt;link itemprop="dayOfWeek" href="http://purl.org/goodrelations/v1#Tuesday" /&gt;Tuesday: 
+&lt;link itemprop="dayOfWeek" href="http://schema.org/Tuesday" /&gt;Tuesday: 
 &lt;time itemprop="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time itemprop="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div itemprop="openingHoursSpecification" itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-&lt;link itemprop="dayOfWeek" href="http://purl.org/goodrelations/v1#Wednesday" /&gt;Wednesday: 
+&lt;link itemprop="dayOfWeek" href="http://schema.org/Wednesday" /&gt;Wednesday: 
 &lt;time itemprop="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time itemprop="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div itemprop="openingHoursSpecification" itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-&lt;link itemprop="dayOfWeek" href="http://purl.org/goodrelations/v1#Thursday" /&gt;Thursday: 
+&lt;link itemprop="dayOfWeek" href="http://schema.org/Thursday" /&gt;Thursday: 
 &lt;time itemprop="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time itemprop="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div itemprop="openingHoursSpecification" itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-&lt;link itemprop="dayOfWeek" href="http://purl.org/goodrelations/v1#Friday" /&gt;Friday: 
+&lt;link itemprop="dayOfWeek" href="http://schema.org/Friday" /&gt;Friday: 
 &lt;time itemprop="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time itemprop="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div itemprop="openingHoursSpecification" itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-&lt;link itemprop="dayOfWeek" href="http://purl.org/goodrelations/v1#Saturday" /&gt;Saturday: 
+&lt;link itemprop="dayOfWeek" href="http://schema.org/Saturday" /&gt;Saturday: 
 &lt;time itemprop="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time itemprop="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div itemprop="openingHoursSpecification" itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-&lt;link itemprop="dayOfWeek" href="http://purl.org/goodrelations/v1#Sunday" /&gt;Sunday: 
+&lt;link itemprop="dayOfWeek" href="http://schema.org/Sunday" /&gt;Sunday: 
 &lt;time itemprop="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time itemprop="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
     &lt;h2 &gt;Contact information&lt;/h2&gt;
@@ -259,31 +275,31 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
 &lt;h1 property="name"&gt;Music Resource Centre&lt;/h1&gt;
 &lt;h2&gt;Opening hours&lt;/h2&gt;
 &lt;div property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-&lt;link property="dayOfWeek" href="http://purl.org/goodrelations/v1#Monday" /&gt;Monday: 
+&lt;link property="dayOfWeek" href="http://schema.org/Monday" /&gt;Monday: 
 &lt;time property="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time property="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-&lt;link property="dayOfWeek" href="http://purl.org/goodrelations/v1#Tuesday" /&gt;Tuesday: 
+&lt;link property="dayOfWeek" href="http://schema.org/Tuesday" /&gt;Tuesday: 
 &lt;time property="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time property="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-&lt;link property="dayOfWeek" href="http://purl.org/goodrelations/v1#Wednesday" /&gt;Wednesday: 
+&lt;link property="dayOfWeek" href="http://schema.org/Wednesday" /&gt;Wednesday: 
 &lt;time property="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time property="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-&lt;link property="dayOfWeek" href="http://purl.org/goodrelations/v1#Thursday" /&gt;Thursday: 
+&lt;link property="dayOfWeek" href="http://schema.org/Thursday" /&gt;Thursday: 
 &lt;time property="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time property="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-&lt;link property="dayOfWeek" href="http://purl.org/goodrelations/v1#Friday" /&gt;Friday: 
+&lt;link property="dayOfWeek" href="http://schema.org/Friday" /&gt;Friday: 
 &lt;time property="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time property="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-&lt;link property="dayOfWeek" href="http://purl.org/goodrelations/v1#Saturday" /&gt;Saturday: 
+&lt;link property="dayOfWeek" href="http://schema.org/Saturday" /&gt;Saturday: 
 &lt;time property="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time property="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
 &lt;div property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-&lt;link property="dayOfWeek" href="http://purl.org/goodrelations/v1#Sunday" /&gt;Sunday: 
+&lt;link property="dayOfWeek" href="http://schema.org/Sunday" /&gt;Sunday: 
 &lt;time property="opens" content="09:00:00"&gt; 9:00 AM&lt;/time&gt; - 
 &lt;time property="closes" content="17:00:00"&gt; 5:00 PM&lt;/time&gt;&lt;/div&gt;
     &lt;h2 &gt;Contact information&lt;/h2&gt;
@@ -331,43 +347,43 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
     {
       "@type": "OpeningHoursSpecification",
       "closes":  "17:00:00",
-      "dayOfWeek": "http://purl.org/goodrelations/v1#Sunday",
+      "dayOfWeek": "http://schema.org/Sunday",
       "opens":  "09:00:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "closes": "17:00:00" ,
-      "dayOfWeek": "http://purl.org/goodrelations/v1#Saturday",
+      "dayOfWeek": "http://schema.org/Saturday",
       "opens": "09:00:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "closes":  "17:00:00",
-      "dayOfWeek": "http://purl.org/goodrelations/v1#Thursday",
+      "dayOfWeek": "http://schema.org/Thursday",
       "opens": "09:00:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "closes": "17:00:00",
-      "dayOfWeek": "http://purl.org/goodrelations/v1#Tuesday",
+      "dayOfWeek": "http://schema.org/Tuesday",
       "opens": "09:00:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "closes": "17:00:00",
-      "dayOfWeek":  "http://purl.org/goodrelations/v1#Friday",
+      "dayOfWeek":  "http://schema.org/Friday",
       "opens": "09:00:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "closes": "17:00:00",
-      "dayOfWeek": "http://purl.org/goodrelations/v1#Monday",
+      "dayOfWeek": "http://schema.org/Monday",
       "opens": "09:00:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "closes": "17:00:00",
-      "dayOfWeek":  "http://purl.org/goodrelations/v1#Wednesday",
+      "dayOfWeek":  "http://schema.org/Wednesday",
       "opens": "09:00:00"
     }
   ]
@@ -377,7 +393,7 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-2"><a id="example-2">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -388,16 +404,16 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;div&gt;
   &lt;h1&gt;Middle of Nowhere Foods&lt;/h1&gt;
   &lt;h2&gt;Opening hours&lt;/h2&gt;
-  &lt;p&gt;Normally open daily 9am-2pm except on:&lt;/p&gt;
+  &lt;p&gt;Normally open daily &lt;time datetime="09:00"&gt;9am&lt;/time&gt;-&lt;time datetime="14:00"&gt;2pm&lt;/time&gt; except on:&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;
-      &lt;span&gt;24 December 2013&lt;/span&gt; and
-      &lt;span&gt;25 December 2013&lt;/span&gt;:
-      &lt;span&gt;9am-11am&lt;/span&gt;
+      &lt;time datetime="2013-12-24"&gt;24 December 2013&lt;/time&gt; and
+      &lt;time datetime="2013-12-25"&gt;25 December 2013&lt;/time&gt;:
+      &lt;time datetime="09:00"&gt;9am&lt;/time&gt;-&lt;time datetime="11:00"&gt;11am&lt;/time&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;span&gt;1st January 2014&lt;/span&gt;:
-      &lt;span&gt;Noon-2pm&lt;/span&gt;
+      &lt;time datetime="2014-01-01"&gt;1st January 2014&lt;/time&gt;:
+      &lt;time datetime="12:00"&gt;Noon&lt;/time&gt;-&lt;time datetime="14:00"&gt;2pm&lt;/time&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
@@ -406,16 +422,18 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
 <pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Store"&gt;
   &lt;h1 itemprop="name"&gt;Middle of Nowhere Foods&lt;/h1&gt;
   &lt;h2&gt;Opening hours&lt;/h2&gt;
-    &lt;p&gt;Normally open &lt;time itemprop="openingHours" datetime="Mo,Tu,We,Th,Fr,Sa,Su 09:00-14:00"&gt;daily 9am-2pm&lt;/time&gt; except on:&lt;/p&gt;
+    &lt;meta itemprop="openingHours" content="Mo,Tu,We,Th,Fr,Sa,Su 09:00-14:00"&gt;
+    &lt;p&gt;Normally open daily &lt;time datetime="09:00"&gt;9am&lt;/time&gt;-&lt;time datetime="14:00"&gt;2pm&lt;/time&gt; except on:&lt;/p&gt;
   &lt;ul&gt;
     &lt;li itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-      &lt;span itemprop="validFrom" content="2013-12-24"&gt;24 December 2013&lt;/span&gt; and
-      &lt;span itemprop="validThrough" content="2013-12-25"&gt;25 December 2013&lt;/span&gt;:
-      &lt;span itemprop="opens" content="09:00"&gt;9am&lt;/span&gt;-&lt;span itemprop="closes" content="11:00"&gt;11am&lt;/span&gt;&lt;/li&gt;
+      &lt;time itemprop="validFrom" datetime="2013-12-24"&gt;24 December 2013&lt;/time&gt; and
+      &lt;time itemprop="validThrough" datetime="2013-12-25"&gt;25 December 2013&lt;/time&gt;:
+      &lt;time itemprop="opens" datetime="09:00"&gt;9am&lt;/time&gt;-&lt;time itemprop="closes" datetime="11:00"&gt;11am&lt;/time&gt;
+    &lt;/li&gt;
     &lt;li itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification"&gt;
-      &lt;span itemprop="validFrom" content="2014-01-01"&gt;1st January 2014&lt;/span&gt;
-      &lt;span itemprop="validThrough" content="2014-01-01"&gt;&lt;/span&gt;:
-      &lt;span itemprop="opens" content="12:00"&gt;Noon&lt;/span&gt;-&lt;span itemprop="closes" content="14:00"&gt;2pm&lt;/span&gt;&lt;/li&gt;
+      &lt;time itemprop="validFrom validThrough" datetime="2014-01-01"&gt;1st January 2014&lt;/time&gt;:
+      &lt;time itemprop="opens" datetime="12:00"&gt;Noon&lt;/time&gt;-&lt;time itemprop="closes" datetime="14:00"&gt;2pm&lt;/time&gt;
+    &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
@@ -423,17 +441,17 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
 <pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Store"&gt;
   &lt;h1 property="name"&gt;Middle of Nowhere Foods&lt;/h1&gt;
   &lt;h2&gt;Opening hours&lt;/h2&gt;
-  &lt;p&gt;Normally open &lt;time property="openingHours" datetime="Mo,Tu,We,Th,Fr,Sa,Su 09:00-14:00"&gt;daily 9am-2pm&lt;/time&gt; except on:&lt;/p&gt;
+  &lt;meta property="openingHours" content="Mo,Tu,We,Th,Fr,Sa,Su 09:00-14:00"&gt;
+  &lt;p&gt;Normally open daily &lt;time datetime="09:00"&gt;9am&lt;/time&gt;-&lt;time datetime="14:00"&gt;2pm&lt;/time&gt; except on:&lt;/p&gt;
   &lt;ul&gt;
     &lt;li property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-      &lt;span property="validFrom" content="2013-12-24"&gt;24 December 2013&lt;/span&gt; and
-      &lt;span property="validThrough" content="2013-12-25"&gt;25 December 2013&lt;/span&gt;:
-      &lt;span property="opens" content="09:00"&gt;9am&lt;/span&gt;-&lt;span property="closes" content="11:00"&gt;11am&lt;/span&gt;
+      &lt;time property="validFrom" datetime="2013-12-24"&gt;24 December 2013&lt;/time&gt; and
+      &lt;time property="validThrough" datetime="2013-12-25"&gt;25 December 2013&lt;/time&gt;:
+      &lt;time property="opens" datetime="09:00"&gt;9am&lt;/time&gt;-&lt;time property="closes" datetime="11:00"&gt;11am&lt;/time&gt;
     &lt;/li&gt;
     &lt;li property="openingHoursSpecification" typeof="OpeningHoursSpecification"&gt;
-      &lt;span property="validFrom" content="2014-01-01"&gt;1st January 2014&lt;/span&gt;
-      &lt;span property="validThrough" content="2014-01-01"&gt;&lt;/span&gt;:
-      &lt;span property="opens" content="12:00"&gt;Noon&lt;/span&gt;-&lt;span property="closes" content="14:00"&gt;2pm&lt;/span&gt;
+      &lt;time property="validFrom validThrough" datetime="2014-01-01"&gt;1st January 2014&lt;/time&gt;:
+      &lt;time property="opens" datetime="12:00"&gt;Noon&lt;/time&gt;-&lt;time property="closes" datetime="14:00"&gt;2pm&lt;/time&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
@@ -446,20 +464,29 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
   "name": "Middle of Nowhere Foods",
   "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 09:00-14:00",
   "openingHoursSpecification":
-  {
-    "@type": "OpeningHoursSpecification",
-    "validFrom": "2013-12-24",
-    "validThrough": "2013-12-25",
-    "opens": "12:00",
-    "closes": "14:00"
-  }
+  [
+    {
+      "@type": "OpeningHoursSpecification",
+      "validFrom": "2013-12-24",
+      "validThrough": "2013-12-25",
+      "opens": "09:00",
+      "closes": "11:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "validFrom": "2014-01-01",
+      "validThrough": "2014-01-01",
+      "opens": "12:00",
+      "closes": "14:00"
+    }
+  ]
 }
 &lt;/script&gt;
 </pre>
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

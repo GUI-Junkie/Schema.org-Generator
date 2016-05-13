@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 StructuredValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/StructuredValue">StructuredValue</a></span>
 </h4>
  <div property="rdfs:comment">Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.</div>
@@ -53,24 +53,28 @@ StructuredValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -116,14 +120,16 @@ StructuredValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 </th>
  
 <td class="prop-ect">
-<a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'. </td></tr><tr>
+<a   href="/MonetaryAmount">MonetaryAmount</a>&nbsp; or<br/> <a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">The value of the quantitative value or property value node.<br/>
+    For QuantitativeValue and MonetaryValue, the recommended type for values is 'Number'. <br/>
+    For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/valueReference">valueReference</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr></table>
-<br/><b>More specific Types</b><ul><li> <a   href="/ContactPoint">ContactPoint</a> </li><li> <a   href="/DatedMoneySpecification">DatedMoneySpecification</a> </li><li> <a   href="/EngineSpecification">EngineSpecification</a> </li><li> <a   href="/GeoCoordinates">GeoCoordinates</a> </li><li> <a   href="/GeoShape">GeoShape</a> </li><li> <a   href="/InteractionCounter">InteractionCounter</a> </li><li> <a   href="/NutritionInformation">NutritionInformation</a> </li><li> <a   href="/OpeningHoursSpecification">OpeningHoursSpecification</a> </li><li> <a   href="/OwnershipInfo">OwnershipInfo</a> </li><li> <a   href="/PriceSpecification">PriceSpecification</a> </li><li> <a   href="/PropertyValue">PropertyValue</a> </li><li> <a   href="/QuantitativeValue">QuantitativeValue</a> </li><li> <a   href="/TypeAndQuantityNode">TypeAndQuantityNode</a> </li><li> <a   href="/WarrantyPromise">WarrantyPromise</a> </li></ul><p class="version"><b>Schema Version 2.2</b></p>
+<a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr></table>
+<br/><b>More specific Types</b><ul><li> <a   href="/ContactPoint">ContactPoint</a> </li><li> <a   href="/EngineSpecification">EngineSpecification</a> </li><li> <a   href="/GeoCoordinates">GeoCoordinates</a> </li><li> <a   href="/GeoShape">GeoShape</a> </li><li> <a   href="/InteractionCounter">InteractionCounter</a> </li><li> <a   href="/MonetaryAmount">MonetaryAmount</a> </li><li> <a   href="/NutritionInformation">NutritionInformation</a> </li><li> <a   href="/OpeningHoursSpecification">OpeningHoursSpecification</a> </li><li> <a   href="/OwnershipInfo">OwnershipInfo</a> </li><li> <a   href="/PriceSpecification">PriceSpecification</a> </li><li> <a   href="/PropertyValue">PropertyValue</a> </li><li> <a   href="/QuantitativeValue">QuantitativeValue</a> </li><li> <a   href="/TypeAndQuantityNode">TypeAndQuantityNode</a> </li><li> <a   href="/WarrantyPromise">WarrantyPromise</a> </li></ul><p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

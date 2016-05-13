@@ -5,13 +5,12 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 PropertyValue</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/StructuredValue">StructuredValue</a> &gt; <a   href="/PropertyValue">PropertyValue</a></span>
 </h4>
  <div property="rdfs:comment">A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.
         <br/><br/>
-        Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.
-    </div>
+        Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.</div>
 
 
  <br/><div>Usage: Fewer than 10 domains</div>
@@ -81,14 +80,16 @@ Standards bodies should promote a standard prefix for the identifiers of propert
 <code property="rdfs:label"><a   href="/value">value</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="/Boolean">Boolean</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/valueReference">
+<link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="/Boolean">Boolean</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The value of the quantitative value or property value node.<br/>
+    For QuantitativeValue and MonetaryValue, the recommended type for values is 'Number'. <br/>
+    For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/valueReference">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/valueReference">valueReference</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/QualitativeValue" /><a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QualitativeValue" /><a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/StructuredValue" /><a   href="/StructuredValue">StructuredValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
   
 </tr>
@@ -115,24 +116,28 @@ Standards bodies should promote a standard prefix for the identifiers of propert
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -178,10 +183,8 @@ Standards bodies should promote a standard prefix for the identifiers of propert
 </th>
  
 <td class="prop-ect">
-<a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or<br/> <a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br />
-
-Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
- </td></tr><tr>
+<a   href="/Place">Place</a>&nbsp; or<br/> <a   href="/Product">Product</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br /></p>
+<p>Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/exifData">exifData</a></code>
 </th>
@@ -193,11 +196,11 @@ Note: Publishers should be aware that applications designed to use specific sche
 </th>
  
 <td class="prop-ect">
-<a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr></table>
-<h4  id="acks">Acknowledgements</h4>
-This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
+<a   href="/PropertyValue">PropertyValue</a>&nbsp; or<br/> <a   href="/QualitativeValue">QualitativeValue</a>&nbsp; or<br/> <a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature. </td></tr></table>
+<h4  id="acks">Acknowledgement</h4>
+<p>This class is derived from the GoodRelations Vocabulary for E-Commerce, created by Martin Hepp. GoodRelations is a data model for sharing e-commerce data on the Web that can be expressed in a variety of syntaxes, including RDFa and HTML5 Microdata. More information about GoodRelations can be found at <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a>.</p><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="exif"></span><div class='ds-selector-tabs ds-selector'>
+<div title="exif"><a id="exif">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -206,7 +209,7 @@ This class is derived from the GoodRelations Vocabulary for E-Commerce, created 
 </div>
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;h2&gt;Beach in Mexico&lt;/h2&gt;
-&lt;img src="mexico-beach.jpg" /&gt;
+&lt;img src="mexico-beach.jpg" alt="" /&gt;
 By Jane Doe
 Photographed in Puerto Vallarta, Mexico
 Date uploaded: Jan 25, 2008
@@ -222,7 +225,7 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/ImageObject"&gt;
   &lt;h2 itemprop="name"&gt;Beach in Mexico&lt;/h2&gt;
-  &lt;img src="mexico-beach.jpg" itemprop="contentUrl" /&gt;
+  &lt;img src="mexico-beach.jpg" alt="" itemprop="contentUrl" /&gt;
   By &lt;span itemprop="author"&gt;Jane Doe&lt;/span&gt;
   Photographed in
     &lt;span itemprop="contentLocation"&gt;Puerto Vallarta, Mexico&lt;/span&gt;
@@ -241,7 +244,7 @@ Flash:            Flash did not fire.
   &lt;div itemprop="exifData" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;meta itemprop="name" content="MaxApertureValue"&gt;
       &lt;meta itemprop="value" content="2.00"&gt;
-  &lt;/div&gt;   
+  &lt;/div&gt;
   &lt;div itemprop="exifData" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;meta itemprop="name" content="Metering Mode"&gt;
       &lt;meta itemprop="value" content="Pattern"&gt;
@@ -255,7 +258,7 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="ImageObject"&gt;
   &lt;h2 property="name"&gt;Beach in Mexico&lt;/h2&gt;
-  &lt;img src="mexico-beach.jpg" property="contentUrl" /&gt;
+  &lt;img src="mexico-beach.jpg" alt="" property="contentUrl" /&gt;
   By &lt;span property="author"&gt;Jane Doe&lt;/span&gt;
   Photographed in
     &lt;span property="contentLocation"&gt;Puerto Vallarta, Mexico&lt;/span&gt;
@@ -274,7 +277,7 @@ Flash:            Flash did not fire.
   &lt;div property="exifData" typeOf="PropertyValue"&gt;
       &lt;meta property="name" content="MaxApertureValue"&gt;
       &lt;meta property="value" content="2.00"&gt;
-  &lt;/div&gt;   
+  &lt;/div&gt;
   &lt;div property="exifData" typeOf="PropertyValue"&gt;
       &lt;meta property="name" content="Metering Mode"&gt;
       &lt;meta property="value" content="Pattern"&gt;
@@ -282,7 +285,7 @@ Flash:            Flash did not fire.
   &lt;div property="exifData" typeOf="PropertyValue"&gt;
       &lt;meta property="name" content="Flash"&gt;
       &lt;meta property="value" content="Flash did not fire."&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -296,38 +299,40 @@ Flash:            Flash did not fire.
   "datePublished": "2008-01-25",
   "description": "I took this picture while on vacation last year.",
   "name": "Beach in Mexico"
-  "exifData": {
-    "@type": "PropertyValue",
-    "name": "Exposure Time",
-    "value": "1/659 sec."
-  }
-  "exifData": {
-    "@type": "PropertyValue",
-    "name": "FNumber",
-    "value": "f/4.0"
-  }
-  "exifData": {
-    "@type": "PropertyValue",
-    "name": "MaxApertureValue",
-    "value": "2.00"
-  }
-  "exifData": {
-    "@type": "PropertyValue",
-    "name": "Metering Mode",
-    "value": "Pattern"
-  }
-  "exifData": {
-    "@type": "PropertyValue",
-    "name": "Flash",
-    "value": "Flash did not fire."
-  }    
+  "exifData": [
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure Time",
+      "value": "1/659 sec."
+    },
+    {
+     "@type": "PropertyValue",
+      "name": "FNumber",
+      "value": "f/4.0"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "MaxApertureValue",
+      "value": "2.00"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Metering Mode",
+      "value": "Pattern"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Flash",
+      "value": "Flash did not fire."
+    }
+  ]
 }
 &lt;/script&gt;
 </pre>
 
 </div>
 
-<span id="pointvalue-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="pointvalue-1"><a id="pointvalue-1">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -337,25 +342,25 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Point Value, with unit as text --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Approx. Weight&lt;/span&gt;
       &lt;span&gt;450&lt;/span&gt;
       &lt;span&gt;gram&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Point Value, with unit as text --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Approx. Weight&lt;/span&gt;
       &lt;span itemprop="value"&gt;450&lt;/span&gt;
       &lt;span itemprop="unitText"&gt;gram&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -369,7 +374,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="pointvalue-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="pointvalue-1"><a id="pointvalue-1">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -379,25 +384,25 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Point Value, with unit as symbol --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Approx. Weight&lt;/span&gt;
       &lt;span&gt;450&lt;/span&gt;
       &lt;span&gt;g&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Point Value, with unit as symbol --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Approx. Weight&lt;/span&gt;
       &lt;span itemprop="value"&gt;450&lt;/span&gt;
       &lt;span itemprop="unitText"&gt;g&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -411,7 +416,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="pointvalue-3"></span><div class='ds-selector-tabs ds-selector'>
+<div title="pointvalue-3"><a id="pointvalue-3">Example 4</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -421,24 +426,24 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Point Value, with unit as UN/CEFACT Common Code to be added to the template --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Approx. Weight&lt;/span&gt;
       &lt;span&gt;450&lt;/span&gt;g
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Point Value, with unit as UN/CEFACT Common Code --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Approx. Weight&lt;/span&gt;
       &lt;span itemprop="value"&gt;450&lt;/span&gt;
       &lt;meta itemprop="unitCode" content="GRM"&gt;g
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -452,7 +457,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="range-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="range-1"><a id="range-1">Example 5</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -462,27 +467,27 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Range, with unit as UN/CEFACT Common Code to be added to the template --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Operating Voltage&lt;/span&gt;
       &lt;span&gt;100&lt;/span&gt;-
       &lt;span&gt;250&lt;/span&gt;
       volts
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Range, with unit as UN/CEFACT Common Code --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Operating Voltage&lt;/span&gt;
       &lt;span itemprop="minValue"&gt;100&lt;/span&gt;-
       &lt;span itemprop="maxValue"&gt;250&lt;/span&gt;
       &lt;meta itemprop="unitCode" content="VLT"&gt;volts
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -496,7 +501,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="openinterval"></span><div class='ds-selector-tabs ds-selector'>
+<div title="openinterval"><a id="openinterval">Example 6</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -506,26 +511,26 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Open Interval, with unit as UN/CEFACT Common Code to be added to the template --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
-      &lt;span&gt;Wifi range&lt;/span&gt;: up to 
-      &lt;span&gt;30&lt;/span&gt; 
+      &lt;span&gt;Wifi range&lt;/span&gt;: up to
+      &lt;span&gt;30&lt;/span&gt;
       ft.
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Open Interval, with unit as UN/CEFACT Common Code --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
-      &lt;span itemprop="name"&gt;Wifi range&lt;/span&gt;: up to 
-      &lt;span itemprop="maxValue"&gt;30&lt;/span&gt; 
-&lt;!-- Note: The UN/CEFACT Common Code for foot is FOT --&gt; 
+      &lt;span itemprop="name"&gt;Wifi range&lt;/span&gt;: up to
+      &lt;span itemprop="maxValue"&gt;30&lt;/span&gt;
+&lt;!-- Note: The UN/CEFACT Common Code for foot is FOT --&gt;
       &lt;meta itemprop="unitCode" content="FOT"&gt;ft.
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -535,12 +540,11 @@ Flash:            Flash did not fire.
 <pre class="prettyprint lang-html linenums jsonld ">{
 ... JSON examples will be added in the future ...
 }
-  
 </pre>
 
 </div>
 
-<span id="intervals"></span><div class='ds-selector-tabs ds-selector'>
+<div title="intervals"><a id="intervals">Example 7</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -550,27 +554,27 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Multiple Intervals --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
-      &lt;span&gt;Operating voltage&lt;/span&gt;: 
+      &lt;span&gt;Operating voltage&lt;/span&gt;:
       &lt;span&gt;9-12&lt;/span&gt; or
       &lt;span&gt;100-250&lt;/span&gt;
       volts
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Multiple Intervals --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
-      &lt;span itemprop="name"&gt;Operating voltage&lt;/span&gt;: 
+      &lt;span itemprop="name"&gt;Operating voltage&lt;/span&gt;:
       &lt;span itemprop="value"&gt;9-12&lt;/span&gt; or
       &lt;span itemprop="value"&gt;100-250&lt;/span&gt;
       &lt;meta itemprop="unitCode" content="VLT"&gt;volts
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -584,7 +588,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="range-and-enumeration"></span><div class='ds-selector-tabs ds-selector'>
+<div title="range-and-enumeration"><a id="range-and-enumeration">Example 8</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -594,27 +598,27 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Range and Enumerated Values --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
-      &lt;span&gt;ISO Sensitivity&lt;/span&gt;: 
+      &lt;span&gt;ISO Sensitivity&lt;/span&gt;:
       &lt;span&gt;100-6400&lt;/span&gt;/
       &lt;span&gt;12,800&lt;/span&gt; (Hi-1)
       &lt;span&gt;ISO&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Range and Enumerated Values --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
-      &lt;span itemprop="name"&gt;ISO Sensitivity&lt;/span&gt;: 
+      &lt;span itemprop="name"&gt;ISO Sensitivity&lt;/span&gt;:
       &lt;span itemprop="value"&gt;100-6400&lt;/span&gt;/
       &lt;span itemprop="value"&gt;12,800&lt;/span&gt; (Hi-1)
       &lt;span itemprop="unitText"&gt;ISO&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -628,7 +632,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="boolean"></span><div class='ds-selector-tabs ds-selector'>
+<div title="boolean"><a id="boolean">Example 9</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -638,22 +642,22 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Boolean Value --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;USB interface&lt;/span&gt;: Yes
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Boolean Value --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;USB interface&lt;/span&gt;:
       &lt;meta itemprop="value" content="True"&gt;Yes
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -667,7 +671,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="qualitative-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="qualitative-1"><a id="qualitative-1">Example 10</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -677,22 +681,22 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Qualitative Value --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Interface&lt;/span&gt;: &lt;span&gt;USB&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Qualitative Value --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Interface&lt;/span&gt;:
       &lt;span itemprop="value"&gt;USB&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -706,7 +710,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="qualitative-2"></span><div class='ds-selector-tabs ds-selector'>
+<div title="qualitative-2"><a id="qualitative-2">Example 11</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -716,25 +720,25 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Qualitative Value (multiple) --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Interfaces&lt;/span&gt;:
-      &lt;span&gt;USB&lt;/span&gt;, 
+      &lt;span&gt;USB&lt;/span&gt;,
       &lt;span&gt;Ethernet&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Qualitative Value (multiple) --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Interfaces&lt;/span&gt;:
-      &lt;span itemprop="value"&gt;USB&lt;/span&gt;, 
+      &lt;span itemprop="value"&gt;USB&lt;/span&gt;,
       &lt;span itemprop="value"&gt;Ethernet&lt;/span&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -748,7 +752,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="property-id-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="property-id-1"><a id="property-id-1">Example 12</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -758,27 +762,27 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Property ID for clarifying the meaning of a property: URI from external vocabulary --&gt;
 &lt;!-- (see microdata example for comparison) --&gt;
-&lt;div itemscope itemtype="http://schema.org/Car"&gt;
-  &lt;img src="station_waggon123.jpg" /&gt;
+&lt;div&gt;
+  &lt;img src="station_waggon123.jpg" alt="" /&gt;
   &lt;span&gt;Station Waggon 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Luggage Capacity (seats folded)&lt;/span&gt;:
       &lt;span&gt;500&lt;/span&gt;
       liter
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Property ID for clarifying the meaning of a property: URI from external vocabulary --&gt;
 &lt;div itemscope itemtype="http://schema.org/Car"&gt;
-  &lt;img itemprop="image" src="station_waggon123.jpg" /&gt;
+  &lt;img itemprop="image" src="station_waggon123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Station Waggon 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Luggage Capacity (seats folded)&lt;/span&gt;:
       &lt;span itemprop="value"&gt;500&lt;/span&gt;
       &lt;meta itemprop="unitCode" content="LTR"&gt;liter
       &lt;link itemprop="propertyID" href="http://purl.org/vvo/ns#luggageCapacitySeatsFolded" /&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -792,7 +796,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="property-id-2"></span><div class='ds-selector-tabs ds-selector'>
+<div title="property-id-2"><a id="property-id-2">Example 13</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -801,27 +805,27 @@ Flash:            Flash did not fire.
 </div>
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Property ID for clarifying the meaning of a property: Code from eCl@ss Standard --&gt;
-&lt;!-- The Property code 02-AAM226 is for "USB interface present" in eCl@ss 8.1 
+&lt;!-- The Property code 02-AAM226 is for "USB interface present" in eCl@ss 8.1
 (see microdata example for comparison) --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;USB Interface&lt;/span&gt;:Yes
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Property ID for clarifying the meaning of a property: Code from eCl@ss Standard --&gt;
 &lt;!-- The Property code 02-AAM226 is for "USB interface present" in eCl@ss 8.1 --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;USB Interface&lt;/span&gt;:
       &lt;meta itemprop="value" content="True"&gt;Yes
       &lt;meta itemprop="propertyID" content="eclass81:02-AAM226"&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -835,7 +839,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="valueref"></span><div class='ds-selector-tabs ds-selector'>
+<div title="valueref"><a id="valueref">Example 14</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -845,7 +849,7 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Value References --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Operating Voltage&lt;/span&gt;
@@ -856,14 +860,14 @@ Flash:            Flash did not fire.
       &lt;div&gt;
          &lt;span&gt;50&lt;/span&gt;
          &lt;span&gt;Hz&lt;/span&gt;
-      &lt;/div&gt; 
-  &lt;/div&gt;  
+      &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Value References --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Operating Voltage&lt;/span&gt;
@@ -874,8 +878,8 @@ Flash:            Flash did not fire.
       &lt;div itemprop="valueReference" itemscope itemtype="http://schema.org/PropertyValue"&gt;
          &lt;span itemprop="value"&gt;50&lt;/span&gt;
          &lt;span itemprop="unitText"&gt;Hz&lt;/span&gt;
-      &lt;/div&gt; 
-  &lt;/div&gt;  
+      &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -889,7 +893,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="ratios"></span><div class='ds-selector-tabs ds-selector'>
+<div title="ratios"><a id="ratios">Example 15</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -898,8 +902,8 @@ Flash:            Flash did not fire.
 </div>
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Ratios --&gt;
-&lt;div itemscope itemtype="http://schema.org/Car"&gt;
-  &lt;img src="station_waggon123.jpg" /&gt;
+&lt;div&gt;
+  &lt;img src="station_waggon123.jpg" alt="" /&gt;
   &lt;span&gt;Station Waggon 123&lt;/span&gt;
   &lt;div&gt;
       &lt;span&gt;Fuel consumption&lt;/span&gt;:
@@ -909,13 +913,13 @@ Flash:            Flash did not fire.
         &lt;span&gt;100&lt;/span&gt;
         &lt;span&gt;km&lt;/span&gt;
       &lt;/div&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Ratios --&gt;
 &lt;div itemscope itemtype="http://schema.org/Car"&gt;
-  &lt;img itemprop="image" src="station_waggon123.jpg" /&gt;
+  &lt;img itemprop="image" src="station_waggon123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Station Waggon 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;span itemprop="name"&gt;Fuel consumption&lt;/span&gt;:
@@ -925,7 +929,7 @@ Flash:            Flash did not fire.
         &lt;span itemprop="value"&gt;100&lt;/span&gt;
         &lt;span itemprop="unitText"&gt;km&lt;/span&gt;
       &lt;/div&gt;
-  &lt;/div&gt;  
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -939,7 +943,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<span id="grouping"></span><div class='ds-selector-tabs ds-selector'>
+<div title="grouping"><a id="grouping">Example 16</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -949,31 +953,31 @@ Flash:            Flash did not fire.
 
 <pre class="prettyprint lang-html linenums original_html selected">&lt;!-- Product: Grouping and Hierarchical Order of Properties --&gt;
 &lt;div&gt;
-  &lt;img src="camera123.jpg" /&gt;
+  &lt;img src="camera123.jpg" alt="" /&gt;
   &lt;span&gt;Digital Camera 123&lt;/span&gt;
   &lt;div&gt;
       &lt;strong&gt;Focus/Autofocus&lt;/strong&gt;
       &lt;div&gt;
-        &lt;span&gt;Picture Control&lt;/span&gt; 
+        &lt;span&gt;Picture Control&lt;/span&gt;
         &lt;span&gt;Landscape&lt;/span&gt;
         &lt;span&gt;Monochrome&lt;/span&gt;
         &lt;span&gt;Portrait&lt;/span&gt;
       &lt;/div&gt;
       &lt;div&gt;
         &lt;span&gt;Single-point AF Mode&lt;/span&gt;: Yes
-      &lt;/div&gt;      
-  &lt;/div&gt;  
+      &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums microdata ">&lt;!-- Product: Grouping and Hierarchical Order of Properties --&gt;
 &lt;div itemscope itemtype="http://schema.org/Product"&gt;
-  &lt;img itemprop="image" src="camera123.jpg" /&gt;
+  &lt;img itemprop="image" src="camera123.jpg" alt="" /&gt;
   &lt;span itemprop="name"&gt;Digital Camera 123&lt;/span&gt;
   &lt;div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue"&gt;
       &lt;strong itemprop="name"&gt;Focus/Autofocus&lt;/strong&gt;
       &lt;div itemprop="value" itemscope itemtype="http://schema.org/PropertyValue"&gt;
-        &lt;span itemprop="name"&gt;Picture Control&lt;/span&gt; 
+        &lt;span itemprop="name"&gt;Picture Control&lt;/span&gt;
         &lt;span itemprop="value"&gt;Landscape&lt;/span&gt;
         &lt;span itemprop="value"&gt;Monochrome&lt;/span&gt;
         &lt;span itemprop="value"&gt;Portrait&lt;/span&gt;
@@ -981,8 +985,8 @@ Flash:            Flash did not fire.
       &lt;div itemprop="value" itemscope itemtype="http://schema.org/PropertyValue"&gt;
         &lt;span itemprop="name"&gt;Single-point AF Mode&lt;/span&gt;:
         &lt;meta itemprop="value" content="True"&gt;Yes
-      &lt;/div&gt;      
-  &lt;/div&gt;  
+      &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -996,7 +1000,7 @@ Flash:            Flash did not fire.
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/CreativeWork">CreativeWork</a> &gt; <a   href="/Book">Book</a></span>
 </h4>
  <div property="rdfs:comment">A book.</div>
@@ -157,7 +157,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/author">author</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
     
       <th class="prop-nam" scope="row">
 
@@ -213,14 +213,14 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/contributor">contributor</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/copyrightHolder">copyrightHolder</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
     
       <th class="prop-nam" scope="row">
 
@@ -234,7 +234,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/creator">creator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
     
       <th class="prop-nam" scope="row">
 
@@ -311,7 +311,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/genre">genre</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
     
       <th class="prop-nam" scope="row">
 
@@ -332,7 +332,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
     
       <th class="prop-nam" scope="row">
 
@@ -346,14 +346,14 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/interactivityType">interactivityType</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOnUrl">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOn">
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/isBasedOnUrl">isBasedOnUrl</a></code>
+<code property="rdfs:label"><a   href="/isBasedOn">isBasedOn</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes <a   href="/isBasedOnUrl">isBasedOnUrl</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
     
       <th class="prop-nam" scope="row">
 
@@ -430,14 +430,14 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/producer">producer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/provider">provider</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
     
       <th class="prop-nam" scope="row">
 
@@ -451,7 +451,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/publisher">publisher</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
     
       <th class="prop-nam" scope="row">
 
@@ -486,7 +486,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/schemaVersion">schemaVersion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
     
       <th class="prop-nam" scope="row">
 
@@ -521,7 +521,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/translator">translator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -576,7 +576,14 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
@@ -590,10 +597,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -625,11 +629,12 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 
 </table>
 
-<h4>Available properties in extensions</h4><ul><li>From Book: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/abridged">abridged</a></li>
-<li>From CreativeWork: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<h4>Available properties in extensions</h4><ul><li>For <a   href="/Book">Book</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/abridged">abridged</a></li>
+<li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://pending.schema.org">pending</a> extension:  <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessMode">accessMode</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessModeSufficient">accessModeSufficient</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessibilitySummary">accessibilitySummary</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/contentReferenceTime">contentReferenceTime</a></li>
 </ul><h4>More specific Types available in extensions</h4><ul><li><a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/Audiobook">Audiobook</a></li></ul><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="offer-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="offer-1"><a id="offer-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -740,7 +745,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 
 </div>
 
-<span id="offeredBy-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="offeredBy-1"><a id="offeredBy-1">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -882,7 +887,7 @@ Book</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   hr
 
 </div>
 
-<span id="eg-12"></span><div class='ds-selector-tabs ds-selector'>
+<div title="eg-12"><a id="eg-12">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -933,7 +938,7 @@ by &lt;a itemprop="author" href="/author/jd_salinger.html"&gt;J.D. Salinger&lt;/
   &lt;span itemprop="reviewCount"&gt;3077&lt;/span&gt; reviews
 &lt;/div&gt;
 &lt;div itemprop="offers" itemscope itemtype="http://schema.org/Offer"&gt;
-  Price: &lt;span itemprop="price" content="6.99"&gt;$6.99&lt;/span&gt;
+  Price: $&lt;span itemprop="price"&gt;6.99&lt;/span&gt;
   &lt;meta itemprop="priceCurrency" content="USD" /&gt;
   &lt;link itemprop="availability" href="http://schema.org/InStock"&gt;In Stock
 &lt;/div&gt;
@@ -982,7 +987,8 @@ by &lt;a property="author" href="/author/jd_salinger.html"&gt;J.D. Salinger&lt;/
   &lt;span property="reviewCount"&gt;3077&lt;/span&gt; reviews
 &lt;/div&gt;
 &lt;div property="offers" typeof="Offer"&gt;
-  Price: &lt;meta property="priceCurrency" content="USD" /&gt;$&lt;meta property="price" content="6.99" /&gt;6.99  
+  Price: $&lt;span property="price"&gt;6.99&lt;/span&gt;
+  &lt;meta property="priceCurrency" content="USD" /&gt;
   &lt;link property="availability" href="http://schema.org/InStock"&gt;In Stock
 &lt;/div&gt;
 Product details
@@ -1067,7 +1073,7 @@ Reviews:
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-4"><a id="example-4">Example 4</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1312,7 +1318,7 @@ as suggested by www.a11ymetadata.org.
 
 </div>
 
-<span id="bib-3"></span><div class='ds-selector-tabs ds-selector'>
+<div title="bib-3"><a id="bib-3">Example 5</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1501,121 +1507,7 @@ as suggested by www.a11ymetadata.org.
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">A CreativeWork and it's translation.
-&lt;div&gt;
-&lt;div&gt;
-	&lt;h1&gt;Rouge et le noir&lt;/h1&gt;
-    &lt;div&gt;Author: Stendhal&lt;/div&gt;
-	&lt;div&gt;Language: French&lt;/div&gt;
-	&lt;div&gt;Has Translation: Red and Black : A New Translation, Backgrounds and Sources, Criticism&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;h1&gt;Red and Black : A New Translation, Backgrounds and Sources, Criticism&lt;/h1&gt;
-    &lt;div&gt;Author: Stendhal&lt;/div&gt;
-	&lt;div&gt;Language: English&lt;/div&gt;
-	&lt;div&gt;Subject: Psychological fiction, French&lt;/div&gt;
-	&lt;div&gt;Translation of: Rouge et le noir&lt;/div&gt;
-	&lt;div&gt;Translator: Robert Martin Adams&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div&gt;
-&lt;div itemscope itemtype="http://schema.org/Book" itemid="http://worldcat.org/entity/work/id/2292573321"&gt;
-	&lt;h1&gt;&lt;span itemprop="name"&gt;Rouge et le noir&lt;/span&gt;&lt;/h1&gt;
-    &lt;div&gt;Author: &lt;span property="itemprop" itemscope itemtype="http://schema.org/Person" itemid="http://viaf.org/viaf/17823"&gt;Stendhal&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Language: &lt;span itemprop="inLanguage" content="fr"&gt;French&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Has Translation: &lt;span itemprop="workTranslation" itemscope itemtype="http://schema.org/CreativeWork" itemid="http://worldcat.org/entity/work/id/460647"&gt;Red and Black : A New Translation, Backgrounds and Sources, Criticism&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div itemscope itemtype="http://schema.org/Book" itemid="http://worldcat.org/entity/work/id/460647"&gt;
-    &lt;h1&gt;&lt;span itemprop="name"&gt;Red and Black : A New Translation, Backgrounds and Sources, Criticism&lt;/span&gt;&lt;/h1&gt;
-    &lt;div&gt;Author: &lt;span itemprop="author" itemscope itemtype="http://schema.org/Person" itemid="http://viaf.org/viaf/17823"&gt;Stendhal&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Language: &lt;span itemprop="inLanguage" content="en"&gt;English&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Subject: &lt;span itemprop="about"&gt;Psychological fiction, French&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Translation of: &lt;span itemprop="translationOfWork" itemscope itemtype="http://schema.org/CreativeWork" itemid="http://worldcat.org/entity/work/id/2292573321"&gt;Rouge et le noir&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Translator: &lt;span property="itemprop" itemscope itemtype="http://schema.org/Person" itemid="http://viaf.org/viaf/8453420"&gt;Robert Martin Adams&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/"&gt;
-&lt;div typeof="Book" resource="http://worldcat.org/entity/work/id/2292573321"&gt;
-	&lt;h1&gt;&lt;span property="name"&gt;Rouge et le noir&lt;/span&gt;&lt;/h1&gt;
-    &lt;div&gt;Author: &lt;span property="author" typeOf="Person" resource="http://viaf.org/viaf/17823"&gt;Stendhal&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Language: &lt;span property="inLanguage" content="fr"&gt;French&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Has Translation: &lt;span property="workTranslation" typeOf="CreativeWork" resource="http://worldcat.org/entity/work/id/460647"&gt;Red and Black : A New Translation, Backgrounds and Sources, Criticism&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div typeof="Book" resource="http://worldcat.org/entity/work/id/460647"&gt;
-    &lt;h1&gt;&lt;span property="name"&gt;Red and Black : A New Translation, Backgrounds and Sources, Criticism&lt;/span&gt;&lt;/h1&gt;
-    &lt;div&gt;Author: &lt;span property="author" typeOf="Person" resource="http://viaf.org/viaf/17823"&gt;Stendhal&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Language: &lt;span property="inLanguage" content="en"&gt;English&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Subject: &lt;span property="about"&gt;Psychological fiction, French&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Translation of: &lt;span property="translationOfWork" typeOf="CreativeWork" resource="http://worldcat.org/entity/work/id/2292573321"&gt;Rouge et le noir&lt;/span&gt;&lt;/div&gt;
-	&lt;div&gt;Translator: &lt;span property="translator" typeOf="Person" resource="http://viaf.org/viaf/8453420"&gt;Robert Martin Adams&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": {
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfa": "http://www.w3.org/ns/rdfa#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "",
-      "rdfa:usesVocabulary": {
-        "@id": "schema:"
-      }
-    },
-    {
-      "@id": "http://worldcat.org/entity/work/id/2292573321",
-      "@type": "schema:Book",
-      "schema:author": {
-        "@id": "http://viaf.org/viaf/17823"
-      },
-      "schema:inLanguage": "fr",
-      "schema:name": "Rouge et le noir",
-      "schema:workTranslation": {
-        "@id": "http://worldcat.org/entity/work/id/460647"
-      }
-    },
-    {
-      "@id": "http://worldcat.org/entity/work/id/460647",
-      "@type": "schema:Book",
-      "schema:about": "Psychological fiction, French",
-      "schema:author": {
-        "@id": "http://viaf.org/viaf/17823"
-      },
-      "schema:inLanguage": "en",
-      "schema:name": "Red and Black : A New Translation, Backgrounds and Sources, Criticism",
-      "schema:translationOfWork": {
-        "@id": "http://worldcat.org/entity/work/id/2292573321"
-      },
-      "schema:translator": {
-        "@id": "http://viaf.org/viaf/8453420"
-      }
-    }
-  ]
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

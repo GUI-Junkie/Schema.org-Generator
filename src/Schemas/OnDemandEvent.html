@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Event">Event</a> &gt; <a   href="/PublicationEvent">PublicationEvent</a> &gt; <a   href="/OnDemandEvent">OnDemandEvent</a></span>
 </h4>
  <div property="rdfs:comment">A publication event e.g. catch-up TV or radio podcast, during which a program is available on-demand.</div>
@@ -52,7 +52,14 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 </tr>
 
 <tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/aggregateRating">
+  <tr typeof="rdfs:Property" resource="http://schema.org/actor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/actor">actor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/actors">actors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/aggregateRating">
     
       <th class="prop-nam" scope="row">
 
@@ -66,7 +73,28 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 <code property="rdfs:label"><a   href="/attendee">attendee</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization attending the event. Supersedes <a   href="/attendees">attendees</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/doorTime">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization attending the event. Supersedes <a   href="/attendees">attendees</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/composer">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/composer">composer</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who wrote a composition, or who is the composer of a work performed at some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/contributor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/contributor">contributor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/director">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/director">director</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/directors">directors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/doorTime">
     
       <th class="prop-nam" scope="row">
 
@@ -101,14 +129,14 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/location">location</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/PostalAddress" /><a   href="/PostalAddress">PostalAddress</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The location of for example where the event is happening, an organization is located, or where an action takes place.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/offers">
+<link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PostalAddress" /><a   href="/PostalAddress">PostalAddress</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The location of for example where the event is happening, an organization is located, or where an action takes place.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/offers">
     
       <th class="prop-nam" scope="row">
 
@@ -122,14 +150,14 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 <code property="rdfs:label"><a   href="/organizer">organizer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An organizer of an Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/performer">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An organizer of an Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/performer">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/performer">performer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A performer at the event&#x2014;for example, a presenter, musician, musical group or actor. Supersedes <a   href="/performers">performers</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/previousStartDate">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A performer at the event&#x2014;for example, a presenter, musician, musical group or actor. Supersedes <a   href="/performers">performers</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/previousStartDate">
     
       <th class="prop-nam" scope="row">
 
@@ -150,7 +178,14 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 <code property="rdfs:label"><a   href="/review">review</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Review" /><a   href="/Review">Review</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A review of the item. Supersedes <a   href="/reviews">reviews</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startDate">
+<link  property="rangeIncludes" href="http://schema.org/Review" /><a   href="/Review">Review</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A review of the item. Supersedes <a   href="/reviews">reviews</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sponsor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/sponsor">sponsor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startDate">
     
       <th class="prop-nam" scope="row">
 
@@ -164,14 +199,21 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 <code property="rdfs:label"><a   href="/subEvent">subEvent</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes <a   href="/subEvents">subEvents</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/superEvent">
+<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes <a   href="/subEvents">subEvents</a>.<br/> Inverse property: <a   href="/superEvent">superEvent</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/superEvent">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/superEvent">superEvent</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.<br/> Inverse property: <a   href="/subEvent">subEvent</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/translator">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/translator">translator</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -220,7 +262,14 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
@@ -234,10 +283,7 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -269,10 +315,10 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 
 </table>
 
-<h4>Available properties in extensions</h4><ul><li>From PublicationEvent: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publishedBy">publishedBy</a></li>
+<h4>Available properties in extensions</h4><ul><li>For <a   href="/PublicationEvent">PublicationEvent</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publishedBy">publishedBy</a></li>
 </ul><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-1"><a id="example-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -391,7 +437,7 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-2"><a id="example-2">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -482,7 +528,7 @@ OnDemandEvent</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

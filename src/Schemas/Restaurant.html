@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 Restaurant</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Organization">Organization</a> &gt; <a   href="/LocalBusiness">LocalBusiness</a> &gt; <a   href="/FoodEstablishment">FoodEstablishment</a> &gt; <a   href="/Restaurant">Restaurant</a></span>
 <br/><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Place">Place</a> &gt; <a   href="/LocalBusiness">LocalBusiness</a> &gt; <a   href="/FoodEstablishment">FoodEstablishment</a> &gt; <a   href="/Restaurant">Restaurant</a></span>
 </h4>
@@ -40,14 +40,14 @@ Restaurant</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/acceptsReservations">acceptsReservations</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="/Boolean">Boolean</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, a URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/menu">
+<link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="/Boolean">Boolean</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/menu">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/menu">menu</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Either the actual menu or a URL of the menu.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/servesCuisine">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Either the actual menu or a URL of the menu.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/servesCuisine">
     
       <th class="prop-nam" scope="row">
 
@@ -60,16 +60,7 @@ Restaurant</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 </tr>
 
 <tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/branchCode">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/branchCode">branchCode</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
-<br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
-      </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/currenciesAccepted">
+  <tr typeof="rdfs:Property" resource="http://schema.org/currenciesAccepted">
     
       <th class="prop-nam" scope="row">
 
@@ -83,7 +74,7 @@ Restaurant</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/openingHours">openingHours</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.<br />- Days are specified using the following two-letter combinations: <code>Mo</code>, <code>Tu</code>, <code>We</code>, <code>Th</code>, <code>Fr</code>, <code>Sa</code>, <code>Su</code>.<br />- Times are specified using 24:00 time. For example, 3pm is specified as <code>15:00</code>. <br />- Here is an example: <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>. <br />- If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/paymentAccepted">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.<br />- Days are specified using the following two-letter combinations: <code>Mo</code>, <code>Tu</code>, <code>We</code>, <code>Th</code>, <code>Fr</code>, <code>Sa</code>, <code>Su</code>.<br />- Times are specified using 24:00 time. For example, 3pm is specified as <code>15:00</code>. <br />- Here is an example: <code>&lt;span itemprop=&quot;openingHours&quot; content=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/span&gt;</code>. <br />- If a business is open 7 days a week, then it can be specified as <code>&lt;span itemprop=&quot;openingHours&quot; content=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/span&gt;</code>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/paymentAccepted">
     
       <th class="prop-nam" scope="row">
 
@@ -110,10 +101,8 @@ Restaurant</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/additionalProperty">additionalProperty</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br />
-
-Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
-</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/address">
+<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="/PropertyValue">PropertyValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br /><br /></p>
+<p>Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/address">
     
       <th class="prop-nam" scope="row">
 
@@ -135,8 +124,7 @@ Note: Publishers should be aware that applications designed to use specific sche
     </th>
  <td class="prop-ect">
 <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
-<br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
-      </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/containedInPlace">
+<br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/containedInPlace">
     
       <th class="prop-nam" scope="row">
 
@@ -150,7 +138,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/containsPlace">containsPlace</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The basic containment relation between a place and another that it contains.<br/> Inverse property: <a   href="/containsPlace">containsPlace</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/event">
+<link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The basic containment relation between a place and another that it contains.<br/> Inverse property: <a   href="/containedInPlace">containedInPlace</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/event">
     
       <th class="prop-nam" scope="row">
 
@@ -185,7 +173,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/hasMap">hasMap</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Map" /><a   href="/Map">Map</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A URL to a map of the place. Supersedes <a   href="/map">map</a>, <a   href="/maps">maps</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isicV4">
+<link  property="rangeIncludes" href="http://schema.org/Map" /><a   href="/Map">Map</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A URL to a map of the place. Supersedes <a   href="/map">map</a>, <a   href="/maps">maps</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isicV4">
     
       <th class="prop-nam" scope="row">
 
@@ -199,7 +187,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/logo">logo</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An associated logo.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/openingHoursSpecification">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An associated logo.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/openingHoursSpecification">
     
       <th class="prop-nam" scope="row">
 
@@ -213,14 +201,23 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/photo">photo</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Photograph" /><a   href="/Photograph">Photograph</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A photograph of this place. Supersedes <a   href="/photos">photos</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/review">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Photograph" /><a   href="/Photograph">Photograph</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A photograph of this place. Supersedes <a   href="/photos">photos</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/review">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/review">review</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Review" /><a   href="/Review">Review</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A review of the item. Supersedes <a   href="/reviews">reviews</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/telephone">
+<link  property="rangeIncludes" href="http://schema.org/Review" /><a   href="/Review">Review</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A review of the item. Supersedes <a   href="/reviews">reviews</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/specialOpeningHoursSpecification">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/specialOpeningHoursSpecification">specialOpeningHoursSpecification</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/OpeningHoursSpecification" /><a   href="/OpeningHoursSpecification">OpeningHoursSpecification</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The special opening hours of a certain place.
+<br />
+Use this to explicitly override general opening hours brought in scope by <a href="/openingHoursSpecification">openingHoursSpecification</a> or <a href="/openingHours">openingHours</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/telephone">
     
       <th class="prop-nam" scope="row">
 
@@ -261,7 +258,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/areaServed">areaServed</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/AdministrativeArea" /><a   href="/AdministrativeArea">AdministrativeArea</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The geographic area where a service or offered item is provided. Supersedes <a   href="/serviceArea">serviceArea</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
+<link  property="rangeIncludes" href="http://schema.org/AdministrativeArea" /><a   href="/AdministrativeArea">AdministrativeArea</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The geographic area where a service or offered item is provided. Supersedes <a   href="/serviceArea">serviceArea</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
     
       <th class="prop-nam" scope="row">
 
@@ -279,7 +276,7 @@ Note: Publishers should be aware that applications designed to use specific sche
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/contactPoint">contactPoint</a></code>
+<code property="rdfs:label"><a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/contactPoint">contactPoint</a></code>
     </th>
  <td class="prop-ect">
 <link  property="rangeIncludes" href="http://schema.org/ContactPoint" /><a   href="/ContactPoint">ContactPoint</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A contact point for a person or organization. Supersedes <a   href="/contactPoints">contactPoints</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/department">
@@ -303,7 +300,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/duns">duns</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The Dun & Bradstreet DUNS number for identifying an organization or business person.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/email">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The Dun &amp; Bradstreet DUNS number for identifying an organization or business person.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/email">
     
       <th class="prop-nam" scope="row">
 
@@ -387,7 +384,14 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/legalName">legalName</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The official name of the organization, e.g. the registered company name.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The official name of the organization, e.g. the registered company name.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/leiCode">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/leiCode">leiCode</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
     
       <th class="prop-nam" scope="row">
 
@@ -401,7 +405,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/logo">logo</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An associated logo.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/makesOffer">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An associated logo.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/makesOffer">
     
       <th class="prop-nam" scope="row">
 
@@ -422,7 +426,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/memberOf">memberOf</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/ProgramMembership" /><a   href="/ProgramMembership">ProgramMembership</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Organization (or ProgramMembership) to which this Person or Organization belongs.<br/> Inverse property: <a   href="/member">member</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/naics">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ProgramMembership" /><a   href="/ProgramMembership">ProgramMembership</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Organization (or ProgramMembership) to which this Person or Organization belongs.<br/> Inverse property: <a   href="/member">member</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/naics">
     
       <th class="prop-nam" scope="row">
 
@@ -443,14 +447,14 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/owns">owns</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/OwnershipInfo" /><a   href="/OwnershipInfo">OwnershipInfo</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Products owned by the organization or person.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/parentOrganization">
+<link  property="rangeIncludes" href="http://schema.org/OwnershipInfo" /><a   href="/OwnershipInfo">OwnershipInfo</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Products owned by the organization or person.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/parentOrganization">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/parentOrganization">parentOrganization</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The larger organization that this organization is a branch of, if any. Supersedes <a   href="/branchOf">branchOf</a>.<br/> Inverse property: <a   href="/subOrganization">subOrganization</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/review">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The larger organization that this local business is a branch of, if any. Supersedes <a   href="/branchOf">branchOf</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/review">
     
       <th class="prop-nam" scope="row">
 
@@ -464,14 +468,21 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/seeks">seeks</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Demand" /><a   href="/Demand">Demand</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to products or services sought by the organization or person (demand).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/subOrganization">
+<link  property="rangeIncludes" href="http://schema.org/Demand" /><a   href="/Demand">Demand</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to products or services sought by the organization or person (demand).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sponsor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/sponsor">sponsor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/subOrganization">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/subOrganization">subOrganization</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.<br/> Inverse property: <a   href="/parentOrganization">parentOrganization</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/taxID">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/taxID">
     
       <th class="prop-nam" scope="row">
 
@@ -519,24 +530,28 @@ Note: Publishers should be aware that applications designed to use specific sche
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -570,7 +585,7 @@ Note: Publishers should be aware that applications designed to use specific sche
 
 <br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="eg-4"></span><div class='ds-selector-tabs ds-selector'>
+<div title="eg-4"><a id="eg-4">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -686,7 +701,7 @@ Takes Reservations: Yes
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-2"><a id="example-2">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -750,7 +765,7 @@ apps.
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-3"><a id="example-3">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -770,7 +785,7 @@ apps.
 <pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Restaurant"&gt;
   &lt;h1 itemprop="name"&gt;Fondue for Fun and Fantasy&lt;/h1&gt;
   &lt;p itemprop="description"&gt;Fantastic and fun for all your cheesy occasions.&lt;/p&gt;
-  &lt;p&gt;Open: &lt;time itemprop="openingHours" datetime="Mo,Tu,We,Th,Fr,Sa,Su 11:30-23:00"&gt;Daily from 11:30am till 11pm&lt;/time&gt;&lt;/p&gt;
+  &lt;p&gt;Open: &lt;span itemprop="openingHours" content="Mo,Tu,We,Th,Fr,Sa,Su 11:30-23:00"&gt;Daily from 11:30am till 11pm&lt;/span&gt;&lt;/p&gt;
   &lt;p&gt;Phone: &lt;span itemprop="telephone" content="+155501003333"&gt;555-0100-3333&lt;/span&gt;&lt;/p&gt;
   &lt;p&gt;View &lt;a itemprop="menu" href="http://example.com/menu"&gt;our menu&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -779,7 +794,7 @@ apps.
 <pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Restaurant"&gt;
   &lt;h1 property="name"&gt;Fondue for Fun and Fantasy&lt;/h1&gt;
   &lt;p property="description"&gt;Fantastic and fun for all your cheesy occasions.&lt;/p&gt;
-  &lt;p&gt;Open: &lt;time property="openingHours" datetime="Mo,Tu,We,Th,Fr,Sa,Su 11:30-23:00"&gt;Daily from 11:30am till 11pm&lt;/time&gt;&lt;/p&gt;
+  &lt;p&gt;Open: &lt;span property="openingHours" content="Mo,Tu,We,Th,Fr,Sa,Su 11:30-23:00"&gt;Daily from 11:30am till 11pm&lt;/span&gt;&lt;/p&gt;
   &lt;p&gt;Phone: &lt;span property="telephone" content="+155501003333"&gt;555-0100-3333&lt;/span&gt;&lt;/p&gt;
   &lt;p&gt;View &lt;a property="menu" href="http://example.com/menu"&gt;our menu&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -800,7 +815,7 @@ apps.
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

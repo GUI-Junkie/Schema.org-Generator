@@ -1,12 +1,11 @@
 <div id="mainContent" vocab="http://schema.org/" typeof="rdfs:Class" resource="http://schema.org/Person">
-  <link property="owl:equivalentClass" href="http://xmlns.com/foaf/0.1/Person"/>
-
+  <!-- no external mappings noted for this term. -->
 
 <!-- webapp will assemble the rest elsewhere -->
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Person">Person</a></span>
 </h4>
  <div property="rdfs:comment">A person (alive, dead, undead, or fictional).</div>
@@ -24,7 +23,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <div>
         <div id='infobox' style='text-align: right;'><label role="checkbox" for=morecheck><b><span style="cursor: pointer;">[more...]</span></b></label></div>
         <input type='checkbox' checked="checked" style='display: none' id=morecheck><div id='infomsg' style='background-color: #EEEEEE; text-align: left; padding: 0.5em;'>
-        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/Person&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+Person'>Check for open issues.</a></li><li>'Person' is mentioned in layer: <a href='http://schema.org/Person'>core</a></li><li>'Person' is mentioned in extension layer: <a href='http://bib.schema.org/Person'>bib</a></li></ul>
+        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/Person&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+Person'>Check for open issues.</a></li><li>'Person' is mentioned in layer: <a href='https://schema.org/Person'>core</a></li><li>'Person' is mentioned in extension layer: <a href='https://bib.schema.org/Person'>bib</a></li><li>'Person' is mentioned in extension layer: <a href='https://health-lifesci.schema.org/Person'>health-lifesci</a></li><li>'Person' is mentioned in extension layer: <a href='https://pending.schema.org/Person'>pending</a></li></ul>
 </div>
 </div>
 <tr class="supertype">
@@ -103,11 +102,11 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/colleague">colleague</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A colleague of the person. Supersedes <a   href="/colleagues">colleagues</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/contactPoint">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A colleague of the person. Supersedes <a   href="/colleagues">colleagues</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/contactPoint">
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/contactPoint">contactPoint</a></code>
+<code property="rdfs:label"><a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="https://pending.schema.org/contactPoint">contactPoint</a></code>
     </th>
  <td class="prop-ect">
 <link  property="rangeIncludes" href="http://schema.org/ContactPoint" /><a   href="/ContactPoint">ContactPoint</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A contact point for a person or organization. Supersedes <a   href="/contactPoints">contactPoints</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/deathDate">
@@ -131,7 +130,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/duns">duns</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The Dun & Bradstreet DUNS number for identifying an organization or business person.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/email">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The Dun &amp; Bradstreet DUNS number for identifying an organization or business person.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/email">
     
       <th class="prop-nam" scope="row">
 
@@ -166,7 +165,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/gender">gender</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Gender of the person.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/givenName">
+<link  property="rangeIncludes" href="http://schema.org/GenderType" /><a   href="/GenderType">GenderType</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/givenName">
     
       <th class="prop-nam" scope="row">
 
@@ -201,7 +200,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/height">height</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The height of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/homeLocation">
+<link  property="rangeIncludes" href="http://schema.org/Distance" /><a   href="/Distance">Distance</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/QuantitativeValue" /><a   href="/QuantitativeValue">QuantitativeValue</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The height of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/homeLocation">
     
       <th class="prop-nam" scope="row">
 
@@ -257,7 +256,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/memberOf">memberOf</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/ProgramMembership" /><a   href="/ProgramMembership">ProgramMembership</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Organization (or ProgramMembership) to which this Person or Organization belongs.<br/> Inverse property: <a   href="/member">member</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/naics">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ProgramMembership" /><a   href="/ProgramMembership">ProgramMembership</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Organization (or ProgramMembership) to which this Person or Organization belongs.<br/> Inverse property: <a   href="/member">member</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/naics">
     
       <th class="prop-nam" scope="row">
 
@@ -278,7 +277,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/netWorth">netWorth</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/PriceSpecification" /><a   href="/PriceSpecification">PriceSpecification</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total financial value of the person as calculated by subtracting assets from liabilities.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/owns">
+<link  property="rangeIncludes" href="http://schema.org/MonetaryAmount" /><a   href="/MonetaryAmount">MonetaryAmount</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PriceSpecification" /><a   href="/PriceSpecification">PriceSpecification</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total financial value of the organization or person as calculated by subtracting assets from liabilities.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/owns">
     
       <th class="prop-nam" scope="row">
 
@@ -320,7 +319,14 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/sibling">sibling</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sibling of the person. Supersedes <a   href="/siblings">siblings</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/spouse">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sibling of the person. Supersedes <a   href="/siblings">siblings</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sponsor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/sponsor">sponsor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/spouse">
     
       <th class="prop-nam" scope="row">
 
@@ -396,24 +402,28 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -471,13 +481,13 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/Clip">Clip</a>&nbsp; or<br/> <a   href="/CreativeWorkSeason">CreativeWorkSeason</a>&nbsp; or<br/> <a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoObject">VideoObject</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp;</td><td class="prop-desc">An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.  Supersedes <a   href="/actors">actors</a>.</td></tr><tr>
+<a   href="/Clip">Clip</a>&nbsp; or<br/> <a   href="/CreativeWorkSeason">CreativeWorkSeason</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/Event">Event</a>&nbsp; or<br/> <a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a   href="/VideoObject">VideoObject</a>&nbsp;</td><td class="prop-desc">An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.  Supersedes <a   href="/actors">actors</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/agent">agent</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/Action">Action</a>&nbsp;</td><td class="prop-desc">The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book. </td></tr><tr>
+<a   href="/Action">Action</a>&nbsp;</td><td class="prop-desc">The direct performer or driver of the action (animate or inanimate). e.g. <em>John</em> wrote a book. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/alumni">alumni</a></code>
 </th>
@@ -519,7 +529,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/Reservation">Reservation</a>&nbsp; or<br/> <a   href="/Order">Order</a>&nbsp; or<br/> <a   href="/Invoice">Invoice</a>&nbsp;</td><td class="prop-desc">An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.  Supersedes <a   href="/bookingAgent">bookingAgent</a>.</td></tr><tr>
+<a   href="/Invoice">Invoice</a>&nbsp; or<br/> <a   href="/Order">Order</a>&nbsp; or<br/> <a   href="/Reservation">Reservation</a>&nbsp;</td><td class="prop-desc">An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.  Supersedes <a   href="/bookingAgent">bookingAgent</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/buyer">buyer</a></code>
 </th>
@@ -567,13 +577,13 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/MusicComposition">MusicComposition</a>&nbsp;</td><td class="prop-desc">The person or organization who wrote the composition. </td></tr><tr>
+<a   href="/Event">Event</a>&nbsp; or<br/> <a   href="/MusicComposition">MusicComposition</a>&nbsp;</td><td class="prop-desc">The person or organization who wrote a composition, or who is the composer of a work performed at some event. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/contributor">contributor</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc">A secondary contributor to the CreativeWork. </td></tr><tr>
+<a   href="/CreativeWork">CreativeWork</a>&nbsp; or<br/> <a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc">A secondary contributor to the CreativeWork or Event. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/copyrightHolder">copyrightHolder</a></code>
 </th>
@@ -597,13 +607,13 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/Order">Order</a>&nbsp; or<br/> <a   href="/Invoice">Invoice</a>&nbsp;</td><td class="prop-desc">Party placing the order or paying the invoice. </td></tr><tr>
+<a   href="/Invoice">Invoice</a>&nbsp; or<br/> <a   href="/Order">Order</a>&nbsp;</td><td class="prop-desc">Party placing the order or paying the invoice. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/director">director</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/Clip">Clip</a>&nbsp; or<br/> <a   href="/CreativeWorkSeason">CreativeWorkSeason</a>&nbsp; or<br/> <a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoObject">VideoObject</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp;</td><td class="prop-desc">A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.  Supersedes <a   href="/directors">directors</a>.</td></tr><tr>
+<a   href="/Clip">Clip</a>&nbsp; or<br/> <a   href="/CreativeWorkSeason">CreativeWorkSeason</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/Event">Event</a>&nbsp; or<br/> <a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a   href="/VideoObject">VideoObject</a>&nbsp;</td><td class="prop-desc">A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.  Supersedes <a   href="/directors">directors</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/editor">editor</a></code>
 </th>
@@ -623,12 +633,6 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <td class="prop-ect">
 <a   href="/EndorseAction">EndorseAction</a>&nbsp;</td><td class="prop-desc">A sub property of participant. The person/organization being supported. </td></tr><tr>
 <th class="prop-nam" scope="row">
- <code><a   href="/endorsers">endorsers</a></code>
-</th>
- 
-<td class="prop-ect">
-<a   href="/Diet">Diet</a>&nbsp;</td><td class="prop-desc">People or organizations that endorse the plan. </td></tr><tr>
-<th class="prop-nam" scope="row">
  <code><a   href="/followee">followee</a></code>
 </th>
  
@@ -646,6 +650,12 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
  
 <td class="prop-ect">
 <a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc">A person who founded this organization.  Supersedes <a   href="/founders">founders</a>.</td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/grantee">grantee</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/DigitalDocumentPermission">DigitalDocumentPermission</a>&nbsp;</td><td class="prop-desc">The person, organization, contact point, or audience that has been granted this permission. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/homeTeam">homeTeam</a></code>
 </th>
@@ -693,13 +703,13 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/ProgramMembership">ProgramMembership</a>&nbsp; or<br/> <a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc">A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.  Supersedes <a   href="/musicGroupMember">musicGroupMember</a>.<br/> inverse property: <a   href="/memberOf">memberOf</a>.</td></tr><tr>
+<a   href="/Organization">Organization</a>&nbsp; or<br/> <a   href="/ProgramMembership">ProgramMembership</a>&nbsp;</td><td class="prop-desc">A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.  Supersedes <a   href="/musicGroupMember">musicGroupMember</a>.<br/> inverse property: <a   href="/memberOf">memberOf</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/musicBy">musicBy</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/Clip">Clip</a>&nbsp; or<br/> <a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoObject">VideoObject</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp;</td><td class="prop-desc">The composer of the soundtrack. </td></tr><tr>
+<a   href="/Clip">Clip</a>&nbsp; or<br/> <a   href="/Episode">Episode</a>&nbsp; or<br/> <a   href="/Movie">Movie</a>&nbsp; or<br/> <a   href="/MovieSeries">MovieSeries</a>&nbsp; or<br/> <a   href="/RadioSeries">RadioSeries</a>&nbsp; or<br/> <a   href="/TVSeries">TVSeries</a>&nbsp; or<br/> <a   href="/VideoGame">VideoGame</a>&nbsp; or<br/> <a   href="/VideoGameSeries">VideoGameSeries</a>&nbsp; or<br/> <a   href="/VideoObject">VideoObject</a>&nbsp;</td><td class="prop-desc">The composer of the soundtrack. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/offeredBy">offeredBy</a></code>
 </th>
@@ -729,7 +739,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/Action">Action</a>&nbsp;</td><td class="prop-desc">Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*. </td></tr><tr>
+<a   href="/Action">Action</a>&nbsp;</td><td class="prop-desc">Other co-agents that participated in the action indirectly. e.g. John wrote a book with <em>Steve</em>. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/performer">performer</a></code>
 </th>
@@ -747,19 +757,13 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/ParcelDelivery">ParcelDelivery</a>&nbsp; or<br/> <a   href="/Flight">Flight</a>&nbsp; or<br/> <a   href="/Invoice">Invoice</a>&nbsp; or<br/> <a   href="/BusTrip">BusTrip</a>&nbsp; or<br/> <a   href="/Service">Service</a>&nbsp; or<br/> <a   href="/CreativeWork">CreativeWork</a>&nbsp; or<br/> <a   href="/Reservation">Reservation</a>&nbsp; or<br/> <a   href="/TrainTrip">TrainTrip</a>&nbsp;</td><td class="prop-desc">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.  Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr>
-<th class="prop-nam" scope="row">
- <code><a   href="/publisher">publisher</a></code>
-</th>
- 
-<td class="prop-ect">
-<a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc">The publisher of the creative work. </td></tr><tr>
+<a   href="/BusTrip">BusTrip</a>&nbsp; or<br/> <a   href="/CreativeWork">CreativeWork</a>&nbsp; or<br/> <a   href="/Flight">Flight</a>&nbsp; or<br/> <a   href="/Invoice">Invoice</a>&nbsp; or<br/> <a   href="/ParcelDelivery">ParcelDelivery</a>&nbsp; or<br/> <a   href="/Reservation">Reservation</a>&nbsp; or<br/> <a   href="/Service">Service</a>&nbsp; or<br/> <a   href="/TrainTrip">TrainTrip</a>&nbsp;</td><td class="prop-desc">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.  Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/recipient">recipient</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/ReturnAction">ReturnAction</a>&nbsp; or<br/> <a   href="/GiveAction">GiveAction</a>&nbsp; or<br/> <a   href="/DonateAction">DonateAction</a>&nbsp; or<br/> <a   href="/SendAction">SendAction</a>&nbsp; or<br/> <a   href="/TipAction">TipAction</a>&nbsp; or<br/> <a   href="/CommunicateAction">CommunicateAction</a>&nbsp; or<br/> <a   href="/PayAction">PayAction</a>&nbsp; or<br/> <a   href="/AuthorizeAction">AuthorizeAction</a>&nbsp;</td><td class="prop-desc">A sub property of participant. The participant who is at the receiving end of the action. </td></tr><tr>
+<a   href="/AuthorizeAction">AuthorizeAction</a>&nbsp; or<br/> <a   href="/CommunicateAction">CommunicateAction</a>&nbsp; or<br/> <a   href="/DonateAction">DonateAction</a>&nbsp; or<br/> <a   href="/GiveAction">GiveAction</a>&nbsp; or<br/> <a   href="/Message">Message</a>&nbsp; or<br/> <a   href="/PayAction">PayAction</a>&nbsp; or<br/> <a   href="/ReturnAction">ReturnAction</a>&nbsp; or<br/> <a   href="/SendAction">SendAction</a>&nbsp; or<br/> <a   href="/TipAction">TipAction</a>&nbsp;</td><td class="prop-desc">A sub property of participant. The participant who is at the receiving end of the action. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/relatedTo">relatedTo</a></code>
 </th>
@@ -777,19 +781,25 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/Flight">Flight</a>&nbsp; or<br/> <a   href="/Order">Order</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp; or<br/> <a   href="/BuyAction">BuyAction</a>&nbsp; or<br/> <a   href="/Offer">Offer</a>&nbsp;</td><td class="prop-desc">An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.  Supersedes <a   href="/merchant">merchant</a>.</td></tr><tr>
+<a   href="/BuyAction">BuyAction</a>&nbsp; or<br/> <a   href="/Demand">Demand</a>&nbsp; or<br/> <a   href="/Flight">Flight</a>&nbsp; or<br/> <a   href="/Offer">Offer</a>&nbsp; or<br/> <a   href="/Order">Order</a>&nbsp;</td><td class="prop-desc">An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.  Supersedes <a   href="/vendor">vendor</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/sender">sender</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/ReceiveAction">ReceiveAction</a>&nbsp;</td><td class="prop-desc">A sub property of participant. The participant who is at the sending end of the action. </td></tr><tr>
+<a   href="/Message">Message</a>&nbsp; or<br/> <a   href="/ReceiveAction">ReceiveAction</a>&nbsp;</td><td class="prop-desc">A sub property of participant. The participant who is at the sending end of the action. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/sibling">sibling</a></code>
 </th>
  
 <td class="prop-ect">
 <a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc">A sibling of the person.  Supersedes <a   href="/siblings">siblings</a>.</td></tr><tr>
+<th class="prop-nam" scope="row">
+ <code><a   href="/sponsor">sponsor</a></code>
+</th>
+ 
+<td class="prop-ect">
+<a   href="/Event">Event</a>&nbsp; or<br/> <a   href="/Organization">Organization</a>&nbsp; or<br/> <a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/spouse">spouse</a></code>
 </th>
@@ -801,7 +811,7 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 </th>
  
 <td class="prop-ect">
-<a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market. </td></tr><tr>
+<a   href="/CreativeWork">CreativeWork</a>&nbsp; or<br/> <a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event. </td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/underName">underName</a></code>
 </th>
@@ -814,10 +824,712 @@ Person</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
  
 <td class="prop-ect">
 <a   href="/LoseAction">LoseAction</a>&nbsp;</td><td class="prop-desc">A sub property of participant. The winner of the action. </td></tr></table>
-<h4  id="acks">Acknowledgements</h4>
-This class contains derivatives of IPTC rNews properties. rNews is a data model of publishing metadata with serializations currently available for RDFa as well as HTML5 Microdata. More information about the IPTC and rNews can be found at <a href=http://rnews.org>rnews.org</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
+<h4>More specific Types available in extensions</h4><ul><li><a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="https://health-lifesci.schema.org/Patient">Patient</a></li></ul><h4  id="acks">Acknowledgement</h4>
+<p>This class contains derivatives of IPTC rNews properties. rNews is a data model of publishing metadata with serializations currently available for RDFa as well as HTML5 Microdata. More information about the IPTC and rNews can be found at <a href=http://rnews.org>rnews.org</a>.</p><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="eg-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="invoice-1"><a id="invoice-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">An example of a credit card bill (invoice).
+ACME Bank
+Bill for: January 2015 Visa
+invoice link: http://www.acmebank.com/invoice.pdf
+Customer: Jane Doe
+account ID: xxxx-xxxx-xxxx-1234
+payment due: 2015-01-30
+minimum payment: $15.00
+total due: $200.00
+billing period: 2014-12-21 to 2015-01-20
+payment due
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Invoice"&gt;
+  &lt;h1 itemprop="description"&gt;January 2015 Visa&lt;/h1&gt;
+  &lt;a itemprop="url" href="http://acmebank.com/invoice.pdf" /&gt;Invoice PDF&lt;/a&gt;
+  &lt;div itemprop="broker" itemscope itemtype="http://schema.org/BankOrCreditUnion"&gt;
+    &lt;b itemprop="name"&gt;ACME Bank&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;span itemprop="accountId"&gt;xxxx-xxxx-xxxx-1234&lt;/span&gt;
+  &lt;div itemprop="customer" itemscope itemtype="http://schema.org/Person"&gt;
+    &lt;b itemprop="name"&gt;Jane Doe&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;time itemprop="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
+  &lt;div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
+    &lt;span itemprop="price"&gt;15.00&lt;/span&gt;
+    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
+    &lt;span itemprop="price"&gt;200.00&lt;/span&gt;
+    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;meta itemprop="billingPeriod" content="2014-12-21/P30D" /&gt;starts:2014-12-21 30 days
+  &lt;link itemprop="paymentStatus" href="http://schema.org/PaymentDue" /&gt;
+&lt;/div&gt;
+ 
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Invoice"&gt;
+  &lt;h1 property="description"&gt;January 2015 Visa&lt;/h1&gt;
+  &lt;a property="url" href="http://acmebank.com/invoice.pdf"&gt;Invoice PDF&lt;/a&gt;
+  &lt;div property="broker" typeof="BankOrCreditUnion"&gt;
+    &lt;b property="name"&gt;ACME Bank&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;span property="accountId"&gt;xxxx-xxxx-xxxx-1234&lt;/span&gt;
+  &lt;div property="customer" typeof="Person"&gt;
+    &lt;b property="name"&gt;Jane Doe&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;time property="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
+  &lt;div property="minimumPaymentDue" typeof="PriceSpecification"&gt;
+    &lt;span property="price"&gt;15.00&lt;/span&gt;
+    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div property="totalPaymentDue" typeof="PriceSpecification"&gt;
+    &lt;span property="price"&gt;200.00&lt;/span&gt;
+    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;meta property="billingPeriod" content="2014-12-21/P30D" /&gt;starts:2014-12-21 30 days
+  &lt;link property="paymentStatus" href="PaymentDue" /&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+    "@context": "http://schema.org/",
+    "@type": "Invoice",
+    "description": "January 2015 Visa bill.",
+    "url": "http://acmebank.com/invoice.pdf",
+    "broker": {
+      "@type": "BankOrCreditUnion",
+      "name": "ACME Bank",
+    },
+    "accountId": "xxxx-xxxx-xxxx-1234",
+    "customer": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "paymentDueDate": "2015-01-30",
+    "minimumPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 15.00,
+      "priceCurrency": "USD"
+    },
+    "totalPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 200.00,
+      "priceCurrency": "USD"
+    },
+    "billingPeriod": "2014-12-21/P30D",
+    "paymentStatus": "http://schema.org/PaymentDue"
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="example-2"><a id="example-2">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">An example of a invoice for a purchase and installation.
+ACME Home Heating
+Bill for: New furnace and installation
+Customer: Jane Doe
+payment due: 2015-01-30
+minimum payment: $0.00
+total due: $0.00
+payment status: paid
+order: furnace model ABC123
+order: installation labor
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Invoice"&gt;
+  &lt;h1 itemprop="description"&gt;New furnace and installation&lt;/h1&gt;
+  &lt;div itemprop="broker" itemscope itemtype="http://schema.org/LocalBusiness"&gt;
+    &lt;b itemprop="name"&gt;ACME Home Heating&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="customer" itemscope itemtype="http://schema.org/Person"&gt;
+    &lt;b itemprop="name"&gt;Jane Doe&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;time itemprop="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
+  &lt;div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
+    &lt;span itemprop="price"&gt;0.00&lt;/span&gt;
+    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
+    &lt;span itemprop="price"&gt;0.00&lt;/span&gt;
+    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;link itemprop="paymentStatus" href="http://schema.org/PaymentComplete" /&gt;
+  &lt;div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order"&gt;
+    &lt;span itemprop="description"&gt;furnace&lt;/span&gt;
+    &lt;time itemprop="orderDate"&gt;2014-12-01&lt;/time&gt;
+    &lt;span itemprop="orderNumber"&gt;123ABC&lt;/span&gt;
+    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product"&gt;
+      &lt;span itemprop="name"&gt;ACME Furnace 3000&lt;/span&gt;
+      &lt;meta itemprop="productId" content="ABC123" /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order"&gt;
+    &lt;span itemprop="description"&gt;furnace installation&lt;/span&gt;
+    &lt;time itemprop="orderDate"&gt;2014-12-02&lt;/time&gt;
+    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Service"&gt;
+      &lt;span itemprop="description"&gt;furnace installation&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Invoice"&gt;
+  &lt;h1 property="description"&gt;New furnace and installation&lt;/h1&gt;
+  &lt;div property="broker" typeof="/LocalBusiness"&gt;
+    &lt;b property="name"&gt;ACME Home Heating&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div property="customer" typeof="Person"&gt;
+    &lt;b property="name"&gt;Jane Doe&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;time property="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
+  &lt;div property="minimumPaymentDue" typeof="PriceSpecification"&gt;
+    &lt;span property="price"&gt;0.00&lt;/span&gt;
+    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div property="totalPaymentDue" typeof="PriceSpecification"&gt;
+    &lt;span property="price"&gt;0.00&lt;/span&gt;
+    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;meta itemprop="paymentStatus" content="PaymentComplete" /&gt;
+  &lt;div property="referencesOrder" typeof="Order"&gt;
+    &lt;span property="description"&gt;furnace&lt;/span&gt;
+    &lt;time property="orderDate"&gt;2014-12-01&lt;/time&gt;
+    &lt;span property="orderNumber"&gt;123ABC&lt;/span&gt;
+    &lt;div property="orderedItem" typeof="Product"&gt;
+      &lt;span property="name"&gt;ACME Furnace 3000&lt;/span&gt;
+      &lt;meta property="productId" content="ABC123" /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div property="referencesOrder" typeof="Order"&gt;
+    &lt;span property="description"&gt;furnace installation&lt;/span&gt;
+    &lt;time property="orderDate"&gt;2014-12-02&lt;/time&gt;
+    &lt;div property="orderedItem" typeof="Service"&gt;
+      &lt;span property="description"&gt;furnace installation&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+    "@context": "http://schema.org/",
+    "@type": "Invoice",
+    "broker": {
+      "@type": "LocalBusiness",
+      "name": "ACME Home Heating",
+    },
+    "accountId": "xxxx-xxxx-xxxx-1234",
+    "customer": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "paymentDueDate": "2015-01-30",
+    "minimumPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 0.00,
+      "priceCurrency": "USD"
+    },
+    "totalPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 0.00,
+      "priceCurrency": "USD"
+    },
+    "paymentStatus": "http://schema.org/PaymentComplete",
+    "referencesOrder": [
+      {
+        "@type": "Order",
+        "description": "furnace",
+        "orderDate": "2014-12-01",
+        "orderNumber": "123ABC",
+        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+        "orderedItem": {
+          "@type": "Product",
+          "name": "ACME Furnace 3000",
+          "productId": "ABC123"
+        }
+      },
+      {
+        "@type": "Order",
+        "description": "furnace installation",
+        "orderDate": "2014-12-02",
+        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+        "orderedItem": {
+          "@type": "Service",
+          "description": "furnace installation"
+        }
+      },
+    ]
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="example-3"><a id="example-3">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">An example of an order for multiple items, shipped separately.
+ACME Supplies
+Customer: Jane Doe
+Order:
+  Item abc123: 1 Widget: delivered 2015-03-10
+  Item def456: 3 Widget accessories: shipped 2015-03-12
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Order"&gt;
+  &lt;div itemprop="seller" itemscope itemtype="http://schema.org/Organization"&gt;
+    &lt;b itemprop="name"&gt;ACME Supplies&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="customer" itemscope itemtype="http://schema.org/Person"&gt;
+    &lt;b itemprop="name"&gt;Jane Doe&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem"&gt;
+    Item number: &lt;span itemprop="orderItemNumber"&gt;abc123&lt;/span&gt;
+    &lt;span itemprop="orderQuantity"&gt;1&lt;/span&gt;
+    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product"&gt;
+      &lt;span itemprop="name"&gt;Widget&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;link itemprop="orderItemStatus" href="http://schema.org/OrderDelivered" /&gt;Delivered
+    &lt;div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery"&gt;
+      &lt;time="expectedArrivalFrom"&gt;2015-03-10&lt;/time&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem"&gt;
+    Item number: &lt;span itemprop="orderItemNumber"&gt;def456&lt;/span&gt;
+    &lt;span itemprop="orderQuantity"&gt;4&lt;/span&gt;
+    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product"&gt;
+      &lt;span itemprop="name"&gt;Widget accessories&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;link itemprop="orderItemStatus" href="http://schema.org/OrderInTransit" /&gt;Shipped
+    &lt;div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery"&gt;
+      &lt;time itemprop="expectedArrivalFrom"&gt;2015-03-15&lt;/time&gt;
+      &lt;time itemprop="expectedArrivalUntil"&gt;2015-03-18&lt;/time&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Order"&gt;
+  &lt;div property="seller" typeof="Organization"&gt;
+    &lt;b property="name"&gt;ACME Supplies&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div property="customer" typeof="Person"&gt;
+    &lt;b property="name"&gt;Jane Doe&lt;/b&gt;
+  &lt;/div&gt;
+  &lt;div property="orderedItem" typeof="OrderItem"&gt;
+    Item number: &lt;span property="orderItemNumber"&gt;abc123&lt;/span&gt;
+    &lt;span property="orderQuantity"&gt;1&lt;/span&gt;
+    &lt;div property="orderedItem" typeof="Product"&gt;
+      &lt;span property="name"&gt;Widget&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;link property="orderItemStatus" href="http://schema.org/OrderDelivered" /&gt;Delivered
+    &lt;div property="orderDelivery" typeof="ParcelDelivery"&gt;
+      &lt;time property="expectedArrivalFrom"&gt;2015-03-10&lt;/time&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div property="orderedItem" typeof="OrderItem"&gt;
+    Item number: &lt;span property="orderItemNumber"&gt;def456&lt;/span&gt;
+    &lt;span property="orderQuantity"&gt;4&lt;/span&gt;
+    &lt;div property="orderedItem" typeof="Product"&gt;
+      &lt;span property="name"&gt;Widget accessories&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;link property="orderItemStatus" href="http://schema.org/OrderInTransit" /&gt;Shipped
+    &lt;div property="orderDelivery" typeof="ParcelDelivery"&gt;
+      &lt;time property="expectedArrivalFrom"&gt;2015-03-15&lt;/time&gt;
+      &lt;time property="expectedArrivalUntil"&gt;2015-03-18&lt;/time&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org/"
+  "@type": "Order",
+  "seller": {
+    "@type": "Organization",
+    "name": "ACME Supplies"
+  },
+  "customer": {
+    "@type": "Person",
+    "name": "Jane Doe"
+  },
+  "orderedItem": [
+    {
+      "@type": "OrderItem"
+      "orderItemNumber": "abc123",
+      "orderQuantity": 1,
+      "orderedItem": {
+        "@type": "Product",
+        "name": "Widget"
+      },
+      "orderItemStatus": "http://schema.org/OrderDelivered",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2015-03-10"
+      }
+    },
+    {
+      "@type": "OrderItem"
+      "orderItemNumber": "def456",
+      "orderQuantity": 3,
+      "orderedItem": {
+        "@type": "Product",
+        "name": "Widget accessories"
+      },
+      "orderItemStatus": "http://schema.org/OrderInTransit",
+      "orderDelivery": {
+        "@type": "ParcelDelivery",
+        "expectedArrivalFrom": "2015-03-15",
+        "expectedArrivalUntil": "2015-03-18"
+      }
+    }
+  ]
+}
+&lt;/script&gt;
+    
+</pre>
+
+</div>
+
+<div title="music-2"><a id="music-2">Example 4</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">A MusicComposition Example. The following JSON-LD models
+the composition A Day in the Life by Lennon and McCartney,
+regardless of who performs or records the song.
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">Not available yet.
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">Not available yet.
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+    "@context": "http://schema.org",
+    "@type": "MusicComposition",
+    "@id": "http://musicbrainz.org/work/fd1aa4f2-ba26-3a05-b72d-4392c35a073c",
+    "name": "A Day in the Life",
+    "composer": [
+        {
+            "@type": "Person",
+            "name": "John Lennon",
+            "@id": "http://musicbrainz.org/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9"
+        },
+        {
+            "@type": "Person",
+            "name": "Paul McCartney",
+            "@id": "http://musicbrainz.org/artist/ba550d0e-adac-4864-b88b-407cab5e76af"
+        }
+    ],
+    "iswcCode": "T-010.140.236-1",
+    "inLanguage": "EN",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Northern Songs, Ltd.",
+        "@id": "http://musicbrainz.org/label/26df054d-78cf-4d83-9bb1-a41816125528"
+    },
+    "datePublished": "1967",
+    "lyrics": {
+      "@type": "CreativeWork",
+      "text": "I  read the news today oh boy..."
+    }
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="sponsor-2"><a id="sponsor-2">Example 5</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">&lt;p&gt;Christopher Froome was sponsored by Sky in the Tour de France.&lt;/p&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;p itemscope itemprop="Person" itemtype="http://schema.org/Person"&gt;
+  &lt;span itemprop="name"&gt;Christopher Froome&lt;/span&gt; was sponsored by 
+  &lt;span itemprop="sponsor" itemtype="http://schema.org/Organization"&gt;
+    &lt;a itemprop="url" href="http://www.skysports.com/"&gt;Sky&lt;/a&gt;&lt;/span&gt; in the Tour de France.
+&lt;/p&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;p vocab="http://schema.org/" typeof="Person"&gt;
+  &lt;span property="name"&gt;Christopher Froome&lt;/span&gt; was sponsored by 
+  &lt;span property="sponsor" typeof="http://schema.org/Organization"&gt;
+    &lt;a property="url" href="http://www.skysports.com/"&gt;Sky&lt;/a&gt;&lt;/span&gt; in the Tour de France.
+&lt;/p&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Christopher Froome",
+  "sponsor": 
+  {
+    "@type": "Organization",
+    "name": "Sky",
+    "url": "http://www.skysports.com/"
+  }
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="sponsor-3"><a id="sponsor-3">Example 6</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">&lt;p&gt;Rose Tyler was sponsored by Sarah Jane Smith in the membership process.&lt;/p&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;p itemscope itemprop="Person" itemtype="http://schema.org/Person"&gt;
+  &lt;span itemprop="name"&gt;Rose Tyler&lt;/span&gt; was sponsored by 
+  &lt;span itemscope itemprop="sponsor" itemtype="http://schema.org/Person"&gt;
+    &lt;span itemprop="name"&gt;Sarah Jane Smith&lt;/span&gt;
+  &lt;/span&gt; in the membership process.
+&lt;/p&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;p vocab="http://schema.org/" typeof="Person"&gt;
+  &lt;span property="name"&gt;Rose Tyler&lt;/span&gt; was sponsored by 
+  &lt;span property="sponsor" typeof="http://schema.org/Person"&gt;
+    &lt;span property="name"&gt;Sarah Jane Smith&lt;/span&gt;
+  &lt;/span&gt; in the membership process.
+&lt;/p&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Rose Tyler",
+  "sponsor": 
+    {
+    "@type": "Person",
+    "name": "Sarah Jane Smith"
+    }
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="example-7"><a id="example-7">Example 7</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">Fairly straightforward painting markup.
+    &lt;div&gt;
+        &lt;h1 lang="fr"&gt;La trahison des images &lt;/h1&gt;
+        &lt;p&gt;
+            A painting also known as The Treason of Images or 
+            The Treachery of Images.
+        &lt;/p&gt;  
+        &lt;img src="http://http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" /&gt;
+        &lt;div&gt;
+            &lt;p&gt;
+                The painting shows a pipe. Below it, Magritte painted, 
+                &lt;q lang="fr"&gt;Ceci n'est pas une pipe.&lt;/q&gt;, French for 
+                "This is not a pipe."
+            &lt;/p&gt;
+            &lt;p&gt;
+                His statement is taken to mean that the painting itself is not a pipe. 
+                The painting is merely an image of a pipe. Hence, the description, 
+                "this is not a pipe."
+            &lt;/p&gt;
+            &lt;p&gt;
+                Similarly, the image shown above is neither a pipe nor even a painting, 
+                but rather a digital photograph.
+            &lt;/p&gt;
+            &lt;p&gt;
+                The painting is sometimes given as an example of meta message conveyed 
+                by paralanguage. Compare with Korzybski's &lt;q&gt;The word is not the thing&lt;/q&gt; 
+                and &lt;q&gt;The map is not the territory&lt;/q&gt;.
+        &lt;/div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Artist: &lt;a href="https://www.freebase.com/m/06h88"&gt;René Magritte&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;Dimensions: 940 mm × 635 mm&lt;/li&gt;
+            &lt;li&gt;Materials: oil on canvas&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">    &lt;div itemscope itemtype="http://schema.org/VisualArtwork"&gt;
+        &lt;link itemprop="sameAs" href="http://rdf.freebase.com/rdf/m.0439_q" /&gt;
+        &lt;h1 itemprop="name" lang="fr"&gt;La trahison des images &lt;/h1&gt;
+        &lt;p&gt;
+            A &lt;span itemprop="artform"&gt;painting&lt;/span&gt; also known as 
+            &lt;span&gt;The Treason of Images&lt;/span&gt; or 
+            &lt;span itemprop="alternateName"&gt;The Treachery of Images&lt;/span&gt;.
+        &lt;/p&gt;
+        &lt;img itemprop="image" src="http://http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" /&gt;
+        &lt;div itemprop="description"&gt;
+            &lt;p&gt;
+                The painting shows a pipe. Below it, Magritte painted, 
+                &lt;q lang="fr"&gt;Ceci n'est pas une pipe.&lt;/q&gt;, French for 
+                "This is not a pipe."
+            &lt;/p&gt;
+            &lt;p&gt;
+                His statement is taken to mean that the painting itself is not a pipe. 
+                The painting is merely an image of a pipe. Hence, the description, 
+                "this is not a pipe."
+            &lt;/p&gt;
+            &lt;p&gt;
+                Similarly, the image shown above is neither a pipe nor even a painting, 
+                but rather a digital photograph.
+            &lt;/p&gt;
+            &lt;p&gt;
+                The painting is sometimes given as an example of meta message conveyed 
+                by paralanguage. Compare with Korzybski's &lt;q&gt;The word is not the thing&lt;/q&gt; 
+                and &lt;q&gt;The map is not the territory&lt;/q&gt;.
+        &lt;/div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Artist: 
+                &lt;span itemprop="creator" itemscope itemtype="http://schema.org/Person"&gt;
+                    &lt;a itemprop="sameAs" href="https://www.freebase.com/m/06h88"&gt;
+                        &lt;span itemprop="name"&gt;René Magritte&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Dimensions:
+                &lt;span itemprop="width" itemscope itemtype="http://schema.org/Distance"&gt;940 mm&lt;/span&gt; × 
+                &lt;span itemprop="height" itemscope itemtype="http://schema.org/Distance"&gt;635 mm&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Materials:
+                &lt;span itemprop="artMedium"&gt;oil&lt;/span&gt; on &lt;span itemprop="artworkSurface"&gt;canvas&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">    &lt;div vocab="http://schema.org/" typeof="VisualArtwork"&gt;
+        &lt;link property="sameAs" href="http://rdf.freebase.com/rdf/m.0439_q" /&gt;
+        &lt;h1 property="name" lang="fr"&gt;La trahison des images &lt;/h1&gt;
+        &lt;p&gt;
+            A &lt;span property="artform"&gt;painting&lt;/span&gt; also known as 
+            &lt;span&gt;The Treason of Images&lt;/span&gt; or 
+            &lt;span property="alternateName"&gt;The Treachery of Images&lt;/span&gt;.
+        &lt;/p&gt;
+        &lt;img property="image" src="http://http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" /&gt;
+        &lt;div property="description"&gt;
+            &lt;p&gt;
+                The painting shows a pipe. Below it, Magritte painted, 
+                &lt;q lang="fr"&gt;Ceci n'est pas une pipe.&lt;/q&gt;, French for 
+                "This is not a pipe."
+            &lt;/p&gt;
+            &lt;p&gt;
+                His statement is taken to mean that the painting itself is not a pipe. 
+                The painting is merely an image of a pipe. Hence, the description, 
+                "this is not a pipe."
+            &lt;/p&gt;
+            &lt;p&gt;
+                Similarly, the image shown above is neither a pipe nor even a painting, 
+                but rather a digital photograph.
+            &lt;/p&gt;
+            &lt;p&gt;
+                The painting is sometimes given as an example of meta message conveyed 
+                by paralanguage. Compare with Korzybski's &lt;q&gt;The word is not the thing&lt;/q&gt; 
+                and &lt;q&gt;The map is not the territory&lt;/q&gt;.
+        &lt;/div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Artist: 
+                &lt;span property="creator" typeof="Person"&gt;
+                    &lt;a property="sameAs" href="https://www.freebase.com/m/06h88"&gt;
+                        &lt;span property="name"&gt;René Magritte&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Dimensions:
+                &lt;span property="width" typeof="Distance"&gt;940 mm&lt;/span&gt; × 
+                &lt;span property="height" typeof="Distance"&gt;635 mm&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Materials:
+                &lt;span property="artMedium"&gt;oil&lt;/span&gt; on &lt;span property="artworkSurface"&gt;canvas&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">    &lt;script type="application/ld+json"&gt;
+    {
+      "@context": "http://schema.org",
+      "@type": "VisualArtwork",
+      "name": "La trahison des images",
+      "alternateName": "The Treachery of Images",
+      "image": "http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg",
+      "description": "The painting shows a pipe. Below it, Magritte...",
+      "creator": [
+        {
+          "@type": "Person",
+          "name": "René Magritte",
+          "sameAs": "https://www.freebase.com/m/06h88"
+        }
+      ],
+      "width": [
+        {
+          "@type": "Distance",
+          "name": "940 mm"
+        }
+      ],
+      "height": [
+        {
+          "@type": "Distance",
+          "name": "635 mm"
+        }
+      ],
+      "artMedium": "oil",
+      "artworkSurface": "canvas"
+    }
+    &lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="eg-1"><a id="eg-1">Example 8</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -919,7 +1631,7 @@ Graduate students:
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-9"><a id="example-9">Example 9</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1138,7 +1850,7 @@ Graduate students:
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-10"><a id="example-10">Example 10</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1198,7 +1910,7 @@ about a 'member' of a 'SportsTeam', including time qualfiers
 
 </div>
 
-<span id="music-2"></span><div class='ds-selector-tabs ds-selector'>
+<div title="example-11"><a id="example-11">Example 11</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1206,616 +1918,49 @@ about a 'member' of a 'SportsTeam', including time qualfiers
     <a data-selects='jsonld' class=''>JSON-LD</a>
 </div>
 
-<pre class="prettyprint lang-html linenums original_html selected">A MusicComposition Example. The following JSON-LD models
-the composition A Day in the Life by Lennon and McCartney,
-regardless of who performs or records the song.
+<pre class="prettyprint lang-html linenums original_html selected">George Bush, the 41st President of the United States is the father of George W. Bush, the 43rd President of the United States.
 </pre>
 
-<pre class="prettyprint lang-html linenums microdata ">Not available yet.
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">Not available yet.
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-    "@context": "http://schema.org",
-    "@type": "MusicComposition",
-    "@id": "http://musicbrainz.org/work/fd1aa4f2-ba26-3a05-b72d-4392c35a073c",
-    "name": "A Day in the Life",
-    "composer": [
-        {
-            "@type": "Person",
-            "name": "John Lennon",
-            "@id": "http://musicbrainz.org/artist/4d5447d7-c61c-4120-ba1b-d7f471d385b9"
-        },
-        {
-            "@type": "Person",
-            "name": "Paul McCartney",
-            "@id": "http://musicbrainz.org/artist/ba550d0e-adac-4864-b88b-407cab5e76af"
-        }
-    ],
-    "iswcCode": "T-010.140.236-1",
-    "inLanguage": "EN",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Northern Songs, Ltd.",
-        "@id": "http://musicbrainz.org/label/26df054d-78cf-4d83-9bb1-a41816125528"
-    },
-    "datePublished": "1967",
-    "lyrics": {
-      "@type": "CreativeWork",
-      "text": "I  read the news today oh boy..."
-    }
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<span id="invoice-1"></span><div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">An example of a credit card bill (invoice).
-ACME Bank
-Bill for: January 2015 Visa
-invoice link: http://www.acmebank.com/invoice.pdf
-Customer: Jane Doe
-account ID: xxxx-xxxx-xxxx-1234
-payment due: 2015-01-30
-minimum payment: $15.00
-total due: $200.00
-billing period: 2014-12-21 to 2015-01-20
-payment due
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Invoice"&gt;
-  &lt;h1 itemprop="description"&gt;January 2015 Visa&lt;/h1&gt;
-  &lt;a itemprop="url" href="http://acmebank.com/invoice.pdf" /&gt;Invoice PDF&lt;/a&gt;
-  &lt;div itemprop="broker" itemscope itemtype="http://schema.org/BankOrCreditUnion"&gt;
-    &lt;b itemprop="name"&gt;ACME Bank&lt;/b&gt;
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Person"&gt;
+  &lt;span itemprop="name"&gt;George Bush&lt;/span&gt;, the
+  &lt;span itemprop="disambiguatingDescription"&gt;41st President of the United States&lt;/span&gt;
+  is the father of
+  &lt;div itemprop="children" itemscope itemtype="http://schema.org/Person"&gt;
+    &lt;span itemprop="name"&gt;George W. Bush&lt;/span&gt;, the
+    &lt;span itemprop="disambiguatingDescription"&gt;43rd President of the United States&lt;/span&gt;.
   &lt;/div&gt;
-  &lt;span itemprop="accountId"&gt;xxxx-xxxx-xxxx-1234&lt;/span&gt;
-  &lt;div itemprop="customer" itemscope itemtype="http://schema.org/Person"&gt;
-    &lt;b itemprop="name"&gt;Jane Doe&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;time itemprop="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
-  &lt;div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
-    &lt;span itemprop="price"&gt;15.00&lt;/span&gt;
-    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
-    &lt;span itemprop="price"&gt;200.00&lt;/span&gt;
-    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;meta itemprop="billingPeriod" content="2014-12-21/P30D" /&gt;starts:2014-12-21 30 days
-  &lt;link itemprop="paymentStatus" href="http://schema.org/PaymentDue" /&gt;
-&lt;/div&gt;
- 
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Invoice"&gt;
-  &lt;h1 property="description"&gt;January 2015 Visa&lt;/h1&gt;
-  &lt;a property="url" href="http://acmebank.com/invoice.pdf"&gt;Invoice PDF&lt;/a&gt;
-  &lt;div property="broker" typeof="BankOrCreditUnion"&gt;
-    &lt;b property="name"&gt;ACME Bank&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;span property="accountId"&gt;xxxx-xxxx-xxxx-1234&lt;/span&gt;
-  &lt;div property="customer" typeof="Person"&gt;
-    &lt;b property="name"&gt;Jane Doe&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;time property="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
-  &lt;div property="minimumPaymentDue" typeof="PriceSpecification"&gt;
-    &lt;span property="price"&gt;15.00&lt;/span&gt;
-    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div property="totalPaymentDue" typeof="PriceSpecification"&gt;
-    &lt;span property="price"&gt;200.00&lt;/span&gt;
-    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;meta property="billingPeriod" content="2014-12-21/P30D" /&gt;starts:2014-12-21 30 days
-  &lt;link property="paymentStatus" href="PaymentDue" /&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-    "@context": "http://schema.org/",
-    "@type": "Invoice",
-    "description": "January 2015 Visa bill.",
-    "url": "http://acmebank.com/invoice.pdf",
-    "broker": {
-      "@type": "BankOrCreditUnion",
-      "name": "ACME Bank",
-    },
-    "accountId": "xxxx-xxxx-xxxx-1234",
-    "customer": {
-      "@type": "Person",
-      "name": "Jane Doe"
-    },
-    "paymentDueDate": "2015-01-30",
-    "minimumPaymentDue": {
-      "@type": "PriceSpecification",
-      "price": 15.00,
-      "priceCurrency": "USD"
-    },
-    "totalPaymentDue": {
-      "@type": "PriceSpecification",
-      "price": 200.00,
-      "priceCurrency": "USD"
-    },
-    "billingPeriod": "2014-12-21/P30D",
-    "paymentStatus": "http://schema.org/PaymentDue"
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">An example of a invoice for a purchase and installation.
-ACME Home Heating
-Bill for: New furnace and installation
-Customer: Jane Doe
-payment due: 2015-01-30
-minimum payment: $0.00
-total due: $0.00
-payment status: paid
-order: furnace model ABC123
-order: installation labor
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Invoice"&gt;
-  &lt;h1 itemprop="description"&gt;New furnace and installation&lt;/h1&gt;
-  &lt;div itemprop="broker" itemscope itemtype="http://schema.org/LocalBusiness"&gt;
-    &lt;b itemprop="name"&gt;ACME Home Heating&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="customer" itemscope itemtype="http://schema.org/Person"&gt;
-    &lt;b itemprop="name"&gt;Jane Doe&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;time itemprop="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
-  &lt;div itemprop="minimumPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
-    &lt;span itemprop="price"&gt;0.00&lt;/span&gt;
-    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="totalPaymentDue" itemscope itemtype="http://schema.org/PriceSpecification"&gt;
-    &lt;span itemprop="price"&gt;0.00&lt;/span&gt;
-    &lt;span itemprop="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;link itemprop="paymentStatus" href="http://schema.org/PaymentComplete" /&gt;
-  &lt;div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order"&gt;
-    &lt;span itemprop="description"&gt;furnace&lt;/span&gt;
-    &lt;time itemprop="orderDate"&gt;2014-12-01&lt;/time&gt;
-    &lt;span itemprop="orderNumber"&gt;123ABC&lt;/span&gt;
-    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product"&gt;
-      &lt;span itemprop="name"&gt;ACME Furnace 3000&lt;/span&gt;
-      &lt;meta itemprop="productId" content="ABC123" /&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="referencesOrder" itemscope itemtype="http://schema.org/Order"&gt;
-    &lt;span itemprop="description"&gt;furnace installation&lt;/span&gt;
-    &lt;time itemprop="orderDate"&gt;2014-12-02&lt;/time&gt;
-    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Service"&gt;
-      &lt;span itemprop="description"&gt;furnace installation&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
- 
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Invoice"&gt;
-  &lt;h1 property="description"&gt;New furnace and installation&lt;/h1&gt;
-  &lt;div property="broker" typeof="/LocalBusiness"&gt;
-    &lt;b property="name"&gt;ACME Home Heating&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div property="customer" typeof="Person"&gt;
-    &lt;b property="name"&gt;Jane Doe&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;time property="paymentDueDate"&gt;2015-01-30&lt;/time&gt;
-  &lt;div property="minimumPaymentDue" typeof="PriceSpecification"&gt;
-    &lt;span property="price"&gt;0.00&lt;/span&gt;
-    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div property="totalPaymentDue" typeof="PriceSpecification"&gt;
-    &lt;span property="price"&gt;0.00&lt;/span&gt;
-    &lt;span property="priceCurrency"&gt;USD&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;meta itemprop="paymentStatus" content="PaymentComplete" /&gt;
-  &lt;div property="referencesOrder" typeof="Order"&gt;
-    &lt;span property="description"&gt;furnace&lt;/span&gt;
-    &lt;time property="orderDate"&gt;2014-12-01&lt;/time&gt;
-    &lt;span property="orderNumber"&gt;123ABC&lt;/span&gt;
-    &lt;div property="orderedItem" typeof="Product"&gt;
-      &lt;span property="name"&gt;ACME Furnace 3000&lt;/span&gt;
-      &lt;meta property="productId" content="ABC123" /&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div property="referencesOrder" typeof="Order"&gt;
-    &lt;span property="description"&gt;furnace installation&lt;/span&gt;
-    &lt;time property="orderDate"&gt;2014-12-02&lt;/time&gt;
-    &lt;div property="orderedItem" typeof="Service"&gt;
-      &lt;span property="description"&gt;furnace installation&lt;/span&gt;
-    &lt;/div&gt;
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Person"&gt;
+  &lt;span property="name"&gt;George Bush&lt;/span&gt;, the
+  &lt;span property="disambiguatingDescription"&gt;41st President of the United States&lt;/span&gt;
+  is the father of
+  &lt;div property="children" typeof="Person"&gt;
+    &lt;span property="name"&gt;George W. Bush&lt;/span&gt;, the
+    &lt;span property="disambiguatingDescription"&gt;43rd President of the United States&lt;/span&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
 {
-    "@context": "http://schema.org/",
-    "@type": "Invoice",
-    "broker": {
-      "@type": "LocalBusiness",
-      "name": "ACME Home Heating",
-    },
-    "accountId": "xxxx-xxxx-xxxx-1234",
-    "customer": {
-      "@type": "Person",
-      "name": "Jane Doe"
-    },
-    "paymentDueDate": "2015-01-30",
-    "minimumPaymentDue": {
-      "@type": "PriceSpecification",
-      "price": 0.00,
-      "priceCurrency": "USD"
-    },
-    "totalPaymentDue": {
-      "@type": "PriceSpecification",
-      "price": 0.00,
-      "priceCurrency": "USD"
-    },
-    "paymentStatus": "http://schema.org/PaymentComplete",
-    "referencesOrder": [
-      {
-        "@type": "Order",
-        "description": "furnace",
-        "orderDate": "2014-12-01",
-        "orderNumber": "123ABC",
-        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
-        "orderedItem": {
-          "@type": "Product",
-          "name": "ACME Furnace 3000",
-          "productId": "ABC123"
-        }
-      },
-      {
-        "@type": "Order",
-        "description": "furnace installation",
-        "orderDate": "2014-12-02",
-        "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
-        "orderedItem": {
-          "@type": "Service",
-          "description": "furnace installation"
-        }
-      },
-    ]
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">An example of an order for multiple items, shipped separately.
-ACME Supplies
-Customer: Jane Doe
-Order:
-  Item abc123: 1 Widget: delivered 2015-03-10
-  Item def456: 3 Widget accessories: shipped 2015-03-12
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Order"&gt;
-  &lt;div itemprop="seller" itemscope itemtype="http://schema.org/Organization"&gt;
-    &lt;b itemprop="name"&gt;ACME Supplies&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="customer" itemscope itemtype="http://schema.org/Person"&gt;
-    &lt;b itemprop="name"&gt;Jane Doe&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem"&gt;
-    Item number: &lt;span itemprop="orderItemNumber"&gt;abc123&lt;/span&gt;
-    &lt;span itemprop="orderQuantity"&gt;1&lt;/span&gt;
-    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product"&gt;
-      &lt;span itemprop="name"&gt;Widget&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;link itemprop="orderItemStatus" href="http://schema.org/OrderDelivered" /&gt;Delivered
-    &lt;div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery"&gt;
-      &lt;time="expectedArrivalFrom"&gt;2015-03-10&lt;/time&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/OrderItem"&gt;
-    Item number: &lt;span itemprop="orderItemNumber"&gt;def456&lt;/span&gt;
-    &lt;span itemprop="orderQuantity"&gt;4&lt;/span&gt;
-    &lt;div itemprop="orderedItem" itemscope itemtype="http://schema.org/Product"&gt;
-      &lt;span itemprop="name"&gt;Widget accessories&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;link itemprop="orderItemStatus" href="http://schema.org/OrderInTransit" /&gt;Shipped
-    &lt;div itemprop="orderDelivery" itemscope itemtype="http://schema.org/ParcelDelivery"&gt;
-      &lt;time itemprop="expectedArrivalFrom"&gt;2015-03-15&lt;/time&gt;
-      &lt;time itemprop="expectedArrivalUntil"&gt;2015-03-18&lt;/time&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
- 
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Order"&gt;
-  &lt;div property="seller" typeof="Organization"&gt;
-    &lt;b property="name"&gt;ACME Supplies&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div property="customer" typeof="Person"&gt;
-    &lt;b property="name"&gt;Jane Doe&lt;/b&gt;
-  &lt;/div&gt;
-  &lt;div property="orderedItem" typeof="OrderItem"&gt;
-    Item number: &lt;span property="orderItemNumber"&gt;abc123&lt;/span&gt;
-    &lt;span property="orderQuantity"&gt;1&lt;/span&gt;
-    &lt;div property="orderedItem" typeof="Product"&gt;
-      &lt;span property="name"&gt;Widget&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;link property="orderItemStatus" href="http://schema.org/OrderDelivered" /&gt;Delivered
-    &lt;div property="orderDelivery" typeof="ParcelDelivery"&gt;
-      &lt;time property="expectedArrivalFrom"&gt;2015-03-10&lt;/time&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div property="orderedItem" typeof="OrderItem"&gt;
-    Item number: &lt;span property="orderItemNumber"&gt;def456&lt;/span&gt;
-    &lt;span property="orderQuantity"&gt;4&lt;/span&gt;
-    &lt;div property="orderedItem" typeof="Product"&gt;
-      &lt;span property="name"&gt;Widget accessories&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;link property="orderItemStatus" href="http://schema.org/OrderInTransit" /&gt;Shipped
-    &lt;div property="orderDelivery" typeof="ParcelDelivery"&gt;
-      &lt;time property="expectedArrivalFrom"&gt;2015-03-15&lt;/time&gt;
-      &lt;time property="expectedArrivalUntil"&gt;2015-03-18&lt;/time&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org/"
-  "@type": "Order",
-  "seller": {
-    "@type": "Organization",
-    "name": "ACME Supplies"
-  },
-  "customer": {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "George Bush",
+  "disambiguatingDescription": "41st President of the United States",
+  "children": {
     "@type": "Person",
-    "name": "Jane Doe"
-  },
-  "orderedItem": [
-    {
-      "@type": "OrderItem"
-      "orderItemNumber": "abc123",
-      "orderQuantity": 1,
-      "orderedItem": {
-        "@type": "Product",
-        "name": "Widget"
-      },
-      "orderItemStatus": "http://schema.org/OrderDelivered",
-      "orderDelivery": {
-        "@type": "ParcelDelivery",
-        "expectedArrivalFrom": "2015-03-10"
-      }
-    },
-    {
-      "@type": "OrderItem"
-      "orderItemNumber": "def456",
-      "orderQuantity": 3,
-      "orderedItem": {
-        "@type": "Product",
-        "name": "Widget accessories"
-      },
-      "orderItemStatus": "http://schema.org/OrderInTransit",
-      "orderDelivery": {
-        "@type": "ParcelDelivery",
-        "expectedArrivalFrom": "2015-03-15",
-        "expectedArrivalUntil": "2015-03-18"
-      }
-    }
-  ]
+    "name": "George W. Bush",
+    "disambiguatingDescription": "43rd President of the United States"
+  }
 }
 &lt;/script&gt;
-    
 </pre>
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">Fairly straightforward painting markup.
-    &lt;div&gt;
-        &lt;h1 lang="fr"&gt;La trahison des images &lt;/h1&gt;
-        &lt;p&gt;
-            A painting also known as The Treason of Images or 
-            The Treachery of Images.
-        &lt;/p&gt;  
-        &lt;img src="http://http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" /&gt;
-        &lt;div&gt;
-            &lt;p&gt;
-                The painting shows a pipe. Below it, Magritte painted, 
-                &lt;q lang="fr"&gt;Ceci n'est pas une pipe.&lt;/q&gt;, French for 
-                "This is not a pipe."
-            &lt;/p&gt;
-            &lt;p&gt;
-                His statement is taken to mean that the painting itself is not a pipe. 
-                The painting is merely an image of a pipe. Hence, the description, 
-                "this is not a pipe."
-            &lt;/p&gt;
-            &lt;p&gt;
-                Similarly, the image shown above is neither a pipe nor even a painting, 
-                but rather a digital photograph.
-            &lt;/p&gt;
-            &lt;p&gt;
-                The painting is sometimes given as an example of meta message conveyed 
-                by paralanguage. Compare with Korzybski's &lt;q&gt;The word is not the thing&lt;/q&gt; 
-                and &lt;q&gt;The map is not the territory&lt;/q&gt;.
-        &lt;/div&gt;
-        &lt;ul&gt;
-            &lt;li&gt;Artist: &lt;a href="https://www.freebase.com/m/06h88"&gt;René Magritte&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;Dimensions: 940 mm × 635 mm&lt;/li&gt;
-            &lt;li&gt;Materials: oil on canvas&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">    &lt;div itemscope itemtype="http://schema.org/VisualArtwork"&gt;
-        &lt;link itemprop="sameAs" href="http://rdf.freebase.com/rdf/m.0439_q" /&gt;
-        &lt;h1 itemprop="name" lang="fr"&gt;La trahison des images &lt;/h1&gt;
-        &lt;p&gt;
-            A &lt;span itemprop="artform"&gt;painting&lt;/span&gt; also known as 
-            &lt;span&gt;The Treason of Images&lt;/span&gt; or 
-            &lt;span itemprop="alternateName"&gt;The Treachery of Images&lt;/span&gt;.
-        &lt;/p&gt;
-        &lt;img itemprop="image" src="http://http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" /&gt;
-        &lt;div itemprop="description"&gt;
-            &lt;p&gt;
-                The painting shows a pipe. Below it, Magritte painted, 
-                &lt;q lang="fr"&gt;Ceci n'est pas une pipe.&lt;/q&gt;, French for 
-                "This is not a pipe."
-            &lt;/p&gt;
-            &lt;p&gt;
-                His statement is taken to mean that the painting itself is not a pipe. 
-                The painting is merely an image of a pipe. Hence, the description, 
-                "this is not a pipe."
-            &lt;/p&gt;
-            &lt;p&gt;
-                Similarly, the image shown above is neither a pipe nor even a painting, 
-                but rather a digital photograph.
-            &lt;/p&gt;
-            &lt;p&gt;
-                The painting is sometimes given as an example of meta message conveyed 
-                by paralanguage. Compare with Korzybski's &lt;q&gt;The word is not the thing&lt;/q&gt; 
-                and &lt;q&gt;The map is not the territory&lt;/q&gt;.
-        &lt;/div&gt;
-        &lt;ul&gt;
-            &lt;li&gt;Artist: 
-                &lt;span itemprop="creator" itemscope itemtype="http://schema.org/Person"&gt;
-                    &lt;a itemprop="sameAs" href="https://www.freebase.com/m/06h88"&gt;
-                        &lt;span itemprop="name"&gt;René Magritte&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li&gt;Dimensions:
-                &lt;span itemprop="width" itemscope itemtype="http://schema.org/Distance"&gt;940 mm&lt;/span&gt; × 
-                &lt;span itemprop="height" itemscope itemtype="http://schema.org/Distance"&gt;635 mm&lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li&gt;Materials:
-                &lt;span itemprop="artMedium"&gt;oil&lt;/span&gt; on &lt;span itemprop="artworkSurface"&gt;canvas&lt;/span&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">    &lt;div vocab="http://schema.org/" typeof="VisualArtwork"&gt;
-        &lt;link property="sameAs" href="http://rdf.freebase.com/rdf/m.0439_q" /&gt;
-        &lt;h1 property="name" lang="fr"&gt;La trahison des images &lt;/h1&gt;
-        &lt;p&gt;
-            A &lt;span property="artform"&gt;painting&lt;/span&gt; also known as 
-            &lt;span&gt;The Treason of Images&lt;/span&gt; or 
-            &lt;span property="alternateName"&gt;The Treachery of Images&lt;/span&gt;.
-        &lt;/p&gt;
-        &lt;img property="image" src="http://http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg" /&gt;
-        &lt;div property="description"&gt;
-            &lt;p&gt;
-                The painting shows a pipe. Below it, Magritte painted, 
-                &lt;q lang="fr"&gt;Ceci n'est pas une pipe.&lt;/q&gt;, French for 
-                "This is not a pipe."
-            &lt;/p&gt;
-            &lt;p&gt;
-                His statement is taken to mean that the painting itself is not a pipe. 
-                The painting is merely an image of a pipe. Hence, the description, 
-                "this is not a pipe."
-            &lt;/p&gt;
-            &lt;p&gt;
-                Similarly, the image shown above is neither a pipe nor even a painting, 
-                but rather a digital photograph.
-            &lt;/p&gt;
-            &lt;p&gt;
-                The painting is sometimes given as an example of meta message conveyed 
-                by paralanguage. Compare with Korzybski's &lt;q&gt;The word is not the thing&lt;/q&gt; 
-                and &lt;q&gt;The map is not the territory&lt;/q&gt;.
-        &lt;/div&gt;
-        &lt;ul&gt;
-            &lt;li&gt;Artist: 
-                &lt;span property="creator" typeof="Person"&gt;
-                    &lt;a property="sameAs" href="https://www.freebase.com/m/06h88"&gt;
-                        &lt;span property="name"&gt;René Magritte&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li&gt;Dimensions:
-                &lt;span property="width" typeof="Distance"&gt;940 mm&lt;/span&gt; × 
-                &lt;span property="height" typeof="Distance"&gt;635 mm&lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li&gt;Materials:
-                &lt;span property="artMedium"&gt;oil&lt;/span&gt; on &lt;span property="artworkSurface"&gt;canvas&lt;/span&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">    &lt;script type="application/ld+json"&gt;
-    {
-      "@context": "http://schema.org",
-      "@type": "VisualArtwork",
-      "name": "La trahison des images",
-      "alternateName": "The Treachery of Images",
-      "image": "http://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg",
-      "description": "The painting shows a pipe. Below it, Magritte...",
-      "creator": [
-        {
-          "@type": "Person",
-          "name": "René Magritte",
-          "sameAs": "https://www.freebase.com/m/06h88"
-        }
-      ],
-      "width": [
-        {
-          "@type": "Distance",
-          "name": "940 mm"
-        }
-      ],
-      "height": [
-        {
-          "@type": "Distance",
-          "name": "635 mm"
-        }
-      ],
-      "artMedium": "oil",
-      "artworkSurface": "canvas"
-    }
-    &lt;/script&gt;
-</pre>
-
-</div>
-
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

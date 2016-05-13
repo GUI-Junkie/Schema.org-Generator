@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 MusicAlbumProductionType</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/Enumeration">Enumeration</a> &gt; <a   href="/MusicAlbumProductionType">MusicAlbumProductionType</a></span>
 </h4>
  <div property="rdfs:comment">Classification of the album by it's type of content: soundtrack, live album, studio album, etc.</div>
@@ -27,19 +27,6 @@ MusicAlbumProductionType</h1><h4><span class='breadcrumbs'><a   href="/Thing">Th
 </div>
 </div>
 <tr><td colspan="3"><meta property="rdfs:subClassOf" content="MusicAlbumProductionType"></td></tr><tr class="supertype">
-     <th class="supertype-name" colspan="3">Properties from <a   href="/Enumeration">Enumeration</a></th>
-  
-</tr>
-
-<tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/supersededBy">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/supersededBy">supersededBy</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Class" /><a   href="/Class">Class</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Property" /><a   href="/Property">Property</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Enumeration" /><a   href="/Enumeration">Enumeration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Relates a term (i.e. a property, class or enumeration) to one that supersedes it.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
   
 </tr>
@@ -66,24 +53,28 @@ MusicAlbumProductionType</h1><h4><span class='breadcrumbs'><a   href="/Thing">Th
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -130,10 +121,10 @@ MusicAlbumProductionType</h1><h4><span class='breadcrumbs'><a   href="/Thing">Th
  
 <td class="prop-ect">
 <a   href="/MusicAlbum">MusicAlbum</a>&nbsp;</td><td class="prop-desc">Classification of the album by it's type of content: soundtrack, live album, studio album, etc. </td></tr></table>
-<br/><br/><b>Enumeration members</b><ul><li> <a   href="/CompilationAlbum">CompilationAlbum</a> </li><li> <a   href="/DJMixAlbum">DJMixAlbum</a> </li><li> <a   href="/DemoAlbum">DemoAlbum</a> </li><li> <a   href="/LiveAlbum">LiveAlbum</a> </li><li> <a   href="/MixtapeAlbum">MixtapeAlbum</a> </li><li> <a   href="/RemixAlbum">RemixAlbum</a> </li><li> <a   href="/SoundtrackAlbum">SoundtrackAlbum</a> </li><li> <a   href="/SpokenWordAlbum">SpokenWordAlbum</a> </li><li> <a   href="/StudioAlbum">StudioAlbum</a> </li></ul><h4  id="acks">Acknowledgements</h4>
-This vocabulary was improved through collaboration with the MusicBrainz project
+<br/><br/><b>Enumeration members</b><ul><li> <a   href="/CompilationAlbum">CompilationAlbum</a> </li><li> <a   href="/DJMixAlbum">DJMixAlbum</a> </li><li> <a   href="/DemoAlbum">DemoAlbum</a> </li><li> <a   href="/LiveAlbum">LiveAlbum</a> </li><li> <a   href="/MixtapeAlbum">MixtapeAlbum</a> </li><li> <a   href="/RemixAlbum">RemixAlbum</a> </li><li> <a   href="/SoundtrackAlbum">SoundtrackAlbum</a> </li><li> <a   href="/SpokenWordAlbum">SpokenWordAlbum</a> </li><li> <a   href="/StudioAlbum">StudioAlbum</a> </li></ul><h4  id="acks">Acknowledgement</h4>
+<p>This vocabulary was improved through collaboration with the MusicBrainz project
     (<a href="http://www.musicbrainz.org">www.musicbrainz.org</a>), and is partially inspired by the MusicBrainz and
-    <a href="http://musicontology.com/docs/getting-started.html">Music Ontology</a> schemas.<br/><p class="version"><b>Schema Version 2.2</b></p>
+    <a href="http://musicontology.com/docs/getting-started.html">Music Ontology</a> schemas.</p><p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

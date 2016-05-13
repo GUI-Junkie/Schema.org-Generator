@@ -1,12 +1,11 @@
 <div id="mainContent" vocab="http://schema.org/" typeof="rdfs:Class" resource="http://schema.org/Event">
-  <link property="owl:equivalentClass" href="http://purl.org/dc/dcmitype/Event"/>
-
+  <!-- no external mappings noted for this term. -->
 
 <!-- webapp will assemble the rest elsewhere -->
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Event">Event</a></span>
 </h4>
  <div property="rdfs:comment">An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the 'offers' property. Repeated events may be structured as separate Event objects.</div>
@@ -24,7 +23,7 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 <div>
         <div id='infobox' style='text-align: right;'><label role="checkbox" for=morecheck><b><span style="cursor: pointer;">[more...]</span></b></label></div>
         <input type='checkbox' checked="checked" style='display: none' id=morecheck><div id='infomsg' style='background-color: #EEEEEE; text-align: left; padding: 0.5em;'>
-        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/Event&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+Event'>Check for open issues.</a></li><li>'Event' is mentioned in layer: <a href='http://schema.org/Event'>core</a></li></ul>
+        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/Event&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+Event'>Check for open issues.</a></li><li>'Event' is mentioned in layer: <a href='http://schema.org/Event'>core</a></li><li>'Event' is mentioned in extension layer: <a href='http://pending.schema.org/Event'>pending</a></li></ul>
 </div>
 </div>
 <tr class="supertype">
@@ -33,7 +32,14 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 </tr>
 
 <tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/aggregateRating">
+  <tr typeof="rdfs:Property" resource="http://schema.org/actor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/actor">actor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/actors">actors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/aggregateRating">
     
       <th class="prop-nam" scope="row">
 
@@ -47,7 +53,28 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 <code property="rdfs:label"><a   href="/attendee">attendee</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization attending the event. Supersedes <a   href="/attendees">attendees</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/doorTime">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization attending the event. Supersedes <a   href="/attendees">attendees</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/composer">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/composer">composer</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who wrote a composition, or who is the composer of a work performed at some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/contributor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/contributor">contributor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/director">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/director">director</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip. Supersedes <a   href="/directors">directors</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/doorTime">
     
       <th class="prop-nam" scope="row">
 
@@ -82,14 +109,14 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/location">location</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PostalAddress" /><a   href="/PostalAddress">PostalAddress</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The location of for example where the event is happening, an organization is located, or where an action takes place.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/offers">
+<link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PostalAddress" /><a   href="/PostalAddress">PostalAddress</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The location of for example where the event is happening, an organization is located, or where an action takes place.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/offers">
     
       <th class="prop-nam" scope="row">
 
@@ -103,14 +130,14 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 <code property="rdfs:label"><a   href="/organizer">organizer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An organizer of an Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/performer">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An organizer of an Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/performer">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/performer">performer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A performer at the event&#x2014;for example, a presenter, musician, musical group or actor. Supersedes <a   href="/performers">performers</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/previousStartDate">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A performer at the event&#x2014;for example, a presenter, musician, musical group or actor. Supersedes <a   href="/performers">performers</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/previousStartDate">
     
       <th class="prop-nam" scope="row">
 
@@ -131,7 +158,14 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 <code property="rdfs:label"><a   href="/review">review</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Review" /><a   href="/Review">Review</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A review of the item. Supersedes <a   href="/reviews">reviews</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startDate">
+<link  property="rangeIncludes" href="http://schema.org/Review" /><a   href="/Review">Review</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A review of the item. Supersedes <a   href="/reviews">reviews</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sponsor">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/sponsor">sponsor</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startDate">
     
       <th class="prop-nam" scope="row">
 
@@ -145,14 +179,21 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 <code property="rdfs:label"><a   href="/subEvent">subEvent</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes <a   href="/subEvents">subEvents</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/superEvent">
+<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes <a   href="/subEvents">subEvents</a>.<br/> Inverse property: <a   href="/superEvent">superEvent</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/superEvent">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/superEvent">superEvent</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.<br/> Inverse property: <a   href="/subEvent">subEvent</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/translator">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/translator">translator</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -201,24 +242,28 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -270,7 +315,7 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 </th>
  
 <td class="prop-ect">
-<a   href="/Organization">Organization</a>&nbsp; or<br/> <a   href="/InviteAction">InviteAction</a>&nbsp; or<br/> <a   href="/LeaveAction">LeaveAction</a>&nbsp; or<br/> <a   href="/InformAction">InformAction</a>&nbsp; or<br/> <a   href="/Place">Place</a>&nbsp; or<br/> <a   href="/PlayAction">PlayAction</a>&nbsp; or<br/> <a   href="/JoinAction">JoinAction</a>&nbsp;</td><td class="prop-desc">Upcoming or past event associated with this place, organization, or action.  Supersedes <a   href="/events">events</a>.</td></tr><tr>
+<a   href="/InformAction">InformAction</a>&nbsp; or<br/> <a   href="/InviteAction">InviteAction</a>&nbsp; or<br/> <a   href="/JoinAction">JoinAction</a>&nbsp; or<br/> <a   href="/LeaveAction">LeaveAction</a>&nbsp; or<br/> <a   href="/Organization">Organization</a>&nbsp; or<br/> <a   href="/Place">Place</a>&nbsp; or<br/> <a   href="/PlayAction">PlayAction</a>&nbsp;</td><td class="prop-desc">Upcoming or past event associated with this place, organization, or action.  Supersedes <a   href="/events">events</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/firstPerformance">firstPerformance</a></code>
 </th>
@@ -294,16 +339,194 @@ Event</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   h
 </th>
  
 <td class="prop-ect">
-<a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc">An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.  Supersedes <a   href="/subEvents">subEvents</a>.</td></tr><tr>
+<a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc">An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.  Supersedes <a   href="/subEvents">subEvents</a>.<br/> inverse property: <a   href="/superEvent">superEvent</a>.</td></tr><tr>
 <th class="prop-nam" scope="row">
  <code><a   href="/superEvent">superEvent</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc">An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent. </td></tr></table>
-<br/><b>More specific Types</b><ul><li> <a   href="/BusinessEvent">BusinessEvent</a> </li><li> <a   href="/ChildrensEvent">ChildrensEvent</a> </li><li> <a   href="/ComedyEvent">ComedyEvent</a> </li><li> <a   href="/DanceEvent">DanceEvent</a> </li><li> <a   href="/DeliveryEvent">DeliveryEvent</a> </li><li> <a   href="/EducationEvent">EducationEvent</a> </li><li> <a   href="/ExhibitionEvent">ExhibitionEvent</a> </li><li> <a   href="/Festival">Festival</a> </li><li> <a   href="/FoodEvent">FoodEvent</a> </li><li> <a   href="/LiteraryEvent">LiteraryEvent</a> </li><li> <a   href="/MusicEvent">MusicEvent</a> </li><li> <a   href="/PublicationEvent">PublicationEvent</a> </li><li> <a   href="/SaleEvent">SaleEvent</a> </li><li> <a   href="/ScreeningEvent">ScreeningEvent</a> </li><li> <a   href="/SocialEvent">SocialEvent</a> </li><li> <a   href="/SportsEvent">SportsEvent</a> </li><li> <a   href="/TheaterEvent">TheaterEvent</a> </li><li> <a   href="/UserInteraction">UserInteraction</a> </li><li> <a   href="/VisualArtsEvent">VisualArtsEvent</a> </li></ul><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
+<a   href="/Event">Event</a>&nbsp;</td><td class="prop-desc">An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent. <br/> inverse property: <a   href="/subEvent">subEvent</a>.</td></tr></table>
+<br/><b>More specific Types</b><ul><li> <a   href="/BusinessEvent">BusinessEvent</a> </li><li> <a   href="/ChildrensEvent">ChildrensEvent</a> </li><li> <a   href="/ComedyEvent">ComedyEvent</a> </li><li> <a   href="/DanceEvent">DanceEvent</a> </li><li> <a   href="/DeliveryEvent">DeliveryEvent</a> </li><li> <a   href="/EducationEvent">EducationEvent</a> </li><li> <a   href="/ExhibitionEvent">ExhibitionEvent</a> </li><li> <a   href="/Festival">Festival</a> </li><li> <a   href="/FoodEvent">FoodEvent</a> </li><li> <a   href="/LiteraryEvent">LiteraryEvent</a> </li><li> <a   href="/MusicEvent">MusicEvent</a> </li><li> <a   href="/PublicationEvent">PublicationEvent</a> </li><li> <a   href="/SaleEvent">SaleEvent</a> </li><li> <a   href="/ScreeningEvent">ScreeningEvent</a> </li><li> <a   href="/SocialEvent">SocialEvent</a> </li><li> <a   href="/SportsEvent">SportsEvent</a> </li><li> <a   href="/TheaterEvent">TheaterEvent</a> </li><li> <a   href="/VisualArtsEvent">VisualArtsEvent</a> </li></ul><h4>More specific Types available in extensions</h4><ul><li><a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/CourseInstance">CourseInstance</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/EventSeries">EventSeries</a></li></ul><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="eg-9"></span><div class='ds-selector-tabs ds-selector'>
+<div title="sponsor-1"><a id="sponsor-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">&lt;div class="event-wrapper"&gt;
+  &lt;h1&gt;The 2016 Missoula Marathon&lt;/h1&gt;
+  &lt;p&gt;The 2016 &lt;a href="http://www.missoulamarathon.org/events/marathon/"&gt;Missoula Marathon&lt;/a&gt; is sponsored by &lt;a href="http://www.runwildmissoula.org/"&gt;Run Wild Missoula&lt;/a&gt;.&lt;/p&gt;
+  &lt;div class="event-date"&gt;Date/Time:  Sunday, July 10th, 2016, 6:00am&lt;/div&gt;
+  &lt;div class="event-fees"&gt;
+    &lt;p&gt;Cost:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Oct 1, 2015 – Jan 31, 2016 – $85&lt;/li&gt;
+      &lt;li&gt;Feb 1, 2016 – June 14, 2016 – $95&lt;/li&gt;
+      &lt;li&gt;Jun 15, 2016 – July 9, 2016 – $125&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="description"&gt;
+    &lt;p&gt;The Missoula Marathon course is flat, fast, USATF certified, and a Boston Qualifier! The marathon course does have a significant hill at the halfway point. The course is a point-to-point, beginning with a scenic route through the countryside and finishing in historic downtown Missoula. The marathon course is well marked with both cones and arrows on the road. You will notice every mile is marked on the road and with 8ft tall mile markers.&lt;/p&gt;
+    &lt;p&gt;Wheelchair and Handcycle: We are pleased to offer wheelchair and handcycle divisions in the 2016 Full and Half Marathon.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="location"&gt;
+    &lt;h2&gt;&lt;a href="http://www.ci.missoula.mt.us/"&gt;About Missoula, MT&lt;/a&gt;&lt;/h2&gt;
+    &lt;h2&gt;&lt;a href="http://www.missoulamarathon.org/wp-content/uploads/2015/06/2015-MM-Course-Map-V1-6-2-15.png"&gt;View Course Map&lt;/a&gt;&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div class="event-wrapper" itemscope itemtype="http://schema.org/Event"&gt;
+  &lt;h1 itemprop="name"&gt;The 2016 Missoula Marathon&lt;/h1&gt;
+  &lt;p&gt;The 2016 &lt;a itemprop="url" href="http://www.missoulamarathon.org/events/marathon/"&gt;Missoula Marathon&lt;/a&gt; is sponsored by 
+    &lt;span itemprop="sponsor" itemtype="http://schema.org/Organization"&gt;&lt;a itemprop="url" href="http://www.runwildmissoula.org/"&gt;
+    &lt;span itemprop="name"&gt;Run Wild Missoula&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+  &lt;div class="event-date" itemprop="startDate" content="2016-07-10T06:00"&gt;Date/Time:  Sunday, July 10th, 2016, 6:00am&lt;/div&gt;
+  &lt;div class="event-fees"&gt;
+    &lt;p&gt;Cost:&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li itemprop="offers" itemscope itemtype="http://schema.org/Offer"&gt;
+		  &lt;a itemprop="url" href="http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm"&gt;
+		  &lt;span itemprop="validFrom" content="2015-10-01T00:01"&gt;Oct 1, 2015&lt;/span&gt; – 
+		  &lt;span itemprop="validThrough" content="2016-01-31T23:59"&gt;Jan 31, 2016&lt;/span&gt; – 
+		  &lt;span itemprop="price" content="85.00"&gt;&lt;span itemprop="priceCurrency" content="USD"&gt;$85&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+		&lt;/li&gt;
+        &lt;li itemprop="offers" itemscope itemtype="http://schema.org/Offer"&gt;
+		  &lt;a itemprop="url" href="http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm"&gt;
+		  &lt;span itemprop="validFrom" content="2016-02-01T00:01"&gt;Feb 1, 2016&lt;/span&gt; – 
+		  &lt;span itemprop="validThrough" content="2016-06-14T23:59"&gt;June 14, 2016&lt;/span&gt; – 
+		  &lt;span itemprop="price" content="95.00"&gt;&lt;span itemprop="priceCurrency" content="USD"&gt;$95&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+		&lt;/li&gt;
+        &lt;li itemprop="offers" itemscope itemtype="http://schema.org/Offer"&gt;
+		  &lt;a itemprop="url" href="http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm"&gt;
+		  &lt;span itemprop="validFrom" content="2016-06-15T00:01"&gt;Jun 15, 2016&lt;/span&gt; – 
+		  &lt;span itemprop="validThrough" content="2016-07-09T23:59"&gt;July 9, 2016&lt;/span&gt; – 
+		  &lt;span itemprop="price" content="125.00"&gt;&lt;span itemprop="priceCurrency" content="USD"&gt;$125&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+		&lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="description" itemprop="description"&gt;
+    &lt;p&gt;The Missoula Marathon course is flat, fast, USATF certified, and a Boston Qualifier! The marathon course does have a significant hill at the halfway point. The course is a point-to-point, beginning with a scenic route through the countryside and finishing in historic downtown Missoula. The marathon course is well marked with both cones and arrows on the road. You will notice every mile is marked on the road and with 8ft tall mile markers.&lt;/p&gt;
+    &lt;p&gt;Wheelchair and Handcycle: We are pleased to offer wheelchair and handcycle divisions in the 2016 Full and Half Marathon.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="location" itemprop="location" itemscope itemtype="http://schema.org/Place"&gt;
+    &lt;h2 itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;
+	  &lt;a href="http://www.ci.missoula.mt.us/"&gt;About &lt;span itemprop="addressLocality"&gt;Missoula&lt;/span&gt;,  &lt;span itemprop="addressRegion"&gt;MT&lt;/span&gt;&lt;/a&gt;
+	&lt;/h2&gt;
+    &lt;h2 itemprop="hasMap"&gt;&lt;a itemprop="map" itemtype="https://schema.org/Map" href="http://www.missoulamarathon.org/wp-content/uploads/2015/06/2015-MM-Course-Map-V1-6-2-15.png"&gt;View Course Map&lt;/a&gt;
+	&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa "> 
+&lt;div class="event-wrapper" vocab="http://schema.org/" typeof="Event"&gt;
+  &lt;h1 property="name"&gt;The 2016 Missoula Marathon&lt;/h1&gt;
+  &lt;p&gt;The 2016 &lt;a property="url" href="http://www.missoulamarathon.org/events/marathon/"&gt;Missoula Marathon&lt;/a&gt; is sponsored by &lt;span property="sponsor" typeof="Organization"&gt;&lt;a property="url" href="http://www.runwildmissoula.org/"&gt;&lt;span property="name"&gt;Run Wild Missoula&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+  &lt;div class="event-date" property="startDate" content="2016-07-10T06:00"&gt;Date/Time:  Sunday, July 10th, 2016, 6:00am&lt;/div&gt;
+  &lt;div class="event-fees"&gt;
+    &lt;ul&gt;
+      &lt;li property="offers" typeof="http://schema.org/Offer"&gt;
+        &lt;a property="url" href="http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm"&gt;
+		&lt;span property="validFrom" content="2015-10-01T00:01"&gt;Oct 1, 2015&lt;/span&gt; – 
+		&lt;span property="validThrough" content="2016-01-31T23:59"&gt;Jan 31, 2016&lt;/span&gt; – 
+		&lt;span property="price" content="85.00"&gt;
+		  &lt;span property="priceCurrency" content="USD"&gt;$85&lt;/span&gt;
+		&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li property="offers" typeof="http://schema.org/Offer"&gt;
+	    &lt;a property="url" href="http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm"&gt;
+		&lt;span property="validFrom" content="2016-02-01T00:01"&gt;Feb 1, 2016&lt;/span&gt; – 
+		&lt;span property="validThrough" content="2016-06-14T23:59"&gt;June 14, 2016&lt;/span&gt; – 
+		&lt;span property="price" content="95.00"&gt;
+		  &lt;span property="priceCurrency" content="USD"&gt;$95&lt;/span&gt;
+		&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li property="offers" typeof="http://schema.org/Offer"&gt;
+        &lt;a property="url" href="http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm"&gt;
+        &lt;span property="validFrom" content="2016-06-15T00:01"&gt;Jun 15, 2016&lt;/span&gt; – 
+        &lt;span property="validThrough" content="2016-07-09T23:59"&gt;July 9, 2016&lt;/span&gt; – 
+        &lt;span property="price" content="125.00"&gt;&lt;span property="priceCurrency" content="USD"&gt;$125&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="description" property="description"&gt;
+    &lt;p&gt;The Missoula Marathon course is flat, fast, USATF certified, and a Boston Qualifier! The marathon course does have a significant hill at the halfway point. The course is a point-to-point, beginning with a scenic route through the countryside and finishing in historic downtown Missoula. The marathon course is well marked with both cones and arrows on the road. You will notice every mile is marked on the road and with 8ft tall mile markers.&lt;/p&gt;
+    &lt;p&gt;Wheelchair and Handcycle: We are pleased to offer wheelchair and handcycle divisions in the 2016 Full and Half Marathon.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="location" property="location" typeof="http://schema.org/Place"&gt;
+    &lt;a property="url" href="http://www.ci.missoula.mt.us/"&gt;
+	  &lt;h2 property="address" typeof="http://schema.org/PostalAddress"&gt;About 
+	  &lt;span property="addressLocality"&gt;Missoula&lt;/span&gt;, &lt;span property="addressRegion"&gt;MT&lt;/span&gt;
+	&lt;/h2&gt;
+	&lt;/a&gt;
+    &lt;h2&gt;
+	  &lt;span property="hasMap"&gt;
+	  &lt;a property="map" href="http://www.missoulamarathon.org/wp-content/uploads/2015/06/2015-MM-Course-Map-V1-6-2-15.png"&gt;View Course Map&lt;/a&gt;
+	  &lt;/span&gt;
+    &lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld "> 
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org/",
+  "@type": "Event",
+  "name": "The Missoula Marathon",
+  "sponsor": {
+    "@type": "Organization",
+    "name": "Run Wild Missoula",
+    "url": "http://www.runwildmissoula.org/"
+	},
+  "startDate": "2016-07-10T06:00",
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm",
+      "validFrom": "2015-10-01T00:01",
+      "validThrough": "2016-01-31T23:59",
+      "price": "85.00",
+      "priceCurrency": "USD"
+    },{
+      "@type": "Offer",
+      "url": "http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm",
+      "validFrom": "2016-02-01T00:01",
+      "validThrough": "2016-06-14T23:59",
+      "price": "95.00",
+      "priceCurrency": "USD"
+    },{
+      "@type": "Offer",
+      "url": "http://www.runwildmissoula.org/runwild/index.php/ID/mmar2016/fuseaction/register.main.htm",
+      "validFrom": "2016-06-15T00:01",
+      "validThrough": "2016-07-09T23:59",
+      "price": "125.00",
+      "priceCurrency": "USD"
+    }
+    ],
+  "description": "The Missoula Marathon course is flat, fast, USATF certified, and a Boston Qualifier! The marathon course does have a significant hill at the halfway point. The course is a point-to-point, beginning with a scenic route through the countryside and finishing in historic downtown Missoula. The marathon course is well marked with both cones and arrows on the road. You will notice every mile is marked on the road and with 8ft tall mile markers. Wheelchair and Handcycle: We are pleased to offer wheelchair and handcycle divisions in the 2016 Full and Half Marathon.",
+  "location": {
+    "@type": "Place",
+    "name": "Missoula, MT",
+    "url": "http://www.ci.missoula.mt.us/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Missoula",
+      "addressRegion": "MT"
+    },
+    "hasMap": "http://www.missoulamarathon.org/wp-content/uploads/2015/06/2015-MM-Course-Map-V1-6-2-15.png"
+    }
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="eg-9"><a id="eg-9">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -400,7 +623,7 @@ Priced from: $35
 
 </div>
 
-<span id="eg-14"></span><div class='ds-selector-tabs ds-selector'>
+<div title="eg-14"><a id="eg-14">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -468,7 +691,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 &lt;h2&gt;Songs&lt;/h2&gt;
 &lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
   &lt;span itemprop="name"&gt;Rope&lt;/span&gt;
-  &lt;meta itemprop="url" content ="foo-fighters-rope.html"&gt;
+  &lt;link itemprop="url" href="foo-fighters-rope.html"&gt;
   Length: &lt;meta itemprop="duration" content="PT4M5S"&gt;4:05 -
   14300 plays
   &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
@@ -482,7 +705,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 &lt;/div&gt;
 &lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
   &lt;span itemprop="name"&gt;Everlong&lt;/span&gt;
-  &lt;meta itemprop="url" content ="foo-fighters-everlong.html"&gt;
+  &lt;link itemprop="url" href="foo-fighters-everlong.html"&gt;
   Length: &lt;meta itemprop="duration" content="PT6M33S"&gt;6:33 -
   11700 plays
   &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
@@ -616,64 +839,57 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 {
   "@context": "http://schema.org",
   "@type": "MusicGroup",
-  "event": [
-    {
-      "@type": "Event",
-      "location": "Memphis, TN, US",
-      "offers": "ticketmaster.com/foofighters/may20-2011",
-      "startDate": "2011-05-20",
-      "url": "foo-fighters-may20-fedexforum"
-    },
-    {
-      "@type": "Event",
-      "location": "Council Bluffs, IA, US",
-      "offers": "ticketmaster.com/foofighters/may23-2011",
-      "startDate": "2011-05-23",
-      "url": "foo-fighters-may23-midamericacenter"
-    }
-  ],
+  "event": [{
+    "@type": "Event",
+    "location": "Memphis, TN, US",
+    "offers": "ticketmaster.com/foofighters/may20-2011",
+    "startDate": "2011-05-20",
+    "url": "foo-fighters-may20-fedexforum"
+  }, {
+    "@type": "Event",
+    "location": "Council Bluffs, IA, US",
+    "offers": "ticketmaster.com/foofighters/may23-2011",
+    "startDate": "2011-05-23",
+    "url": "foo-fighters-may23-midamericacenter"
+  }],
   "image": [
     "foofighters-1.jpg",
     "foofighters-2.jpg",
     "foofighters-3.jpg"
   ],
-  "interactionStatistic: {
+  "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": "http://schema.org/CommentAction",
-    "userInteractionCount": "18",
+    "userInteractionCount": "18"
   },
   "name": "Foo Fighters",
-  "track": [
-    {
-      "@type": "MusicRecording",
-      "audio": "foo-fighters-rope-play.html",
-      "duration": "PT4M5S",
-      "inAlbum": "foo-fighters-wasting-light.html",
-      "interactionStatistic: {
-        "@type": "InteractionCounter",
-        "interactionType": "http://schema.org/ListenAction",
-        "userInteractionCount": "14300",
-      }
+  "track": [{
+    "@type": "MusicRecording",
+    "audio": "foo-fighters-rope-play.html",
+    "duration": "PT4M5S",
+    "inAlbum": "foo-fighters-wasting-light.html",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "http://schema.org/ListenAction",
+      "userInteractionCount": "14300"
     },
-      "name": "Rope",
-      "offers": "foo-fighters-rope-buy.html",
-      "url": "foo-fighters-rope.html"
+    "name": "Rope",
+    "offers": "foo-fighters-rope-buy.html",
+    "url": "foo-fighters-rope.html"
+  }, {
+    "@type": "MusicRecording",
+    "audio": "foo-fighters-everlong-play.html",
+    "duration": "PT6M33S",
+    "inAlbum": "foo-fighters-color-and-shape.html",
+    "name": "Everlong",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "http://schema.org/ListenAction",
+      "userInteractionCount": "11700"
     },
-    {
-      "@type": "MusicRecording",
-      "audio": "foo-fighters-everlong-play.html",
-      "duration": "PT6M33S",
-      "inAlbum": "foo-fighters-color-and-shape.html",
-      "name": "Everlong",
-      "interactionStatistic: {
-        "@type": "InteractionCounter",
-        "interactionType": "http://schema.org/ListenAction",
-        "userInteractionCount": "11700",
-      },
-      "offers": "foo-fighters-everlong-buy.html",
-      "url": "foo-fighters-everlong.html"
-    }
-  ],
+    "offers": "foo-fighters-everlong-buy.html",
+    "url": "foo-fighters-everlong.html"
+  }],
   "video": {
     "@type": "VideoObject",
     "description": "Catch this exclusive interview with Dave Grohl and the Foo Fighters about their new album, Rope.",
@@ -687,7 +903,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-4"><a id="example-4">Example 4</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -784,7 +1000,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-5"><a id="example-5">Example 5</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -882,7 +1098,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-6"><a id="example-6">Example 6</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -951,7 +1167,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
   &lt;div class="event-price"&gt;
     &lt;meta property="priceCurrency" content="USD" /&gt;$
     &lt;meta property="price" content="13.00" /&gt;13.00
-  &lt;/div&gt;   
+  &lt;/div&gt;
   &lt;a property="url" href="http://www.ticketfly.com/purchase/309433"&gt;Tickets&lt;/a&gt;
   &lt;/span&gt;
 &lt;/div&gt;
@@ -985,7 +1201,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-7"><a id="example-7">Example 7</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1087,7 +1303,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-8"><a id="example-8">Example 8</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1140,7 +1356,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-9"><a id="example-9">Example 9</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1359,7 +1575,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-10"><a id="example-10">Example 10</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1450,7 +1666,7 @@ Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

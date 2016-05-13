@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 InteractionCounter</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/StructuredValue">StructuredValue</a> &gt; <a   href="/InteractionCounter">InteractionCounter</a></span>
 </h4>
  <div property="rdfs:comment">A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.</div>
@@ -80,24 +80,28 @@ InteractionCounter</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -144,374 +148,48 @@ InteractionCounter</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a
  
 <td class="prop-ect">
 <a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc">The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.  Supersedes <a   href="/interactionCount">interactionCount</a>.</td></tr></table>
+<table class="definition-table">
+  <thead>
+    <tr>
+      <th>Supersedes</th>
+    </tr>
+</thead>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserBlocks" /><a   href="/UserBlocks" title="UserBlocks: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserBlocks</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserCheckins" /><a   href="/UserCheckins" title="UserCheckins: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserCheckins</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserComments" /><a   href="/UserComments" title="UserComments: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserComments</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserDownloads" /><a   href="/UserDownloads" title="UserDownloads: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserDownloads</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserInteraction" /><a   href="/UserInteraction" title="UserInteraction: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserInteraction</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserLikes" /><a   href="/UserLikes" title="UserLikes: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserLikes</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserPageVisits" /><a   href="/UserPageVisits" title="UserPageVisits: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserPageVisits</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserPlays" /><a   href="/UserPlays" title="UserPlays: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserPlays</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserPlusOnes" /><a   href="/UserPlusOnes" title="UserPlusOnes: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserPlusOnes</a></code></td></tr>
+
+    <tr><td><code><link  property="/" href="http://schema.org/UserTweets" /><a   href="/UserTweets" title="UserTweets: ''UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
+          <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.''">UserTweets</a></code></td></tr>
+
+</table>
+
 <br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="eg-14"></span><div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt;Foo Fighters&lt;/h1&gt;
-&lt;h2&gt;Video: Interview with the Foo Fighters&lt;/h2&gt;
-&lt;object ...&gt;
-  &lt;param ...&gt;
-  &lt;embed type="application/x-shockwave-flash" ...&gt;
-&lt;/object&gt;
-Catch this exclusive interview with Dave Grohl and the Foo Fighters
- about their new album, Rope.
-&lt;h2&gt;Songs&lt;/h2&gt;
-Rope
- Length: 4:05 - 14300 plays
-&lt;a href="foo-fighters-rope-play.html"&gt;Play&lt;/a&gt;
-&lt;a href="foo-fighters-rope-buy.html"&gt;Buy&lt;/a&gt;
-From album: &lt;a href="foo-fighters-wasting-light.html"&gt;Wasting Light&lt;/a&gt;
-Everlong
- Length: 6:33 - 11700 plays
-&lt;a href="foo-fighters-everlong-play.html"&gt;Play&lt;/a&gt;
-&lt;a href="foo-fighters-everlong-buy.html"&gt;Buy&lt;/a&gt;
-From album: &lt;a href="foo-fighters-color-and-shape.html"&gt;The Color And The Shape&lt;/a&gt;
-&lt;h2&gt;Upcoming shows&lt;/h2&gt;
-&lt;a href="foo-fighters-may20-fedexforum"&gt;FedExForum&lt;/a&gt;
-Memphis, TN, US
-May 20
-&lt;a href="ticketworlds.com/foofighters/may20-2011"&gt;Buy tickets&lt;/a&gt;
-&lt;a href="foo-fighters-may23-midamericacenter"&gt;Mid America Center&lt;/a&gt;
-Council Bluffs, IA, US
-May 23
-&lt;a href="ticketworlds.com/foofighters/may23-2011"&gt;Buy tickets&lt;/a&gt;
-&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
-&lt;a href="foofighters-1.jpg"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-2.jpg"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-3.jpg"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
-&lt;h2&gt;Comments:&lt;/h2&gt;
-Excited about seeing them in concert next week. -Lawrence , Jan 23
-I dig their latest single. -Mary, Jan 19
-Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicGroup"&gt;
-&lt;h1 itemprop="name"&gt;Foo Fighters&lt;/h1&gt;
-&lt;div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"&gt;
-  &lt;h2&gt;Video: &lt;span itemprop="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
-  &lt;meta itemprop="duration" content="T1M33S" /&gt;
-  &lt;meta itemprop="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
-  &lt;object ...&gt;
-    &lt;param ...&gt;
-    &lt;embed type="application/x-shockwave-flash" ...&gt;
-  &lt;/object&gt;
-  &lt;span itemprop="description"&gt;Catch this exclusive interview with
-    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
-&lt;/div&gt;
-&lt;h2&gt;Songs&lt;/h2&gt;
-&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-  &lt;span itemprop="name"&gt;Rope&lt;/span&gt;
-  &lt;meta itemprop="url" content ="foo-fighters-rope.html"&gt;
-  Length: &lt;meta itemprop="duration" content="PT4M5S"&gt;4:05 -
-  14300 plays
-  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta itemprop="userInteractionCount" content="14300" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-rope-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-rope-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-wasting-light.html"
-    itemprop="inAlbum"&gt;Wasting Light&lt;/a&gt;
-&lt;/div&gt;
-&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-  &lt;span itemprop="name"&gt;Everlong&lt;/span&gt;
-  &lt;meta itemprop="url" content ="foo-fighters-everlong.html"&gt;
-  Length: &lt;meta itemprop="duration" content="PT6M33S"&gt;6:33 -
-  11700 plays
-  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta itemprop="userInteractionCount" content="11700" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-everlong-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-everlong-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-color-and-shape.html"
-    itemprop="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;Upcoming shows&lt;/h2&gt;
-&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
-  &lt;a href="foo-fighters-may20-fedexforum" itemprop="url"&gt;
-    &lt;span itemprop="name"&gt;FedExForum&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span itemprop="location"&gt;Memphis, TN, US&lt;/span&gt;
-  &lt;meta itemprop="startDate" content="2011-05-20"&gt;May 20
-  &lt;a href="ticketmaster.com/foofighters/may20-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
-  &lt;a href="foo-fighters-may23-midamericacenter" itemprop="url"&gt;
-    &lt;span itemprop="name"&gt;Mid America Center&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span itemprop="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
-  &lt;meta itemprop="startDate" content="2011-05-23"&gt;May 23
-  &lt;a href="ticketmaster.com/foofighters/may23-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
-&lt;a href="foofighters-1.jpg" itemprop="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-2.jpg" itemprop="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-3.jpg" itemprop="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
-&lt;h2&gt;Comments:&lt;/h2&gt;
-Excited about seeing them in concert next week. -Lawrence , Jan 23
-I dig their latest single. -Mary, Jan 19
-&lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-  &lt;meta itemprop="interactionType" content="http://schema.org/CommentAction" /&gt;
-  &lt;meta itemprop="userInteractionCount" content="18" /&gt;
-&lt;/div&gt;
-Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicGroup"&gt;
-&lt;h1 property="name"&gt;Foo Fighters&lt;/h1&gt;
-&lt;div property="video" typeof="VideoObject"&gt;
-  &lt;h2&gt;Video: &lt;span property="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
-  &lt;meta property="duration" content="T1M33S" /&gt;
-  &lt;meta property="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
-  &lt;object ...&gt;
-    &lt;param ...&gt;
-    &lt;embed type="application/x-shockwave-flash" ...&gt;
-  &lt;/object&gt;
-  &lt;span property="description"&gt;Catch this exclusive interview with
-    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
-&lt;/div&gt;
-&lt;h2&gt;Songs&lt;/h2&gt;
-&lt;div property="track" typeof="MusicRecording"&gt;
-  &lt;span property="name"&gt;Rope&lt;/span&gt;
-  &lt;meta property="url" content ="foo-fighters-rope.html"&gt;
-  Length: &lt;meta property="duration" content="PT4M5S"&gt;4:05 -
-  14300 plays
-  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
-    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta property="userInteractionCount" content="14300" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-rope-play.html" property="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-rope-buy.html" property="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-wasting-light.html"
-    property="inAlbum"&gt;Wasting Light&lt;/a&gt;
-&lt;/div&gt;
-&lt;div property="track" typeof="MusicRecording"&gt;
-  &lt;span property="name"&gt;Everlong&lt;/span&gt;
-  &lt;meta property="url" content ="foo-fighters-everlong.html"&gt;
-  Length: &lt;meta property="duration" content="PT6M33S"&gt;6:33 -
-  11700 plays
-  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
-    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
-    &lt;meta property="userInteractionCount" content="11700" /&gt;
-  &lt;/div&gt;
-  &lt;a href="foo-fighters-everlong-play.html" property="audio"&gt;Play&lt;/a&gt;
-  &lt;a href="foo-fighters-everlong-buy.html" property="offers"&gt;Buy&lt;/a&gt;
-  From album: &lt;a href="foo-fighters-color-and-shape.html"
-    property="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;Upcoming shows&lt;/h2&gt;
-&lt;div property="event" typeof="Event"&gt;
-  &lt;a href="foo-fighters-may20-fedexforum" property="url"&gt;
-    &lt;span property="name"&gt;FedExForum&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span property="location"&gt;Memphis, TN, US&lt;/span&gt;
-  &lt;meta property="startDate" content="2011-05-20"&gt;May 20
-  &lt;a href="ticketmaster.com/foofighters/may20-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;div property="event" typeof="Event"&gt;
-  &lt;a href="foo-fighters-may23-midamericacenter" property="url"&gt;
-    &lt;span property="name"&gt;Mid America Center&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;span property="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
-  &lt;meta property="startDate" content="2011-05-23"&gt;May 23
-  &lt;a href="ticketmaster.com/foofighters/may23-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
-&lt;/div&gt;
-&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
-&lt;a href="foofighters-1.jpg" property="image"&gt;&lt;img
-alt="Thumbnail and linked photo of Foo Fighters band"
-src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-2.jpg" property="image"&gt;&lt;img
- alt="Thumbnail and linked photo of Foo Fighters band"
- src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
-&lt;a href="foofighters-3.jpg" property="image"&gt;&lt;img
- alt="Thumbnail and linked photo of Foo Fighters band"
- src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
-&lt;h2&gt;Comments:&lt;/h2&gt;
-Excited about seeing them in concert next week. -Lawrence , Jan 23
-I dig their latest single. -Mary, Jan 19
-&lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
-  &lt;meta property="interactionType" content="http://schema.org/CommentAction" /&gt;
-  &lt;meta property="userInteractionCount" content="18" /&gt;
-&lt;/div&gt;
-Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org",
-  "@type": "MusicGroup",
-  "event": [
-    {
-      "@type": "Event",
-      "location": "Memphis, TN, US",
-      "offers": "ticketmaster.com/foofighters/may20-2011",
-      "startDate": "2011-05-20",
-      "url": "foo-fighters-may20-fedexforum"
-    },
-    {
-      "@type": "Event",
-      "location": "Council Bluffs, IA, US",
-      "offers": "ticketmaster.com/foofighters/may23-2011",
-      "startDate": "2011-05-23",
-      "url": "foo-fighters-may23-midamericacenter"
-    }
-  ],
-  "image": [
-    "foofighters-1.jpg",
-    "foofighters-2.jpg",
-    "foofighters-3.jpg"
-  ],
-  "interactionStatistic: {
-    "@type": "InteractionCounter",
-    "interactionType": "http://schema.org/CommentAction",
-    "userInteractionCount": "18",
-  },
-  "name": "Foo Fighters",
-  "track": [
-    {
-      "@type": "MusicRecording",
-      "audio": "foo-fighters-rope-play.html",
-      "duration": "PT4M5S",
-      "inAlbum": "foo-fighters-wasting-light.html",
-      "interactionStatistic: {
-        "@type": "InteractionCounter",
-        "interactionType": "http://schema.org/ListenAction",
-        "userInteractionCount": "14300",
-      }
-    },
-      "name": "Rope",
-      "offers": "foo-fighters-rope-buy.html",
-      "url": "foo-fighters-rope.html"
-    },
-    {
-      "@type": "MusicRecording",
-      "audio": "foo-fighters-everlong-play.html",
-      "duration": "PT6M33S",
-      "inAlbum": "foo-fighters-color-and-shape.html",
-      "name": "Everlong",
-      "interactionStatistic: {
-        "@type": "InteractionCounter",
-        "interactionType": "http://schema.org/ListenAction",
-        "userInteractionCount": "11700",
-      },
-      "offers": "foo-fighters-everlong-buy.html",
-      "url": "foo-fighters-everlong.html"
-    }
-  ],
-  "video": {
-    "@type": "VideoObject",
-    "description": "Catch this exclusive interview with Dave Grohl and the Foo Fighters about their new album, Rope.",
-    "duration": "T1M33S",
-    "name": "Interview with the Foo Fighters",
-    "thumbnail": "foo-fighters-interview-thumb.jpg"
-  }
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">How to Tie a Reef Knot
-by John Doe
-This article has been tweeted 1203 times and contains 78 user comments.
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Article"&gt;
-  &lt;span itemprop="name"&gt;How to Tie a Reef Knot&lt;/span&gt;
-  by &lt;span itemprop="author"&gt;John Doe&lt;/span&gt;
-  This article has been tweeted 1203 times and contains 78 user comments.
-  &lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-    &lt;div itemprop="interactionService" itemscope itemid="http://www.twitter.com" itemtype="http://schema.org/Website"&gt;
-      &lt;meta itemprop="name" content="Twitter" /&gt;
-    &lt;/div&gt;
-    &lt;meta itemprop="interactionType" content="http://schema.org/ShareAction"/&gt;
-    &lt;meta itemprop="userInteractionCount" content="1203" /&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
-    &lt;meta itemprop="interactionType" content="http://schema.org/CommentAction"/&gt;
-    &lt;meta itemprop="userInteractionCount" content="78" /&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Article"&gt;
-  &lt;span property="name"&gt;How to Tie a Reef Knot&lt;/span&gt;
-  by &lt;span property="author"&gt;John Doe&lt;/span&gt;
-  This article has been tweeted 1203 times and contains 78 user comments.
-  &lt;div property="interactionStatistic" typeof="InteractionCounter"&gt;
-    &lt;div property="interactionService" itemscope itemid="http://www.twitter.com" itemtype="http://schema.org/Website"&gt;
-      &lt;meta property="name" content="Twitter" /&gt;
-    &lt;/div&gt;
-    &lt;meta property="interactionType" content="http://schema.org/ShareAction"/&gt;
-    &lt;meta property="userInteractionCount" content="1203" /&gt;
-  &lt;/div&gt;
-  &lt;div property="interactionStatistic" typeof="InteractionCounter"&gt;
-    &lt;meta property="interactionType" content="http://schema.org/CommentAction"/&gt;
-    &lt;meta property="userInteractionCount" content="78" /&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": "John Doe",
-  "interactionStatistic": [
-    {
-      "@type": "InteractionCounter",
-      "interactionService": {
-        "@type": "Website",
-        "name": "Twitter",
-        "url": "http://www.twitter.com"
-      },
-      "interactionType": "http://schema.org/ShareAction",
-      "userInteractionCount": "1203"
-    },
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "http://schema.org/CommentAction",
-      "userInteractionCount": "78"
-    },
-  ],
-  "name": "How to Tie a Reef Knot"
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<span id="interaction-counter-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="interaction-counter-1"><a id="interaction-counter-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -701,7 +379,365 @@ Facebook: 1024 likes
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<div title="eg-14"><a id="eg-14">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt;Foo Fighters&lt;/h1&gt;
+&lt;h2&gt;Video: Interview with the Foo Fighters&lt;/h2&gt;
+&lt;object ...&gt;
+  &lt;param ...&gt;
+  &lt;embed type="application/x-shockwave-flash" ...&gt;
+&lt;/object&gt;
+Catch this exclusive interview with Dave Grohl and the Foo Fighters
+ about their new album, Rope.
+&lt;h2&gt;Songs&lt;/h2&gt;
+Rope
+ Length: 4:05 - 14300 plays
+&lt;a href="foo-fighters-rope-play.html"&gt;Play&lt;/a&gt;
+&lt;a href="foo-fighters-rope-buy.html"&gt;Buy&lt;/a&gt;
+From album: &lt;a href="foo-fighters-wasting-light.html"&gt;Wasting Light&lt;/a&gt;
+Everlong
+ Length: 6:33 - 11700 plays
+&lt;a href="foo-fighters-everlong-play.html"&gt;Play&lt;/a&gt;
+&lt;a href="foo-fighters-everlong-buy.html"&gt;Buy&lt;/a&gt;
+From album: &lt;a href="foo-fighters-color-and-shape.html"&gt;The Color And The Shape&lt;/a&gt;
+&lt;h2&gt;Upcoming shows&lt;/h2&gt;
+&lt;a href="foo-fighters-may20-fedexforum"&gt;FedExForum&lt;/a&gt;
+Memphis, TN, US
+May 20
+&lt;a href="ticketworlds.com/foofighters/may20-2011"&gt;Buy tickets&lt;/a&gt;
+&lt;a href="foo-fighters-may23-midamericacenter"&gt;Mid America Center&lt;/a&gt;
+Council Bluffs, IA, US
+May 23
+&lt;a href="ticketworlds.com/foofighters/may23-2011"&gt;Buy tickets&lt;/a&gt;
+&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="foofighters-1.jpg"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-2.jpg"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-3.jpg"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
+&lt;h2&gt;Comments:&lt;/h2&gt;
+Excited about seeing them in concert next week. -Lawrence , Jan 23
+I dig their latest single. -Mary, Jan 19
+Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicGroup"&gt;
+&lt;h1 itemprop="name"&gt;Foo Fighters&lt;/h1&gt;
+&lt;div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"&gt;
+  &lt;h2&gt;Video: &lt;span itemprop="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
+  &lt;meta itemprop="duration" content="T1M33S" /&gt;
+  &lt;meta itemprop="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
+  &lt;object ...&gt;
+    &lt;param ...&gt;
+    &lt;embed type="application/x-shockwave-flash" ...&gt;
+  &lt;/object&gt;
+  &lt;span itemprop="description"&gt;Catch this exclusive interview with
+    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;Songs&lt;/h2&gt;
+&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+  &lt;span itemprop="name"&gt;Rope&lt;/span&gt;
+  &lt;link itemprop="url" href="foo-fighters-rope.html"&gt;
+  Length: &lt;meta itemprop="duration" content="PT4M5S"&gt;4:05 -
+  14300 plays
+  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta itemprop="userInteractionCount" content="14300" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-rope-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-rope-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-wasting-light.html"
+    itemprop="inAlbum"&gt;Wasting Light&lt;/a&gt;
+&lt;/div&gt;
+&lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+  &lt;span itemprop="name"&gt;Everlong&lt;/span&gt;
+  &lt;link itemprop="url" href="foo-fighters-everlong.html"&gt;
+  Length: &lt;meta itemprop="duration" content="PT6M33S"&gt;6:33 -
+  11700 plays
+  &lt;div itemprop="interactionCount" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+    &lt;meta itemprop="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta itemprop="userInteractionCount" content="11700" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-everlong-play.html" itemprop="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-everlong-buy.html" itemprop="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-color-and-shape.html"
+    itemprop="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;Upcoming shows&lt;/h2&gt;
+&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
+  &lt;a href="foo-fighters-may20-fedexforum" itemprop="url"&gt;
+    &lt;span itemprop="name"&gt;FedExForum&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span itemprop="location"&gt;Memphis, TN, US&lt;/span&gt;
+  &lt;meta itemprop="startDate" content="2011-05-20"&gt;May 20
+  &lt;a href="ticketmaster.com/foofighters/may20-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;div itemprop="event" itemscope itemtype="http://schema.org/Event"&gt;
+  &lt;a href="foo-fighters-may23-midamericacenter" itemprop="url"&gt;
+    &lt;span itemprop="name"&gt;Mid America Center&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span itemprop="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
+  &lt;meta itemprop="startDate" content="2011-05-23"&gt;May 23
+  &lt;a href="ticketmaster.com/foofighters/may23-2011" itemprop="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="foofighters-1.jpg" itemprop="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-2.jpg" itemprop="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-3.jpg" itemprop="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
+&lt;h2&gt;Comments:&lt;/h2&gt;
+Excited about seeing them in concert next week. -Lawrence , Jan 23
+I dig their latest single. -Mary, Jan 19
+&lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+  &lt;meta itemprop="interactionType" content="http://schema.org/CommentAction" /&gt;
+  &lt;meta itemprop="userInteractionCount" content="18" /&gt;
+&lt;/div&gt;
+Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicGroup"&gt;
+&lt;h1 property="name"&gt;Foo Fighters&lt;/h1&gt;
+&lt;div property="video" typeof="VideoObject"&gt;
+  &lt;h2&gt;Video: &lt;span property="name"&gt;Interview with the Foo Fighters&lt;/span&gt;&lt;/h2&gt;
+  &lt;meta property="duration" content="T1M33S" /&gt;
+  &lt;meta property="thumbnail" content="foo-fighters-interview-thumb.jpg" /&gt;
+  &lt;object ...&gt;
+    &lt;param ...&gt;
+    &lt;embed type="application/x-shockwave-flash" ...&gt;
+  &lt;/object&gt;
+  &lt;span property="description"&gt;Catch this exclusive interview with
+    Dave Grohl and the Foo Fighters about their new album, Rope.&lt;/span&gt;
+&lt;/div&gt;
+&lt;h2&gt;Songs&lt;/h2&gt;
+&lt;div property="track" typeof="MusicRecording"&gt;
+  &lt;span property="name"&gt;Rope&lt;/span&gt;
+  &lt;meta property="url" content ="foo-fighters-rope.html"&gt;
+  Length: &lt;meta property="duration" content="PT4M5S"&gt;4:05 -
+  14300 plays
+  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
+    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta property="userInteractionCount" content="14300" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-rope-play.html" property="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-rope-buy.html" property="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-wasting-light.html"
+    property="inAlbum"&gt;Wasting Light&lt;/a&gt;
+&lt;/div&gt;
+&lt;div property="track" typeof="MusicRecording"&gt;
+  &lt;span property="name"&gt;Everlong&lt;/span&gt;
+  &lt;meta property="url" content ="foo-fighters-everlong.html"&gt;
+  Length: &lt;meta property="duration" content="PT6M33S"&gt;6:33 -
+  11700 plays
+  &lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
+    &lt;meta property="interactionType" content="http://schema.org/ListenAction" /&gt;
+    &lt;meta property="userInteractionCount" content="11700" /&gt;
+  &lt;/div&gt;
+  &lt;a href="foo-fighters-everlong-play.html" property="audio"&gt;Play&lt;/a&gt;
+  &lt;a href="foo-fighters-everlong-buy.html" property="offers"&gt;Buy&lt;/a&gt;
+  From album: &lt;a href="foo-fighters-color-and-shape.html"
+    property="inAlbum"&gt;The Color And The Shape&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;Upcoming shows&lt;/h2&gt;
+&lt;div property="event" typeof="Event"&gt;
+  &lt;a href="foo-fighters-may20-fedexforum" property="url"&gt;
+    &lt;span property="name"&gt;FedExForum&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span property="location"&gt;Memphis, TN, US&lt;/span&gt;
+  &lt;meta property="startDate" content="2011-05-20"&gt;May 20
+  &lt;a href="ticketmaster.com/foofighters/may20-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;div property="event" typeof="Event"&gt;
+  &lt;a href="foo-fighters-may23-midamericacenter" property="url"&gt;
+    &lt;span property="name"&gt;Mid America Center&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;span property="location"&gt;Council Bluffs, IA, US&lt;/span&gt;
+  &lt;meta property="startDate" content="2011-05-23"&gt;May 23
+  &lt;a href="ticketmaster.com/foofighters/may23-2011" property="offers"&gt;Buy tickets&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;&lt;a href="foo-fighters-photos"&gt;28 Photos&lt;/a&gt;&lt;/h2&gt;
+&lt;a href="foofighters-1.jpg" property="image"&gt;&lt;img
+alt="Thumbnail and linked photo of Foo Fighters band"
+src="foofighters-thumb1.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-2.jpg" property="image"&gt;&lt;img
+ alt="Thumbnail and linked photo of Foo Fighters band"
+ src="foofighters-thumb2.jpg" /&gt;&lt;/a&gt;
+&lt;a href="foofighters-3.jpg" property="image"&gt;&lt;img
+ alt="Thumbnail and linked photo of Foo Fighters band"
+ src="foofighters-thumb3.jpg" /&gt;&lt;/a&gt;
+&lt;h2&gt;Comments:&lt;/h2&gt;
+Excited about seeing them in concert next week. -Lawrence , Jan 23
+I dig their latest single. -Mary, Jan 19
+&lt;div property="interactionStatistic" typeof="http://schema.org/InteractionCounter"&gt;
+  &lt;meta property="interactionType" content="http://schema.org/CommentAction" /&gt;
+  &lt;meta property="userInteractionCount" content="18" /&gt;
+&lt;/div&gt;
+Showing 1-2 of 18 comments. &lt;a href="foofighters-comments"&gt;More&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org",
+  "@type": "MusicGroup",
+  "event": [{
+    "@type": "Event",
+    "location": "Memphis, TN, US",
+    "offers": "ticketmaster.com/foofighters/may20-2011",
+    "startDate": "2011-05-20",
+    "url": "foo-fighters-may20-fedexforum"
+  }, {
+    "@type": "Event",
+    "location": "Council Bluffs, IA, US",
+    "offers": "ticketmaster.com/foofighters/may23-2011",
+    "startDate": "2011-05-23",
+    "url": "foo-fighters-may23-midamericacenter"
+  }],
+  "image": [
+    "foofighters-1.jpg",
+    "foofighters-2.jpg",
+    "foofighters-3.jpg"
+  ],
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "http://schema.org/CommentAction",
+    "userInteractionCount": "18"
+  },
+  "name": "Foo Fighters",
+  "track": [{
+    "@type": "MusicRecording",
+    "audio": "foo-fighters-rope-play.html",
+    "duration": "PT4M5S",
+    "inAlbum": "foo-fighters-wasting-light.html",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "http://schema.org/ListenAction",
+      "userInteractionCount": "14300"
+    },
+    "name": "Rope",
+    "offers": "foo-fighters-rope-buy.html",
+    "url": "foo-fighters-rope.html"
+  }, {
+    "@type": "MusicRecording",
+    "audio": "foo-fighters-everlong-play.html",
+    "duration": "PT6M33S",
+    "inAlbum": "foo-fighters-color-and-shape.html",
+    "name": "Everlong",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "http://schema.org/ListenAction",
+      "userInteractionCount": "11700"
+    },
+    "offers": "foo-fighters-everlong-buy.html",
+    "url": "foo-fighters-everlong.html"
+  }],
+  "video": {
+    "@type": "VideoObject",
+    "description": "Catch this exclusive interview with Dave Grohl and the Foo Fighters about their new album, Rope.",
+    "duration": "T1M33S",
+    "name": "Interview with the Foo Fighters",
+    "thumbnail": "foo-fighters-interview-thumb.jpg"
+  }
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="example-3"><a id="example-3">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">How to Tie a Reef Knot
+by John Doe
+This article has been tweeted 1203 times and contains 78 user comments.
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/Article"&gt;
+  &lt;span itemprop="name"&gt;How to Tie a Reef Knot&lt;/span&gt;
+  by &lt;span itemprop="author"&gt;John Doe&lt;/span&gt;
+  This article has been tweeted 1203 times and contains 78 user comments.
+  &lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+    &lt;div itemprop="interactionService" itemscope itemid="http://www.twitter.com" itemtype="http://schema.org/Website"&gt;
+      &lt;meta itemprop="name" content="Twitter" /&gt;
+    &lt;/div&gt;
+    &lt;meta itemprop="interactionType" content="http://schema.org/ShareAction"/&gt;
+    &lt;meta itemprop="userInteractionCount" content="1203" /&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"&gt;
+    &lt;meta itemprop="interactionType" content="http://schema.org/CommentAction"/&gt;
+    &lt;meta itemprop="userInteractionCount" content="78" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="Article"&gt;
+  &lt;span property="name"&gt;How to Tie a Reef Knot&lt;/span&gt;
+  by &lt;span property="author"&gt;John Doe&lt;/span&gt;
+  This article has been tweeted 1203 times and contains 78 user comments.
+  &lt;div property="interactionStatistic" typeof="InteractionCounter"&gt;
+    &lt;div property="interactionService" itemscope itemid="http://www.twitter.com" itemtype="http://schema.org/Website"&gt;
+      &lt;meta property="name" content="Twitter" /&gt;
+    &lt;/div&gt;
+    &lt;meta property="interactionType" content="http://schema.org/ShareAction"/&gt;
+    &lt;meta property="userInteractionCount" content="1203" /&gt;
+  &lt;/div&gt;
+  &lt;div property="interactionStatistic" typeof="InteractionCounter"&gt;
+    &lt;meta property="interactionType" content="http://schema.org/CommentAction"/&gt;
+    &lt;meta property="userInteractionCount" content="78" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": "John Doe",
+  "interactionStatistic": [
+    {
+      "@type": "InteractionCounter",
+      "interactionService": {
+        "@type": "Website",
+        "name": "Twitter",
+        "url": "http://www.twitter.com"
+      },
+      "interactionType": "http://schema.org/ShareAction",
+      "userInteractionCount": "1203"
+    },
+    {
+      "@type": "InteractionCounter",
+      "interactionType": "http://schema.org/CommentAction",
+      "userInteractionCount": "78"
+    },
+  ],
+  "name": "How to Tie a Reef Knot"
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

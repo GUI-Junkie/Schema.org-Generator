@@ -5,10 +5,12 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/CreativeWork">CreativeWork</a> &gt; <a   href="/Recipe">Recipe</a></span>
 </h4>
- <div property="rdfs:comment">A recipe.</div>
+ <div property="rdfs:comment">A recipe. For dietary restrictions covered by the recipe,
+    a few common restrictions are enumerated via <a href="/suitableForDiet">suitableForDiet</a>.
+    The <a href="/keywords">keywords</a> property can also be used to add more detail.</div>
 
 
  <br/><div>Usage: Between 10 and 100 domains</div>
@@ -39,7 +41,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/cookTime">cookTime</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Duration" /><a   href="/Duration">Duration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The time it takes to actually cook the dish, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/cookingMethod">
+<link  property="rangeIncludes" href="http://schema.org/Duration" /><a   href="/Duration">Duration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The time it takes to actually cook the dish, in ISO 8601 duration format.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/cookingMethod">
     
       <th class="prop-nam" scope="row">
 
@@ -60,14 +62,14 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/prepTime">prepTime</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Duration" /><a   href="/Duration">Duration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The length of time it takes to prepare the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/recipeCategory">
+<link  property="rangeIncludes" href="http://schema.org/Duration" /><a   href="/Duration">Duration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The length of time it takes to prepare the recipe, in ISO 8601 duration format.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/recipeCategory">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/recipeCategory">recipeCategory</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The category of the recipe&#x2014;for example, appetizer, entree, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/recipeCuisine">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The category of the recipe—for example, appetizer, entree, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/recipeCuisine">
     
       <th class="prop-nam" scope="row">
 
@@ -81,7 +83,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/recipeIngredient">recipeIngredient</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A single ingredient used in the recipe, e.g. sugar, flour or garlic. Supersedes <a   href="/ingredients">ingredients</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/recipeInstructions">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A single ingredient used in the recipe, e.g. sugar, flour or garlic.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/recipeInstructions">
     
       <th class="prop-nam" scope="row">
 
@@ -95,14 +97,21 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/recipeYield">recipeYield</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The quantity produced by the recipe (for example, number of people served, number of servings, etc).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/totalTime">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The quantity produced by the recipe (for example, number of people served, number of servings, etc).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/suitableForDiet">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/suitableForDiet">suitableForDiet</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/RestrictedDiet" /><a   href="/RestrictedDiet">RestrictedDiet</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a dietary restriction or guideline for which this recipe is suitable, e.g. diabetic, halal etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/totalTime">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/totalTime">totalTime</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Duration" /><a   href="/Duration">Duration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total time it takes to prepare and cook the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Duration" /><a   href="/Duration">Duration</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total time it takes to prepare and cook the recipe, in ISO 8601 duration format.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/CreativeWork">CreativeWork</a></th>
   
 </tr>
@@ -248,7 +257,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/contributor">contributor</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
     
       <th class="prop-nam" scope="row">
 
@@ -346,7 +355,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/genre">genre</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
     
       <th class="prop-nam" scope="row">
 
@@ -367,7 +376,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
     
       <th class="prop-nam" scope="row">
 
@@ -381,14 +390,14 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/interactivityType">interactivityType</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOnUrl">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOn">
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/isBasedOnUrl">isBasedOnUrl</a></code>
+<code property="rdfs:label"><a   href="/isBasedOn">isBasedOn</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes <a   href="/isBasedOnUrl">isBasedOnUrl</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
     
       <th class="prop-nam" scope="row">
 
@@ -423,7 +432,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/license">license</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A license document that applies to this content, typically indicated by URL.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/locationCreated">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A license document that applies to this content, typically indicated by URL.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/locationCreated">
     
       <th class="prop-nam" scope="row">
 
@@ -486,7 +495,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/publisher">publisher</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
     
       <th class="prop-nam" scope="row">
 
@@ -521,7 +530,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/schemaVersion">schemaVersion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
     
       <th class="prop-nam" scope="row">
 
@@ -556,7 +565,7 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/translator">translator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -611,24 +620,28 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -675,10 +688,11 @@ Recipe</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   
  
 <td class="prop-ect">
 <a   href="/CookAction">CookAction</a>&nbsp;</td><td class="prop-desc">A sub property of instrument. The recipe/instructions used to perform the action. </td></tr></table>
-<h4>Available properties in extensions</h4><ul><li>From CreativeWork: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<h4>Available properties in extensions</h4><ul><li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://pending.schema.org">pending</a> extension:  <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessMode">accessMode</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessModeSufficient">accessModeSufficient</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessibilitySummary">accessibilitySummary</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/contentReferenceTime">contentReferenceTime</a></li>
 </ul><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="eg-13"></span><div class='ds-selector-tabs ds-selector'>
+<div title="eg-13"><a id="eg-13">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -694,6 +708,7 @@ This classic banana bread recipe comes from my mom -- the walnuts add a nice
 Prep Time: 15 minutes
 Cook time: 1 hour
 Yield: 1 loaf
+Tags: Low fat
 Nutrition facts:
 240 calories, 9 grams fat
 Ingredients:
@@ -721,6 +736,7 @@ From Janel, May 5 -- thank you, great recipe!
   Prep Time: &lt;meta itemprop="prepTime" content="PT15M"&gt;15 minutes
   Cook time: &lt;meta itemprop="cookTime" content="PT1H"&gt;1 hour
   Yield: &lt;span itemprop="recipeYield"&gt;1 loaf&lt;/span&gt;
+  Tags: &lt;link itemprop="suitableForDiet" href="http://schema.org/LowFatDiet" /&gt;Low fat
   &lt;div itemprop="nutrition"
     itemscope itemtype="http://schema.org/NutritionInformation"&gt;
     Nutrition facts:
@@ -759,6 +775,7 @@ From Janel, May 5 -- thank you, great recipe!
   Prep Time: &lt;meta property="prepTime" content="PT15M"&gt;15 minutes
   Cook time: &lt;meta property="cookTime" content="PT1H"&gt;1 hour
   Yield: &lt;span property="recipeYield"&gt;1 loaf&lt;/span&gt;
+  Tags: &lt;link property="suitableForDiet" href="http://schema.org/LowFatDiet" /&gt;Low Fat
   &lt;div property="nutrition" typeof="NutritionInformation"&gt;
     Nutrition facts:
     &lt;span property="calories"&gt;240 calories&lt;/span&gt;,
@@ -811,14 +828,15 @@ From Janel, May 5 -- thank you, great recipe!
   },
   "prepTime": "PT15M",
   "recipeInstructions": "Preheat the oven to 350 degrees. Mix in the ingredients in a bowl. Add the flour last. Pour the mixture into a loaf pan and bake for one hour.",
-  "recipeYield": "1 loaf"
+  "recipeYield": "1 loaf",
+  "suitableForDiet": "http://schema.org/LowFatDiet"
 }
 &lt;/script&gt;
 </pre>
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

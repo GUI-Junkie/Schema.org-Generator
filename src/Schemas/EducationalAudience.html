@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 EducationalAudience</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/Audience">Audience</a> &gt; <a   href="/EducationalAudience">EducationalAudience</a></span>
 </h4>
  <div property="rdfs:comment">An EducationalAudience.</div>
@@ -86,7 +86,14 @@ EducationalAudience</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
@@ -100,10 +107,7 @@ EducationalAudience</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -135,8 +139,101 @@ EducationalAudience</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</
 
 </table>
 
-<h4  id="acks">Acknowledgements</h4>
-This class is based on the work of the LRMI project, see lrmi.net for details.<br/><p class="version"><b>Schema Version 2.2</b></p>
+<h4  id="acks">Acknowledgement</h4>
+<p>This class is based on the work of the LRMI project, see lrmi.net for details.</p><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
+
+<div title="lrmi-1"><a id="lrmi-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected"> 
+&lt;!-- A lesson plan for US second grade teachers. --&gt;
+&lt;div&gt;
+  &lt;h1&gt;Designing a treasure map&lt;/h1&gt;
+  &lt;p&gt;Resource type: lesson plan, learning activity&lt;/p&gt;
+  &lt;p&gt;Target audience: teachers&lt;/p&gt;
+  &lt;p&gt;Educational level: US Grade 2&lt;/p&gt;
+  &lt;p&gt;Link to lesson plan: &lt;a href="http://example.org/lessonplan"&gt;http://example.org/lessonplan&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;!-- A lesson plan for US second grade teachers. --&gt;
+&lt;div itemscope itemtype="http://schema.org/CreativeWork"&gt;
+    &lt;h1 itemprop="name"&gt;Designing a treasure map&lt;/h1&gt;
+    &lt;p&gt;Resource type: 
+      &lt;span itemprop="learningResourceType"&gt;lesson plan&lt;/span&gt;, 
+      &lt;span itemprop="learningResourceType"&gt;learning activity&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Target audience: 
+      &lt;span itemprop="audience" itemscope itemtype="http://schema.org/EducationalAudience"&gt;
+        &lt;span itemprop="educationalRole"&gt;teacher&lt;/span&gt;&lt;/span&gt;s.
+    &lt;/p&gt;
+    &lt;p itemprop="educationalAlignment" itemscope itemtype="http://schema.org/AlignmentObject"&gt;
+        &lt;span itemprop="alignmentType"&gt;Educational level&lt;/span&gt;: 
+        &lt;span itemprop="educationalFramework"&gt;US Grade Levels&lt;/span&gt; 
+        &lt;span itemprop="targetName"&gt;2&lt;/span&gt;
+        &lt;link itemprop="targetUrl" href="http://purl.org/ASN/scheme/ASNEducationLevel/2" /&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Link to lesson plan: &lt;a itemprop="url" href="http://example.org/lessonplan"&gt;http://example.org/lessonplan&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;!-- A list of the issues for a single volume of a given periodical. --&gt;
+&lt;div vocab="http://schema.org/" typeof="CreativeWork"&gt;
+    &lt;h1 property="name"&gt;Designing a treasure map&lt;/h1&gt;
+    &lt;p&gt;Resource type: 
+    &lt;span property="learningResourceType"&gt; lesson plan&lt;/span&gt;,
+    &lt;span property="learningResourceType"&gt; learning activity&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Target audience:
+      &lt;span rel="audience" typeof="EducationalAudience"&gt;
+        &lt;span property="educationalRole"&gt;teacher&lt;/span&gt;s
+      &lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p rel="educationalAlignment" typeof="AlignmentObject"&gt;
+        &lt;span property="alignmentType"&gt;Educational level&lt;/span&gt;:
+        &lt;span property="educationalFramework"&gt;US Grade Levels&lt;/span&gt;
+        &lt;span property="targetName"&gt;2&lt;/span&gt;
+        &lt;span rel="targetUrl" resource="http://purl.org/ASN/scheme/ASNEducationLevel/2"&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Link to lesson plan: &lt;a property="url" href="http://example.org/lessonplan"&gt;http://example.org/lessonplan&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Designing a treasure map",
+  "learningResourceType": [
+    "lesson plan",
+    "learning activity"
+    ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "teacher"
+  },
+  "educationalAlignment": {
+    "@type": "AlignmentObject",
+    "alignmentType": "Educational level",
+    "educationalFramework": "US Grade Levels",
+    "targetName": "2",
+    "targetUrl": {
+      "@id": "http://purl.org/ASN/scheme/ASNEducationLevel/2"
+     }
+  },
+  "url": "http://example.org/lessonplan"
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

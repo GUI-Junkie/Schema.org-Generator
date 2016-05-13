@@ -76,7 +76,7 @@ class Hierarchy:
 
     def get_hierarchy(self, breadcrumb):
         if 'Thing' == breadcrumb:
-            return self._hierarchy[1]
+            return self._hierarchy[1], ''
 
         if '.' in breadcrumb:
             parents = breadcrumb.split('.')

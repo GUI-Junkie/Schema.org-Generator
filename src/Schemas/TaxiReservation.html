@@ -5,10 +5,10 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 TaxiReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/Reservation">Reservation</a> &gt; <a   href="/TaxiReservation">TaxiReservation</a></span>
 </h4>
- <div property="rdfs:comment">A reservation for a taxi.</div>
+ <div property="rdfs:comment">A reservation for a taxi.Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use http://schema.org/Offer.</div>
 
 
  <br/><div>Usage: Between 10 and 100 domains</div>
@@ -73,7 +73,7 @@ TaxiReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 <code property="rdfs:label"><a   href="/broker">broker</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes <a   href="/bookingAgent">bookingAgent</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/modifiedTime">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes <a   href="/bookingAgent">bookingAgent</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/modifiedTime">
     
       <th class="prop-nam" scope="row">
 
@@ -101,7 +101,7 @@ TaxiReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 <code property="rdfs:label"><a   href="/provider">provider</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/reservationFor">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/reservationFor">
     
       <th class="prop-nam" scope="row">
 
@@ -136,14 +136,14 @@ TaxiReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 <code property="rdfs:label"><a   href="/totalPrice">totalPrice</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PriceSpecification" /><a   href="/PriceSpecification">PriceSpecification</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total price for the reservation or ticket, including applicable taxes, shipping, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/underName">
+<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PriceSpecification" /><a   href="/PriceSpecification">PriceSpecification</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The total price for the reservation or ticket, including applicable taxes, shipping, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/underName">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/underName">underName</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization the reservation or ticket is for.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization the reservation or ticket is for.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
   
 </tr>
@@ -170,7 +170,14 @@ TaxiReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
@@ -184,10 +191,7 @@ TaxiReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -221,7 +225,7 @@ TaxiReservation</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &
 
 <br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-1"><a id="example-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -279,7 +283,7 @@ Pickup time: 2017-08-05T16:00:00-07:00
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

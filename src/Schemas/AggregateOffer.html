@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/Offer">Offer</a> &gt; <a   href="/AggregateOffer">AggregateOffer</a></span>
 </h4>
  <div property="rdfs:comment">When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.</div>
@@ -39,14 +39,14 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/highPrice">highPrice</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The highest price of all offers available.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/lowPrice">
+<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The highest price of all offers available.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/lowPrice">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/lowPrice">lowPrice</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The lowest price of all offers available.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/offerCount">
+<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The lowest price of all offers available.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/offerCount">
     
       <th class="prop-nam" scope="row">
 
@@ -73,7 +73,7 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/acceptedPaymentMethod">acceptedPaymentMethod</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/PaymentMethod" /><a   href="/PaymentMethod">PaymentMethod</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The payment method(s) accepted by seller for this offer.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/addOn">
+<link  property="rangeIncludes" href="http://schema.org/LoanOrCredit" /><a   href="/LoanOrCredit">LoanOrCredit</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PaymentMethod" /><a   href="/PaymentMethod">PaymentMethod</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The payment method(s) accepted by seller for this offer.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/addOn">
     
       <th class="prop-nam" scope="row">
 
@@ -101,7 +101,7 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/areaServed">areaServed</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/AdministrativeArea" /><a   href="/AdministrativeArea">AdministrativeArea</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The geographic area where a service or offered item is provided. Supersedes <a   href="/serviceArea">serviceArea</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/availability">
+<link  property="rangeIncludes" href="http://schema.org/AdministrativeArea" /><a   href="/AdministrativeArea">AdministrativeArea</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The geographic area where a service or offered item is provided. Supersedes <a   href="/serviceArea">serviceArea</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/availability">
     
       <th class="prop-nam" scope="row">
 
@@ -150,7 +150,7 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/category">category</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PhysicalActivityCategory" /><a   href="/PhysicalActivityCategory">PhysicalActivityCategory</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/deliveryLeadTime">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/deliveryLeadTime">
     
       <th class="prop-nam" scope="row">
 
@@ -185,9 +185,8 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/eligibleRegion">eligibleRegion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
-      <br><br> See also <a href="/ineligibleRegion">ineligibleRegion</a>.
-    </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/eligibleTransactionVolume">
+<link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
+      <br><br> See also <a href="/ineligibleRegion">ineligibleRegion</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/eligibleTransactionVolume">
     
       <th class="prop-nam" scope="row">
 
@@ -201,28 +200,28 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/gtin12">gtin12</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-12.aspx">GTIN-12</a> code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/gtin13">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://ocp.gs1.org/sites/glossary/en-gb/Pages/GTIN-12.aspx">GTIN-12</a> code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/gtin13">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/gtin13">gtin13</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-13.aspx">GTIN-13</a> code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/gtin14">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://ocp.gs1.org/sites/glossary/en-gb/Pages/GTIN-13.aspx">GTIN-13</a> code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/gtin14">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/gtin14">gtin14</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-14.aspx">GTIN-14</a> code of the product, or the product to which the offer refers. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/gtin8">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://ocp.gs1.org/sites/glossary/en-gb/Pages/GTIN-14.aspx">GTIN-14</a> code of the product, or the product to which the offer refers. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/gtin8">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/gtin8">gtin8</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx">GTIN-8</a> code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/includesObject">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The <a href="http://ocp.gs1.org/sites/glossary/en-gb/Pages/GTIN-8.aspx">GTIN-8</a> code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN Summary</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/includesObject">
     
       <th class="prop-nam" scope="row">
 
@@ -236,9 +235,8 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/ineligibleRegion">ineligibleRegion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.
-      <br><br> See also <a href="/eligibleRegion">eligibleRegion</a>.
-      </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/inventoryLevel">
+<link  property="rangeIncludes" href="http://schema.org/GeoShape" /><a   href="/GeoShape">GeoShape</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.
+      <br><br> See also <a href="/eligibleRegion">eligibleRegion</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/inventoryLevel">
     
       <th class="prop-nam" scope="row">
 
@@ -273,14 +271,14 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/offeredBy">offeredBy</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to the organization or person making the offer.<br/> Inverse property: <a   href="/makesOffer">makesOffer</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/price">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A pointer to the organization or person making the offer.<br/> Inverse property: <a   href="/makesOffer">makesOffer</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/price">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/price">price</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
+<link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="/Number">Number</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
 <br />
 <br />
       Usage guidelines:
@@ -299,8 +297,7 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <li>
       Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.
 </li>
-</ul>
-      </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/priceCurrency">
+</ul></td></tr><tr typeof="rdfs:Property" resource="http://schema.org/priceCurrency">
     
       <th class="prop-nam" scope="row">
 
@@ -335,7 +332,7 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/seller">seller</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider. Supersedes <a   href="/vendor">vendor</a>, <a   href="/merchant">merchant</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/serialNumber">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider. Supersedes <a   href="/merchant">merchant</a>, <a   href="/vendor">vendor</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/serialNumber">
     
       <th class="prop-nam" scope="row">
 
@@ -363,7 +360,7 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/validThrough">validThrough</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The end of the validity of offer, price specification, or opening hours data.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/warranty">
+<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/warranty">
     
       <th class="prop-nam" scope="row">
 
@@ -397,24 +394,28 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -448,7 +449,7 @@ AggregateOffer</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 
 <br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<span id="eg-9"></span><div class='ds-selector-tabs ds-selector'>
+<div title="eg-9"><a id="eg-9">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -545,7 +546,7 @@ Priced from: $35
 
 </div>
 
-<span id="eg-11"></span><div class='ds-selector-tabs ds-selector'>
+<div title="eg-11"><a id="eg-11">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -652,7 +653,7 @@ Sellers:
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

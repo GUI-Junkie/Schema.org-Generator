@@ -5,8 +5,8 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
-DrugClass</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/MedicalEntity">MedicalEntity</a> &gt; <a   href="/MedicalTherapy">MedicalTherapy</a> &gt; <a   href="/DrugClass">DrugClass</a></span>
+<h1 property="rdfs:label" class="page-title">
+DrugClass</h1>Defined in the health-lifesci.schema.org extension.<br/> <span class="canonicalUrl">Canonical URL: <a href="http://schema.org/DrugClass">http://schema.org/DrugClass</a></span><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a> &gt; <a   href="/Enumeration">Enumeration</a> &gt; <a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/MedicalEnumeration">MedicalEnumeration</a> &gt; <a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/DrugClass">DrugClass</a></span>
 </h4>
  <div property="rdfs:comment">A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.</div>
 
@@ -23,11 +23,11 @@ DrugClass</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 <div>
         <div id='infobox' style='text-align: right;'><label role="checkbox" for=morecheck><b><span style="cursor: pointer;">[more...]</span></b></label></div>
         <input type='checkbox' checked="checked" style='display: none' id=morecheck><div id='infomsg' style='background-color: #EEEEEE; text-align: left; padding: 0.5em;'>
-        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/DrugClass&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+DrugClass'>Check for open issues.</a></li><li>'DrugClass' is mentioned in layer: <a href='http://schema.org/DrugClass'>core</a></li></ul>
+        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/DrugClass&entry.882602760=enumeration'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+DrugClass'>Check for open issues.</a></li><li>'DrugClass' is mentioned in extension layer: <a href='http://health-lifesci.schema.org/DrugClass'>health-lifesci</a></li></ul>
 </div>
 </div>
 <tr class="supertype">
-     <th class="supertype-name" colspan="3">Properties from <link  property="rdfs:subClassOf" href="http://schema.org/DrugClass" /><a   href="/DrugClass">DrugClass</a></th>
+     <th class="supertype-name" colspan="3">Properties from <link  property="rdfs:subClassOf" href="http://schema.org/DrugClass" /><a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/DrugClass">DrugClass</a></th>
   
 </tr>
 
@@ -36,99 +36,10 @@ DrugClass</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/drug">drug</a></code>
+<code property="rdfs:label"><a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/drug">drug</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Drug" /><a   href="/Drug">Drug</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A drug in this drug class.</td></tr><tr class="supertype">
-     <th class="supertype-name" colspan="3">Properties from <a   href="/MedicalTherapy">MedicalTherapy</a></th>
-  
-</tr>
-
-<tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/adverseOutcome">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/adverseOutcome">adverseOutcome</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalEntity" /><a   href="/MedicalEntity">MedicalEntity</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention), tag it as a seriouseAdverseOutcome instead.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/contraindication">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/contraindication">contraindication</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalContraindication" /><a   href="/MedicalContraindication">MedicalContraindication</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A contraindication for this therapy.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/duplicateTherapy">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/duplicateTherapy">duplicateTherapy</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalTherapy" /><a   href="/MedicalTherapy">MedicalTherapy</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A therapy that duplicates or overlaps this one.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/indication">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/indication">indication</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalIndication" /><a   href="/MedicalIndication">MedicalIndication</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A factor that indicates use of this therapy for treatment and/or prevention of a condition, symptom, etc. For therapies such as drugs, indications can include both officially-approved indications as well as off-label uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/seriousAdverseOutcome">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/seriousAdverseOutcome">seriousAdverseOutcome</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalEntity" /><a   href="/MedicalEntity">MedicalEntity</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.</td></tr><tr class="supertype">
-     <th class="supertype-name" colspan="3">Properties from <a   href="/MedicalEntity">MedicalEntity</a></th>
-  
-</tr>
-
-<tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/code">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/code">code</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalCode" /><a   href="/MedicalCode">MedicalCode</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/guideline">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/guideline">guideline</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalGuideline" /><a   href="/MedicalGuideline">MedicalGuideline</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A medical guideline related to this entity.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/medicineSystem">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/medicineSystem">medicineSystem</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicineSystem" /><a   href="/MedicineSystem">MedicineSystem</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/recognizingAuthority">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/recognizingAuthority">recognizingAuthority</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/relevantSpecialty">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/relevantSpecialty">relevantSpecialty</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalSpecialty" /><a   href="/MedicalSpecialty">MedicalSpecialty</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">If applicable, a medical specialty in which this entity is relevant.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/study">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/study">study</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/MedicalStudy" /><a   href="/MedicalStudy">MedicalStudy</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A medical study or trial related to this entity.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Drug" /><a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/Drug">Drug</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Specifying a drug or medicine used in a medication procedure</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/Thing">Thing</a></th>
   
 </tr>
@@ -155,7 +66,14 @@ DrugClass</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
@@ -169,10 +87,7 @@ DrugClass</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -204,7 +119,7 @@ DrugClass</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 
 </table>
 
-<br/><br/>Instances of <a   href="/DrugClass">DrugClass</a> may appear as values for the following properties<br/><table class="definition-table">
+<br/><br/>Instances of <a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/DrugClass">DrugClass</a> may appear as values for the following properties<br/><table class="definition-table">
         
   
 <thead>
@@ -214,132 +129,12 @@ DrugClass</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a
 
 <tr>
 <th class="prop-nam" scope="row">
- <code><a   href="/drugClass">drugClass</a></code>
+ <code><a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/drugClass">drugClass</a></code>
 </th>
  
 <td class="prop-ect">
-<a   href="/Drug">Drug</a>&nbsp;</td><td class="prop-desc">The class of drug this belongs to (e.g., statins). </td></tr></table>
-<h4  id="acks">Acknowledgements</h4>
-This class contains information contributed by <a href=http://wikidoc.org>WikiDoc</a>.<br/><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
-
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt;About High Blood Pressure (hypertension)&lt;/h1&gt;
-&lt;h2&gt;Diagnosis&lt;/h2&gt;
-High blood pressure is diagnosed by measuring ...
-...
-&lt;h2&gt;Treatment&lt;/h2&gt;
-There are many common treatments for high blood pressure,
-including beta-blocker drugs such as propanaolol (Innopran)
-and atenonlol (Tenormin) ...
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;body itemscope itemtype="http://schema.org/MedicalWebPage"&gt;
-  &lt;link itemprop="audience" href="http://schema.org/Patient" /&gt;
-  &lt;link itemprop="specialty" href="http://schema.org/Cardiovascular" /&gt;
-  &lt;meta itemprop="lastReviewed" content="2011-09-14"/&gt;
-  &lt;h1&gt;About
-    &lt;span itemprop="about" itemscope itemtype="http://schema.org/MedicalCondition"&gt;
-      &lt;span itemprop="name"&gt;High Blood Pressure&lt;/span&gt;
-      (&lt;span itemprop="name"&gt;hypertension&lt;/span&gt;)&lt;/span&gt;
-  &lt;/h1&gt;
-  ...
-  &lt;h2&gt;&lt;span itemprop="aspect"&gt;Diagnosis&lt;/span&gt;&lt;/h2&gt;
-  High blood pressure is diagnosed by measuring ...
-  ...
-  &lt;h2&gt;&lt;span itemprop="aspect"&gt;Treatment&lt;/span&gt;&lt;/h2&gt;
-  There are many common treatments for high blood pressure,
-  including
-  &lt;span itemscope itemtype="http://schema.org/DrugClass"&gt;
-    &lt;span itemprop="name"&gt;beta-blocker&lt;/span&gt; drugs such as
-    &lt;span itemprop="drug" itemscope itemtype="http://schema.org/Drug"&gt;
-      &lt;span itemprop="nonProprietaryName"&gt;propanaolol&lt;/span&gt;
-      (&lt;span itemprop="otherName"&gt;Innopran&lt;/span&gt;)
-    &lt;/span&gt;
-  and
-    &lt;span itemprop="drug" itemscope itemtype="http://schema.org/Drug"&gt;
-      &lt;span itemprop="nonProprietaryName"&gt;atenolol&lt;/span&gt;
-      (&lt;span itemprop="otherName"&gt;Tenormin&lt;/span&gt;)
-    &lt;/span&gt; ...
-  ...
-&lt;/body&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;body vocab="http://schema.org/" typeof="MedicalWebPage"&gt;
-  &lt;link property="audience" href="http://schema.org/Patient" /&gt;
-  &lt;link property="specialty" href="http://schema.org/Cardiovascular" /&gt;
-  &lt;meta property="lastReviewed" content="2011-09-14"/&gt;
-  &lt;h1&gt;About
-    &lt;span property="about" typeof="MedicalCondition"&gt;
-      &lt;span property="name"&gt;High Blood Pressure&lt;/span&gt;
-      (&lt;span property="name"&gt;hypertension&lt;/span&gt;)&lt;/span&gt;
-  &lt;/h1&gt;
-  ...
-  &lt;h2&gt;&lt;span property="aspect"&gt;Diagnosis&lt;/span&gt;&lt;/h2&gt;
-  High blood pressure is diagnosed by measuring ...
-  ...
-  &lt;h2&gt;&lt;span property="aspect"&gt;Treatment&lt;/span&gt;&lt;/h2&gt;
-  There are many common treatments for high blood pressure,
-  including
-  &lt;span  typeof="DrugClass"&gt;
-    &lt;span property="name"&gt;beta-blocker&lt;/span&gt; drugs such as
-    &lt;span property="drug" typeof="Drug"&gt;
-      &lt;span property="nonProprietaryName"&gt;propanaolol&lt;/span&gt;
-      (&lt;span property="otherName"&gt;Innopran&lt;/span&gt;)
-    &lt;/span&gt;
-  and
-    &lt;span property="drug" typeof="Drug"&gt;
-      &lt;span property="nonProprietaryName"&gt;atenolol&lt;/span&gt;
-      (&lt;span property="otherName"&gt;Tenormin&lt;/span&gt;)
-    &lt;/span&gt; ...
-  ...
-&lt;/body&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org",
-  "@type": "MedicalWebPage",
-  "about": {
-    "@type": "MedicalCondition",
-    "name": [
-      "High Blood Pressure",
-      "hypertension"
-    ]
-  },
-  "aspect": [
-    "Diagnosis",
-    "Treatment"
-  ],
-  "audience": "http://schema.org/Patient",
-  "drug": [
-    {
-      "@type": "Drug",
-      "nonProprietaryName": "propanaolol",
-      "otherName": "Innopran"
-    },
-    {
-      "@type": "Drug",
-      "nonProprietaryName": "atenolol",
-      "otherName": "Tenormin"
-    }
-  ],
-  "lastReviewed": "2011-09-14",
-  "name": "beta-blocker",
-  "specialty": "http://schema.org/Cardiovascular"
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<p class="version"><b>Schema Version 2.2</b></p>
+<a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/Drug">Drug</a>&nbsp;</td><td class="prop-desc">The class of drug this belongs to (e.g., statins). </td></tr></table>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

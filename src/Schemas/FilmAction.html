@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 FilmAction</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Action">Action</a> &gt; <a   href="/CreateAction">CreateAction</a> &gt; <a   href="/FilmAction">FilmAction</a></span>
 </h4>
  <div property="rdfs:comment">The act of capturing sound and moving images on film, video, or digitally.</div>
@@ -46,16 +46,15 @@ FilmAction</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/agent">agent</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/endTime">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The direct performer or driver of the action (animate or inanimate). e.g. <em>John</em> wrote a book.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/endTime">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/endTime">endTime</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.
-
-Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/error">
+<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to <em>December</em>.</p>
+<p>Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/error">
     
       <th class="prop-nam" scope="row">
 
@@ -69,44 +68,43 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 <code property="rdfs:label"><a   href="/instrument">instrument</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
+<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The object that helped the agent perform the action. e.g. John wrote a book with <em>a pen</em>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/location">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/location">location</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PostalAddress" /><a   href="/PostalAddress">PostalAddress</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The location of for example where the event is happening, an organization is located, or where an action takes place.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/object">
+<link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="/Place">Place</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PostalAddress" /><a   href="/PostalAddress">PostalAddress</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The location of for example where the event is happening, an organization is located, or where an action takes place.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/object">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/object">object</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). e.g. John read *a book*.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/participant">
+<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). e.g. John read <em>a book</em>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/participant">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/participant">participant</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/result">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Other co-agents that participated in the action indirectly. e.g. John wrote a book with <em>Steve</em>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/result">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/result">result</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The result produced in the action. e.g. John wrote *a book*.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startTime">
+<link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="/Thing">Thing</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The result produced in the action. e.g. John wrote <em>a book</em>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startTime">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/startTime">startTime</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.
-
-Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/target">
+<link  property="rangeIncludes" href="http://schema.org/DateTime" /><a   href="/DateTime">DateTime</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from <em>January</em> to December.</p>
+<p>Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/target">
     
       <th class="prop-nam" scope="row">
 
@@ -140,24 +138,28 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -191,7 +193,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 
 <br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<div class='ds-selector-tabs ds-selector'>
+<div title="example-1"><a id="example-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -227,7 +229,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

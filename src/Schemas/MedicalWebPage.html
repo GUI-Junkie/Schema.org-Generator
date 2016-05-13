@@ -5,8 +5,8 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
-MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/CreativeWork">CreativeWork</a> &gt; <a   href="/WebPage">WebPage</a> &gt; <a   href="/MedicalWebPage">MedicalWebPage</a></span>
+<h1 property="rdfs:label" class="page-title">
+MedicalWebPage</h1>Defined in the health-lifesci.schema.org extension.<br/> <span class="canonicalUrl">Canonical URL: <a href="http://schema.org/MedicalWebPage">http://schema.org/MedicalWebPage</a></span><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/CreativeWork">CreativeWork</a> &gt; <a   href="/WebPage">WebPage</a> &gt; <a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/MedicalWebPage">MedicalWebPage</a></span>
 </h4>
  <div property="rdfs:comment">A web page that provides medical information.</div>
 
@@ -23,23 +23,10 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <div>
         <div id='infobox' style='text-align: right;'><label role="checkbox" for=morecheck><b><span style="cursor: pointer;">[more...]</span></b></label></div>
         <input type='checkbox' checked="checked" style='display: none' id=morecheck><div id='infomsg' style='background-color: #EEEEEE; text-align: left; padding: 0.5em;'>
-        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/MedicalWebPage&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+MedicalWebPage'>Check for open issues.</a></li><li>'MedicalWebPage' is mentioned in layer: <a href='http://schema.org/MedicalWebPage'>core</a></li></ul>
+        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/MedicalWebPage&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+MedicalWebPage'>Check for open issues.</a></li><li>'MedicalWebPage' is mentioned in extension layer: <a href='http://health-lifesci.schema.org/MedicalWebPage'>health-lifesci</a></li></ul>
 </div>
 </div>
-<tr class="supertype">
-     <th class="supertype-name" colspan="3">Properties from <link  property="rdfs:subClassOf" href="http://schema.org/MedicalWebPage" /><a   href="/MedicalWebPage">MedicalWebPage</a></th>
-  
-</tr>
-
-<tbody class="supertype">
-  <tr typeof="rdfs:Property" resource="http://schema.org/aspect">
-    
-      <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a   href="/aspect">aspect</a></code>
-    </th>
- <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.</td></tr><tr class="supertype">
+<tr><td colspan="3"><meta property="rdfs:subClassOf" content="MedicalWebPage"></td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="/WebPage">WebPage</a></th>
   
 </tr>
@@ -52,7 +39,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/breadcrumb">breadcrumb</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/BreadcrumbList" /><a   href="/BreadcrumbList">BreadcrumbList</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A set of links that can help a user understand and navigate a website hierarchy.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/lastReviewed">
+<link  property="rangeIncludes" href="http://schema.org/BreadcrumbList" /><a   href="/BreadcrumbList">BreadcrumbList</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A set of links that can help a user understand and navigate a website hierarchy.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/lastReviewed">
     
       <th class="prop-nam" scope="row">
 
@@ -66,7 +53,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/mainContentOfPage">mainContentOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/WebPageElement" /><a   href="/WebPageElement">WebPageElement</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates if this web page element is the main subject of the page.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/primaryImageOfPage">
+<link  property="rangeIncludes" href="http://schema.org/WebPageElement" /><a   href="/WebPageElement">WebPageElement</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates if this web page element is the main subject of the page. Supersedes <a title="Extended schema: health-lifesci.schema.org"  class="ext ext-health-lifesci"  href="/aspect">aspect</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/primaryImageOfPage">
     
       <th class="prop-nam" scope="row">
 
@@ -87,7 +74,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/reviewedBy">reviewedBy</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">People or organizations that have reviewed the content on this web page for accuracy and/or completeness.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/significantLink">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">People or organizations that have reviewed the content on this web page for accuracy and/or completeness.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/significantLink">
     
       <th class="prop-nam" scope="row">
 
@@ -191,7 +178,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/author">author</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
     
       <th class="prop-nam" scope="row">
 
@@ -247,14 +234,14 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/contributor">contributor</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/copyrightHolder">copyrightHolder</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
     
       <th class="prop-nam" scope="row">
 
@@ -268,7 +255,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/creator">creator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
     
       <th class="prop-nam" scope="row">
 
@@ -345,7 +332,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/genre">genre</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
     
       <th class="prop-nam" scope="row">
 
@@ -366,7 +353,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
     
       <th class="prop-nam" scope="row">
 
@@ -380,14 +367,14 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/interactivityType">interactivityType</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOnUrl">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOn">
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/isBasedOnUrl">isBasedOnUrl</a></code>
+<code property="rdfs:label"><a   href="/isBasedOn">isBasedOn</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes <a   href="/isBasedOnUrl">isBasedOnUrl</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
     
       <th class="prop-nam" scope="row">
 
@@ -457,21 +444,21 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/position">position</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The position of an item in a series or sequence of items.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/producer">
+<link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The position of an item in a series or sequence of items.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/producer">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/producer">producer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/provider">provider</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
     
       <th class="prop-nam" scope="row">
 
@@ -485,7 +472,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/publisher">publisher</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
     
       <th class="prop-nam" scope="row">
 
@@ -520,7 +507,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/schemaVersion">schemaVersion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
     
       <th class="prop-nam" scope="row">
 
@@ -555,7 +542,7 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/translator">translator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -610,24 +597,28 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -659,127 +650,9 @@ MedicalWebPage</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &g
 
 </table>
 
-<h4>Available properties in extensions</h4><ul><li>From CreativeWork: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
-</ul><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
-
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt;About High Blood Pressure (hypertension)&lt;/h1&gt;
-&lt;h2&gt;Diagnosis&lt;/h2&gt;
-High blood pressure is diagnosed by measuring ...
-...
-&lt;h2&gt;Treatment&lt;/h2&gt;
-There are many common treatments for high blood pressure,
-including beta-blocker drugs such as propanaolol (Innopran)
-and atenonlol (Tenormin) ...
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;body itemscope itemtype="http://schema.org/MedicalWebPage"&gt;
-  &lt;link itemprop="audience" href="http://schema.org/Patient" /&gt;
-  &lt;link itemprop="specialty" href="http://schema.org/Cardiovascular" /&gt;
-  &lt;meta itemprop="lastReviewed" content="2011-09-14"/&gt;
-  &lt;h1&gt;About
-    &lt;span itemprop="about" itemscope itemtype="http://schema.org/MedicalCondition"&gt;
-      &lt;span itemprop="name"&gt;High Blood Pressure&lt;/span&gt;
-      (&lt;span itemprop="name"&gt;hypertension&lt;/span&gt;)&lt;/span&gt;
-  &lt;/h1&gt;
-  ...
-  &lt;h2&gt;&lt;span itemprop="aspect"&gt;Diagnosis&lt;/span&gt;&lt;/h2&gt;
-  High blood pressure is diagnosed by measuring ...
-  ...
-  &lt;h2&gt;&lt;span itemprop="aspect"&gt;Treatment&lt;/span&gt;&lt;/h2&gt;
-  There are many common treatments for high blood pressure,
-  including
-  &lt;span itemscope itemtype="http://schema.org/DrugClass"&gt;
-    &lt;span itemprop="name"&gt;beta-blocker&lt;/span&gt; drugs such as
-    &lt;span itemprop="drug" itemscope itemtype="http://schema.org/Drug"&gt;
-      &lt;span itemprop="nonProprietaryName"&gt;propanaolol&lt;/span&gt;
-      (&lt;span itemprop="otherName"&gt;Innopran&lt;/span&gt;)
-    &lt;/span&gt;
-  and
-    &lt;span itemprop="drug" itemscope itemtype="http://schema.org/Drug"&gt;
-      &lt;span itemprop="nonProprietaryName"&gt;atenolol&lt;/span&gt;
-      (&lt;span itemprop="otherName"&gt;Tenormin&lt;/span&gt;)
-    &lt;/span&gt; ...
-  ...
-&lt;/body&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;body vocab="http://schema.org/" typeof="MedicalWebPage"&gt;
-  &lt;link property="audience" href="http://schema.org/Patient" /&gt;
-  &lt;link property="specialty" href="http://schema.org/Cardiovascular" /&gt;
-  &lt;meta property="lastReviewed" content="2011-09-14"/&gt;
-  &lt;h1&gt;About
-    &lt;span property="about" typeof="MedicalCondition"&gt;
-      &lt;span property="name"&gt;High Blood Pressure&lt;/span&gt;
-      (&lt;span property="name"&gt;hypertension&lt;/span&gt;)&lt;/span&gt;
-  &lt;/h1&gt;
-  ...
-  &lt;h2&gt;&lt;span property="aspect"&gt;Diagnosis&lt;/span&gt;&lt;/h2&gt;
-  High blood pressure is diagnosed by measuring ...
-  ...
-  &lt;h2&gt;&lt;span property="aspect"&gt;Treatment&lt;/span&gt;&lt;/h2&gt;
-  There are many common treatments for high blood pressure,
-  including
-  &lt;span  typeof="DrugClass"&gt;
-    &lt;span property="name"&gt;beta-blocker&lt;/span&gt; drugs such as
-    &lt;span property="drug" typeof="Drug"&gt;
-      &lt;span property="nonProprietaryName"&gt;propanaolol&lt;/span&gt;
-      (&lt;span property="otherName"&gt;Innopran&lt;/span&gt;)
-    &lt;/span&gt;
-  and
-    &lt;span property="drug" typeof="Drug"&gt;
-      &lt;span property="nonProprietaryName"&gt;atenolol&lt;/span&gt;
-      (&lt;span property="otherName"&gt;Tenormin&lt;/span&gt;)
-    &lt;/span&gt; ...
-  ...
-&lt;/body&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org",
-  "@type": "MedicalWebPage",
-  "about": {
-    "@type": "MedicalCondition",
-    "name": [
-      "High Blood Pressure",
-      "hypertension"
-    ]
-  },
-  "aspect": [
-    "Diagnosis",
-    "Treatment"
-  ],
-  "audience": "http://schema.org/Patient",
-  "drug": [
-    {
-      "@type": "Drug",
-      "nonProprietaryName": "propanaolol",
-      "otherName": "Innopran"
-    },
-    {
-      "@type": "Drug",
-      "nonProprietaryName": "atenolol",
-      "otherName": "Tenormin"
-    }
-  ],
-  "lastReviewed": "2011-09-14",
-  "name": "beta-blocker",
-  "specialty": "http://schema.org/Cardiovascular"
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<p class="version"><b>Schema Version 2.2</b></p>
+<h4>Available properties in extensions</h4><ul><li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://pending.schema.org">pending</a> extension:  <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessMode">accessMode</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessModeSufficient">accessModeSufficient</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessibilitySummary">accessibilitySummary</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/contentReferenceTime">contentReferenceTime</a></li>
+</ul><p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

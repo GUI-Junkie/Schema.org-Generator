@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 Intangible</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/Intangible">Intangible</a></span>
 </h4>
  <div property="rdfs:comment">A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.</div>
@@ -23,7 +23,7 @@ Intangible</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <div>
         <div id='infobox' style='text-align: right;'><label role="checkbox" for=morecheck><b><span style="cursor: pointer;">[more...]</span></b></label></div>
         <input type='checkbox' checked="checked" style='display: none' id=morecheck><div id='infomsg' style='background-color: #EEEEEE; text-align: left; padding: 0.5em;'>
-        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/Intangible&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+Intangible'>Check for open issues.</a></li><li>'Intangible' is mentioned in layer: <a href='http://schema.org/Intangible'>core</a></li></ul>
+        <ul><li><a href='https://docs.google.com/a/google.com/forms/d/1krxHlWJAO3JgvHRZV9Rugkr9VYnMdrI10xbGsWt733c/viewform?entry.1174568178&entry.41124795=http://schema.org/Intangible&entry.882602760=type'>Leave public feedback on this term &#128172;</a></li><li><a href='https://github.com/schemaorg/schemaorg/issues?q=is%3Aissue+is%3Aopen+Intangible'>Check for open issues.</a></li><li>'Intangible' is mentioned in layer: <a href='http://schema.org/Intangible'>core</a></li><li>'Intangible' is mentioned in extension layer: <a href='http://meta.schema.org/Intangible'>meta</a></li><li>'Intangible' is mentioned in extension layer: <a href='http://pending.schema.org/Intangible'>pending</a></li></ul>
 </div>
 </div>
 <tr><td colspan="3"><meta property="rdfs:subClassOf" content="Intangible"></td></tr><tr class="supertype">
@@ -53,24 +53,28 @@ Intangible</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -102,7 +106,7 @@ Intangible</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 
 </table>
 
-<br/><b>More specific Types</b><ul><li> <a   href="/AlignmentObject">AlignmentObject</a> </li><li> <a   href="/Audience">Audience</a> </li><li> <a   href="/Brand">Brand</a> </li><li> <a   href="/BroadcastChannel">BroadcastChannel</a> </li><li> <a   href="/BusTrip">BusTrip</a> </li><li> <a   href="/Class">Class</a> </li><li> <a   href="/DataFeedItem">DataFeedItem</a> </li><li> <a   href="/Demand">Demand</a> </li><li> <a   href="/EntryPoint">EntryPoint</a> </li><li> <a   href="/Enumeration">Enumeration</a> </li><li> <a   href="/Flight">Flight</a> </li><li> <a   href="/GameServer">GameServer</a> </li><li> <a   href="/Invoice">Invoice</a> </li><li> <a   href="/ItemList">ItemList</a> </li><li> <a   href="/JobPosting">JobPosting</a> </li><li> <a   href="/Language">Language</a> </li><li> <a   href="/ListItem">ListItem</a> </li><li> <a   href="/Offer">Offer</a> </li><li> <a   href="/Order">Order</a> </li><li> <a   href="/OrderItem">OrderItem</a> </li><li> <a   href="/ParcelDelivery">ParcelDelivery</a> </li><li> <a   href="/Permit">Permit</a> </li><li> <a   href="/ProgramMembership">ProgramMembership</a> </li><li> <a   href="/Property">Property</a> </li><li> <a   href="/PropertyValueSpecification">PropertyValueSpecification</a> </li><li> <a   href="/Quantity">Quantity</a> </li><li> <a   href="/Rating">Rating</a> </li><li> <a   href="/Reservation">Reservation</a> </li><li> <a   href="/Role">Role</a> </li><li> <a   href="/Seat">Seat</a> </li><li> <a   href="/Service">Service</a> </li><li> <a   href="/ServiceChannel">ServiceChannel</a> </li><li> <a   href="/StructuredValue">StructuredValue</a> </li><li> <a   href="/Ticket">Ticket</a> </li><li> <a   href="/TrainTrip">TrainTrip</a> </li></ul><p class="version"><b>Schema Version 2.2</b></p>
+<br/><b>More specific Types</b><ul><li> <a   href="/AlignmentObject">AlignmentObject</a> </li><li> <a   href="/Audience">Audience</a> </li><li> <a   href="/Brand">Brand</a> </li><li> <a   href="/BroadcastChannel">BroadcastChannel</a> </li><li> <a   href="/BusTrip">BusTrip</a> </li><li> <a   href="/ComputerLanguage">ComputerLanguage</a> </li><li> <a   href="/DataFeedItem">DataFeedItem</a> </li><li> <a   href="/Demand">Demand</a> </li><li> <a   href="/DigitalDocumentPermission">DigitalDocumentPermission</a> </li><li> <a   href="/EntryPoint">EntryPoint</a> </li><li> <a   href="/Enumeration">Enumeration</a> </li><li> <a   href="/Flight">Flight</a> </li><li> <a   href="/GameServer">GameServer</a> </li><li> <a   href="/Invoice">Invoice</a> </li><li> <a   href="/ItemList">ItemList</a> </li><li> <a   href="/JobPosting">JobPosting</a> </li><li> <a   href="/Language">Language</a> </li><li> <a   href="/ListItem">ListItem</a> </li><li> <a   href="/Offer">Offer</a> </li><li> <a   href="/Order">Order</a> </li><li> <a   href="/OrderItem">OrderItem</a> </li><li> <a   href="/ParcelDelivery">ParcelDelivery</a> </li><li> <a   href="/Permit">Permit</a> </li><li> <a   href="/ProgramMembership">ProgramMembership</a> </li><li> <a   href="/PropertyValueSpecification">PropertyValueSpecification</a> </li><li> <a   href="/Quantity">Quantity</a> </li><li> <a   href="/Rating">Rating</a> </li><li> <a   href="/Reservation">Reservation</a> </li><li> <a   href="/Role">Role</a> </li><li> <a   href="/Seat">Seat</a> </li><li> <a   href="/Service">Service</a> </li><li> <a   href="/ServiceChannel">ServiceChannel</a> </li><li> <a   href="/StructuredValue">StructuredValue</a> </li><li> <a   href="/Ticket">Ticket</a> </li><li> <a   href="/TrainTrip">TrainTrip</a> </li></ul><h4>More specific Types available in extensions</h4><ul><li><a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/BroadcastFrequencySpecification">BroadcastFrequencySpecification</a>, <a title="Extended schema: meta.schema.org"  class="ext ext-meta"  href="http://meta.schema.org/Class">Class</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/HealthInsurancePlan">HealthInsurancePlan</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/HealthPlanCostSharingSpecification">HealthPlanCostSharingSpecification</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/HealthPlanFormulary">HealthPlanFormulary</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/HealthPlanNetwork">HealthPlanNetwork</a>, <a title="Extended schema: meta.schema.org"  class="ext ext-meta"  href="http://meta.schema.org/Property">Property</a></li></ul><p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

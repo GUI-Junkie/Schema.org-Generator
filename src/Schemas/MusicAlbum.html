@@ -5,7 +5,7 @@
 <!-- Will need at least:  </div></body></html> -->
 <!-- end of genericTermPageHeader.tpl -->
   
-<h1 class="page-title">
+<h1 property="rdfs:label" class="page-title">
 MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <a   href="/CreativeWork">CreativeWork</a> &gt; <a   href="/MusicPlaylist">MusicPlaylist</a> &gt; <a   href="/MusicAlbum">MusicAlbum</a></span>
 </h4>
  <div property="rdfs:comment">A collection of music tracks.</div>
@@ -170,7 +170,7 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/author">author</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/award">
     
       <th class="prop-nam" scope="row">
 
@@ -226,14 +226,14 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/contributor">contributor</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A secondary contributor to the CreativeWork or Event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightHolder">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/copyrightHolder">copyrightHolder</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The party holding the legal copyright to the CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/copyrightYear">
     
       <th class="prop-nam" scope="row">
 
@@ -247,7 +247,7 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/creator">creator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/dateCreated">
     
       <th class="prop-nam" scope="row">
 
@@ -324,7 +324,7 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/genre">genre</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Genre of the creative work or group.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasPart">
     
       <th class="prop-nam" scope="row">
 
@@ -345,7 +345,7 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/inLanguage">inLanguage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
+<link  property="rangeIncludes" href="http://schema.org/Language" /><a   href="/Language">Language</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>. See also <a class="localLink" href="/availableLanguage">availableLanguage</a>. Supersedes <a   href="/language">language</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/interactionStatistic">
     
       <th class="prop-nam" scope="row">
 
@@ -359,14 +359,14 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/interactivityType">interactivityType</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOnUrl">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isBasedOn">
     
       <th class="prop-nam" scope="row">
 
-<code property="rdfs:label"><a   href="/isBasedOnUrl">isBasedOnUrl</a></code>
+<code property="rdfs:label"><a   href="/isBasedOn">isBasedOn</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Product" /><a   href="/Product">Product</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes <a   href="/isBasedOnUrl">isBasedOnUrl</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isFamilyFriendly">
     
       <th class="prop-nam" scope="row">
 
@@ -436,21 +436,21 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/position">position</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The position of an item in a series or sequence of items.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/producer">
+<link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="/Integer">Integer</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The position of an item in a series or sequence of items.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/producer">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/producer">producer</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/provider">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/provider">provider</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes <a   href="/carrier">carrier</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publication">
     
       <th class="prop-nam" scope="row">
 
@@ -464,7 +464,7 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/publisher">publisher</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">The publisher of the creative work.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/publishingPrinciples">
     
       <th class="prop-nam" scope="row">
 
@@ -499,7 +499,7 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/schemaVersion">schemaVersion</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. </td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sourceOrganization">
     
       <th class="prop-nam" scope="row">
 
@@ -534,7 +534,7 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/translator">translator</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
+<link  property="rangeIncludes" href="http://schema.org/Organization" /><a   href="/Organization">Organization</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Person" /><a   href="/Person">Person</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/typicalAgeRange">
     
       <th class="prop-nam" scope="row">
 
@@ -589,24 +589,28 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
 <code property="rdfs:label"><a   href="/description">description</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A short description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+    
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a   href="/disambiguatingDescription">disambiguatingDescription</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="/Text">Text</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/image">image</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+<link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="/mainEntityOfPage">mainEntityOfPage</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described.
-      <br /><br />
-      See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
-      <br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+<link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="/URL">URL</a>&nbsp;</td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
     
       <th class="prop-nam" scope="row">
 
@@ -665,221 +669,11 @@ MusicAlbum</h1><h4><span class='breadcrumbs'><a   href="/Thing">Thing</a> &gt; <
  
 <td class="prop-ect">
 <a   href="/MusicRelease">MusicRelease</a>&nbsp;</td><td class="prop-desc">The album this is a release of. <br/> inverse property: <a   href="/albumRelease">albumRelease</a>.</td></tr></table>
-<h4>Available properties in extensions</h4><ul><li>From CreativeWork: <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<h4>Available properties in extensions</h4><ul><li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://bib.schema.org">bib</a> extension:  <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/publisherImprint">publisherImprint</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/translationOfWork">translationOfWork</a>, <a title="Extended schema: bib.schema.org"  class="ext ext-bib"  href="http://bib.schema.org/workTranslation">workTranslation</a></li>
+<li>For <a   href="/CreativeWork">CreativeWork</a> in the <a href="http://pending.schema.org">pending</a> extension:  <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessMode">accessMode</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessModeSufficient">accessModeSufficient</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/accessibilitySummary">accessibilitySummary</a>, <a title="Extended schema: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/contentReferenceTime">contentReferenceTime</a></li>
 </ul><br/><br/><b><a id="examples">Examples</a></b><br/><br/>
 
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt; King of Limbs &lt;/h1&gt;
-&lt;img alt="Blurry, spooky cover art" src="king-of-limbs.jpg" /&gt;
-&lt;h2&gt; Radiohead &lt;/h2&gt;
-&lt;h3&gt;Sample Tracks&lt;/h3&gt;
-Bloom - 5:14&lt;br&gt;
-Morning Mr Magpie - 4:40&lt;br&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicAlbum"&gt;
-  &lt;h1 itemprop="name"&gt; King of Limbs &lt;/h1&gt;
-  &lt;meta content="/artist/radiohead/album/the-king-of-limbs" itemprop="url" /&gt;
-  &lt;img alt="Blurry, spooky cover art"
-  src="king-of-limbs.jpg" itemprop="image" /&gt;
-  &lt;meta content="8" itemprop="numTracks" /&gt;
-  &lt;meta content="Alt/Punk" itemprop="genre" /&gt;
-  &lt;h2 itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"&gt;
-    &lt;span itemprop="name"&gt;Radiohead&lt;/span&gt;
-  &lt;/h2&gt;
-  &lt;h3&gt;Sample Tracks&lt;/h3&gt;
-    &lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-      &lt;span itemprop="name"&gt;Bloom&lt;/span&gt;
-      &lt;meta content="/artist/radiohead/album/the-king-of-limbs/track/bloom" itemprop="url" /&gt;
-      &lt;meta content="PT5M14S" itemprop="duration" /&gt;5:14
-    &lt;/div&gt;
-    &lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-      &lt;span itemprop="name"&gt;Morning Mr Magpie&lt;/span&gt;
-      &lt;meta content="/artist/radiohead/album/the-king-of-limbs/track/morning-mr-magpie" itemprop="url" /&gt;
-      &lt;meta content="PT4M40S" itemprop="duration" /&gt;4:40
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicAlbum"&gt;
-  &lt;h1 property="name"&gt; King of Limbs &lt;/h1&gt;
-  &lt;meta content="/artist/radiohead/album/the-king-of-limbs" property="url" /&gt;
-  &lt;img alt="Blurry, spooky cover art"
-  src="king-of-limbs.jpg" property="image" /&gt;
-  &lt;meta content="8" property="numTracks" /&gt;
-  &lt;meta content="Alt/Punk" property="genre" /&gt;
-  &lt;h2 property="byArtist" typeof="MusicGroup"&gt;
-    &lt;span property="name"&gt;Radiohead&lt;/span&gt;
-  &lt;/h2&gt;
-  &lt;h3&gt;Sample Tracks&lt;/h3&gt;
-    &lt;div property="track" typeof="MusicRecording"&gt;
-      &lt;span property="name"&gt;Bloom&lt;/span&gt;
-      &lt;meta content="/artist/radiohead/album/the-king-of-limbs/track/bloom" property="url" /&gt;
-      &lt;meta content="PT5M14S" property="duration" /&gt;5:14
-    &lt;/div&gt;
-    &lt;div property="track" typeof="MusicRecording"&gt;
-      &lt;span property="name"&gt;Morning Mr Magpie&lt;/span&gt;
-      &lt;meta content="/artist/radiohead/album/the-king-of-limbs/track/morning-mr-magpie" property="url" /&gt;
-      &lt;meta content="PT4M40S" property="duration" /&gt;4:40
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org",
-  "@type": "MusicAlbum",
-  "byArtist": {
-    "@type": "MusicGroup",
-    "name": "Radiohead"
-  },
-  "genre": "Alt/Punk",
-  "image": "king-of-limbs.jpg",
-  "name": "King of Limbs",
-  "numTracks": "8",
-  "track": [
-    {
-      "@type": "MusicRecording",
-      "duration": "PT5M14S",
-      "name": "Bloom",
-      "url": "/artist/radiohead/album/the-king-of-limbs/track/bloom"
-    },
-    {
-      "@type": "MusicRecording",
-      "duration": "PT4M40S",
-      "name": "Morning Mr Magpie",
-      "url": "/artist/radiohead/album/the-king-of-limbs/track/morning-mr-magpie"
-    }
-  ],
-  "url": "/artist/radiohead/album/the-king-of-limbs"
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<div class='ds-selector-tabs ds-selector'>
-  <div class='selectors'>
-    <a data-selects='original_html' class='selected'>Without Markup</a>
-    <a data-selects='microdata' class=''>Microdata</a>
-    <a data-selects='rdfa' class=''>RDFa</a>
-    <a data-selects='jsonld' class=''>JSON-LD</a>
-</div>
-
-<pre class="prettyprint lang-html linenums original_html selected">King of Limbs - Radiohead
-Tracks:
-1. Bloom
-2. Morning Mr. Magpie
-3. Little by Little
-</pre>
-
-<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicAlbum"&gt;
-  &lt;span itemprop="name"&gt;King of Limbs&lt;/span&gt;
-  &lt;span itemprop="byArtist"&gt;Radiohead&lt;/span&gt;
-  &lt;div itemprop="track" itemscope itemtype="http://schema.org/ItemList"&gt;
-    &lt;span itemprop="numberOfItems" content=8 /&gt;
-    &lt;div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
-      &lt;span itemprop="position"&gt;1&lt;/span&gt;
-      &lt;div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-        &lt;span itemprop="name"&gt;Bloom&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
-      &lt;span itemprop="position"&gt;2&lt;/span&gt;
-      &lt;div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-        &lt;span itemprop="name"&gt;Morning Mr. Magpie&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
-      &lt;span itemprop="position"&gt;3&lt;/span&gt;
-      &lt;div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording"&gt;
-        &lt;span itemprop="name"&gt;Little by Little&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicAlbum"&gt;
-  &lt;span property="name"&gt;King of Limbs&lt;/span&gt;
-  &lt;span property="byArtist"&gt;Radiohead&lt;/span&gt;
-  &lt;div property="track" typeof="ItemList"&gt;
-    &lt;span property="numberOfItems" content=8 /&gt;
-    &lt;div property="itemListElement" typeof="ListItem"&gt;
-      &lt;span property="position"&gt;1&lt;/span&gt;
-      &lt;div property="item" typeof="http://schema.org/MusicRecording"&gt;
-        &lt;span property="name"&gt;Bloom&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div property="itemListElement" typeof="ListItem"&gt;
-      &lt;span property="position"&gt;2&lt;/span&gt;
-      &lt;div property="item" typeof="MusicRecording"&gt;
-        &lt;span property="name"&gt;Morning Mr. Magpie&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div property="itemListElement" typeof="ListItem"&gt;
-      &lt;span property="position"&gt;3&lt;/span&gt;
-      &lt;div property="item" ypeof="MusicRecording"&gt;
-        &lt;span property="name"&gt;Little by Little&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
-{
-  "@context": "http://schema.org",
-  "@type": "MusicAlbum",
-  "name": "King of Limbs",
-  "byArtist": {
-    "@type": "MusicGroup",
-    "name": "Radiohead"
-  },
-  "track": {
-    "@type": "ItemList",
-    "numberOfItems": 8,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "MusicRecording",
-          "name": "Bloom"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "MusicRecording",
-          "name": "Morning Mr. Magpie"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "MusicRecording",
-          "name": "Little by Little"
-        }
-      }
-    ]
-  }
-}
-&lt;/script&gt;
-</pre>
-
-</div>
-
-<span id="music-1"></span><div class='ds-selector-tabs ds-selector'>
+<div title="music-1"><a id="music-1">Example 1</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -956,7 +750,7 @@ Tracks:
 
 </div>
 
-<span id="music-3"></span><div class='ds-selector-tabs ds-selector'>
+<div title="music-3"><a id="music-3">Example 2</a></div><div class='ds-selector-tabs ds-selector'>
   <div class='selectors'>
     <a data-selects='original_html' class='selected'>Without Markup</a>
     <a data-selects='microdata' class=''>Microdata</a>
@@ -1043,7 +837,218 @@ Sample JSON-LD for the Beatles as described by MusicBrainz.
 
 </div>
 
-<p class="version"><b>Schema Version 2.2</b></p>
+<div title="example-3"><a id="example-3">Example 3</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">&lt;h1&gt; King of Limbs &lt;/h1&gt;
+&lt;img alt="Blurry, spooky cover art" src="king-of-limbs.jpg" /&gt;
+&lt;h2&gt; Radiohead &lt;/h2&gt;
+&lt;h3&gt;Sample Tracks&lt;/h3&gt;
+Bloom - 5:14&lt;br&gt;
+Morning Mr Magpie - 4:40&lt;br&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicAlbum"&gt;
+  &lt;h1 itemprop="name"&gt; King of Limbs &lt;/h1&gt;
+  &lt;link href="/artist/radiohead/album/the-king-of-limbs" itemprop="url" /&gt;
+  &lt;img alt="Blurry, spooky cover art"
+  src="king-of-limbs.jpg" itemprop="image" /&gt;
+  &lt;meta content="8" itemprop="numTracks" /&gt;
+  &lt;meta content="Alt/Punk" itemprop="genre" /&gt;
+  &lt;h2 itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"&gt;
+    &lt;span itemprop="name"&gt;Radiohead&lt;/span&gt;
+  &lt;/h2&gt;
+  &lt;h3&gt;Sample Tracks&lt;/h3&gt;
+    &lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+      &lt;span itemprop="name"&gt;Bloom&lt;/span&gt;
+      &lt;link href="/artist/radiohead/album/the-king-of-limbs/track/bloom" itemprop="url" /&gt;
+      &lt;meta content="PT5M14S" itemprop="duration" /&gt;5:14
+    &lt;/div&gt;
+    &lt;div itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+      &lt;span itemprop="name"&gt;Morning Mr Magpie&lt;/span&gt;
+      &lt;link href="/artist/radiohead/album/the-king-of-limbs/track/morning-mr-magpie" itemprop="url" /&gt;
+    &lt;meta content="PT4M40S" itemprop="duration" /&gt;4:40
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicAlbum"&gt;
+  &lt;h1 property="name"&gt; King of Limbs &lt;/h1&gt;
+  &lt;meta content="/artist/radiohead/album/the-king-of-limbs" property="url" /&gt;
+  &lt;img alt="Blurry, spooky cover art"
+  src="king-of-limbs.jpg" property="image" /&gt;
+  &lt;meta content="8" property="numTracks" /&gt;
+  &lt;meta content="Alt/Punk" property="genre" /&gt;
+  &lt;h2 property="byArtist" typeof="MusicGroup"&gt;
+    &lt;span property="name"&gt;Radiohead&lt;/span&gt;
+  &lt;/h2&gt;
+  &lt;h3&gt;Sample Tracks&lt;/h3&gt;
+    &lt;div property="track" typeof="MusicRecording"&gt;
+      &lt;span property="name"&gt;Bloom&lt;/span&gt;
+      &lt;meta content="/artist/radiohead/album/the-king-of-limbs/track/bloom" property="url" /&gt;
+      &lt;meta content="PT5M14S" property="duration" /&gt;5:14
+    &lt;/div&gt;
+    &lt;div property="track" typeof="MusicRecording"&gt;
+      &lt;span property="name"&gt;Morning Mr Magpie&lt;/span&gt;
+      &lt;meta content="/artist/radiohead/album/the-king-of-limbs/track/morning-mr-magpie" property="url" /&gt;
+      &lt;meta content="PT4M40S" property="duration" /&gt;4:40
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org",
+  "@type": "MusicAlbum",
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Radiohead"
+  },
+  "genre": "Alt/Punk",
+  "image": "king-of-limbs.jpg",
+  "name": "King of Limbs",
+  "numTracks": "8",
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "duration": "PT5M14S",
+      "name": "Bloom",
+      "url": "/artist/radiohead/album/the-king-of-limbs/track/bloom"
+    },
+    {
+      "@type": "MusicRecording",
+      "duration": "PT4M40S",
+      "name": "Morning Mr Magpie",
+      "url": "/artist/radiohead/album/the-king-of-limbs/track/morning-mr-magpie"
+    }
+  ],
+  "url": "/artist/radiohead/album/the-king-of-limbs"
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<div title="example-4"><a id="example-4">Example 4</a></div><div class='ds-selector-tabs ds-selector'>
+  <div class='selectors'>
+    <a data-selects='original_html' class='selected'>Without Markup</a>
+    <a data-selects='microdata' class=''>Microdata</a>
+    <a data-selects='rdfa' class=''>RDFa</a>
+    <a data-selects='jsonld' class=''>JSON-LD</a>
+</div>
+
+<pre class="prettyprint lang-html linenums original_html selected">King of Limbs - Radiohead
+Tracks:
+1. Bloom
+2. Morning Mr. Magpie
+3. Little by Little
+</pre>
+
+<pre class="prettyprint lang-html linenums microdata ">&lt;div itemscope itemtype="http://schema.org/MusicAlbum"&gt;
+  &lt;span itemprop="name"&gt;King of Limbs&lt;/span&gt;
+  &lt;span itemprop="byArtist"&gt;Radiohead&lt;/span&gt;
+  &lt;div itemprop="track" itemscope itemtype="http://schema.org/ItemList"&gt;
+    &lt;span itemprop="numberOfItems" content=8 /&gt;
+    &lt;div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+      &lt;span itemprop="position"&gt;1&lt;/span&gt;
+      &lt;div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+        &lt;span itemprop="name"&gt;Bloom&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+      &lt;span itemprop="position"&gt;2&lt;/span&gt;
+      &lt;div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+        &lt;span itemprop="name"&gt;Morning Mr. Magpie&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+      &lt;span itemprop="position"&gt;3&lt;/span&gt;
+      &lt;div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording"&gt;
+        &lt;span itemprop="name"&gt;Little by Little&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums rdfa ">&lt;div vocab="http://schema.org/" typeof="MusicAlbum"&gt;
+  &lt;span property="name"&gt;King of Limbs&lt;/span&gt;
+  &lt;span property="byArtist"&gt;Radiohead&lt;/span&gt;
+  &lt;div property="track" typeof="ItemList"&gt;
+    &lt;meta property="numberOfItems" content=8 /&gt;
+    &lt;div property="itemListElement" typeof="ListItem"&gt;
+      &lt;span property="position"&gt;1&lt;/span&gt;
+      &lt;div property="item" typeof="http://schema.org/MusicRecording"&gt;
+        &lt;span property="name"&gt;Bloom&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div property="itemListElement" typeof="ListItem"&gt;
+      &lt;span property="position"&gt;2&lt;/span&gt;
+      &lt;div property="item" typeof="MusicRecording"&gt;
+        &lt;span property="name"&gt;Morning Mr. Magpie&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div property="itemListElement" typeof="ListItem"&gt;
+      &lt;span property="position"&gt;3&lt;/span&gt;
+      &lt;div property="item" typeof="MusicRecording"&gt;
+        &lt;span property="name"&gt;Little by Little&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint lang-html linenums jsonld ">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org",
+  "@type": "MusicAlbum",
+  "name": "King of Limbs",
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Radiohead"
+  },
+  "track": {
+    "@type": "ItemList",
+    "numberOfItems": 8,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "MusicRecording",
+          "name": "Bloom"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "MusicRecording",
+          "name": "Morning Mr. Magpie"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "MusicRecording",
+          "name": "Little by Little"
+        }
+      }
+    ]
+  }
+}
+&lt;/script&gt;
+</pre>
+
+</div>
+
+<p class="version"><b>Schema Version 3.0</b></p>
 
 <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

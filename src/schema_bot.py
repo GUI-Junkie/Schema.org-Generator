@@ -24,7 +24,7 @@ from zlib import decompress, MAX_WBITS
 from os import getcwd
 from os.path import isdir
 from subprocess import Popen
-from model.schema import SchemaClass
+from model.schema import SchemaClass, SCHEMA_ORG
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
 READ_BINARY = 'rb'
@@ -36,9 +36,10 @@ class Bot(Thread):
     def __init__(self):
         Thread.__init__(self)
         # Public attributes
+        self.debug = False      # Running locally
         self.updated = False
         self.error = None
-        self.version = 0.0     # Version of Schema.org
+        self.version = 0.0      # Version of Schema.org
 
         # Private attributes
         self._is_alive = False
@@ -65,7 +66,9 @@ class Bot(Thread):
         except FileNotFoundError:
             # HIERARCHY_FILE is not there
             is_dirty = True
-        is_dirty = True
+
+        if self.debug:
+            is_dirty = True
         self.version = 0.0
         self._schemas = {}
         self._hierarchy = ['Thing', []]
@@ -76,7 +79,7 @@ class Bot(Thread):
         while i_tries < 9 and txt is None:
             i_tries += 1
             try:
-                with urlopen("http://schema.org/docs/releases.html") as f:
+                with urlopen("{0}docs/releases.html".format(SCHEMA_ORG)) as f:
                     txt = f.read()
                 if 31 == txt[0]:  # If the txt is compressed, decompress
                     txt = decompress(txt, 16 + MAX_WBITS)
@@ -119,12 +122,14 @@ class Bot(Thread):
 
         try:
             # Get the full hierarchy from Schema.org
-            with urlopen('http://schema.org/docs/full.html') as req:
+            with urlopen('{0}docs/full.html'.format(SCHEMA_ORG)) as req:
                 txt = req.read().decode("utf-8")
 
             self._refresh(txt)
         except URLError:
-            self.error = 'Warning: http://schema.org/docs/full.html has not been found'
+            self.error = 'Warning: {0}docs/full.html has not been found'.format(SCHEMA_ORG)
+
+        if self.error:
             self._is_alive = False
 
             # Restore files
@@ -201,6 +206,7 @@ class Bot(Thread):
                 ind += txt[ind:].index('"') + 1  # id="Thing"
                 # Now, we have the id
                 thing = txt[ind:ind + txt[ind:].index('"')]
+
                 # if thing in ['Game', 'ExercisePlan', 'Diet']:
                 #     pass  # Put a breakpoint here if needed
                 if 'datatype_tree' == thing:
@@ -214,17 +220,20 @@ class Bot(Thread):
                 #   <a title="Extended schema: auto.schema.org"  class="ext ext-auto"
                 #       href="http://auto.schema.org/Motorcycle">Motorcycle</a>
                 tmp = ind + txt[ind:].index('</a>')  # search between <a... and </a>
-                if 'Extended' in txt[ind:tmp]:
-                    # Get the url
-                    ind += txt[ind:].index('href="')
-                    ind += txt[ind:].index('"') + 1
-                    # Now, we have the url
-                    url = txt[ind:ind + txt[ind:].index('"')]
-                    url = url[:url.rindex('/') + 1]
-                    element = SchemaClass(thing, self._callback, url)
-                else:
-                    element = SchemaClass(thing, self._callback)
-                self._schemas[thing] = element
+                if thing not in self._schemas:
+                    if 'Extended' in txt[ind:tmp]:
+                        # Get the url
+                        ind += txt[ind:].index('href="')
+                        ind += txt[ind:].index('"') + 1
+                        # Now, we have the url
+                        url = txt[ind:ind + txt[ind:].index('"')]
+                        url = url[:url.rindex('/') + 1]
+                        element = SchemaClass(thing, self._callback, url)
+                    else:
+                        element = SchemaClass(thing, self._callback)
+                    self._schemas[thing] = element
+
+                # Ordered list, needed to generate the hierarchy correctly
                 self._schema_list.append(thing)
             except Exception as e:
                 self.error = 'Error: {0}\n'.format(e)
@@ -267,7 +276,9 @@ class Bot(Thread):
         # Create the hierarchy
         for thing in self._schema_list:
             schema = self._schemas[thing]
-            parents = schema.get_parent_class
+
+            # Order by the longest parent first to prevent not reaching the insertion point or ValueError
+            parents = sorted(schema.get_parent_class, key=len, reverse=True)
 
             if not parents:  # Thing has no parents
                 continue
@@ -335,6 +346,7 @@ if __name__ == "__main__":
     # Check if file exists
     # Check if version is correct
     b = Bot()
+    b.debug = True
     b.start()
     b.join()
 

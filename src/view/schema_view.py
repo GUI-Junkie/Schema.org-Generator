@@ -65,7 +65,16 @@ class SchemaView:
         :return:txt (same txt)
         """
         # list_hierarchy contains pairs of elements and lists of children ['Thing', []]
-        txt = '<h4>{0} sub level</h4>'.format(breadcrumb.replace('.', ' - '))
+        if not breadcrumb:
+            breadcrumb = 'Thing'
+        breadcrumbs = breadcrumb.split('.')
+        h4 = ''
+        for crumb in breadcrumbs:
+            if h4 != '':
+                h4 += ' - '
+            h4 += '<a href="/{0}">{0}</a>'.format(crumb)
+
+        txt = '<h4>Sublevel: {0}</h4>'.format(h4)
         num_elements = len(list_hierarchy)
         if num_elements:
             x = 0
@@ -144,7 +153,7 @@ class SchemaView:
         txt += self._traverse_lvl(list_hierarchy, breadcrumb)
         txt += self._buttons(0)
 
-        txt += '<h4>{0} properties</h4>'.format(schema.name)
+        txt += '<h4>Properties: {0}</h4>'.format(schema.name)
         txt += self.ajax_properties(schema, schema.name)
         txt += '<br />'
         txt += self._buttons(1)
