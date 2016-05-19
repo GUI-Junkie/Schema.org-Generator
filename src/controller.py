@@ -66,7 +66,7 @@ class Controller(handlers.CGIHandler):
         start_response(self.status, self.headers)
         # rc can be a list or text
         if isinstance(rc, list):
-            return rc  # favicon.ico
+            return rc  # favicon.ico, etc
 
         # Use the default UTF-8 encoding
         return [rc.encode()]
