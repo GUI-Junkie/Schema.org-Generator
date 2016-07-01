@@ -11,6 +11,8 @@ from model.schema import PROPERTY_TYPES
 from urllib.parse import unquote_plus
 
 HIERARCHY_FILE = 'view/hierarchy.html'
+TOP_LEVEL = 0
+ALL_LEVELS = 1
 
 
 class SchemaView:
@@ -26,13 +28,15 @@ class SchemaView:
         :return: index.html
         """
         txt = '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
-        txt += self._traverse_hierarchy(hierarchy)
+        txt += self._traverse_hierarchy(hierarchy, TOP_LEVEL)
+        txt += '<h4>Full hierarchy</h4>'
+        txt += self._traverse_hierarchy(hierarchy, ALL_LEVELS)
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
         return html.format(title='Hierarchy', buttons='', form=txt, output='')
 
-    def _traverse_hierarchy(self, list_hierarchy):
+    def _traverse_hierarchy(self, list_hierarchy, level):
         """
         method: Lists all Hierarchy elements
                 Recursive
@@ -49,44 +53,57 @@ class SchemaView:
                 txt += '<li>\n'
                 txt += '<a href="/{0}">{0}</a>\n'.format(list_hierarchy[x])
                 # Recursive call
-                # txt = self._traverse_hierarchy(list_hierarchy[x + 1])
-                txt += self._traverse_lvl(list_hierarchy[x + 1], breadcrumb)
+                if list_hierarchy[x + 1]:
+                    if level:
+                        # txt += self._traverse_lvl(list_hierarchy[x + 1], breadcrumb, level)
+                        txt += self._traverse_hierarchy(list_hierarchy[x + 1], level)
+                    else:
+                        txt += self._traverse_lvl(list_hierarchy[x + 1], breadcrumb)
                 x += 2
                 txt += '</li>\n'
             txt += '</ul>\n'
         return txt
 
     @staticmethod
-    def _traverse_lvl(list_hierarchy, breadcrumb):
+    def _traverse_lvl(list_hierarchy, breadcrumb, level=TOP_LEVEL):
         """
         method: Lists all Hierarchy elements
                 Recursive
         :param list_hierarchy:
         :return:txt (same txt)
         """
-        # list_hierarchy contains pairs of elements and lists of children ['Thing', []]
-        if not breadcrumb:
-            breadcrumb = 'Thing'
-        breadcrumbs = breadcrumb.split('.')
-        h4 = ''
-        for crumb in breadcrumbs:
-            if h4 != '':
-                h4 += ' - '
-            h4 += '<a href="/{0}">{0}</a>'.format(crumb)
+        txt = ''
+        if TOP_LEVEL == level:
+            # list_hierarchy contains pairs of elements and lists of children ['Thing', []]
+            if not breadcrumb:
+                breadcrumb = 'Thing'
+            breadcrumbs = breadcrumb.split('.')
+            h4 = ''
+            for crumb in breadcrumbs:
+                if h4 != '':
+                    h4 += ' - '
+                h4 += '<a href="/{0}">{0}</a>'.format(crumb)
 
-        txt = '<h4>Sublevel: {0}</h4>'.format(h4)
+            txt = '<h4>Sublevel: {0}</h4>'.format(h4)
+
         num_elements = len(list_hierarchy)
         if num_elements:
             x = 0
             half = num_elements / 2
 
             while x < num_elements:
-                txt += '<ul class="properties">\n'
+                if TOP_LEVEL == level:
+                    txt += '<ul class="properties">\n'
+                else:
+                    txt += '<ul>\n'
                 while x < half:
                     txt += '<li>\n'
                     # txt += '<a href="/{0}">{0}</a>\n'.format(list_hierarchy[x])
-                    txt += '<a href="javascript:ShowNextLevel(\'{0}\', \'{1}\');">{0}</a>\n'\
-                        .format(list_hierarchy[x], breadcrumb)
+                    if TOP_LEVEL == level:
+                        txt += '<a href="javascript:ShowNextLevel(\'{0}\', \'{1}\');">{0}</a>\n'\
+                            .format(list_hierarchy[x], breadcrumb)
+                    else:
+                        txt += '<a href="{0}">{0}</a>\n'.format(list_hierarchy[x])
                     x += 2
                     txt += '</li>\n'
                 txt += '</ul>\n'
@@ -158,13 +175,13 @@ class SchemaView:
         txt += '<br />'
         txt += self._buttons(1)
 
-        with open('view/schema_header.html') as f:
-            schema_txt = f.read()
-        schema_txt += schema.get_schema_body()
+        # with open('view/schema_header.html') as f:
+        #     schema_txt = f.read()
+        # schema_txt += schema.get_schema_body()
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
-        return html.format(title=schema.name, buttons="schema", form=txt, output=schema_txt)
+        return html.format(title=schema.name, buttons="schema", form=txt, output='')
 
     @staticmethod
     def _buttons(id):

@@ -15,44 +15,33 @@ The Bot should be called via a ``cron`` job every 24 hours
 * The Application Server |Controller| (or Controllers) will be restarted if necessary
 """
 # Refer to the Readme.txt file for © copyright information
-from pickle import dump, load
+from pickle import load
 from threading import Thread
 from time import sleep
 from urllib.error import URLError
 from urllib.request import urlopen
 from zlib import decompress, MAX_WBITS
-from os import getcwd
-from os.path import isdir
-from subprocess import Popen
-from model.schema import SchemaClass, SCHEMA_ORG
+from os import remove
+from model.schema import SCHEMA_ORG
+from nqparser import treat_file
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
 READ_BINARY = 'rb'
 WRITE_BINARY = 'wb'
-MAX_SIMULTANEOUS_THREADS = 50
 
 
 class Bot(Thread):
     def __init__(self):
         Thread.__init__(self)
         # Public attributes
-        self.debug = False      # Running locally
+        self.debug = False  # Running locally
         self.updated = False
         self.error = None
-        self.version = 0.0      # Version of Schema.org
+        self.version = 0.0  # Version of Schema.org
 
         # Private attributes
-        self._is_alive = False
-        self._schemas = {}      # Dictionary for rapid access
-
-        self._generator_callback_busy = False   # Blocks callback
-        self._threads = 1                       # Will be put at zero on first call, number of running threads
-        self._i_thread = 0                      # Index of next thread to start
-        self._i_max_thread = 0                  # Total number of threads to start
-
-        self._schema_list = []                  # Ordered list, needed to generate the hierarchy correctly
-        self._hierarchy = ['Thing', []]         # Hierarchy, list of lists for ordering output
-        self._keys = None
+        self._is_alive = True
+        self._schemas = {}  # Dictionary for rapid access
 
     def run(self):
         is_dirty = False
@@ -61,17 +50,13 @@ class Bot(Thread):
             with open(HIERARCHY_FILE, READ_BINARY) as f:
                 pickle_list = load(f)
                 self.version = pickle_list[0]
-                self._schemas = pickle_list[1]
-                self._hierarchy = pickle_list[2]
         except FileNotFoundError:
             # HIERARCHY_FILE is not there
             is_dirty = True
 
         if self.debug:
             is_dirty = True
-        self.version = 0.0
-        self._schemas = {}
-        self._hierarchy = ['Thing', []]
+            self.version = 0.0
 
         # Check the version of the Hierarchy against the known version
         i_tries = 0
@@ -97,228 +82,36 @@ class Bot(Thread):
         # <td class="release"><a href="/version/2.1/">2.1</a><br/>sdo-ganymede<br/>(2015-08-06)</td>
         txt = txt.decode()
         ind = txt.index('class="release"')
-        ind += txt[ind:].index('href="')
-        ind += txt[ind:].index('>') + 1
-        version = float(txt[ind:ind + txt[ind:].index('<')])
+        ind += txt[ind:].index('href="') + len('href="/version/')
+        version = float(txt[ind:ind + txt[ind:].index('/')])
         if version > self.version:
             self.version = version
             is_dirty = True
 
         if is_dirty:
-            # If HIERARCHY_FILE is not there
-            # Or there is a new version, get the hierarchy from the Internet
-            self._start_refresh()
+            # Get the new release all-layers.nq file
+            # https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/3.0/all-layers.nq
+            with urlopen("https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/{0}/all-layers.nq"
+                         .format(version)) as f:
+                txt = f.read()
 
-    def _start_refresh(self):
-        """
-        If there is a Hierarchy file, we can do this in the background
-        If not, we have to do this immediately
-        :return: None
-        """
-        self._is_alive = True
+            with open('all-layers.nq', 'w') as f:
+                f.write(txt.decode())
 
-        # Backup and Remove files
-        self._backup()
+            # Delete index.html
+            try:
+                remove('view/index.html')
+            except FileNotFoundError:
+                pass
 
-        try:
-            # Get the full hierarchy from Schema.org
-            with urlopen('{0}docs/full.html'.format(SCHEMA_ORG)) as req:
-                txt = req.read().decode("utf-8")
+            # Let's do *everything*
+            treat_file()
+            self.updated = True
 
-            self._refresh(txt)
-        except URLError:
-            self.error = 'Warning: {0}docs/full.html has not been found'.format(SCHEMA_ORG)
-
-        if self.error:
-            self._is_alive = False
-
-            # Restore files
-            self._restore()
+        self._is_alive = False
 
     def is_alive(self):
         return self._is_alive
-
-    @staticmethod
-    def _backup():
-        """
-        Moves all *.html files to another directory
-        Moves HIERARCHY_FILE there as well
-        """
-        base_dir = '{0}'.format(getcwd())
-
-        # Delete old directory (if it exists)
-        if isdir('{0}/Schemas/old'.format(base_dir)):
-            Popen(['rm -r {0}/Schemas/old'.format(base_dir)], shell=True)
-            sleep(0.1)
-
-        # Create old directory
-        Popen(['mkdir {0}/Schemas/old'.format(base_dir)], shell=True)
-        sleep(0.1)
-
-        # Move all html files to the old directory
-        Popen(['mv {0}/Schemas/*.html {0}/Schemas/old/'.format(base_dir)], shell=True)
-
-        # Move HIERARCHY_FILE to the old directory
-        Popen(['mv {0}/{1} {0}/Schemas/old/'.format(base_dir, HIERARCHY_FILE)], shell=True)
-
-    @staticmethod
-    def _restore():
-        """
-        Moves all *.html files back
-        Moves HIERARCHY_FILE back
-        """
-        base_dir = '{0}'.format(getcwd())
-
-        # Delete 'temporary' files
-        Popen(['rm {0}/Schemas/*.html'.format(base_dir)], shell=True)
-        Popen(['rm {0}/{1}'.format(base_dir, HIERARCHY_FILE)], shell=True)
-
-        # Move all html files back
-        Popen(['mv {0}/Schemas/old/*.html {0}/Schemas/'.format(base_dir)], shell=True)
-
-        # Move HIERARCHY_FILE back
-        Popen(['mv {0}/Schemas/old/{1} {0}/'.format(base_dir, HIERARCHY_FILE)], shell=True)
-
-        # Delete old directory
-        sleep(0.1)
-        Popen(['rm -r {0}/Schemas/old'.format(base_dir)], shell=True)
-
-    def _refresh(self, txt):
-        # <li class="tbranch" id="Thing"><a href="/Thing">Thing</a>
-        if 'class="tbranch" id="Thing"' not in txt:
-            self.error = 'Error: class="tbranch" id="Thing" - Not found'
-            return  # Incorrect - unlikely
-
-        ind = txt.index('id="full_thing_tree"')              # Skip the core, go straight to the full_thing_tree
-        ind += txt[ind:].index('class="tbranch" id="Thing"')   # We're looking for the first element
-        # Get all elements
-        # Read only 5 elements
-        # index = 0
-        thing = ''
-        while True:
-            # if index > 9:
-            #     print('Exit after 10: {0}'.format(self._elements['IgnoreAction'].element))
-            #     return
-            # index += 1
-            try:
-                # <li class="tbranch" id="Thing"><a href="/Thing">Thing</a>
-                ind += txt[ind:].index('id=')  # We want to extract the id
-                ind += txt[ind:].index('"') + 1  # id="Thing"
-                # Now, we have the id
-                thing = txt[ind:ind + txt[ind:].index('"')]
-
-                # if thing in ['Game', 'ExercisePlan', 'Diet']:
-                #     pass  # Put a breakpoint here if needed
-                if 'datatype_tree' == thing:
-                    print('Correxit: datatype_tree')
-
-                    # Launch the Threads
-                    self._callback()
-                    return
-                # Check if Extended schema
-                # <li class="tleaf" id="Motorcycle">
-                #   <a title="Extended schema: auto.schema.org"  class="ext ext-auto"
-                #       href="http://auto.schema.org/Motorcycle">Motorcycle</a>
-                tmp = ind + txt[ind:].index('</a>')  # search between <a... and </a>
-                if thing not in self._schemas:
-                    if 'Extended' in txt[ind:tmp]:
-                        # Get the url
-                        ind += txt[ind:].index('href="')
-                        ind += txt[ind:].index('"') + 1
-                        # Now, we have the url
-                        url = txt[ind:ind + txt[ind:].index('"')]
-                        url = url[:url.rindex('/') + 1]
-                        element = SchemaClass(thing, self._callback, url)
-                    else:
-                        element = SchemaClass(thing, self._callback)
-                    self._schemas[thing] = element
-
-                # Ordered list, needed to generate the hierarchy correctly
-                self._schema_list.append(thing)
-            except Exception as e:
-                self.error = 'Error: {0}\n'.format(e)
-                self.error += 'Error exit: {0}'.format(thing)
-                return  # Escape While True loop
-
-    def _callback(self, element=None):
-        # Only accept one callback at a time
-        if self._generator_callback_busy:
-            return False
-        self._generator_callback_busy = True
-
-        if element is None:
-            # Initiate the keys and max threads
-            print('start threads')
-            self._keys = list(self._schemas.keys())
-            self._i_max_thread = len(self._schemas)
-
-        # One element has stopped, reduce the running threads
-        self._threads -= 1
-
-        # Start up to x simultaneous threads
-        while self._threads < MAX_SIMULTANEOUS_THREADS and self._i_thread < self._i_max_thread:
-            self._schemas[self._keys[self._i_thread]].start()
-            self._i_thread += 1
-
-            # May not be a thread, if not a thread, it's already finished
-            if self._schemas[self._keys[self._i_thread - 1]].is_alive:
-                self._threads += 1
-
-        # All threads finished running
-        if 0 == self._threads and self._i_thread == self._i_max_thread:
-            # Ready
-            self._dump()
-
-        self._generator_callback_busy = False
-        return True
-
-    def _dump(self):
-        # Create the hierarchy
-        for thing in self._schema_list:
-            schema = self._schemas[thing]
-
-            # Order by the longest parent first to prevent not reaching the insertion point or ValueError
-            parents = sorted(schema.get_parent_class, key=len, reverse=True)
-
-            if not parents:  # Thing has no parents
-                continue
-
-            # Every element has Thing at it's root, so it will be found
-            # However, the parent we're looking for may be somewhere else, so keep looking
-            hierarchy = self._hierarchy
-            for x in range(0, len(parents)):
-                for y in range(0, len(parents[x])):
-                    try:
-                        # Walk the hierarchy until the insertion point
-                        hierarchy = hierarchy[hierarchy.index(parents[x][y]) + 1]
-                    except ValueError:
-                        # Reestablish the search tree
-                        hierarchy = self._hierarchy
-                        break
-                # When the insertion point has been reached, exit the for loop
-                if hierarchy != self._hierarchy:
-                    break
-
-            # Add the element to the hierarchy
-            hierarchy.append(schema.name)
-            hierarchy.append([])
-
-        print('Finishing')
-        self._is_alive = False
-        self.updated = True
-
-        # Reduce the amount of data saved by eliminating _html
-        for schema in self._schemas.values():
-            schema.clean()
-
-        with open(HIERARCHY_FILE, WRITE_BINARY) as f:
-            dump([self.version, self._schemas, self._hierarchy], f)
-
-        # Delete old directory (if it exists)
-        # sleep(0.1)
-        base_dir = '{0}'.format(getcwd())
-        if isdir('{0}/Schemas/old'.format(base_dir)):
-            Popen(['rm -r {0}/Schemas/old'.format(base_dir)], shell=True)
 
 
 def restart(port):
@@ -327,8 +120,10 @@ def restart(port):
     except URLError:
         pass
 
+
 if __name__ == "__main__":
     from os import chdir
+
     # from datetime import datetime
 
     # tStart = datetime.now()
@@ -356,7 +151,7 @@ if __name__ == "__main__":
 
     # Restart the server(s) if the pickle file has been updated
     if b.updated:
-        restart(8000)   # Restart server at port 8000
+        restart(8000)  # Restart server at port 8000
         # restart(8001)   # Etc
     print('Schema Bot - main finished')
 

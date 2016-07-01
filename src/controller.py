@@ -155,8 +155,14 @@ class Controller(handlers.CGIHandler):
                 # Return html
                 self.headers = [('Content-type', 'text/html; charset=utf-8')]
                 if '/' == path_info or '' == path_info:
-                    # Returns the whole hierarchy - Similar to http://schema.org/docs/full.html
-                    rc = self.view.get_index(self.hierarchy.hierarchy)
+                    try:
+                        with open('view/index.html') as f:
+                            rc = f.read()
+                    except FileNotFoundError:
+                        # Returns the whole hierarchy - Similar to http://schema.org/docs/full.html
+                        rc = self.view.get_index(self.hierarchy.hierarchy)
+                        with open('view/index.html', 'w') as f:
+                            f.write(rc)
                 elif '/schema_bot' == path_info:
                     if ctx.get('check'):
                         rc = self.view.get_schema_bot_ajax(self.schema_bot)
