@@ -48,6 +48,7 @@
                 </ul>
             </nav>
             <div class="right_col" id="right_col">
+                <span class="release">schema.org release: 3.1</span>
                 <form method="POST" action="/GenerateSchema">
                     <input type="hidden" name="breadcrumb" id="breadcrumb" value="" /><ul>
 <li>
@@ -64,6 +65,9 @@
 </li>
 <li>
 <a href="javascript:ShowNextLevel('Intangible', 'Thing');">Intangible</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('MedicalEntity', 'Thing');">MedicalEntity</a>
 </li>
 </ul>
 <ul class="properties">
@@ -466,14 +470,6 @@
 <a href="/Article">Article</a>
 <ul>
 <li>
-<a href="/BlogPosting">BlogPosting</a>
-<ul>
-<li>
-<a href="/LiveBlogPosting">LiveBlogPosting</a>
-</li>
-</ul>
-</li>
-<li>
 <a href="/NewsArticle">NewsArticle</a>
 </li>
 <li>
@@ -481,10 +477,23 @@
 </li>
 <li>
 <a href="/ScholarlyArticle">ScholarlyArticle</a>
+<ul>
+<li>
+<a href="/MedicalScholarlyArticle">MedicalScholarlyArticle</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/SocialMediaPosting">SocialMediaPosting</a>
 <ul>
+<li>
+<a href="/BlogPosting">BlogPosting</a>
+<ul>
+<li>
+<a href="/LiveBlogPosting">LiveBlogPosting</a>
+</li>
+</ul>
+</li>
 <li>
 <a href="/DiscussionForumPosting">DiscussionForumPosting</a>
 </li>
@@ -616,6 +625,9 @@
 </ul>
 </li>
 <li>
+<a href="/Diet">Diet</a>
+</li>
+<li>
 <a href="/DigitalDocument">DigitalDocument</a>
 <ul>
 <li>
@@ -642,6 +654,9 @@
 <a href="/TVEpisode">TVEpisode</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="/ExercisePlan">ExercisePlan</a>
 </li>
 <li>
 <a href="/Game">Game</a>
@@ -821,6 +836,9 @@
 <a href="/ItemPage">ItemPage</a>
 </li>
 <li>
+<a href="/MedicalWebPage">MedicalWebPage</a>
+</li>
+<li>
 <a href="/ProfilePage">ProfilePage</a>
 </li>
 <li>
@@ -980,8 +998,24 @@
 <a href="/EducationalAudience">EducationalAudience</a>
 </li>
 <li>
+<a href="/MedicalAudience">MedicalAudience</a>
+<ul>
+<li>
+<a href="/Patient">Patient</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/PeopleAudience">PeopleAudience</a>
 <ul>
+<li>
+<a href="/MedicalAudience">MedicalAudience</a>
+<ul>
+<li>
+<a href="/Patient">Patient</a>
+</li>
+</ul>
+</li>
 <li>
 <a href="/ParentAudience">ParentAudience</a>
 </li>
@@ -1087,6 +1121,70 @@
 <a href="/MapCategoryType">MapCategoryType</a>
 </li>
 <li>
+<a href="/MedicalEnumeration">MedicalEnumeration</a>
+<ul>
+<li>
+<a href="/DrugClass">DrugClass</a>
+</li>
+<li>
+<a href="/DrugCost">DrugCost</a>
+</li>
+<li>
+<a href="/DrugCostCategory">DrugCostCategory</a>
+</li>
+<li>
+<a href="/DrugPregnancyCategory">DrugPregnancyCategory</a>
+</li>
+<li>
+<a href="/DrugPrescriptionStatus">DrugPrescriptionStatus</a>
+</li>
+<li>
+<a href="/InfectiousAgentClass">InfectiousAgentClass</a>
+</li>
+<li>
+<a href="/MedicalAudience">MedicalAudience</a>
+<ul>
+<li>
+<a href="/Patient">Patient</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalDevicePurpose">MedicalDevicePurpose</a>
+</li>
+<li>
+<a href="/MedicalEvidenceLevel">MedicalEvidenceLevel</a>
+</li>
+<li>
+<a href="/MedicalImagingTechnique">MedicalImagingTechnique</a>
+</li>
+<li>
+<a href="/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>
+</li>
+<li>
+<a href="/MedicalProcedureType">MedicalProcedureType</a>
+</li>
+<li>
+<a href="/MedicalSpecialty">MedicalSpecialty</a>
+</li>
+<li>
+<a href="/MedicalStudyStatus">MedicalStudyStatus</a>
+</li>
+<li>
+<a href="/MedicalTrialDesign">MedicalTrialDesign</a>
+</li>
+<li>
+<a href="/MedicineSystem">MedicineSystem</a>
+</li>
+<li>
+<a href="/PhysicalExam">PhysicalExam</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalTrialDesign">MedicalTrialDesign</a>
+</li>
+<li>
 <a href="/MusicAlbumProductionType">MusicAlbumProductionType</a>
 </li>
 <li>
@@ -1118,6 +1216,9 @@
 <a href="/PaymentStatusType">PaymentStatusType</a>
 </li>
 <li>
+<a href="/PhysicalActivityCategory">PhysicalActivityCategory</a>
+</li>
+<li>
 <a href="/QualitativeValue">QualitativeValue</a>
 <ul>
 <li>
@@ -1142,6 +1243,11 @@
 </li>
 <li>
 <a href="/Specialty">Specialty</a>
+<ul>
+<li>
+<a href="/MedicalSpecialty">MedicalSpecialty</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/WarrantyScope">WarrantyScope</a>
@@ -1451,6 +1557,260 @@
 </ul>
 </li>
 <li>
+<a href="/MedicalEntity">MedicalEntity</a>
+<ul>
+<li>
+<a href="/AnatomicalStructure">AnatomicalStructure</a>
+<ul>
+<li>
+<a href="/Bone">Bone</a>
+</li>
+<li>
+<a href="/BrainStructure">BrainStructure</a>
+</li>
+<li>
+<a href="/Joint">Joint</a>
+</li>
+<li>
+<a href="/Ligament">Ligament</a>
+</li>
+<li>
+<a href="/Muscle">Muscle</a>
+</li>
+<li>
+<a href="/Nerve">Nerve</a>
+</li>
+<li>
+<a href="/Vessel">Vessel</a>
+<ul>
+<li>
+<a href="/Artery">Artery</a>
+</li>
+<li>
+<a href="/LymphaticVessel">LymphaticVessel</a>
+</li>
+<li>
+<a href="/Vein">Vein</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/AnatomicalSystem">AnatomicalSystem</a>
+</li>
+<li>
+<a href="/LifestyleModification">LifestyleModification</a>
+<ul>
+<li>
+<a href="/Diet">Diet</a>
+</li>
+<li>
+<a href="/PhysicalActivity">PhysicalActivity</a>
+<ul>
+<li>
+<a href="/ExercisePlan">ExercisePlan</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalCause">MedicalCause</a>
+</li>
+<li>
+<a href="/MedicalCondition">MedicalCondition</a>
+<ul>
+<li>
+<a href="/InfectiousDisease">InfectiousDisease</a>
+</li>
+<li>
+<a href="/MedicalSignOrSymptom">MedicalSignOrSymptom</a>
+<ul>
+<li>
+<a href="/MedicalSign">MedicalSign</a>
+<ul>
+<li>
+<a href="/VitalSign">VitalSign</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalSymptom">MedicalSymptom</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalContraindication">MedicalContraindication</a>
+</li>
+<li>
+<a href="/MedicalDevice">MedicalDevice</a>
+</li>
+<li>
+<a href="/MedicalGuideline">MedicalGuideline</a>
+<ul>
+<li>
+<a href="/MedicalGuidelineContraindication">MedicalGuidelineContraindication</a>
+</li>
+<li>
+<a href="/MedicalGuidelineRecommendation">MedicalGuidelineRecommendation</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalIndication">MedicalIndication</a>
+<ul>
+<li>
+<a href="/ApprovedIndication">ApprovedIndication</a>
+</li>
+<li>
+<a href="/PreventionIndication">PreventionIndication</a>
+</li>
+<li>
+<a href="/TreatmentIndication">TreatmentIndication</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalIntangible">MedicalIntangible</a>
+<ul>
+<li>
+<a href="/DDxElement">DDxElement</a>
+</li>
+<li>
+<a href="/DoseSchedule">DoseSchedule</a>
+<ul>
+<li>
+<a href="/MaximumDoseSchedule">MaximumDoseSchedule</a>
+</li>
+<li>
+<a href="/RecommendedDoseSchedule">RecommendedDoseSchedule</a>
+</li>
+<li>
+<a href="/ReportedDoseSchedule">ReportedDoseSchedule</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DrugLegalStatus">DrugLegalStatus</a>
+</li>
+<li>
+<a href="/DrugStrength">DrugStrength</a>
+</li>
+<li>
+<a href="/MedicalCode">MedicalCode</a>
+</li>
+<li>
+<a href="/MedicalConditionStage">MedicalConditionStage</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalProcedure">MedicalProcedure</a>
+<ul>
+<li>
+<a href="/DiagnosticProcedure">DiagnosticProcedure</a>
+</li>
+<li>
+<a href="/PalliativeProcedure">PalliativeProcedure</a>
+</li>
+<li>
+<a href="/PhysicalExam">PhysicalExam</a>
+</li>
+<li>
+<a href="/SurgicalProcedure">SurgicalProcedure</a>
+</li>
+<li>
+<a href="/TherapeuticProcedure">TherapeuticProcedure</a>
+<ul>
+<li>
+<a href="/MedicalTherapy">MedicalTherapy</a>
+<ul>
+<li>
+<a href="/OccupationalTherapy">OccupationalTherapy</a>
+</li>
+<li>
+<a href="/PalliativeProcedure">PalliativeProcedure</a>
+</li>
+<li>
+<a href="/PhysicalTherapy">PhysicalTherapy</a>
+</li>
+<li>
+<a href="/RadiationTherapy">RadiationTherapy</a>
+</li>
+<li>
+<a href="/RespiratoryTherapy">RespiratoryTherapy</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PsychologicalTreatment">PsychologicalTreatment</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalRiskEstimator">MedicalRiskEstimator</a>
+<ul>
+<li>
+<a href="/MedicalRiskCalculator">MedicalRiskCalculator</a>
+</li>
+<li>
+<a href="/MedicalRiskScore">MedicalRiskScore</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalRiskFactor">MedicalRiskFactor</a>
+</li>
+<li>
+<a href="/MedicalStudy">MedicalStudy</a>
+<ul>
+<li>
+<a href="/MedicalObservationalStudy">MedicalObservationalStudy</a>
+</li>
+<li>
+<a href="/MedicalTrial">MedicalTrial</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalTest">MedicalTest</a>
+<ul>
+<li>
+<a href="/BloodTest">BloodTest</a>
+</li>
+<li>
+<a href="/ImagingTest">ImagingTest</a>
+</li>
+<li>
+<a href="/MedicalTestPanel">MedicalTestPanel</a>
+</li>
+<li>
+<a href="/PathologyTest">PathologyTest</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Substance">Substance</a>
+<ul>
+<li>
+<a href="/DietarySupplement">DietarySupplement</a>
+</li>
+<li>
+<a href="/Drug">Drug</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/SuperficialAnatomy">SuperficialAnatomy</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/Organization">Organization</a>
 <ul>
 <li>
@@ -1716,6 +2076,83 @@
 </ul>
 </li>
 <li>
+<a href="/MedicalBusiness">MedicalBusiness</a>
+<ul>
+<li>
+<a href="/CommunityHealth">CommunityHealth</a>
+</li>
+<li>
+<a href="/Dentist">Dentist</a>
+</li>
+<li>
+<a href="/Dermatology">Dermatology</a>
+</li>
+<li>
+<a href="/DietNutrition">DietNutrition</a>
+</li>
+<li>
+<a href="/Emergency">Emergency</a>
+</li>
+<li>
+<a href="/Geriatric">Geriatric</a>
+</li>
+<li>
+<a href="/Gynecologic">Gynecologic</a>
+</li>
+<li>
+<a href="/MedicalClinic">MedicalClinic</a>
+</li>
+<li>
+<a href="/Midwifery">Midwifery</a>
+</li>
+<li>
+<a href="/Nursing">Nursing</a>
+</li>
+<li>
+<a href="/Obstetric">Obstetric</a>
+</li>
+<li>
+<a href="/Oncologic">Oncologic</a>
+</li>
+<li>
+<a href="/Optician">Optician</a>
+</li>
+<li>
+<a href="/Optometric">Optometric</a>
+</li>
+<li>
+<a href="/Otolaryngologic">Otolaryngologic</a>
+</li>
+<li>
+<a href="/Pediatric">Pediatric</a>
+</li>
+<li>
+<a href="/Pharmacy">Pharmacy</a>
+</li>
+<li>
+<a href="/Physician">Physician</a>
+</li>
+<li>
+<a href="/Physiotherapy">Physiotherapy</a>
+</li>
+<li>
+<a href="/PlasticSurgery">PlasticSurgery</a>
+</li>
+<li>
+<a href="/Podiatric">Podiatric</a>
+</li>
+<li>
+<a href="/PrimaryCare">PrimaryCare</a>
+</li>
+<li>
+<a href="/Psychiatric">Psychiatric</a>
+</li>
+<li>
+<a href="/PublicHealth">PublicHealth</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/ProfessionalService">ProfessionalService</a>
 <ul>
 <li>
@@ -1883,13 +2320,22 @@
 <a href="/Dentist">Dentist</a>
 </li>
 <li>
+<a href="/DiagnosticLab">DiagnosticLab</a>
+</li>
+<li>
 <a href="/Hospital">Hospital</a>
+</li>
+<li>
+<a href="/MedicalClinic">MedicalClinic</a>
 </li>
 <li>
 <a href="/Pharmacy">Pharmacy</a>
 </li>
 <li>
 <a href="/Physician">Physician</a>
+</li>
+<li>
+<a href="/VeterinaryCare">VeterinaryCare</a>
 </li>
 </ul>
 </li>
@@ -1925,6 +2371,11 @@
 </li>
 <li>
 <a href="/Person">Person</a>
+<ul>
+<li>
+<a href="/Patient">Patient</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/Place">Place</a>
@@ -2342,6 +2793,83 @@
 </li>
 <li>
 <a href="/Motel">Motel</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalBusiness">MedicalBusiness</a>
+<ul>
+<li>
+<a href="/CommunityHealth">CommunityHealth</a>
+</li>
+<li>
+<a href="/Dentist">Dentist</a>
+</li>
+<li>
+<a href="/Dermatology">Dermatology</a>
+</li>
+<li>
+<a href="/DietNutrition">DietNutrition</a>
+</li>
+<li>
+<a href="/Emergency">Emergency</a>
+</li>
+<li>
+<a href="/Geriatric">Geriatric</a>
+</li>
+<li>
+<a href="/Gynecologic">Gynecologic</a>
+</li>
+<li>
+<a href="/MedicalClinic">MedicalClinic</a>
+</li>
+<li>
+<a href="/Midwifery">Midwifery</a>
+</li>
+<li>
+<a href="/Nursing">Nursing</a>
+</li>
+<li>
+<a href="/Obstetric">Obstetric</a>
+</li>
+<li>
+<a href="/Oncologic">Oncologic</a>
+</li>
+<li>
+<a href="/Optician">Optician</a>
+</li>
+<li>
+<a href="/Optometric">Optometric</a>
+</li>
+<li>
+<a href="/Otolaryngologic">Otolaryngologic</a>
+</li>
+<li>
+<a href="/Pediatric">Pediatric</a>
+</li>
+<li>
+<a href="/Pharmacy">Pharmacy</a>
+</li>
+<li>
+<a href="/Physician">Physician</a>
+</li>
+<li>
+<a href="/Physiotherapy">Physiotherapy</a>
+</li>
+<li>
+<a href="/PlasticSurgery">PlasticSurgery</a>
+</li>
+<li>
+<a href="/Podiatric">Podiatric</a>
+</li>
+<li>
+<a href="/PrimaryCare">PrimaryCare</a>
+</li>
+<li>
+<a href="/Psychiatric">Psychiatric</a>
+</li>
+<li>
+<a href="/PublicHealth">PublicHealth</a>
 </li>
 </ul>
 </li>

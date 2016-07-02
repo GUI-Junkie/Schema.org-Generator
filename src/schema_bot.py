@@ -105,7 +105,7 @@ class Bot(Thread):
                 pass
 
             # Let's do *everything*
-            treat_file()
+            treat_file(version)
             self.updated = True
 
         self._is_alive = False

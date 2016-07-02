@@ -16,6 +16,9 @@ ALL_LEVELS = 1
 
 
 class SchemaView:
+    def __init__(self, version):
+        self.version = version
+
     """
     SchemaView class handles all output creating valid HTML
     """
@@ -34,7 +37,7 @@ class SchemaView:
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
-        return html.format(title='Hierarchy', buttons='', form=txt, output='')
+        return html.format(title='Hierarchy', buttons='', version=self.version, form=txt, output='')
 
     def _traverse_hierarchy(self, list_hierarchy, level):
         """
@@ -124,6 +127,7 @@ class SchemaView:
         if len(properties):
             x = 0
             while x < len(properties):
+                types = schema.properties[properties[x]]
                 if x % 2:
                     txt += '<div class="tr_odd">\n'
                 else:
@@ -131,8 +135,7 @@ class SchemaView:
                 txt += '<div class="td">\n'
                 txt += '<a href="{0}{1}" target="_blank">{1} ' \
                        '<img src="/external_link.png" alt="external link" title="external link" />' \
-                       '</a>\n'.format(schema.url, properties[x])
-                types = schema.properties[properties[x]]
+                       '</a>\n'.format(types[0], properties[x])
                 txt += '</div>\n'
                 txt += '<div class="td">\n'
                 txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
@@ -168,12 +171,12 @@ class SchemaView:
         txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
 
         txt += self._traverse_lvl(list_hierarchy, breadcrumb)
-        txt += self._buttons(0)
+        txt += self._buttons()
 
         txt += '<h4>Properties: {0}</h4>'.format(schema.name)
         txt += self.ajax_properties(schema, schema.name)
         txt += '<br />'
-        txt += self._buttons(1)
+        txt += self._buttons()
 
         # with open('view/schema_header.html') as f:
         #     schema_txt = f.read()
@@ -181,10 +184,10 @@ class SchemaView:
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
-        return html.format(title=schema.name, buttons="schema", form=txt, output='')
+        return html.format(title=schema.name, buttons="schema", version=self.version, form=txt, output='')
 
     @staticmethod
-    def _buttons(id):
+    def _buttons():
         txt = '<div class="buttons">'
         txt += '    <ul>'
         txt += '        <li>'
@@ -195,6 +198,7 @@ class SchemaView:
         txt += '        </li>'
         txt += '    </ul>'
         txt += '</div>'
+        # Maybe one day add Roles
         # txt += '<div class="buttons">'
         # txt += '    <ul>'
         # txt += '        <li>'
@@ -289,7 +293,7 @@ class SchemaView:
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
-        return html.format(title='Generated Schema', buttons='', form=txt, output=txt_output)
+        return html.format(title='Generated Schema', buttons='', version=self.version, form=txt, output=txt_output)
         # Fin generate_microdata
 
     def generate_rdfa(self, schema, ctx):
@@ -372,7 +376,7 @@ class SchemaView:
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
-        return html.format(title='Generated Schema', buttons='', form=txt, output=txt_output)
+        return html.format(title='Generated Schema', buttons='', version=self.version, form=txt, output=txt_output)
         # Fin generate_rdfa
 
     def generate_json(self, schema, ctx):
@@ -466,11 +470,10 @@ class SchemaView:
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
-        return html.format(title='Generated Schema', buttons='', form=txt, output=txt_output)
+        return html.format(title='Generated Schema', buttons='', version=self.version, form=txt, output=txt_output)
         # FIN generate_json
 
-    @staticmethod
-    def get_saved_output():
+    def get_saved_output(self):
         """
         Class method for UX experience. Shows the schema has effectively been stored in LocalStorage
 
@@ -483,7 +486,7 @@ class SchemaView:
         txt_output += 'The Schema has been saved in Local Storage'
         txt_output += '</p>'
 
-        return html.format(title='Saved', buttons='', form='', output=txt_output)
+        return html.format(title='Saved', buttons='', version=self.version, form='', output=txt_output)
 
     @staticmethod
     def get_schema_bot_ajax(schema_bot):

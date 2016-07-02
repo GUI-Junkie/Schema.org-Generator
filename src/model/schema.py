@@ -39,7 +39,7 @@ class Hierarchy:
         if __file__ != FILE_NAME:
             base_dir = __file__[:__file__.index(FILE_NAME)]
 
-        self._version = 0.0  # Version of Schema.org
+        self.version = 0.0  # Version of Schema.org
         self._schemas = {}  # Dictionary for rapid access
         self._hierarchy = []  # Hierarchy, list of lists for ordering output
         self._property_types = PROPERTY_TYPES  # Set of basic properties that should be rendered as inputs
@@ -50,7 +50,7 @@ class Hierarchy:
                 pickle_list = load(f)
 
             # HIERARCHY_FILE is created by schema_bot
-            self._version = pickle_list[0]
+            self.version = pickle_list[0]
             self._schemas = pickle_list[1]
             self._hierarchy = pickle_list[2]
 

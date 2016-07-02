@@ -40,12 +40,12 @@ class Controller(handlers.CGIHandler):
         Start the http demon
         """
         super().__init__()
-        self.cloud = True               # Running on server
-        self.Restart = False            # Don't restart unless it's local
-        self.hierarchy = Hierarchy()    # the model
-        self.view = SchemaView()        # the view
-        self.schema_bot = None          # Bot to update the model
-        self._httpd = None              # simple server placeholder (for localhost only)
+        self.cloud = True                               # Running on server
+        self.Restart = False                            # Don't restart unless it's local
+        self.hierarchy = Hierarchy()                    # the model
+        self.view = SchemaView(self.hierarchy.version)  # the view
+        self.schema_bot = None                          # Bot to update the model
+        self._httpd = None                              # simple server placeholder (for localhost only)
 
     def run(self, host='localhost', port=8000):
         self.cloud = False

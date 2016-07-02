@@ -5,7 +5,6 @@ from model.schema import SchemaClass
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
 WRITE_BINARY = 'wb'
-SCHEMA_VERSION = 3.0
 
 debug = 'Dentist'
 # debug = 'ProfessionalService'
@@ -62,8 +61,14 @@ def parse_link(line):
     """
     # <http://schema.org/tongueWeight> <http://schema.org/rangeIncludes>
     #       <http://schema.org/QuantitativeValue> <http://auto.schema.org/#v3.0> .
-    ind = line.index('<') + 1       # Get the beginning of the first column
-    return line[ind:ind + line[ind:].index('>')]
+    ind = line.index('<') + 1       # Get the beginning of the fourth column
+    ind += line[ind:].index('<') + 1
+    ind += line[ind:].index('<') + 1
+
+    # rangeIncludes usually has four columns, but not if it's a #comment or a #label
+    if not '#comment' in line and not '#label' in line:
+        ind += line[ind:].index('<') + 1
+    return line[ind:ind + line[ind:].index('#')]
 
 
 def parse_sub_class(line, subclass='subClassOf'):
@@ -209,7 +214,7 @@ def create_nested_hierarchy(hierarchy):
     return sort_nested(nested)
 
 
-def treat_file():
+def treat_file(schema_version):
     """
     Open the file, read all the data
         - Create the schemas with parents and properties
@@ -234,7 +239,10 @@ def treat_file():
             prop, prop_type = parse_sub_class(line, 'rangeIncludes')
             if prop:
                 # Get the link
-                link = parse_link(line)
+                try:
+                    link = parse_link(line)
+                except ValueError:
+                    print(link)
                 try:
                     # Check if the property already exists
                     prop_list = properties[prop]
@@ -281,7 +289,6 @@ def treat_file():
                     try:
                         thing = schemas[thing]
                         link = parse_link(line)
-                        link = link[:link.rindex('/') + 1]
                         thing.url = link
                     except KeyError:
                         if thing not in ['DataType', 'Time', 'Text', 'URL', 'Boolean', 'Float',
@@ -328,7 +335,7 @@ def treat_file():
 
     # Create the dump file
     with open(HIERARCHY_FILE, WRITE_BINARY) as f:
-        dump([SCHEMA_VERSION, _schemas, hierarchy], f)
+        dump([schema_version, _schemas, hierarchy], f)
 
 
 if __name__ == "__main__":
@@ -339,4 +346,4 @@ if __name__ == "__main__":
         pass
 
     # Let's do *everything*
-    treat_file()
+    treat_file(3.1)

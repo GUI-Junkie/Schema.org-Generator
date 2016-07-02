@@ -33,6 +33,8 @@ nav ul li a:hover, .buttons ul li a:hover{background-color:#858E98;color:white;}
 .right_col ul li a{color:#4C3441;text-decoration:none;padding-left:1em}
 .right_col ul li a:hover{background-color:#858E98;color:white}
 
+.release{float:right;padding-right:1em}
+
 .properties{float:left}
 .properties::after{content:".";display:block;height:1em;clear:both;visibility:hidden}
 
