@@ -79,7 +79,7 @@ class Hierarchy:
         if '.' in breadcrumb:
             parents = breadcrumb.split('.')
         else:
-            parents = self._schemas[breadcrumb].get_parent_class[0]
+            parents = list(self._schemas[breadcrumb].get_parent_class[0])
             parents.append(breadcrumb)
 
         hierarchy = self._hierarchy
