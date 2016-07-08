@@ -21,7 +21,7 @@ from time import sleep
 from urllib.error import URLError
 from urllib.request import urlopen
 from zlib import decompress, MAX_WBITS
-from os import remove
+from os import remove, listdir
 from model.schema import SCHEMA_ORG
 from nqparser import treat_file
 
@@ -103,6 +103,13 @@ class Bot(Thread):
                 remove('view/index.html')
             except FileNotFoundError:
                 pass
+
+            # Delete schemas/*.txt files
+            for file in listdir("schemas/"):
+                if '.txt' in file:
+                    remove(file)
+                else:
+                    print('{0} is not a *.txt file in directory schemas'.format(file))
 
             # Let's do *everything*
             treat_file(version)

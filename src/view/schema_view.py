@@ -166,21 +166,23 @@ class SchemaView:
         :param breadcrumb:
         :rtype: str - html
         """
-        txt = '<input type="hidden" name="path" value="{0}" />'.format(schema.name)
-        txt += '<input type="hidden" name="type" id="type" value="" />'
-        txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
+        try:
+            with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb)) as f:
+                txt = f.read()
+        except FileNotFoundError:
+            txt = '<input type="hidden" name="path" value="{0}" />'.format(schema.name)
+            txt += '<input type="hidden" name="type" id="type" value="" />'
+            txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
 
-        txt += self._traverse_lvl(list_hierarchy, breadcrumb)
-        txt += self._buttons()
+            txt += self._traverse_lvl(list_hierarchy, breadcrumb)
+            txt += self._buttons()
 
-        txt += '<h4>Properties: {0}</h4>'.format(schema.name)
-        txt += self.ajax_properties(schema, schema.name)
-        txt += '<br />'
-        txt += self._buttons()
-
-        # with open('view/schema_header.html') as f:
-        #     schema_txt = f.read()
-        # schema_txt += schema.get_schema_body()
+            txt += '<h4>Properties: {0}</h4>'.format(schema.name)
+            txt += self.ajax_properties(schema, schema.name)
+            txt += '<br />'
+            txt += self._buttons()
+            with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb), 'w') as f:
+                f.write(txt)
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()

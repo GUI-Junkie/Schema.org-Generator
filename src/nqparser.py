@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from pickle import dump
-from os import remove
+from os import remove, listdir
 from model.schema import SchemaClass
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
@@ -344,6 +344,13 @@ if __name__ == "__main__":
         remove('view/index.html')
     except FileNotFoundError:
         pass
+
+    # Delete schemas/*.txt files
+    for file in listdir("schemas/"):
+        if '.txt' in file:
+            remove(file)
+        else:
+            print('{0} is not a *.txt file in directory schemas'.format(file))
 
     # Let's do *everything*
     treat_file(3.1)

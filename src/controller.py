@@ -47,8 +47,8 @@ class Controller(handlers.CGIHandler):
         self.schema_bot = None                          # Bot to update the model
         self._httpd = None                              # simple server placeholder (for localhost only)
 
-    def run(self, host='localhost', port=8000):
-        self.cloud = False
+    def run(self, host='localhost', port=8000, cloud=False):
+        self.cloud = cloud
 
         # Initialize the server deamon
         self._httpd = simple_server.make_server(host, port, self.__call__)
@@ -208,11 +208,11 @@ class Controller(handlers.CGIHandler):
                     # 2. next_element (or not) - get the AJAX properties of the next_element
                     # 3. GenerateSchema - Output the schema so it can be used by the user
                     try:
-                        schema = self.hierarchy.get_schema(path_info[1:])  # Path info starts with "/"
                         breadcrumb = ctx.get('breadcrumb')
                         if not breadcrumb:
                             breadcrumb = path_info[1:]
 
+                        schema = self.hierarchy.get_schema(path_info[1:])  # Path info starts with "/"
                         list_hierarchy, breadcrumb = self.hierarchy.get_hierarchy(breadcrumb)
                         rc = self.view.show_schema_properties(schema, list_hierarchy, breadcrumb)
                     except URLError:
