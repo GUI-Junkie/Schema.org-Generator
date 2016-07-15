@@ -70,6 +70,12 @@ class Hierarchy:
             # Get the schema from the dictionary
             return self._schemas[thing]
         except KeyError:
+            # Maybe the schema exists with another case
+            thing = thing.lower()
+            for schema in self._schemas.keys():
+                if thing == schema.lower():
+                    return self._schemas[schema]
+
             raise SchemaNotFoundError
 
     def get_hierarchy(self, breadcrumb):

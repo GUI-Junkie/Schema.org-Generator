@@ -108,8 +108,8 @@ class Controller(handlers.CGIHandler):
 
             # Get the path info - This is to redirect the flow
             # This is not in the ctx
-            path_info = environ['PATH_INFO']
-            if path_info in ['/quit', '/restart']:
+            path_info = environ['PATH_INFO'][1:]
+            if path_info in ['quit', 'restart']:
                 # Only quit or restart when localhost
                 if self.cloud:
                     raise SchemaNotFoundError
@@ -117,7 +117,7 @@ class Controller(handlers.CGIHandler):
                 self.headers = [('Content-type', 'text/plain; charset=utf-8')]
                 # Configure Apache to filter out these requests
                 # localhost:port/quit or /restart can then be used
-                if '/restart' == path_info:
+                if 'restart' == path_info:
                     self.Restart = True
 
                 # The http demon will not stop from a call in this thread
@@ -126,11 +126,10 @@ class Controller(handlers.CGIHandler):
                 q.start()
 
                 # Returns a string to the browser
-                # Path info starts with "/"
-                rc = '{0}: {1}'.format(path_info[1:], datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+                rc = '/{0}: {1}'.format(path_info, datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
             elif '.ico' in path_info or '.png' in path_info or '.jpg' in path_info:
                 # This code should be eliminated when used as a module with Apache
-                with open('view{0}'.format(path_info), 'rb') as f:
+                with open('view/{0}'.format(path_info), 'rb') as f:
                     txt = f.read()
 
                 if '.ico' in path_info:
@@ -144,17 +143,17 @@ class Controller(handlers.CGIHandler):
             elif '.js' in path_info:
                 # This code should be eliminated when used as a module with Apache
                 self.headers = [('Content-type', 'text/js; charset=utf-8')]
-                with open('view{0}'.format(path_info)) as f:
+                with open('view/{0}'.format(path_info)) as f:
                     rc = f.read()
             elif '.css' in path_info:
                 # This code should be eliminated when used as a module with Apache
                 self.headers = [('Content-type', 'text/css; charset=utf-8')]
-                with open('view{0}'.format(path_info)) as f:
+                with open('view/{0}'.format(path_info)) as f:
                     rc = f.read()
             else:
                 # Return html
                 self.headers = [('Content-type', 'text/html; charset=utf-8')]
-                if '/' == path_info or '' == path_info:
+                if not path_info:
                     try:
                         with open('view/index.html') as f:
                             rc = f.read()
@@ -163,7 +162,7 @@ class Controller(handlers.CGIHandler):
                         rc = self.view.get_index(self.hierarchy.hierarchy)
                         with open('view/index.html', 'w') as f:
                             f.write(rc)
-                elif '/schema_bot' == path_info:
+                elif 'schema_bot' == path_info:
                     if ctx.get('check'):
                         rc = self.view.get_schema_bot_ajax(self.schema_bot)
                         if 'Busy' != rc:
@@ -179,13 +178,13 @@ class Controller(handlers.CGIHandler):
                             self.schema_bot = Bot()
                             self.schema_bot.start()
                         rc = self.view.get_schema_bot_html()
-                elif '/SaveSchema' == path_info:
+                elif 'SaveSchema' == path_info:
                     # The Schema has been saved in Local Storage
                     # Return a nice message
                     rc = self.view.get_saved_output()
-                elif '/AddRoles' == path_info:
+                elif 'AddRoles' == path_info:
                     rc = 'yo!'
-                elif '/GenerateSchema' == path_info:
+                elif 'GenerateSchema' == path_info:
                     # Put it all together
                     # Output the Scheme the user has constructed
                     # Output a link to the Google Structured Data Testing Tool
@@ -207,22 +206,20 @@ class Controller(handlers.CGIHandler):
                     # 1. Get the Hierarchy
                     # 2. next_element (or not) - get the AJAX properties of the next_element
                     # 3. GenerateSchema - Output the schema so it can be used by the user
-                    try:
-                        breadcrumb = ctx.get('breadcrumb')
-                        if not breadcrumb:
-                            breadcrumb = path_info[1:]
+                    schema = self.hierarchy.get_schema(path_info)
+                    if schema.name != path_info:
+                        path_info = schema.name
 
-                        schema = self.hierarchy.get_schema(path_info[1:])  # Path info starts with "/"
-                        list_hierarchy, breadcrumb = self.hierarchy.get_hierarchy(breadcrumb)
-                        rc = self.view.show_schema_properties(schema, list_hierarchy, breadcrumb)
-                    except URLError:
-                        self.status = '300 Error'
-                        self.headers = [('Content-type', 'text/plain; charset=utf-8')]
-                        rc = 'Schema "{0}" not found'.format(path_info[1:])
+                    breadcrumb = ctx.get('breadcrumb')
+                    if not breadcrumb:
+                        breadcrumb = path_info
+
+                    list_hierarchy, breadcrumb = self.hierarchy.get_hierarchy(breadcrumb)
+                    rc = self.view.show_schema_properties(schema, list_hierarchy, breadcrumb)
         except SchemaNotFoundError:
             self.status = '300 Error'
             self.headers = [('Content-type', 'text/plain; charset=utf-8')]
-            rc = 'Schema "{0}" not found'.format(path_info[1:])
+            rc = 'Schema "{0}" not found'.format(path_info)
         except Exception as err:
             # If something unexpected happens, return a reasonable message
             self.status = '300 Error'
