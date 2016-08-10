@@ -18,10 +18,12 @@ The Bot should be called via a ``cron`` job every 24 hours
 from pickle import load
 from threading import Thread
 from time import sleep
-from urllib.error import URLError
+from urllib.error import URLError, HTTPError
 from urllib.request import urlopen
 from zlib import decompress, MAX_WBITS
-from os import remove, listdir
+from os import remove, makedirs
+from shutil import rmtree
+
 from model.schema import SCHEMA_ORG
 from nqparser import treat_file
 
@@ -91,12 +93,17 @@ class Bot(Thread):
         if is_dirty:
             # Get the new release all-layers.nq file
             # https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/3.0/all-layers.nq
-            with urlopen("https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/{0}/all-layers.nq"
-                         .format(version)) as f:
-                txt = f.read()
+            try:
+                with urlopen("https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/"
+                             "{0}/all-layers.nq".format(version)) as f:
+                    txt = f.read()
+            except HTTPError:
+                with urlopen("https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-makemake/data/releases/"
+                             "{0}/all-layers.nq".format(version)) as f:
+                    txt = f.read()
 
             with open('all-layers.nq', 'w') as f:
-                f.write(txt.decode())
+                    f.write(txt.decode())
 
             # Delete index.html
             try:
@@ -104,12 +111,9 @@ class Bot(Thread):
             except FileNotFoundError:
                 pass
 
-            # Delete schemas/*.txt files
-            for file in listdir("schemas/"):
-                if '.txt' in file:
-                    remove(file)
-                else:
-                    print('{0} is not a *.txt file in directory schemas'.format(file))
+            # Delete all schemas
+            rmtree('schemas/')
+            makedirs('schemas/')
 
             # Let's do *everything*
             treat_file(version)
