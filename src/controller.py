@@ -150,6 +150,11 @@ class Controller(handlers.CGIHandler):
                 self.headers = [('Content-type', 'text/css; charset=utf-8')]
                 with open('view/{0}'.format(path_info)) as f:
                     rc = f.read()
+            elif path_info == 'robots.txt':
+                # This code should be eliminated when used as a module with Apache
+                self.headers = [('Content-type', 'text/plain; charset=utf-8')]
+                with open('view/{0}'.format(path_info)) as f:
+                    rc = f.read()
             else:
                 # Return html
                 self.headers = [('Content-type', 'text/html; charset=utf-8')]
