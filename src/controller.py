@@ -19,7 +19,7 @@ from wsgiref import handlers, simple_server
 from urllib.error import URLError
 from threading import Thread
 from datetime import datetime
-from model.schema import Hierarchy, SchemaNotFoundError
+from model.schema import Hierarchy, SchemaNotFoundError, SchemaClass
 from schema_bot import Bot
 from view.schema_view import SchemaView
 
@@ -189,6 +189,20 @@ class Controller(handlers.CGIHandler):
                     rc = self.view.get_saved_output()
                 elif 'AddRoles' == path_info:
                     rc = 'yo!'
+                elif 'GenerateOntology' == path_info:
+                    # Put it all together
+                    # Output the Scheme the user has constructed
+                    # Output a link to the Google Structured Data Testing Tool
+                    schema_type = ctx.get('type')
+                    # print(schema_type)
+                    schema = SchemaClass(ctx.get('path'))
+                    # schema = self.hierarchy.get_schema(ctx.get('path'))
+                    if 'RDFa' == schema_type:
+                        rc = self.view.generate_rdfa(schema, ctx)
+                    elif 'JSON' == schema_type:
+                        rc = self.view.generate_json(schema, ctx)
+                    else:
+                        rc = self.view.generate_microdata(schema, ctx)
                 elif 'GenerateSchema' == path_info:
                     # Put it all together
                     # Output the Scheme the user has constructed

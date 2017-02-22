@@ -39,7 +39,7 @@ nav ul li a:hover, .buttons ul li a:hover{background-color:#858E98;color:white;}
 .properties{float:left}
 .properties::after{content:".";display:block;height:1em;clear:both;visibility:hidden}
 
-.table{display:table;width:auto}
+.table{display:table;width:98%}
 .tr_odd, .tr_even{display:table-row;width:auto;clear:both}
 .tr_odd{background:beige}
 .tr_even{background:ivory}
@@ -102,7 +102,7 @@ nav ul li a:hover, .buttons ul li a:hover{background-color:#858E98;color:white;}
     .logo_link{position:fixed;top:0px}
     .right_col, .org_right_col {margin-left:16em}
     .td{width:15em;padding-right:1em}
-    .td_property{width:50em;margin-left:-30em;margin-top:3em}
+    .td_property{width:50em;margin-left:1em;margin-top:1em}
     .td_property .tr_odd{background:azure}
     .td_property .tr_even{background:burlywood}
     .footer{flex-direction:row}

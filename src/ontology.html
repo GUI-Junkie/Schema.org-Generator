@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Schema.org Ontology Generator" />
+        <meta name="robots" content="index, follow" />
+        <!--<link rel="icon" type="image/png" href="./images/Favicon.png" />-->
+        <!--<link rel="stylesheet" href="./style.css" type="text/css" />-->
+        <title>
+            Schema.org Ontology Generator
+        </title>
+        <script  src="./ontology.js">
+        </script>
+        </head>
+    <body onload="javascript:OnLoad();">
+        <div id="input">
+            <div id="input0">
+                <label for="schema_name">Schema Name:</label><input type="text" id="schema_name" value="SomeThing"><br/><br/>
+            </div>
+        </div>
+        <br/>
+        <button type="button" onclick="javascript:Add('Property')">Add Property</button>
+        <!--<button type="button" onclick="javascript:Add('SubSchema')">Add SubSchema</button>-->
+        <br/>
+        <br/>
+        <button type="button" onclick="javascript:Generate('Microdata')">Microdata</button>
+        <button type="button" onclick="javascript:Generate('RDFa')">RDFa</button>
+        <button type="button" onclick="javascript:Generate('JSON')">JSON-LD</button>
+        <!--<form action="http://schema.pythonanywhere.com/GenerateOntology" method="POST">-->
+        <form action="http://localhost:8000/GenerateOntology" method="POST">
+            <input type="hidden" name="path" id="path" value="" />
+            <input type="hidden" name="type" id="type" value="Microdata">
+            <!--<input type="hidden" name="SomeThing_SchemaName_Text" value="Schema name">-->
+            <!--<input type="hidden" name="SomeThing_SchemaProperty_Propertyname" value="Property name">-->
+        </form>
+    </body>
+</html>

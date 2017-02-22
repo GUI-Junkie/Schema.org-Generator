@@ -142,8 +142,18 @@ class SchemaView:
                        '<img src="/external_link.png" alt="external link" title="external link" /></a>'
                 txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(web_hierarchy, properties[x], 'Text')
                 txt += '</div>\n'
+                txt += '</div>\n'  # Close row
 
                 for a_type in types[1]:
+                    # Maintain row style for all types
+                    if x % 2:
+                        txt += '<div class="tr_odd">\n'
+                    else:
+                        txt += '<div class="tr_even">\n'
+
+                    # Add empty column
+                    txt += '<div class="td">&nbsp;</div>\n'
+
                     # If the type is a basic type, let the user fill it out
                     name = '{0}_{1}_{2}'.format(web_hierarchy, properties[x], a_type)
                     if a_type not in PROPERTY_TYPES:
@@ -152,8 +162,8 @@ class SchemaView:
                         txt += '<a href="javascript:ShowNextSchema(\'{0}\', \'{1}\');">{0}</a>\n'.format(a_type, name)
                         txt += '<div class="td_property" id="{0}"></div>'.format(name)
                         txt += '</div>\n'
+                    txt += '</div>\n'
                 x += 1
-                txt += '</div>\n'
         txt += '</div>\n'
         return txt
 
@@ -460,7 +470,7 @@ class SchemaView:
             txt += '"{0}":"{1}"'.format(key_brackets[-2], unquote_plus(ctx.get(p)).replace('</textarea', ''))
 
         # After the last key, close all brackets
-        txt += self._close_brackets(current_lvl)
+        txt += self._close_brackets(current_lvl, 1)
         txt += '\n}\n'
         txt += '</script>\n'
         txt += '</textarea>'
