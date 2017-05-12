@@ -15,13 +15,15 @@ A valid Schema will be generated.
 It can be validated on Google Developers |Structured Data Testing Tool| |external_link|
 """
 # Refer to the Readme.txt file for © copyright information
+# from logging import info, DEBUG, basicConfig
 from wsgiref import handlers, simple_server
-from urllib.error import URLError
+# from urllib.error import URLError
 from threading import Thread
 from datetime import datetime
 from model.schema import Hierarchy, SchemaNotFoundError, SchemaClass
 from schema_bot import Bot
 from view.schema_view import SchemaView
+
 
 # Controller class - WSGI
 class Controller(handlers.CGIHandler):
@@ -40,12 +42,13 @@ class Controller(handlers.CGIHandler):
         Start the http demon
         """
         super().__init__()
-        self.cloud = True                               # Running on server
-        self.Restart = False                            # Don't restart unless it's local
-        self.hierarchy = Hierarchy()                    # the model
+        self.cloud = True  # Running on server
+        self.Restart = False  # Don't restart unless it's local
+        self.hierarchy = Hierarchy()  # the model
         self.view = SchemaView(self.hierarchy.version)  # the view
-        self.schema_bot = None                          # Bot to update the model
-        self._httpd = None                              # simple server placeholder (for localhost only)
+        self.schema_bot = None  # Bot to update the model
+        self._httpd = None  # simple server placeholder (for localhost only)
+        # basicConfig(filename='_controller.log', level=DEBUG)
 
     def run(self, host='localhost', port=8000, cloud=False):
         self.cloud = cloud
@@ -69,7 +72,10 @@ class Controller(handlers.CGIHandler):
             return rc  # favicon.ico, etc
 
         # Use the default UTF-8 encoding
-        return [rc.encode()]
+        try:
+            return [rc.encode()]
+        except AttributeError:
+            return [rc]
 
     # This closes the server so the socket is liberated
     def server_close(self):
@@ -161,14 +167,17 @@ class Controller(handlers.CGIHandler):
                 if not path_info:
                     try:
                         with open('view/index.html') as f:
+                            # info('Controller log - 1')
                             rc = f.read()
                     except FileNotFoundError:
                         # Returns the whole hierarchy - Similar to http://schema.org/docs/full.html
+                        # info('Controller log - 2')
                         rc = self.view.get_index(self.hierarchy.hierarchy)
                         with open('view/index.html', 'w') as f:
                             f.write(rc)
                 elif 'schema_bot' == path_info:
                     if ctx.get('check'):
+                        # info('Controller log - 3')
                         rc = self.view.get_schema_bot_ajax(self.schema_bot)
                         if 'Busy' != rc:
                             self.schema_bot = None
@@ -179,15 +188,12 @@ class Controller(handlers.CGIHandler):
                             #     f.write(index)
                     else:
                         # No bot, then start one
-                        if None == self.schema_bot:
+                        if self.schema_bot is None:
                             self.schema_bot = Bot()
                             self.schema_bot.start()
                         rc = self.view.get_schema_bot_html()
-                elif 'SaveSchema' == path_info:
-                    # The Schema has been saved in Local Storage
-                    # Return a nice message
-                    rc = self.view.get_saved_output()
                 elif 'AddRoles' == path_info:
+                    # info('Controller log - 5')
                     rc = 'yo!'
                 elif 'GenerateOntology' == path_info:
                     # Put it all together
@@ -218,6 +224,8 @@ class Controller(handlers.CGIHandler):
                         rc = self.view.generate_microdata(schema, ctx)
                 elif ctx.get('next_element'):  # If the Action is POST
                     # AJAX call for the next level down from the top level Scheme the user is constructing
+                    # info('Controller log - 6')
+
                     schema = self.hierarchy.get_schema(ctx.get('next_element'))
                     # The id of the container div - use for next level
                     rc = self.view.ajax_properties(schema, ctx.get('id'))
@@ -225,6 +233,8 @@ class Controller(handlers.CGIHandler):
                     # 1. Get the Hierarchy
                     # 2. next_element (or not) - get the AJAX properties of the next_element
                     # 3. GenerateSchema - Output the schema so it can be used by the user
+                    # info('Controller log - 7')
+
                     schema = self.hierarchy.get_schema(path_info)
                     if schema.name != path_info:
                         path_info = schema.name
@@ -354,6 +364,7 @@ class EZQuit(Thread):
 
     def run(self):
         self._httpd.shutdown()
+
 
 app = Controller()
 

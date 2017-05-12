@@ -142,13 +142,16 @@ function ShowNextLevel(schema, breadcrumb)
 
 function GenerateSchema(type)
 {
+    // Save the Schema before submitting it
+    SaveSchema(false);
+
     // Set the type
     var ele = document.getElementById("type");
     ele.value = type;
     document.forms[0].submit();
 }
 
-function SaveSchema()
+function SaveSchema(clicked)
 {
     // Clear local storage
     localStorage.clear();
@@ -166,8 +169,16 @@ function SaveSchema()
             localStorage.setItem(form.elements[i].name, form.elements[i].value);
 
     // Show a nice message after saving to local storage
-    document.forms[0].action = '/SaveSchema'
-    document.forms[0].submit();
+    if(clicked)
+    {
+        form = document.getElementById('saved');
+        form.style.display = ""
+        setTimeout(function()
+        {
+            form = document.getElementById('saved');
+            form.style.display = "None";
+        }, 3000);
+    }
 }
 
 function RecoverData()

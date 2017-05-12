@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 from pickle import dump
 from os import remove, listdir
+from urllib.error import HTTPError
+from urllib.request import urlopen
+
 from model.schema import SchemaClass
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
@@ -339,6 +342,19 @@ def treat_file(schema_version):
 
 
 if __name__ == "__main__":
+    download = False
+    version = 3.2
+    if download:
+        try:
+            with urlopen("https://github.com/schemaorg/schemaorg/blob/sdo-callisto/data/releases/"
+                         "{0}/all-layers.nq?raw=true".format(version)) as f:
+                txt = f.read()
+
+            with open('all-layers.nq', 'w') as f:
+                f.write(txt.decode())
+        except HTTPError:
+            exit("File not found")
+
     # Delete index.html
     try:
         remove('view/index.html')
@@ -348,9 +364,9 @@ if __name__ == "__main__":
     # Delete schemas/*.txt files
     for file in listdir("schemas/"):
         if '.txt' in file:
-            remove(file)
+            remove("schemas/{0}".format(file))
         else:
             print('{0} is not a *.txt file in directory schemas'.format(file))
 
     # Let's do *everything*
-    treat_file(3.1)
+    treat_file(version)

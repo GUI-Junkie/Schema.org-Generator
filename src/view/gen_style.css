@@ -16,7 +16,7 @@ textarea{width:99%;height:50em}
 /* Responsive design */
 img.resize{width:100%;height:auto}
 .wrapper,.logo{display:block;margin-left:auto;margin-right:auto;width:100%;height:auto}
-.wrapper{background-color:rgba(255, 255, 255, 0.5);min-height:30em}
+.wrapper{background-color:rgba(255, 255, 255, 0.7);min-height:30em}
 
 /* :after to adjust height automatically */
 .wrapper::after{content:".";display:block;height:0;clear:both;visibility:hidden}
@@ -87,11 +87,15 @@ nav ul li a:hover, .buttons ul li a:hover{background-color:#858E98;color:white;}
 .ds-selector-tabs pre {display: none;}
 .ds-selector-tabs pre.selected {display: block;}
 
+#saved{margin-left:auto;margin-right:auto;background-color:#dbdb7d;position:absolute}
+
 .version{color: #3F4750;text-align: right;font-size: x-small;}
 
-.footer{display:flex;flex-direction:column;justify-content:center;background-color:rgba(184, 191, 197, 0.5);font-size:0.8em;width:100%}
+.footer{display:flex;flex-direction:column;justify-content:center;background-color:rgba(184, 191, 197, 0.7);font-size:0.8em;width:100%}
 .footer_item{text-align:center;margin: .5em 1em .5em 1em}
 .footer_item a{text-decoration:none}
+
+.breadcrumb li{display:inline}
 
 @media screen and (min-width:750px)
 {

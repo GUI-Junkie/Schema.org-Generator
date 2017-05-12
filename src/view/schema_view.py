@@ -10,7 +10,7 @@ Contains the class for the
 from model.schema import PROPERTY_TYPES
 from urllib.parse import unquote_plus
 
-HIERARCHY_FILE = 'view/hierarchy.html'
+HIERARCHY_FILE = 'view/hierarchy.tpl'
 TOP_LEVEL = 0
 ALL_LEVELS = 1
 
@@ -30,9 +30,9 @@ class SchemaView:
         :param hierarchy: The list of lists that's the full hierarchy
         :return: index.html
         """
-        txt = '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
+        txt = '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />\n'
         txt += self._traverse_hierarchy(hierarchy, TOP_LEVEL)
-        txt += '<h4>Full hierarchy</h4>'
+        txt += '<h4>Full hierarchy</h4>\n'
         txt += self._traverse_hierarchy(hierarchy, ALL_LEVELS)
 
         with open(HIERARCHY_FILE) as f:
@@ -80,14 +80,7 @@ class SchemaView:
             # list_hierarchy contains pairs of elements and lists of children ['Thing', []]
             if not breadcrumb:
                 breadcrumb = 'Thing'
-            breadcrumbs = breadcrumb.split('.')
-            h4 = ''
-            for crumb in breadcrumbs:
-                if h4 != '':
-                    h4 += ' - '
-                h4 += '<a href="/{0}">{0}</a>'.format(crumb)
-
-            txt = '<h4>Sublevel: {0}</h4>'.format(h4)
+            txt = '<h4>Sublevel:</h4>\n'
 
         num_elements = len(list_hierarchy)
         if num_elements:
@@ -139,7 +132,7 @@ class SchemaView:
                 txt += '</div>\n'
                 txt += '<div class="td">\n'
                 txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
-                       '<img src="/external_link.png" alt="external link" title="external link" /></a>'
+                       '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
                 txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(web_hierarchy, properties[x], 'Text')
                 txt += '</div>\n'
                 txt += '</div>\n'  # Close row
@@ -180,16 +173,18 @@ class SchemaView:
             with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb)) as f:
                 txt = f.read()
         except FileNotFoundError:
-            txt = '<input type="hidden" name="path" value="{0}" />'.format(schema.name)
-            txt += '<input type="hidden" name="type" id="type" value="" />'
-            txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />'
+            txt = '<input type="hidden" name="path" value="{0}" />\n'.format(schema.name)
+            txt += '<input type="hidden" name="type" id="type" value="" />\n'
+            txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />\n'
+
+            txt += self._breadcrumbs(schema)
 
             txt += self._traverse_lvl(list_hierarchy, breadcrumb)
             txt += self._buttons()
 
-            txt += '<h4>Properties: {0}</h4>'.format(schema.name)
+            txt += '<h4>Properties: {0}</h4>\n'.format(schema.name)
             txt += self.ajax_properties(schema, schema.name)
-            txt += '<br />'
+            txt += '<br />\n'
             txt += self._buttons()
             with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb), 'w') as f:
                 f.write(txt)
@@ -200,16 +195,16 @@ class SchemaView:
 
     @staticmethod
     def _buttons():
-        txt = '<div class="buttons">'
-        txt += '    <ul>'
-        txt += '        <li>'
-        txt += '            <span>Generate:</span>'
-        txt += '            <a href="javascript:GenerateSchema(\'Microdata\');">&nbsp;&nbsp;&nbsp;&nbsp;Microdata</a>'
-        txt += '            <a href="javascript:GenerateSchema(\'RDFa\');">&nbsp;&nbsp;&nbsp;&nbsp;RDFa</a>'
-        txt += '            <a href="javascript:GenerateSchema(\'JSON\');">&nbsp;&nbsp;&nbsp;&nbsp;JSON-LD</a>'
-        txt += '        </li>'
-        txt += '    </ul>'
-        txt += '</div>'
+        txt = '<div class="buttons">\n'
+        txt += '    <ul>\n'
+        txt += '        <li>\n'
+        txt += '            <span>Generate:</span>\n'
+        txt += '            <a href="javascript:GenerateSchema(\'Microdata\');">&nbsp;&nbsp;&nbsp;&nbsp;Microdata</a>\n'
+        txt += '            <a href="javascript:GenerateSchema(\'RDFa\');">&nbsp;&nbsp;&nbsp;&nbsp;RDFa</a>\n'
+        txt += '            <a href="javascript:GenerateSchema(\'JSON\');">&nbsp;&nbsp;&nbsp;&nbsp;JSON-LD</a>\n'
+        txt += '        </li>\n'
+        txt += '    </ul>\n'
+        txt += '</div>\n'
         # Maybe one day add Roles
         # txt += '<div class="buttons">'
         # txt += '    <ul>'
@@ -444,6 +439,7 @@ class SchemaView:
 
                     # Open next bracket
                     current_bracket_levels.append(key_brackets[j])
+                    txt += ',\n'
                     txt += '\t' * (current_lvl + 1)
                     txt += '"{0}": {{\n'.format(key_brackets[j - 1])
                     txt += '\t' * (current_lvl + 2)
@@ -484,21 +480,6 @@ class SchemaView:
             html = f.read()
         return html.format(title='Generated Schema', buttons='', version=self.version, form=txt, output=txt_output)
         # FIN generate_json
-
-    def get_saved_output(self):
-        """
-        Class method for UX experience. Shows the schema has effectively been stored in LocalStorage
-
-        :return: str
-        """
-        with open(HIERARCHY_FILE) as f:
-            html = f.read()
-
-        txt_output = '<p>'
-        txt_output += 'The Schema has been saved in Local Storage'
-        txt_output += '</p>'
-
-        return html.format(title='Saved', buttons='', version=self.version, form='', output=txt_output)
 
     @staticmethod
     def get_schema_bot_ajax(schema_bot):
@@ -559,4 +540,30 @@ class SchemaView:
             txt += '\t' * lvl
             txt += '}'
             lvl -= 1
+        return txt
+
+    @staticmethod
+    def _breadcrumbs(schema):
+        # Add the Canonical URL
+        txt = 'Canonical URL: <a href="http://schema.org/{0}" target="_blank">http://schema.org/{0} ' \
+              '<img src="/external_link.png" alt="external link" title="external link" />' \
+              '</a><br/><br/>\n'.format(schema.name)
+
+        # Add all breadcrumbs with Schema.org syntax
+        for parents in schema.get_parent_class:
+            count = 0
+            for parent in parents:
+                count += 1
+                if 1 == count:
+                    txt += '<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">\n'
+                else:
+                    txt += '    <li> > </li>\n'
+
+                txt += '    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">\n'
+                txt += '        <a itemprop="item" href="/{0}"><span itemprop="name">{0}</span></a>\n'.format(parent)
+                txt += '        <meta itemprop="position" content="{0}" />\n'.format(count)
+                txt += '    </li>\n'
+
+            txt += '</ol>\n'
+        txt += '<br/>\n'
         return txt
