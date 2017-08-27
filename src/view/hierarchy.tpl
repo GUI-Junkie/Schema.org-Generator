@@ -93,6 +93,6 @@
                 <img border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1"/>
             </form>
         </div>
-        <div class="footer">© Copyright 2016, Hans Polak.<br/>&nbsp;</div>
+        <div class="footer">© Copyright 2016 - 2017, Hans Polak.<br/>&nbsp;</div>
     </body>
 </html>

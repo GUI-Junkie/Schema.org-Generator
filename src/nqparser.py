@@ -343,7 +343,7 @@ def treat_file(schema_version):
 
 if __name__ == "__main__":
     download = False
-    version = 3.2
+    version = 3.3
     if download:
         try:
             with urlopen("https://github.com/schemaorg/schemaorg/blob/sdo-callisto/data/releases/"

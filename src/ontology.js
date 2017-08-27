@@ -1,11 +1,57 @@
+/*
+ * Copyright (C) 2016 - 2017 Hans Polak
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+var lvl = 0;                                                // lvl
+var count = 0;                                              // Count
+
 function OnLoad()
 {
+    // Try to recover data from local storage
+//    ClearData();
+    //localStorage.clear();
+    RecoverData();
+
+    count = GetCount();
+
     var inp = document.getElementById("schema_name");
     inp.focus();
 }
 
-var lvl = 0;                                                // lvl
-var count = 0;                                              // Count
+function GetCount()
+{
+    var inputs, index, ret, num;
+    ret = 0;
+
+    // Find the highest property count
+    inputs = document.getElementsByTagName('input');
+    for(index=0; index<inputs.length; index++)
+        if("property_" === inputs[index].id.substring(0, 9))
+        {
+            num = parseInt(inputs[index].id.substring(10));
+            if(num > ret)
+                ret = num;
+        }
+
+    // If we have previous properties, we need to add one to count
+    if(ret)
+        ret++;
+
+    return ret;
+}
 
 function Add(param)
 {
@@ -125,18 +171,11 @@ function WalkDiv(div, count, name)
             WalkDiv(child, count, name);
         else if(child.id)
         {
-            if("schema_name" === child.id.substring(0, 11))
+            if("schema_name" === child.id)
             {
-                if("schema_name" === child.id)
-                {
-                    name = child.value;
-                    ele = document.getElementById("path");
-                    ele.value = child.value;
-                }
-//                else
-//                {
-//                console.log(child.id + " - " + child.value);
-//                }
+                name = child.value;
+                ele = document.getElementById("path");
+                ele.value = child.value;
             }
             else if("property_" === child.id.substring(0, 9))
             {
@@ -170,8 +209,92 @@ function WalkDiv(div, count, name)
     }
 }
 
+function SaveSchema()
+{
+    // Don't continue if the browser does not support local storage
+    if("undefined" == typeof(Storage))
+        return;
+
+    // Clear local storage
+    var cookie = localStorage.getItem("cookie");
+    localStorage.clear();
+    if(cookie)
+        localStorage.setItem("cookie", cookie);
+
+    // This function can only be called if the browser supports local storage
+    // Save the entire page, this doesn't store values
+    localStorage.setItem("SaveSchema", document.documentElement.innerHTML);
+
+    // Save values, but only the form elements with information
+    var inputs, index;
+
+    inputs = document.getElementsByTagName('input');
+    for(index=0; index<inputs.length; index++)
+        if("property_" === inputs[index].id.substring(0, 9)
+         || "schema_name" === inputs[index].id)
+            localStorage.setItem(inputs[index].id, inputs[index].value);
+}
+
+function RecoverData()
+{
+    // Don't continue if the browser does not support local storage
+    if("undefined" == typeof(Storage))
+        return;
+
+    // Don't continue if local storage is empty
+    if(!localStorage.length)
+        return;
+
+    if(localStorage.getItem("SaveSchema") === null)
+        return;
+
+    // This function can only be called if there is local storage
+    // Restore the saved page without values
+    document.documentElement.innerHTML = localStorage.getItem("SaveSchema");
+    var i;
+    // Restore all values of the saved form elements
+    for(i=0; i<localStorage.length; i++)
+        if("property_" === localStorage.key(i).substring(0, 9)
+         || "schema_name" === localStorage.key(i))
+            document.getElementById(localStorage.key(i)).value = localStorage.getItem(localStorage.key(i));
+
+    // Show the Clear Button
+    var li = document.getElementById("ClearButton");
+    li.style.display = "";
+}
+
+function ClearData()
+{
+    // Don't continue if the browser does not support local storage
+    if("undefined" == typeof(Storage))
+        return;
+
+    var inputs, index;
+
+    // Clear content
+    inputs = document.getElementsByTagName('input');
+    for (index = 0; index < inputs.length; ++index)
+        if(inputs[index].id.length
+         && inputs[index].name.length === 0)
+            inputs[index].value = "";
+
+    inputs = document.getElementById("schema_name");
+    inputs.value = "SomeThing";
+
+    // Clear local storage
+    var cookie = localStorage.getItem("cookie");
+    localStorage.clear();
+    localStorage.setItem("cookie", cookie);
+
+    li = document.getElementById("ClearButton");
+    li.style.display = "None";
+}
+
 function Generate(type)
 {
+    // Before anything else, try to store the schema in local storage
+    SaveSchema();
+
     var ele = document.getElementById("type");
     ele.value = type;
 

@@ -26,7 +26,7 @@ nav span{padding-left: 1em}
 nav ul, .buttons ul{display:flex;flex-direction:column}
 nav ul li, .buttons ul li{list-style:none;flex-grow:1;color:#8A7581;width:14em;line-height:2em}
 nav ul li a, .buttons ul li a{color:#4C3441;text-decoration:none;display:block;padding-left:1em}
-nav ul li a:hover, .buttons ul li a:hover{background-color:#858E98;color:white;}
+nav ul li a:hover, .buttons ul li a:hover, .delete_button a:hover{background-color:#858E98;color:white;}
 
 .right_col ul{margin-left:2em;display:flex;flex-direction:column}
 .right_col ul li{flex-grow:1;color:#8A7581;line-height:2em}
@@ -47,7 +47,9 @@ nav ul li a:hover, .buttons ul li a:hover{background-color:#858E98;color:white;}
 
 .buttons{font-size:0.9em;clear:both}
 .buttons ul{margin-left:0em;background:beige}
-.buttons ul li a{display:inline-block}
+.buttons ul li a{border-radius:12px;border:2px solid #517EBF;width:6em;text-align:center;padding:initial;}
+.delete_button a{border-radius:12px;border:2px solid #517EBF;text-decoration:none}
+
 
 .org_right_col, #mainContent{display:block;clear:both}
 .org_sitename{text-shadow:0 2px 0 #510000;padding-left:2em;line-height:2em;color:#fff;background:#990000}
@@ -103,6 +105,7 @@ nav ul li a:hover, .buttons ul li a:hover{background-color:#858E98;color:white;}
 
     nav{position:fixed;width:15em}
     .buttons ul{flex-direction:row}
+    .buttons ul li a{display:inline-block}
     .logo_link{position:fixed;top:0px}
     .right_col, .org_right_col {margin-left:16em}
     .td{width:15em;padding-right:1em}

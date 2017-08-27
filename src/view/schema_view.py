@@ -15,13 +15,108 @@ TOP_LEVEL = 0
 ALL_LEVELS = 1
 
 
+# .buttons a {color:#4C3441;text-decoration:none;text-align:center;display:block;border-radius:12px;border:2px solid #4CAF50;padding-left:initial;}
+
+def frequent_things(Thing):
+    """
+
+    :type Thing: String indicating the Thing
+    """
+    item = 'description'
+    txt = '\t<div class="tr_even">\n'
+    # txt += '<div class="tr_odd">\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+           '<img src="/external_link.png" alt="external link" title="external link" />' \
+           '</a>\n'.format('http://schema.org/', item)
+    txt += '</div>\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
+           '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
+    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'Text')
+    txt += '</div>\n'
+    txt += '</div>\n'  # Close row
+
+    item = 'image'
+    txt += '<div class="tr_odd">\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+           '<img src="/external_link.png" alt="external link" title="external link" />' \
+           '</a>\n'.format('http://schema.org/', item)
+    txt += '</div>\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
+           '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
+    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'ImageObject')
+    txt += '</div>\n'
+    txt += '</div>\n'  # Close row
+    item = 'image - second property'
+    txt += '<div class="tr_odd">\n'
+    txt += '<div class="td">\n'
+    txt += '&nbsp;'
+    txt += '</div>\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="javascript:ShowNextSchema(\'ImageObject\', \'{0}_image_ImageObject\', 10000);">ImageObject</a>\n'.format(Thing)
+    txt += '<div class="td_property" id="{0}_image_ImageObject"></div>\n'.format(Thing)
+    txt += '</div>\n'
+    txt += '</div>\n'  # Close row
+
+    item = 'name'
+    txt += '\t<div class="tr_even">\n'
+    # txt += '<div class="tr_odd">\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+           '<img src="/external_link.png" alt="external link" title="external link" />' \
+           '</a>\n'.format('http://schema.org/', item)
+    txt += '</div>\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
+           '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
+    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'Text')
+    txt += '</div>\n'
+    txt += '</div>\n'  # Close row
+
+    item = 'potentialAction'
+    # txt += '\t<div class="tr_even">\n'
+    txt += '<div class="tr_odd">\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+           '<img src="/external_link.png" alt="external link" title="external link" />' \
+           '</a>\n'.format('http://schema.org/', item)
+    txt += '</div>\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
+           '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
+    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'Text')
+    txt += '</div>\n'
+    txt += '</div>\n'  # Close row
+
+    item = 'url'
+    txt += '\t<div class="tr_even">\n'
+    # txt += '<div class="tr_odd">\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+           '<img src="/external_link.png" alt="external link" title="external link" />' \
+           '</a>\n'.format('http://schema.org/', item)
+    txt += '</div>\n'
+    txt += '<div class="td">\n'
+    txt += '<a href="http://schema.org/URL" target="_blank">URL ' \
+           '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
+    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'URL')
+    txt += '</div>\n'
+    txt += '</div>\n'  # Close row
+    return txt
+
+
 class SchemaView:
-    def __init__(self, version):
+    def __init__(self, version, cloud=True):
         self.version = version
+        self.cloud = cloud
 
     """
     SchemaView class handles all output creating valid HTML
     """
+
     def get_index(self, hierarchy):
         """
         Class method: Gets the html for the full hierarchy
@@ -96,7 +191,7 @@ class SchemaView:
                     txt += '<li>\n'
                     # txt += '<a href="/{0}">{0}</a>\n'.format(list_hierarchy[x])
                     if TOP_LEVEL == level:
-                        txt += '<a href="javascript:ShowNextLevel(\'{0}\', \'{1}\');">{0}</a>\n'\
+                        txt += '<a href="javascript:ShowNextLevel(\'{0}\', \'{1}\');">{0}</a>\n' \
                             .format(list_hierarchy[x], breadcrumb)
                     else:
                         txt += '<a href="{0}">{0}</a>\n'.format(list_hierarchy[x])
@@ -107,56 +202,44 @@ class SchemaView:
         return txt
 
     @staticmethod
-    def ajax_properties(schema, web_hierarchy):
+    def ajax_properties(schema, web_hierarchy, first_use, id=-1):
         """
         Class method: creates a section of HTML with the properties of the ``schema``
 
+        :param id: The id of the select (id becomes id+1)
+        :param first_use: If it's the first call, add the most frequent properties from Thing
         :param schema: SchemaClass
         :param web_hierarchy: the id of the hierarchy
         :return: html <li></li>
         """
+        id += 1
         txt = '<div class="table">\n'
+        if first_use:
+            txt += frequent_things(schema.name)
+        # txt += '\t<div class="tr_even">\n'
+        txt += '\t<div class="tr_odd">\n'
+        txt += '\t\tAdd property: <select id="select_' + str(id) + '" onchange="javascript:SelectionChange(' + str(id) + ');">\n'
+        txt += '<option value="--">--</option>\n'
+
         properties = sorted(schema.properties)
-        if len(properties):
-            x = 0
-            while x < len(properties):
-                types = schema.properties[properties[x]]
-                if x % 2:
-                    txt += '<div class="tr_odd">\n'
-                else:
-                    txt += '<div class="tr_even">\n'
-                txt += '<div class="td">\n'
-                txt += '<a href="{0}{1}" target="_blank">{1} ' \
-                       '<img src="/external_link.png" alt="external link" title="external link" />' \
-                       '</a>\n'.format(types[0], properties[x])
-                txt += '</div>\n'
-                txt += '<div class="td">\n'
-                txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
-                       '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-                txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(web_hierarchy, properties[x], 'Text')
-                txt += '</div>\n'
-                txt += '</div>\n'  # Close row
+        x = 0
+        while x < len(properties):
+            types = schema.properties[properties[x]]
+            # {{types}} to insert the types later
+            txt += '<option value="{0}{1};{2}_{3}_{4}||{{types}}">{1}</option>\n' \
+                .format(types[0], properties[x], web_hierarchy, properties[x], 'Text')
 
-                for a_type in types[1]:
-                    # Maintain row style for all types
-                    if x % 2:
-                        txt += '<div class="tr_odd">\n'
-                    else:
-                        txt += '<div class="tr_even">\n'
-
-                    # Add empty column
-                    txt += '<div class="td">&nbsp;</div>\n'
-
-                    # If the type is a basic type, let the user fill it out
-                    name = '{0}_{1}_{2}'.format(web_hierarchy, properties[x], a_type)
-                    if a_type not in PROPERTY_TYPES:
-                        txt += '<div class="td">\n'
-                        # Div placeholder for AJAX property
-                        txt += '<a href="javascript:ShowNextSchema(\'{0}\', \'{1}\');">{0}</a>\n'.format(a_type, name)
-                        txt += '<div class="td_property" id="{0}"></div>'.format(name)
-                        txt += '</div>\n'
-                    txt += '</div>\n'
-                x += 1
+            output_types = ''
+            for a_type in types[1]:
+                name = '{0}_{1}_{2}'.format(web_hierarchy, properties[x], a_type)
+                if a_type not in PROPERTY_TYPES:
+                    if output_types:
+                        output_types += ','
+                    output_types += '{0};{1}'.format(a_type, name)
+            txt = txt.format_map({'types': output_types})
+            x += 1
+        txt += '\t\t</select>\n'
+        txt += '\t</div>\n'
         txt += '</div>\n'
         return txt
 
@@ -183,11 +266,12 @@ class SchemaView:
             txt += self._buttons()
 
             txt += '<h4>Properties: {0}</h4>\n'.format(schema.name)
-            txt += self.ajax_properties(schema, schema.name)
+            txt += self.ajax_properties(schema, schema.name, True)
             txt += '<br />\n'
             txt += self._buttons()
-            with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb), 'w') as f:
-                f.write(txt)
+            if self.cloud:
+                with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb), 'w') as f:
+                    f.write(txt)
 
         with open(HIERARCHY_FILE) as f:
             html = f.read()
@@ -199,9 +283,9 @@ class SchemaView:
         txt += '    <ul>\n'
         txt += '        <li>\n'
         txt += '            <span>Generate:</span>\n'
-        txt += '            <a href="javascript:GenerateSchema(\'Microdata\');">&nbsp;&nbsp;&nbsp;&nbsp;Microdata</a>\n'
-        txt += '            <a href="javascript:GenerateSchema(\'RDFa\');">&nbsp;&nbsp;&nbsp;&nbsp;RDFa</a>\n'
-        txt += '            <a href="javascript:GenerateSchema(\'JSON\');">&nbsp;&nbsp;&nbsp;&nbsp;JSON-LD</a>\n'
+        txt += '            <a href="javascript:GenerateSchema(\'Microdata\');">Microdata</a>\n'
+        txt += '            <a href="javascript:GenerateSchema(\'RDFa\');">RDFa</a>\n'
+        txt += '            <a href="javascript:GenerateSchema(\'JSON\');">JSON-LD</a>\n'
         txt += '        </li>\n'
         txt += '    </ul>\n'
         txt += '</div>\n'
@@ -268,7 +352,7 @@ class SchemaView:
                     # Open next div
                     current_div_levels.append(key_divs[j])
                     txt += '\t' * current_lvl
-                    txt += '<div itemprop="{0}" itemscope itemtype="{1}{2}">\n'\
+                    txt += '<div itemprop="{0}" itemscope itemtype="{1}{2}">\n' \
                         .format(key_divs[j - 1], schema.url, key_divs[j])
                     current_lvl += 1
 
@@ -286,7 +370,7 @@ class SchemaView:
             # Add the key / value
             # Sanitize output
             txt += '\t' * current_lvl
-            txt += '<span itemprop="{0}">{1}</span>\n'\
+            txt += '<span itemprop="{0}">{1}</span>\n' \
                 .format(key_divs[-2], unquote_plus(ctx.get(p)).replace('</textarea', ''))
 
         # After the last key, close all divs
@@ -369,7 +453,7 @@ class SchemaView:
             # Add the key / value
             # Sanitize output
             txt += '\t' * current_lvl
-            txt += '<span property="{0}">{1}</span>\n'\
+            txt += '<span property="{0}">{1}</span>\n' \
                 .format(key_divs[-2], unquote_plus(ctx.get(p)).replace('</textarea', ''))
 
         # After the last key, close all divs

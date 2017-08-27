@@ -25,7 +25,7 @@
                         <a href="http://polak.es/gen_help/index.html" target="_blank">Online help <img src="/external_link.png" alt="external link" title="external link" /></a>
                     </li>
                     <li id="SaveButton" style="display:none">
-                        <a href="javascript:SaveSchema();">Save Schema</a>
+                        <a href="javascript:SaveSchema(true);">Save Schema</a>
                     </li>
                     <li id="GenerateButton" style="display:none">
                         <span>Generate</span>
@@ -49,13 +49,16 @@
             </nav>
             <div class="right_col" id="right_col">
                 <div class="wrap_release">
-                    <span class="release">schema.org release: 3.2</span>
+                    <span class="release">schema.org release: 3.3</span>
                 </div>
+                <div id="saved" style="display:none"><p>The Schema has been saved in Local Storage</p></div>
                 <form method="POST" action="/GenerateSchema">
-                    <input type="hidden" name="breadcrumb" id="breadcrumb" value="" /><ul>
+                    <input type="hidden" name="breadcrumb" id="breadcrumb" value="" />
+<ul>
 <li>
 <a href="/Thing">Thing</a>
-<h4>Sublevel: <a href="/Thing">Thing</a></h4><ul class="properties">
+<h4>Sublevel:</h4>
+<ul class="properties">
 <li>
 <a href="javascript:ShowNextLevel('Action', 'Thing');">Action</a>
 </li>
@@ -88,7 +91,8 @@
 </ul>
 </li>
 </ul>
-<h4>Full hierarchy</h4><ul>
+<h4>Full hierarchy</h4>
+<ul>
 <li>
 <a href="/Thing">Thing</a>
 <ul>
@@ -423,6 +427,9 @@
 <a href="/LendAction">LendAction</a>
 </li>
 <li>
+<a href="/MoneyTransfer">MoneyTransfer</a>
+</li>
+<li>
 <a href="/ReceiveAction">ReceiveAction</a>
 </li>
 <li>
@@ -473,9 +480,29 @@
 <ul>
 <li>
 <a href="/NewsArticle">NewsArticle</a>
+<ul>
+<li>
+<a href="/AnalysisNewsArticle">AnalysisNewsArticle</a>
+</li>
+<li>
+<a href="/BackgroundNewsArticle">BackgroundNewsArticle</a>
+</li>
+<li>
+<a href="/OpinionNewsArticle">OpinionNewsArticle</a>
+</li>
+<li>
+<a href="/ReportageNewsArticle">ReportageNewsArticle</a>
+</li>
+<li>
+<a href="/ReviewNewsArticle">ReviewNewsArticle</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/Report">Report</a>
+</li>
+<li>
+<a href="/SatiricalArticle">SatiricalArticle</a>
 </li>
 <li>
 <a href="/ScholarlyArticle">ScholarlyArticle</a>
@@ -502,6 +529,9 @@
 </ul>
 </li>
 <li>
+<a href="/SponsoredContentArticle">SponsoredContentArticle</a>
+</li>
+<li>
 <a href="/TechArticle">TechArticle</a>
 <ul>
 <li>
@@ -524,6 +554,9 @@
 <a href="/Audiobook">Audiobook</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="/CategoryCodeSet">CategoryCodeSet</a>
 </li>
 <li>
 <a href="/Chapter">Chapter</a>
@@ -623,6 +656,11 @@
 <ul>
 <li>
 <a href="/DataFeed">DataFeed</a>
+<ul>
+<li>
+<a href="/CompleteDataFeed">CompleteDataFeed</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -647,9 +685,6 @@
 </ul>
 </li>
 <li>
-<a href="/EnumerationValueSet">EnumerationValueSet</a>
-</li>
-<li>
 <a href="/Episode">Episode</a>
 <ul>
 <li>
@@ -668,6 +703,22 @@
 <ul>
 <li>
 <a href="/VideoGame">VideoGame</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HowTo">HowTo</a>
+<ul>
+<li>
+<a href="/Recipe">Recipe</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Legislation">Legislation</a>
+<ul>
+<li>
+<a href="/LegislationObject">LegislationObject</a>
 </li>
 </ul>
 </li>
@@ -697,12 +748,21 @@
 </ul>
 </li>
 <li>
+<a href="/LegislationObject">LegislationObject</a>
+</li>
+<li>
 <a href="/MusicVideoObject">MusicVideoObject</a>
 </li>
 <li>
 <a href="/VideoObject">VideoObject</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="/Menu">Menu</a>
+</li>
+<li>
+<a href="/MenuSection">MenuSection</a>
 </li>
 <li>
 <a href="/Message">Message</a>
@@ -756,13 +816,24 @@
 <a href="/Quotation">Quotation</a>
 </li>
 <li>
-<a href="/Recipe">Recipe</a>
-</li>
-<li>
 <a href="/Review">Review</a>
 <ul>
 <li>
 <a href="/ClaimReview">ClaimReview</a>
+</li>
+<li>
+<a href="/CriticReview">CriticReview</a>
+<ul>
+<li>
+<a href="/ReviewNewsArticle">ReviewNewsArticle</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/EmployerReview">EmployerReview</a>
+</li>
+<li>
+<a href="/UserReview">UserReview</a>
 </li>
 </ul>
 </li>
@@ -1060,6 +1131,14 @@
 <a href="/BusTrip">BusTrip</a>
 </li>
 <li>
+<a href="/CategoryCode">CategoryCode</a>
+<ul>
+<li>
+<a href="/MedicalCode">MedicalCode</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/Class">Class</a>
 </li>
 <li>
@@ -1116,9 +1195,6 @@
 <a href="/DigitalDocumentPermissionType">DigitalDocumentPermissionType</a>
 </li>
 <li>
-<a href="/EnumerationValue">EnumerationValue</a>
-</li>
-<li>
 <a href="/EventStatusType">EventStatusType</a>
 </li>
 <li>
@@ -1135,6 +1211,12 @@
 </li>
 <li>
 <a href="/ItemListOrderType">ItemListOrderType</a>
+</li>
+<li>
+<a href="/LegalForceStatus">LegalForceStatus</a>
+</li>
+<li>
+<a href="/LegalValueLevel">LegalValueLevel</a>
 </li>
 <li>
 <a href="/MapCategoryType">MapCategoryType</a>
@@ -1283,6 +1365,9 @@
 <a href="/GameServer">GameServer</a>
 </li>
 <li>
+<a href="/GeospatialGeometry">GeospatialGeometry</a>
+</li>
+<li>
 <a href="/HealthInsurancePlan">HealthInsurancePlan</a>
 </li>
 <li>
@@ -1304,6 +1389,12 @@
 <a href="/BreadcrumbList">BreadcrumbList</a>
 </li>
 <li>
+<a href="/HowToSection">HowToSection</a>
+</li>
+<li>
+<a href="/HowToStep">HowToStep</a>
+</li>
+<li>
 <a href="/OfferCatalog">OfferCatalog</a>
 </li>
 </ul>
@@ -1316,6 +1407,28 @@
 </li>
 <li>
 <a href="/ListItem">ListItem</a>
+<ul>
+<li>
+<a href="/HowToDirection">HowToDirection</a>
+</li>
+<li>
+<a href="/HowToItem">HowToItem</a>
+<ul>
+<li>
+<a href="/HowToSupply">HowToSupply</a>
+</li>
+<li>
+<a href="/HowToTool">HowToTool</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HowToTip">HowToTip</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MenuItem">MenuItem</a>
 </li>
 <li>
 <a href="/Offer">Offer</a>
@@ -1460,7 +1573,13 @@
 <a href="/InvestmentOrDeposit">InvestmentOrDeposit</a>
 <ul>
 <li>
+<a href="/BrokerageAccount">BrokerageAccount</a>
+</li>
+<li>
 <a href="/DepositAccount">DepositAccount</a>
+</li>
+<li>
+<a href="/InvestmentFund">InvestmentFund</a>
 </li>
 </ul>
 </li>
@@ -1469,6 +1588,9 @@
 <ul>
 <li>
 <a href="/CreditCard">CreditCard</a>
+</li>
+<li>
+<a href="/MortgageLoan">MortgageLoan</a>
 </li>
 </ul>
 </li>
@@ -1497,10 +1619,16 @@
 <li>
 <a href="/TaxiService">TaxiService</a>
 </li>
+<li>
+<a href="/WebAPI">WebAPI</a>
+</li>
 </ul>
 </li>
 <li>
 <a href="/ServiceChannel">ServiceChannel</a>
+</li>
+<li>
+<a href="/SpeakableSpecification">SpeakableSpecification</a>
 </li>
 <li>
 <a href="/StructuredValue">StructuredValue</a>
@@ -1518,6 +1646,9 @@
 </li>
 <li>
 <a href="/EngineSpecification">EngineSpecification</a>
+</li>
+<li>
+<a href="/ExchangeRateSpecification">ExchangeRateSpecification</a>
 </li>
 <li>
 <a href="/GeoCoordinates">GeoCoordinates</a>
@@ -1572,6 +1703,9 @@
 </li>
 <li>
 <a href="/QuantitativeValue">QuantitativeValue</a>
+</li>
+<li>
+<a href="/RepaymentSpecification">RepaymentSpecification</a>
 </li>
 <li>
 <a href="/TypeAndQuantityNode">TypeAndQuantityNode</a>
@@ -1850,6 +1984,9 @@
 <a href="/Airline">Airline</a>
 </li>
 <li>
+<a href="/Consortium">Consortium</a>
+</li>
+<li>
 <a href="/Corporation">Corporation</a>
 </li>
 <li>
@@ -1877,6 +2014,9 @@
 </li>
 <li>
 <a href="/GovernmentOrganization">GovernmentOrganization</a>
+</li>
+<li>
+<a href="/LibrarySystem">LibrarySystem</a>
 </li>
 <li>
 <a href="/LocalBusiness">LocalBusiness</a>
@@ -2380,6 +2520,9 @@
 <a href="/NGO">NGO</a>
 </li>
 <li>
+<a href="/NewsMediaOrganization">NewsMediaOrganization</a>
+</li>
+<li>
 <a href="/PerformingGroup">PerformingGroup</a>
 <ul>
 <li>
@@ -2569,6 +2712,9 @@
 </li>
 <li>
 <a href="/PoliceStation">PoliceStation</a>
+</li>
+<li>
+<a href="/PublicToilet">PublicToilet</a>
 </li>
 <li>
 <a href="/RVPark">RVPark</a>

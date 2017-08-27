@@ -52,6 +52,7 @@ class Controller(handlers.CGIHandler):
 
     def run(self, host='localhost', port=8000, cloud=False):
         self.cloud = cloud
+        self.view.cloud = cloud
 
         # Initialize the server deamon
         self._httpd = simple_server.make_server(host, port, self.__call__)
@@ -227,8 +228,9 @@ class Controller(handlers.CGIHandler):
                     # info('Controller log - 6')
 
                     schema = self.hierarchy.get_schema(ctx.get('next_element'))
+                    id = int(ctx.get('select_id'))
                     # The id of the container div - use for next level
-                    rc = self.view.ajax_properties(schema, ctx.get('id'))
+                    rc = self.view.ajax_properties(schema, ctx.get('id'), False, id)
                 else:  # Otherwise the action is GET - This is what happens first
                     # 1. Get the Hierarchy
                     # 2. next_element (or not) - get the AJAX properties of the next_element
