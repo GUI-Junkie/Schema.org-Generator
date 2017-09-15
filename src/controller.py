@@ -214,6 +214,9 @@ class Controller(handlers.CGIHandler):
                     # Put it all together
                     # Output the Scheme the user has constructed
                     # Output a link to the Google Structured Data Testing Tool
+                    if 'GET' == ctx.get('REQUEST_METHOD'):
+                        raise (BaseException('Invalid method'))
+
                     schema_type = ctx.get('type')
                     # print(schema_type)
                     schema = self.hierarchy.get_schema(ctx.get('path'))
@@ -248,9 +251,14 @@ class Controller(handlers.CGIHandler):
                     list_hierarchy, breadcrumb = self.hierarchy.get_hierarchy(breadcrumb)
                     rc = self.view.show_schema_properties(schema, list_hierarchy, breadcrumb)
         except SchemaNotFoundError:
-            self.status = '300 Error'
+            self.status = '404 Error'
             self.headers = [('Content-type', 'text/plain; charset=utf-8')]
             rc = 'Schema "{0}" not found'.format(path_info)
+        except BaseException as err:
+            # If Invalid method
+            self.status = '405 Error'
+            self.headers = [('Content-type', 'text/plain; charset=utf-8')]
+            rc = err.args[0]
         except Exception as err:
             # If something unexpected happens, return a reasonable message
             self.status = '300 Error'
@@ -291,6 +299,7 @@ class EZContext:
     def __init__(self, environ):
         self._QUERY_STRING = {}
         try:
+            self._QUERY_STRING['REQUEST_METHOD'] = environ['REQUEST_METHOD']
             if 'GET' == environ['REQUEST_METHOD']:
                 # If method == GET, but body, raise an error
                 i = environ['CONTENT_LENGTH'].strip()
