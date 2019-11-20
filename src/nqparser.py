@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-from pickle import dump
 from os import remove, listdir
+from pickle import dump
 from urllib.error import HTTPError
 from urllib.request import urlopen
 
 from model.schema import SchemaClass
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
+WRITE = 'w'
 WRITE_BINARY = 'wb'
 
 debug = 'Dentist'
@@ -112,7 +113,13 @@ def get_real_parents(name, hierarchy):
         return [[]]
 
     # If thing already has real_parents, return them
-    thing = hierarchy[name]
+    if 'Text' == name:
+        print("Stop")
+
+    try:
+        thing = hierarchy[name]
+    except:
+        pass
     if thing.real_parents:
         return thing.real_parents
 
@@ -258,13 +265,13 @@ def treat_file(schema_version):
                     # If the property doesn't exist, add it
                     properties[prop] = [link, [prop_type]]
 
-    # Delete the schemas we're not going to show
-    unwanted = ['DataType', 'Float', 'Integer', 'URL']
+    # Delete the schemas we're not going to show because their parents are undefined (for instance 'Text')
+    unwanted = ['CssSelectorType', 'DataType', 'Float', 'Integer', 'StupidType', 'URL', 'XPathType']
     for name in unwanted:
         try:
             del schemas[name]
         except KeyError:
-            print('Unwanted {0} not found'.format(name))
+            print(f'Unwanted {name} not found')
 
     # Add Thing. Thing has no parents, so it wouldn't be added
     schemas['Thing'] = Thing('Thing')
@@ -281,11 +288,11 @@ def treat_file(schema_version):
     # Go through the file another time
     # Check for orphaned classes
     # Get all the properties
+    unwanted += ['Boolean', 'Date', 'DateTime', 'Number', 'Text', 'Time']
     with open('all-layers.nq') as f:
         for line in f:
             # Sanity check -> see if there are things without subclass
-            #   - ignore ['DataType', 'Time', 'Text','URL','Boolean','Float',
-            #             'Integer','DataType','Date','DateTime','Number']
+            #   - ignore unwanted
             if '#Class' in line:
                 thing, something = parse_sub_class(line, '#Class')
                 if thing:
@@ -294,9 +301,8 @@ def treat_file(schema_version):
                         link = parse_link(line)
                         thing.url = link
                     except KeyError:
-                        if thing not in ['DataType', 'Time', 'Text', 'URL', 'Boolean', 'Float',
-                                         'Integer', 'DataType', 'Date', 'DateTime', 'Number']:
-                            print('Nonexistent: {0}'.format(thing))
+                        if thing not in unwanted:
+                            print(f'Nonexistent: {thing}')
 
             # Get all the properties
             if 'domainIncludes' in line:
@@ -342,15 +348,16 @@ def treat_file(schema_version):
 
 
 if __name__ == "__main__":
-    download = False
-    version = 3.3
+    # download = False
+    download = True
+    version = 5.0
     if download:
         try:
-            with urlopen("https://github.com/schemaorg/schemaorg/blob/sdo-callisto/data/releases/"
-                         "{0}/all-layers.nq?raw=true".format(version)) as f:
+            # http://webschemas.org/version/latest/all-layers.nq
+            with urlopen(f'https://github.com/schemaorg/schemaorg/raw/master/data/releases/{version}/all-layers.nq') as f:
                 txt = f.read()
 
-            with open('all-layers.nq', 'w') as f:
+            with open('all-layers.nq', WRITE) as f:
                 f.write(txt.decode())
         except HTTPError:
             exit("File not found")
@@ -364,9 +371,9 @@ if __name__ == "__main__":
     # Delete schemas/*.txt files
     for file in listdir("schemas/"):
         if '.txt' in file:
-            remove("schemas/{0}".format(file))
+            remove(f'schemas/{file}')
         else:
-            print('{0} is not a *.txt file in directory schemas'.format(file))
+            print(f'{file} is not a *.txt file in directory schemas')
 
     # Let's do *everything*
     treat_file(version)
