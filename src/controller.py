@@ -14,15 +14,19 @@ While under construction, `Schemas` can be stored on the browser using Local Sto
 A valid Schema will be generated.
 It can be validated on Google Developers |Structured Data Testing Tool| |external_link|
 """
+from datetime import datetime
+# from urllib.error import URLError
+from threading import Thread
 # Refer to the Readme.txt file for © copyright information
 # from logging import info, DEBUG, basicConfig
 from wsgiref import handlers, simple_server
-# from urllib.error import URLError
-from threading import Thread
-from datetime import datetime
+
 from model.schema import Hierarchy, SchemaNotFoundError, SchemaClass
 from schema_bot import Bot
 from view.schema_view import SchemaView
+
+WRITE = 'w'
+READ_BINARY = 'rb'
 
 
 # Controller class - WSGI
@@ -54,9 +58,9 @@ class Controller(handlers.CGIHandler):
         self.cloud = cloud
         self.view.cloud = cloud
 
-        # Initialize the server deamon
+        # Initialize the server demon
         self._httpd = simple_server.make_server(host, port, self.__call__)
-        print("Serving on port {0}...".format(port))
+        print(f'Serving on port {port}...')
 
         # Start the server
         self._httpd.serve_forever()
@@ -133,10 +137,10 @@ class Controller(handlers.CGIHandler):
                 q.start()
 
                 # Returns a string to the browser
-                rc = '/{0}: {1}'.format(path_info, datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+                rc = f'/{path_info}: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
             elif '.ico' in path_info or '.png' in path_info or '.jpg' in path_info:
                 # This code should be eliminated when used as a module with Apache
-                with open('view/{0}'.format(path_info), 'rb') as f:
+                with open(f'view/{path_info}', READ_BINARY) as f:
                     txt = f.read()
 
                 if '.ico' in path_info:
@@ -150,17 +154,17 @@ class Controller(handlers.CGIHandler):
             elif '.js' in path_info:
                 # This code should be eliminated when used as a module with Apache
                 self.headers = [('Content-type', 'text/js; charset=utf-8')]
-                with open('view/{0}'.format(path_info)) as f:
+                with open(f'view/{path_info}') as f:
                     rc = f.read()
             elif '.css' in path_info:
                 # This code should be eliminated when used as a module with Apache
                 self.headers = [('Content-type', 'text/css; charset=utf-8')]
-                with open('view/{0}'.format(path_info)) as f:
+                with open(f'view/{path_info}') as f:
                     rc = f.read()
             elif path_info == 'robots.txt':
                 # This code should be eliminated when used as a module with Apache
                 self.headers = [('Content-type', 'text/plain; charset=utf-8')]
-                with open('view/{0}'.format(path_info)) as f:
+                with open(f'view/{path_info}') as f:
                     rc = f.read()
             else:
                 # Return html
@@ -174,7 +178,7 @@ class Controller(handlers.CGIHandler):
                         # Returns the whole hierarchy - Similar to http://schema.org/docs/full.html
                         # info('Controller log - 2')
                         rc = self.view.get_index(self.hierarchy.hierarchy)
-                        with open('view/index.html', 'w') as f:
+                        with open('view/index.html', WRITE) as f:
                             f.write(rc)
                 elif 'schema_bot' == path_info:
                     if ctx.get('check'):
@@ -185,7 +189,7 @@ class Controller(handlers.CGIHandler):
                         elif 'Updated' in rc:
                             self.hierarchy = Hierarchy()
                             # index = self.view.get_index(self.hierarchy)
-                            # with open('view/index.html', 'w') as f:
+                            # with open('view/index.html', WRITE) as f:
                             #     f.write(index)
                     else:
                         # No bot, then start one
@@ -253,7 +257,7 @@ class Controller(handlers.CGIHandler):
         except SchemaNotFoundError:
             self.status = '404 Error'
             self.headers = [('Content-type', 'text/plain; charset=utf-8')]
-            rc = 'Schema "{0}" not found'.format(path_info)
+            rc = f'Schema "{path_info}" not found'
         except BaseException as err:
             # If Invalid method
             self.status = '405 Error'

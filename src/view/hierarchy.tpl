@@ -8,13 +8,18 @@
         <link type="image/png" rel="icon" href="/favicon.ico"/>
         <title>{title}</title>
         <link rel="stylesheet" type="text/css" href="/gen_style.css" />
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="/schema.js"></script>
     </head>
     <body onload="javascript:onLoad('{buttons}');">
-        <a class="logo_link" href="/">
-            <img src="/logo_gen.png" alt="schema.org &lt;Generator&gt;" title="schema.org &lt;Generator&gt;" class="logo"/>
-        </a>
+        <div class="header">
+            <a class="logo_link" href="/">
+                <img src="/logo_gen.jpg" alt="schema.org &lt;Generator&gt;" title="schema.org &lt;Generator&gt;" class="logo"/>
+            </a>
+            <div class="wrap_release">
+                <span class="release">schema.org release: {version}</span>
+            </div>
+            <div id="saved" style="display:none"><p>The Schema has been saved in Local Storage</p></div>
+        </div> <!-- Fin div header !-->
         <div class="wrapper">
             <nav>
                 <ul>
@@ -47,18 +52,12 @@
                     </li>
                 </ul>
             </nav>
-            <div class="right_col" id="right_col">
-                <div class="wrap_release">
-                    <span class="release">schema.org release: {version}</span>
-                </div>
-                <div id="saved" style="display:none"><p>The Schema has been saved in Local Storage</p></div>
+            <div class="right_col" id="right_col" tabindex="0">
                 <form method="POST" action="/GenerateSchema">
                     {form}
                 </form>
                 <br />
-            </div>
-            <div class="org_right_col">
-            {output}
+                {output}
             </div>
         <noscript>Your browser does not support JavaScript!</noscript>
         </div>
@@ -68,24 +67,21 @@
             <span itemprop="streetAddress" class="footer_item">c/ San Antonio 52</span>
             <span itemprop="postalCode" class="footer_item">10.470</span>
             <span itemprop="addressLocality" class="footer_item">Villanueva de la Vera</span>
-            <span class="footer_item">Cáceres</span>
-            <span class="footer_item">Spain</span>
+            <span class="footer_item">Cáceres, Spain</span>
             <span class="footer_item"><a href="mailto:info@polak.es?subject=Generator">Contact me</a></span>
             <span itemprop="addressRegion" hidden="">CC</span>
             <span itemprop="addressCountry" hidden="">ES</span>
         </div>
-        <div class="footer">
-            <span itemprop="currenciesAccepted" hidden="">EUR</span>
-            <span itemprop="email" hidden="">info@polak.es</span>
-            <span itemprop="foundingDate" hidden="">2015-01-01</span>
-            <span itemprop="name" hidden="">Hans Polak</span>
-            <span itemprop="paymentAccepted" hidden="">Paypal, Electronic Funds Transfer</span>
-            <span itemprop="taxID" hidden="">X2.125.374J</span>
-            <span itemprop="telephone" hidden="">+34 669.765.160</span>
-            <span itemprop="url" hidden="">http://polak.es</span>
-            <span itemprop="vatID" hidden="">ES.X21.253.74J</span>
-        </div>
-        <div class="footer">
+        <span itemprop="currenciesAccepted" hidden="">EUR</span>
+        <span itemprop="email" hidden="">info@polak.es</span>
+        <span itemprop="foundingDate" hidden="">2015-01-01</span>
+        <span itemprop="name" hidden="">Hans Polak</span>
+        <span itemprop="paymentAccepted" hidden="">Paypal, Electronic Funds Transfer</span>
+        <span itemprop="taxID" hidden="">X2.125.374J</span>
+        <span itemprop="telephone" hidden="">+34 669.765.160</span>
+        <span itemprop="url" hidden="">http://polak.es</span>
+        <span itemprop="vatID" hidden="">ES.X21.253.74J</span>
+        <div class="under_footer">
             <form target="_top" method="post" action="https://www.paypal.com/cgi-bin/webscr">
                 <input value="_s-xclick" name="cmd" type="hidden"/>
                 <input value="RXHPLLAMU2XYC" name="hosted_button_id" type="hidden"/>
@@ -93,6 +89,9 @@
                 <img border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1"/>
             </form>
         </div>
-        <div class="footer">© Copyright 2016 - 2017, Hans Polak.<br/>&nbsp;</div>
+        <div class="under_footer">© Copyright 2016 - 2020, Hans Polak.<br/>&nbsp;</div>
+        <script>
+            document.getElementById("right_col").focus();
+        </script>
     </body>
 </html>

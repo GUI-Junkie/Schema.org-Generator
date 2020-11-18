@@ -46,7 +46,7 @@ class Hierarchy:
 
         try:
             # First load the existing HIERARCHY_FILE
-            with open('{0}{1}'.format(base_dir, HIERARCHY_FILE), READ_BINARY) as f:
+            with open(f'{base_dir}{HIERARCHY_FILE}', READ_BINARY) as f:
                 pickle_list = load(f)
 
             # HIERARCHY_FILE is created by schema_bot

@@ -373,34 +373,3 @@ function DeleteDiv(id, select_id)
         }
     }
 }
-
-// jQuery for Schema.org content 'Examples' for the tabs to work
-// Copied from Schema.org
-$(document).ready(function()
-{
-    setTimeout(function()
-    {
-        $(".atn:contains(itemscope), .atn:contains(itemtype), .atn:contains(itemprop), \
-            .atn:contains(itemid), .atn:contains(time), .atn:contains(datetime), \
-            .atn:contains(datetime), .tag:contains(time) ").addClass('new');
-        $('.new + .pun + .atv').addClass('curl');
-    }, 500);
-
-    setTimeout(function()
-    {
-        $(".atn:contains(property), .atn:contains(typeof) ").addClass('new');
-        $('.new + .pun + .atv').addClass('curl');
-    }, 500);
-
-    setTimeout(function()
-    {
-        $('.ds-selector-tabs .selectors a').click(function()
-        {
-            var $this = $(this);
-            var $p = $this.parents('.ds-selector-tabs');
-            $('.selected', $p).removeClass('selected');
-            $this.addClass('selected');
-            $('pre.' + $this.data('selects'), $p).addClass('selected');
-        });
-    }, 0);
-});

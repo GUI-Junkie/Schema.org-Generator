@@ -14,21 +14,22 @@ The Bot should be called via a ``cron`` job every 24 hours
 
 * The Application Server |Controller| (or Controllers) will be restarted if necessary
 """
+from os import remove, makedirs
 # Refer to the Readme.txt file for © copyright information
 from pickle import load
+from shutil import rmtree
 from threading import Thread
 from time import sleep
 from urllib.error import URLError, HTTPError
 from urllib.request import urlopen
 from zlib import decompress, MAX_WBITS
-from os import remove, makedirs
-from shutil import rmtree
 
 from model.schema import SCHEMA_ORG
 from nqparser import treat_file
 
 HIERARCHY_FILE = 'Hierarchy.pickle'
 READ_BINARY = 'rb'
+WRITE = 'w'
 WRITE_BINARY = 'wb'
 
 
@@ -66,7 +67,7 @@ class Bot(Thread):
         while i_tries < 9 and txt is None:
             i_tries += 1
             try:
-                with urlopen("{0}docs/releases.html".format(SCHEMA_ORG)) as f:
+                with urlopen(f'{SCHEMA_ORG}docs/releases.html') as f:
                     txt = f.read()
                 if 31 == txt[0]:  # If the txt is compressed, decompress
                     txt = decompress(txt, 16 + MAX_WBITS)
@@ -94,15 +95,15 @@ class Bot(Thread):
             # Get the new release all-layers.nq file
             # https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/3.0/all-layers.nq
             try:
-                with urlopen("https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/"
-                             "{0}/all-layers.nq".format(version)) as f:
+                with urlopen('https://raw.githubusercontent.com/schemaorg/schemaorg/master/data/releases/'
+                             f'{version}/all-layers.nq') as f:
                     txt = f.read()
             except HTTPError:
-                with urlopen("https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-makemake/data/releases/"
-                             "{0}/all-layers.nq".format(version)) as f:
+                with urlopen('https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-makemake/data/releases/'
+                             f'{version}/all-layers.nq') as f:
                     txt = f.read()
 
-            with open('all-layers.nq', 'w') as f:
+            with open('all-layers.nq', WRITE) as f:
                     f.write(txt.decode())
 
             # Delete index.html
@@ -127,23 +128,23 @@ class Bot(Thread):
 
 def restart(port):
     try:
-        urlopen('http://localhost:{0}/restart'.format(port))
+        urlopen(f'http://localhost:{port}/restart')
     except URLError:
         pass
 
 
 if __name__ == "__main__":
     from os import chdir
+    from datetime import datetime
 
-    # from datetime import datetime
-
-    # tStart = datetime.now()
+    start_time = datetime.now()
 
     print('Schema Bot - main')
 
     # Change the base dir to where this __file__ is located
     # Same location as the Hierarchy.pickle file
-    FILE_NAME = 'schema_bot.py'
+    # FILE_NAME = 'schema_bot.py'
+    FILE_NAME = __file__[__file__.rindex("/") + 1:]
     if __file__ != FILE_NAME:
         BASE_DIR = __file__[:__file__.index(FILE_NAME)]
         chdir(BASE_DIR)
@@ -166,6 +167,9 @@ if __name__ == "__main__":
         # restart(8001)   # Etc
     print('Schema Bot - main finished')
 
-    # tFin = datetime.now()
-    # tDiff = tFin - tStart
-    # print("\nDuration:", ''.join([str(tDiff.seconds), ":", str(tDiff.microseconds)]))
+    stop_time = datetime.now()
+    time_delta = stop_time - start_time
+
+    hours, remainder = divmod(time_delta.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    print("\nDuration:", f'{hours:02d}:{minutes:02d}:{seconds:02d} and {time_delta.microseconds} microseconds')

@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from wsgiref import simple_server
 from controller import app
 
 
@@ -10,7 +9,8 @@ if __name__ == "__main__":
 
     # Change the base dir to where this __file__ is located
     # Needed for testing
-    FILE_NAME = 'wsgi.py'
+    # FILE_NAME = 'wsgi.py'
+    FILE_NAME = __file__[__file__.rindex("/") + 1:]
     if __file__ != FILE_NAME:
         BASE_DIR = __file__[:__file__.index(FILE_NAME)]
         chdir(BASE_DIR)

@@ -7,57 +7,59 @@ Contains the class for the
 """
 # Refer to the Readme.txt file for © copyright information
 
-from model.schema import PROPERTY_TYPES
 from urllib.parse import unquote_plus
+
+from model.schema import PROPERTY_TYPES
 
 HIERARCHY_FILE = 'view/hierarchy.tpl'
 TOP_LEVEL = 0
 ALL_LEVELS = 1
+WRITE = 'w'
 
 
-# .buttons a {color:#4C3441;text-decoration:none;text-align:center;display:block;border-radius:12px;border:2px solid #4CAF50;padding-left:initial;}
-
-def frequent_things(Thing):
+def frequent_things(thing):
     """
 
-    :type Thing: String indicating the Thing
+    :type thing: String indicating the Thing
     """
     item = 'description'
     txt = '\t<div class="tr_even">\n'
     # txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
            '<img src="/external_link.png" alt="external link" title="external link" />' \
-           '</a>\n'.format('http://schema.org/', item)
+           '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'Text')
+    txt += f'<input type="text" name="{thing}_{item}_Text" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
     item = 'image'
     txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
            '<img src="/external_link.png" alt="external link" title="external link" />' \
-           '</a>\n'.format('http://schema.org/', item)
+           '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'ImageObject')
+    txt += f'<input type="text" name="{thing}_{item}_ImageObject" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
-    item = 'image - second property'
+
+    # item = 'image - second property'
     txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
     txt += '&nbsp;'
     txt += '</div>\n'
     txt += '<div class="td">\n'
-    txt += '<a href="javascript:ShowNextSchema(\'ImageObject\', \'{0}_image_ImageObject\', 10000);">ImageObject</a>\n'.format(Thing)
-    txt += '<div class="td_property" id="{0}_image_ImageObject"></div>\n'.format(Thing)
+    txt += f'<a href="javascript:ShowNextSchema(\'ImageObject\', \'{thing}_image_ImageObject\', 10000);">' \
+           f'ImageObject</a>\n'
+    txt += f'<div class="td_property" id="{thing}_image_ImageObject"></div>\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
@@ -65,14 +67,14 @@ def frequent_things(Thing):
     txt += '\t<div class="tr_even">\n'
     # txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
            '<img src="/external_link.png" alt="external link" title="external link" />' \
-           '</a>\n'.format('http://schema.org/', item)
+           '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'Text')
+    txt += f'<input type="text" name="{thing}_{item}_Text" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
@@ -80,14 +82,14 @@ def frequent_things(Thing):
     # txt += '\t<div class="tr_even">\n'
     txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
            '<img src="/external_link.png" alt="external link" title="external link" />' \
-           '</a>\n'.format('http://schema.org/', item)
+           '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'Text')
+    txt += f'<input type="text" name="{thing}_{item}_Text" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
@@ -95,14 +97,14 @@ def frequent_things(Thing):
     txt += '\t<div class="tr_even">\n'
     # txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += '<a href="{0}{1}" target="_blank">{1} ' \
+    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
            '<img src="/external_link.png" alt="external link" title="external link" />' \
-           '</a>\n'.format('http://schema.org/', item)
+           '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/URL" target="_blank">URL ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += '<input type="text" name="{0}_{1}_{2}" />\n'.format(Thing, item, 'URL')
+    txt += f'<input type="text" name="{thing}_{item}_URL" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
     return txt
@@ -149,7 +151,7 @@ class SchemaView:
             breadcrumb = list_hierarchy[0]
             while x < len(list_hierarchy):
                 txt += '<li>\n'
-                txt += '<a href="/{0}">{0}</a>\n'.format(list_hierarchy[x])
+                txt += f'<a href="/{list_hierarchy[x]}">{list_hierarchy[x]}</a>\n'
                 # Recursive call
                 if list_hierarchy[x + 1]:
                     if level:
@@ -189,12 +191,12 @@ class SchemaView:
                     txt += '<ul>\n'
                 while x < half:
                     txt += '<li>\n'
-                    # txt += '<a href="/{0}">{0}</a>\n'.format(list_hierarchy[x])
+                    # txt += f'<a href="/{list_hierarchy[x]}">{list_hierarchy[x]}</a>\n'
                     if TOP_LEVEL == level:
-                        txt += '<a href="javascript:ShowNextLevel(\'{0}\', \'{1}\');">{0}</a>\n' \
-                            .format(list_hierarchy[x], breadcrumb)
+                        txt += f'<a href="javascript:ShowNextLevel(\'{list_hierarchy[x]}\', \'{breadcrumb}\');">' \
+                               f'{list_hierarchy[x]}</a>\n'
                     else:
-                        txt += '<a href="{0}">{0}</a>\n'.format(list_hierarchy[x])
+                        txt += f'<a href="{list_hierarchy[x]}">{list_hierarchy[x]}</a>\n'
                     x += 2
                     txt += '</li>\n'
                 txt += '</ul>\n'
@@ -202,23 +204,24 @@ class SchemaView:
         return txt
 
     @staticmethod
-    def ajax_properties(schema, web_hierarchy, first_use, id=-1):
+    def ajax_properties(schema, web_hierarchy, first_use, ajax_id=-1):
         """
         Class method: creates a section of HTML with the properties of the ``schema``
 
-        :param id: The id of the select (id becomes id+1)
+        :param ajax_id: The id of the select (id becomes id+1)
         :param first_use: If it's the first call, add the most frequent properties from Thing
         :param schema: SchemaClass
         :param web_hierarchy: the id of the hierarchy
         :return: html <li></li>
         """
-        id += 1
+        ajax_id += 1
         txt = '<div class="table">\n'
         if first_use:
             txt += frequent_things(schema.name)
         # txt += '\t<div class="tr_even">\n'
         txt += '\t<div class="tr_odd">\n'
-        txt += '\t\tAdd property: <select id="select_' + str(id) + '" onchange="javascript:SelectionChange(' + str(id) + ');">\n'
+        txt += '\t\tAdd property: <select id="select_' \
+               + str(ajax_id) + '" onchange="javascript:SelectionChange(' + str(ajax_id) + ');">\n'
         txt += '<option value="--">--</option>\n'
 
         properties = sorted(schema.properties)
@@ -226,16 +229,16 @@ class SchemaView:
         while x < len(properties):
             types = schema.properties[properties[x]]
             # {{types}} to insert the types later
-            txt += '<option value="{0}{1};{2}_{3}_{4}||{{types}}">{1}</option>\n' \
-                .format(types[0], properties[x], web_hierarchy, properties[x], 'Text')
+            txt += f'<option value="{types[0]}{properties[x]};{web_hierarchy}_{properties[x]}_Text||{{types}}">' \
+                   f'{properties[x]}</option>\n'
 
             output_types = ''
             for a_type in types[1]:
-                name = '{0}_{1}_{2}'.format(web_hierarchy, properties[x], a_type)
+                name = f'{web_hierarchy}_{properties[x]}_{a_type}'
                 if a_type not in PROPERTY_TYPES:
                     if output_types:
                         output_types += ','
-                    output_types += '{0};{1}'.format(a_type, name)
+                    output_types += f'{a_type};{name}'
             txt = txt.format_map({'types': output_types})
             x += 1
         txt += '\t\t</select>\n'
@@ -253,10 +256,10 @@ class SchemaView:
         :rtype: str - html
         """
         try:
-            with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb)) as f:
+            with open(f'schemas/{schema.name}_{breadcrumb}.txt') as f:
                 txt = f.read()
         except FileNotFoundError:
-            txt = '<input type="hidden" name="path" value="{0}" />\n'.format(schema.name)
+            txt = f'<input type="hidden" name="path" value="{schema.name}" />\n'
             txt += '<input type="hidden" name="type" id="type" value="" />\n'
             txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />\n'
 
@@ -265,12 +268,12 @@ class SchemaView:
             txt += self._traverse_lvl(list_hierarchy, breadcrumb)
             txt += self._buttons()
 
-            txt += '<h4>Properties: {0}</h4>\n'.format(schema.name)
+            txt += f'<h4>Properties: {schema.name}</h4>\n'
             txt += self.ajax_properties(schema, schema.name, True)
             txt += '<br />\n'
             txt += self._buttons()
             if self.cloud:
-                with open('schemas/{0}_{1}.txt'.format(schema.name, breadcrumb), 'w') as f:
+                with open(f'schemas/{schema.name}_{breadcrumb}.txt', WRITE) as f:
                     f.write(txt)
 
         with open(HIERARCHY_FILE) as f:
@@ -294,11 +297,11 @@ class SchemaView:
         # txt += '    <ul>'
         # txt += '        <li>'
         # txt += '            <span>Add:</span>'
-        # txt += '            <a href="javascript:AddRole({0});">&nbsp;&nbsp;&nbsp;&nbsp;Role to...</a>'.format(id)
+        # txt += f'            <a href="javascript:AddRole({id});">&nbsp;&nbsp;&nbsp;&nbsp;Role to...</a>'
         # txt += '        </li>'
         # txt += '    </ul>'
         # txt += '</div>'
-        # txt += '<div id="role_{0}">'.format(id)
+        # txt += f'<div id="role_{id}">'
         # txt += '</div>'
         return txt
 
@@ -312,9 +315,26 @@ class SchemaView:
         :param ctx: Context with the Query_string arguments
         :type schema: Schema
         """
+        txt = '<p>Considerable effort has gone into writing this software which has been released under the terms of ' \
+              'the GNU General Public License.</p>'
+        txt += '<p>If you find this software useful, don\'t hesitate to make a financial contribution by clicking on ' \
+               'the <strong>Donate</strong> button below.</p>'
+        txt += '<p>If you would like additional features, I\'m a freelance developer and I can bill internationally.' \
+               '</p>'
+        txt += '</form>'
+        txt += '<form action = "https://www.paypal.com/cgi-bin/webscr" method = "post" target = "_top">'
+        txt += '<input type = "hidden" name = "cmd" value = "_s-xclick">'
+        txt += '<input type = "hidden" name = "hosted_button_id" value = "RXHPLLAMU2XYC">'
+        txt += '<input type = "image" src = "https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" ' \
+               'border = "0" name = "submit" alt = "PayPal - The safer, easier way to pay online!">'
+        txt += '<img alt = "" border = "0" src = "https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width = "1" ' \
+               'height = "1">'
+        txt += '<br />'
+        txt += '<br />'
+
         schema_name = schema.name
-        txt = '<textarea>\n'
-        txt += '<div itemscope itemtype="{0}{1}">\n'.format(schema.url, schema_name)
+        txt += '<textarea>\n'
+        txt += f'<div itemscope itemtype="{schema.url}{schema_name}">\n'
         current_div_levels = [schema_name]
         current_lvl = 1
 
@@ -352,8 +372,7 @@ class SchemaView:
                     # Open next div
                     current_div_levels.append(key_divs[j])
                     txt += '\t' * current_lvl
-                    txt += '<div itemprop="{0}" itemscope itemtype="{1}{2}">\n' \
-                        .format(key_divs[j - 1], schema.url, key_divs[j])
+                    txt += f'<div itemprop="{key_divs[j - 1]}" itemscope itemtype="{schema.url}{key_divs[j]}">\n'
                     current_lvl += 1
 
             # If this key has more levels than the current level
@@ -363,15 +382,13 @@ class SchemaView:
                 j = current_lvl * 2
                 current_div_levels.append(key_divs[j])
                 txt += '\t' * current_lvl
-                txt += '<div itemprop="{0}" itemscope itemtype="{1}{2}">\n' \
-                    .format(key_divs[j - 1], schema.url, key_divs[j])
+                txt += f'<div itemprop="{key_divs[j - 1]}" itemscope itemtype="{schema.url}{key_divs[j]}">\n'
                 current_lvl += 1
 
             # Add the key / value
             # Sanitize output
             txt += '\t' * current_lvl
-            txt += '<span itemprop="{0}">{1}</span>\n' \
-                .format(key_divs[-2], unquote_plus(ctx.get(p)).replace('</textarea', ''))
+            txt += f'<span itemprop="{key_divs[-2]}">{unquote_plus(ctx.get(p)).replace("</textarea", "")}</span>\n'
 
         # After the last key, close all divs
         txt += self._close_tabs(current_lvl)
@@ -397,9 +414,26 @@ class SchemaView:
         :param ctx: Context with the Query_string arguments
         :type schema: Schema
         """
+        txt = '<p>Considerable effort has gone into writing this software which has been released under the ' \
+              'terms of the GNU General Public License.</p>'
+        txt += '<p>If you find this software useful, don\'t hesitate to make a financial ' \
+               'contribution by clicking on the <strong>Donate</strong> button below.</p>'
+        txt += '<p>If you would like additional features, I\'m a freelance developer and I can ' \
+               'bill internationally.</p>'
+        txt += '</form>'
+        txt += '<form action = "https://www.paypal.com/cgi-bin/webscr" method = "post" target = "_top">'
+        txt += '<input type = "hidden" name = "cmd" value = "_s-xclick">'
+        txt += '<input type = "hidden" name = "hosted_button_id" value = "RXHPLLAMU2XYC">'
+        txt += '<input type = "image" src = "https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif"' \
+               ' border = "0" name = "submit" alt = "PayPal - The safer, easier way to pay online!">'
+        txt += '<img alt = "" border = "0" src = "https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width = "1" ' \
+               'height = "1">'
+        txt += '<br />'
+        txt += '<br />'
+
         schema_name = schema.name
-        txt = '<textarea>\n'
-        txt += '<div vocab="{0}" typeof="{1}">\n'.format(schema.url, schema_name)
+        txt += '<textarea>\n'
+        txt += f'<div vocab="{schema.url}" typeof="{schema_name}">\n'
         current_div_levels = [schema_name]
         current_lvl = 1
 
@@ -437,7 +471,7 @@ class SchemaView:
                     # Open next div
                     current_div_levels.append(key_divs[j])
                     txt += '\t' * current_lvl
-                    txt += '<div property="{0}" typeof="{1}">\n'.format(key_divs[j - 1], key_divs[j])
+                    txt += f'<div property="{key_divs[j - 1]}" typeof="{key_divs[j]}">\n'
                     current_lvl += 1
 
             # If this key has more levels than the current level
@@ -447,14 +481,13 @@ class SchemaView:
                 j = current_lvl * 2
                 current_div_levels.append(key_divs[j])
                 txt += '\t' * current_lvl
-                txt += '<div property="{0}" typeof="{1}">\n'.format(key_divs[j - 1], key_divs[j])
+                txt += f'<div property="{key_divs[j - 1]}" typeof="{key_divs[j]}">\n'
                 current_lvl += 1
 
             # Add the key / value
             # Sanitize output
             txt += '\t' * current_lvl
-            txt += '<span property="{0}">{1}</span>\n' \
-                .format(key_divs[-2], unquote_plus(ctx.get(p)).replace('</textarea', ''))
+            txt += f'<span property="{key_divs[-2]}">{unquote_plus(ctx.get(p)).replace("</textarea", "")}</span>\n'
 
         # After the last key, close all divs
         txt += self._close_tabs(current_lvl)
@@ -480,13 +513,30 @@ class SchemaView:
         :param ctx: Context with the Query_string arguments
         :type schema: Schema
         """
+        txt = '<p>Considerable effort has gone into writing this software which has been released under the ' \
+              'terms of the GNU General Public License.</p>'
+        txt += '<p>If you find this software useful, don\'t hesitate to make a financial contribution by clicking ' \
+               'on the <strong>Donate</strong> button below.</p>'
+        txt += '<p>If you would like additional features, I\'m a freelance developer and I can bill internationally.' \
+               '</p>'
+        txt += '</form>'
+        txt += '<form action = "https://www.paypal.com/cgi-bin/webscr" method = "post" target = "_top">'
+        txt += '<input type = "hidden" name = "cmd" value = "_s-xclick">'
+        txt += '<input type = "hidden" name = "hosted_button_id" value = "RXHPLLAMU2XYC">'
+        txt += '<input type = "image" src = "https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" ' \
+               'border = "0" name = "submit" alt = "PayPal - The safer, easier way to pay online!">'
+        txt += '<img alt = "" border = "0" src = "https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width = "1" ' \
+               'height = "1">'
+        txt += '<br />'
+        txt += '<br />'
+
         schema_name = schema.name
-        txt = '<textarea>\n'
+        txt += '<textarea>\n'
         txt += '<script type="application/ld+json">\n'
         txt += '{\n'
-        # txt += '\t"@context": "{0}",\n'.format(schema.url)
+        # txt += f'\t"@context": "{schema.url}",\n'
         txt += '\t"@context": "http://schema.org/",\n'
-        txt += '\t"@type": "{0}"'.format(schema_name)
+        txt += f'\t"@type": "{schema_name}"'
         current_bracket_levels = [schema_name]
         current_lvl = 1
 
@@ -525,9 +575,9 @@ class SchemaView:
                     current_bracket_levels.append(key_brackets[j])
                     txt += ',\n'
                     txt += '\t' * (current_lvl + 1)
-                    txt += '"{0}": {{\n'.format(key_brackets[j - 1])
+                    txt += f'"{key_brackets[j - 1]}": {{\n'
                     txt += '\t' * (current_lvl + 2)
-                    txt += '"@type": "{0}"'.format(key_brackets[j])
+                    txt += f'"@type": "{key_brackets[j]}"'
                     current_lvl += 1
 
             # If this key has more levels than the current level
@@ -538,16 +588,16 @@ class SchemaView:
                 current_bracket_levels.append(key_brackets[j])
                 txt += ',\n'
                 txt += '\t' * (current_lvl + 1)
-                txt += '"{0}": {{\n'.format(key_brackets[j - 1])
+                txt += f'"{key_brackets[j - 1]}": {{\n'
                 txt += '\t' * (current_lvl + 2)
-                txt += '"@type": "{0}"'.format(key_brackets[j])
+                txt += f'"@type": "{key_brackets[j]}"'
                 current_lvl += 1
 
             # Add the key / value
             # Sanitize output
             txt += ',\n'
             txt += '\t' * (current_lvl + 1)
-            txt += '"{0}":"{1}"'.format(key_brackets[-2], unquote_plus(ctx.get(p)).replace('</textarea', ''))
+            txt += f'"{key_brackets[-2]}":"{unquote_plus(ctx.get(p)).replace("</textarea", "")}"'
 
         # After the last key, close all brackets
         txt += self._close_brackets(current_lvl, 1)
@@ -583,10 +633,10 @@ class SchemaView:
         if schema_bot.updated:
             # This is the good stuff
             # Update the hierarchy and go on your merry way
-            return 'Finished - Updated to schema.org version {0}'.format(schema_bot.version)
+            return f'Finished - Updated to schema.org version {schema_bot.version}'
 
         # False alarm, the version is unchanged
-        return 'Finished - nothing there, still schema.org version {0}'.format(schema_bot.version)
+        return f'Finished - nothing there, still schema.org version {schema_bot.version}'
 
     @staticmethod
     def get_schema_bot_html():
@@ -629,9 +679,10 @@ class SchemaView:
     @staticmethod
     def _breadcrumbs(schema):
         # Add the Canonical URL
-        txt = 'Canonical URL: <a href="http://schema.org/{0}" target="_blank">http://schema.org/{0} ' \
+        txt = f'Canonical URL: <a href="http://schema.org/{schema.name}" target="_blank">' \
+              f'http://schema.org/{schema.name} ' \
               '<img src="/external_link.png" alt="external link" title="external link" />' \
-              '</a><br/><br/>\n'.format(schema.name)
+              '</a><br/><br/>\n'
 
         # Add all breadcrumbs with Schema.org syntax
         for parents in schema.get_parent_class:
@@ -644,8 +695,8 @@ class SchemaView:
                     txt += '    <li> > </li>\n'
 
                 txt += '    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">\n'
-                txt += '        <a itemprop="item" href="/{0}"><span itemprop="name">{0}</span></a>\n'.format(parent)
-                txt += '        <meta itemprop="position" content="{0}" />\n'.format(count)
+                txt += f'        <a itemprop="item" href="/{parent}"><span itemprop="name">{parent}</span></a>\n'
+                txt += f'        <meta itemprop="position" content="{count}" />\n'
                 txt += '    </li>\n'
 
             txt += '</ol>\n'

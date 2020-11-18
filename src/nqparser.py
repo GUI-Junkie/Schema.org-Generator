@@ -11,6 +11,8 @@ WRITE = 'w'
 WRITE_BINARY = 'wb'
 
 debug = 'Dentist'
+
+
 # debug = 'ProfessionalService'
 
 
@@ -19,11 +21,12 @@ class Thing:
     Small substitute class for the SchemaClass
     Info will be copied to the real class
     """
+
     def __init__(self, thing):
-        self.name = thing       # The name of the schema
-        self.parents = []       # This will contain all the direct parents
+        self.name = thing  # The name of the schema
+        self.parents = []  # This will contain all the direct parents
         self.real_parents = []  # This will contain all parents up to 'Thing'
-        self.properties = []    # This will contain the properties (duh)
+        self.properties = []  # This will contain the properties (duh)
         self.url = ''
 
     def add_parent(self, parent):
@@ -52,12 +55,12 @@ def parse_class(line):
     """
     # <http://schema.org/DiscoverAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
     #           <http://schema.org/FindAction> <http://schema.org/#v3.0> .
-    ind = line.index('>')        # Get the end of the first column
-    ind = line[:ind].rindex('/') + 1    # From here to the end
+    ind = line.index('>')  # Get the end of the first column
+    ind = line[:ind].rindex('/') + 1  # From here to the end
     return line[ind:ind + line[ind:].index('>')]
 
 
-def parse_link(line):
+def parse_link(line, schema_version):
     """
     Get the external link of the property
     :param line:
@@ -65,14 +68,15 @@ def parse_link(line):
     """
     # <http://schema.org/tongueWeight> <http://schema.org/rangeIncludes>
     #       <http://schema.org/QuantitativeValue> <http://auto.schema.org/#v3.0> .
-    ind = line.index('<') + 1       # Get the beginning of the fourth column
+    ind = line.index('<') + 1  # Get the beginning of the fourth column
     ind += line[ind:].index('<') + 1
     ind += line[ind:].index('<') + 1
 
     # rangeIncludes usually has four columns, but not if it's a #comment or a #label
-    if not '#comment' in line and not '#label' in line:
+    if not ('#comment' in line or '#label' in line):
         ind += line[ind:].index('<') + 1
-    return line[ind:ind + line[ind:].index('#')]
+    # return line[ind:ind + line[ind:].index('#')] Old file format
+    return line[ind:ind + line[ind:].index(f'{schema_version}')]
 
 
 def parse_sub_class(line, subclass='subClassOf'):
@@ -91,11 +95,11 @@ def parse_sub_class(line, subclass='subClassOf'):
 
     # <http://schema.org/DiscoverAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
     #           <http://schema.org/FindAction> <http://schema.org/#v3.0> .
-    ind = line.index(subclass)      # We're interested in what comes after subclassof
-    ind += line[ind:].index('>') + 1    # We're interested in what lies before the end
-    ind += line[ind:].index('>')        # ... of the next column
+    ind = line.index(subclass)  # We're interested in what comes after subclassof
+    ind += line[ind:].index('>') + 1  # We're interested in what lies before the end
+    ind += line[ind:].index('>')  # ... of the next column
 
-    ind = line[:ind].rindex('/') + 1    # From here to the end
+    ind = line[:ind].rindex('/') + 1  # From here to the end
     # Get the data from the third column
     return this_class, line[ind:ind + line[ind:].index('>')]
 
@@ -115,11 +119,14 @@ def get_real_parents(name, hierarchy):
     # If thing already has real_parents, return them
     if 'Text' == name:
         print("Stop")
+        # Check the call stack for unwanted (new) types
 
     try:
         thing = hierarchy[name]
-    except:
-        pass
+    except KeyError:
+        return [[]]
+        # Check the call stack for unwanted (new) types
+
     if thing.real_parents:
         return thing.real_parents
 
@@ -160,7 +167,7 @@ def sort_nested(nested):
     # Sort tuples
     new_nested = []
     for i in range(len(nested)):
-        if not i % 2:   # Odd members are text, even members are lists
+        if not i % 2:  # Odd members are text, even members are lists
             new_nested.append(nested[i])
 
     # Sort the text members
@@ -233,8 +240,8 @@ def treat_file(schema_version):
     """
     schemas = {}
     properties = {}
-    with open('all-layers.nq') as f:
-        for line in f:
+    with open('all-layers.nq') as f_all:
+        for line in f_all:
             # If the line contains the schema, and parent
             thing, ancestor = parse_sub_class(line)
             if thing:
@@ -250,9 +257,9 @@ def treat_file(schema_version):
             if prop:
                 # Get the link
                 try:
-                    link = parse_link(line)
+                    link = parse_link(line, schema_version)
                 except ValueError:
-                    print(link)
+                    print(line)
                 try:
                     # Check if the property already exists
                     prop_list = properties[prop]
@@ -266,7 +273,7 @@ def treat_file(schema_version):
                     properties[prop] = [link, [prop_type]]
 
     # Delete the schemas we're not going to show because their parents are undefined (for instance 'Text')
-    unwanted = ['CssSelectorType', 'DataType', 'Float', 'Integer', 'StupidType', 'URL', 'XPathType']
+    unwanted = ['CssSelectorType', 'DataType', 'Float', 'Integer', 'URL', 'XPathType', 'PronounceableText']
     for name in unwanted:
         try:
             del schemas[name]
@@ -289,8 +296,8 @@ def treat_file(schema_version):
     # Check for orphaned classes
     # Get all the properties
     unwanted += ['Boolean', 'Date', 'DateTime', 'Number', 'Text', 'Time']
-    with open('all-layers.nq') as f:
-        for line in f:
+    with open('all-layers.nq') as f_all:
+        for line in f_all:
             # Sanity check -> see if there are things without subclass
             #   - ignore unwanted
             if '#Class' in line:
@@ -298,7 +305,7 @@ def treat_file(schema_version):
                 if thing:
                     try:
                         thing = schemas[thing]
-                        link = parse_link(line)
+                        link = parse_link(line, schema_version)
                         thing.url = link
                     except KeyError:
                         if thing not in unwanted:
@@ -343,19 +350,26 @@ def treat_file(schema_version):
         _schemas[schema] = tmp
 
     # Create the dump file
-    with open(HIERARCHY_FILE, WRITE_BINARY) as f:
-        dump([schema_version, _schemas, hierarchy], f)
+    with open(HIERARCHY_FILE, WRITE_BINARY) as f_all:
+        dump([schema_version, _schemas, hierarchy], f_all)
 
 
 if __name__ == "__main__":
-    # download = False
-    download = True
-    version = 5.0
+    download = False
+    # download = True
+    web_schema = True
+    # web_schema = False
+    version = 11.0
     if download:
         try:
-            # http://webschemas.org/version/latest/all-layers.nq
-            with urlopen(f'https://github.com/schemaorg/schemaorg/raw/master/data/releases/{version}/all-layers.nq') as f:
-                txt = f.read()
+            if web_schema:
+                with urlopen(f'https://webschemas.org/version/{version}/schemaorg-current-https.nq') as f:
+                    txt = f.read()
+            else:
+                # http://webschemas.org/version/latest/all-layers.nq
+                # https://schema.org/version/latest/schemaorg-current-https.nq
+                with urlopen('https://schema.org/version/latest/schemaorg-all-https.nq') as f:
+                    txt = f.read()
 
             with open('all-layers.nq', WRITE) as f:
                 f.write(txt.decode())
