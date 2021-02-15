@@ -64,12 +64,12 @@
         <div itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address" class="footer">
             <span itemprop="name" class="footer_item">Hans Polak</span>
             <span class="footer_item"><a href="tel:+34669765160">+34 669.765.160</a></span>
-            <span itemprop="streetAddress" class="footer_item">c/ San Antonio 52</span>
-            <span itemprop="postalCode" class="footer_item">10.470</span>
-            <span itemprop="addressLocality" class="footer_item">Villanueva de la Vera</span>
-            <span class="footer_item">Cáceres, Spain</span>
+            <span itemprop="streetAddress" class="footer_item">AP 34, Avda. Ramón y Cajal S/N</span>
+            <span itemprop="postalCode" class="footer_item">05.480</span>
+            <span itemprop="addressLocality" class="footer_item">Candeleda</span>
+            <span class="footer_item">Ávila, Spain</span>
             <span class="footer_item"><a href="mailto:info@polak.es?subject=Generator">Contact me</a></span>
-            <span itemprop="addressRegion" hidden="">CC</span>
+            <span itemprop="addressRegion" hidden="">AV</span>
             <span itemprop="addressCountry" hidden="">ES</span>
         </div>
         <span itemprop="currenciesAccepted" hidden="">EUR</span>
@@ -89,7 +89,7 @@
                 <img border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1"/>
             </form>
         </div>
-        <div class="under_footer">© Copyright 2016 - 2020, Hans Polak.<br/>&nbsp;</div>
+        <div class="under_footer">© Copyright 2016 - 2021, Hans Polak.<br/>&nbsp;</div>
         <script>
             document.getElementById("right_col").focus();
         </script>

@@ -273,7 +273,8 @@ def treat_file(schema_version):
                     properties[prop] = [link, [prop_type]]
 
     # Delete the schemas we're not going to show because their parents are undefined (for instance 'Text')
-    unwanted = ['CssSelectorType', 'DataType', 'Float', 'Integer', 'URL', 'XPathType', 'PronounceableText']
+    unwanted = ['CssSelectorType', 'DataType', 'Float', 'Integer', 'PronounceableText', 'StupidType', 'URL',
+                'XPathType']
     for name in unwanted:
         try:
             del schemas[name]
@@ -357,8 +358,8 @@ def treat_file(schema_version):
 if __name__ == "__main__":
     download = False
     # download = True
-    web_schema = True
-    # web_schema = False
+    # web_schema = True
+    web_schema = False
     version = 11.0
     if download:
         try:
