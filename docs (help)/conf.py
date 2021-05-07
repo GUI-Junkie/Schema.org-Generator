@@ -105,6 +105,10 @@ rst_epilog = """
    <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">
    Model View Controller</a>
 
+.. |Schema Generator| raw:: html
+
+   <a href="https://schema.pythonanywhere.com/" target="_blank">Schema Generator</a>
+
 """
 
 # The encoding of source files.
@@ -115,7 +119,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Schema Generator'
-copyright = u'2016, Hans Polak'
+copyright = u'2016 - 2021, Hans Polak'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

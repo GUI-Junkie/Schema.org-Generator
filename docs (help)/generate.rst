@@ -5,13 +5,13 @@ Once you have generated your schema's markup, you can then go and test it.
 
 .. raw:: html
 
-    <img src="./_images/D13.png" title="Generated output" alt"Generated output" />
+    <img src="./_images/D13.png" title="Generated output" alt="Generated output" />
 
 Test at |Structured Data Testing Tool| |external_link|
 
 .. raw:: html
 
-    <img src="./_images/D14.png" title="Link to the testing tool" alt"Link to the testing tool" /><br/><br/>
+    <img src="./_images/D14.png" title="Link to the testing tool" alt="Link to the testing tool" /><br/><br/>
 
 
 Validate the Schema
@@ -21,15 +21,15 @@ You can easily test your schema by copying it and paste it in the |Structured Da
 
 .. raw:: html
 
-    <img src="./_images/D15.png" title="The testing tool" alt"The testing tool" /><br/><br/>
+    <img src="./_images/D15.png" title="The testing tool" alt="The testing tool" /><br/><br/>
 
 .. raw:: html
 
-    <img src="./_images/D16.png" title="Paste the generated output" alt"Paste the generated output" /><br/><br/>
+    <img src="./_images/D16.png" title="Paste the generated output" alt="Paste the generated output" /><br/><br/>
 
 .. raw:: html
 
-    <img src="./_images/D17.png" title="Validated output" alt"Validated output" />
+    <img src="./_images/D17.png" title="Validated output" alt="Validated output" />
 
 |All good|? Done!
 

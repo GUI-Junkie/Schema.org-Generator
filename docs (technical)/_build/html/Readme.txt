@@ -1,5 +1,5 @@
 Tool for generating a valid Scheme as proposed by Schema.org
-Copyright (C) 2015  Hans Polak
+Copyright (C) 2016 - 2021 Hans Polak
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __author__ = "Hans Polak"
-__copyright__ = "Copyright 2015"
+__copyright__ = "Copyright 2016 - 2021"
 __credits__ = ["Hans Polak"]
 __license__ = "GNU GPL"
 __version__ = "3.0"

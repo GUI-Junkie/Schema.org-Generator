@@ -5,7 +5,7 @@ Schema Generator can store the data in the browser. This way, the user can conti
 
 .. raw:: html
 
-    <img src="./_images/D11.png" title="Saved" alt"Saved" />
+    <img src="./_images/D11.png" title="Saved" alt="Saved" />
 
 
 Recover Data button

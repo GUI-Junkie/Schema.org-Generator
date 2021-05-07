@@ -21,6 +21,11 @@ I'm assuming the reader is familiar with |html| |external_link|
     external
     donate
 
+Where is the tool?
+==================
+
+You can use the |Schema Generator| |external_link|
+
 Indices and tables
 ==================
 

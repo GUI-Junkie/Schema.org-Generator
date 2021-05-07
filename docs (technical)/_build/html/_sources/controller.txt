@@ -51,7 +51,7 @@ or using Python
     from urllib.request import urlopen
 
     try:
-        urlopen('http://localhost:{0}/quit'.format(port))
+        urlopen(f'http://localhost:{port}/quit')
     except URLError:
         pass
 
@@ -72,6 +72,6 @@ or using Python
     from urllib.request import urlopen
 
     try:
-        urlopen('http://localhost:{0}/restart'.format(port))
+        urlopen(f'http://localhost:{port}/restart')
     except URLError:
         pass

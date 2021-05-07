@@ -5,7 +5,7 @@ Visit the |generator_tool| |external_link| website and choose the top level sche
 
 .. raw:: html
 
-    <img src="./_images/D1.png" title="Generator Tool" alt"Generator Tool" />
+    <img src="./_images/D1.png" title="Generator Tool" alt="Generator Tool" />
 
 .. |generator_tool| raw:: html
 
