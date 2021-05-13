@@ -73,7 +73,7 @@ rst_epilog = """
 
 .. |Structured Data Testing Tool| raw:: html
 
-   <a href="https://developers.google.com/structured-data/testing-tool/" target="_blank">
+   <a href="https://validator.schema.org/" target="_blank">
    Structured Data Testing Tool</a>
 
 .. |Schema bot| raw:: html

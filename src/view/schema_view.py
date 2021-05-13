@@ -26,28 +26,28 @@ def frequent_things(thing):
     txt = '\t<div class="tr_even">\n'
     # txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
-           '<img src="/external_link.png" alt="external link" title="external link" />' \
-           '</a>\n'
+    txt += '<a href="http://schema.org/' + item + '" target="_blank">' + item + ''
+    txt += ' <img src="/external_link.png" alt="external link" title="external link" />'
+    txt += '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += f'<input type="text" name="{thing}_{item}_Text" />\n'
+    txt += '<input type="text" name="' + thing + '_' + item + '_Text" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
     item = 'image'
     txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
+    txt += '<a href="http://schema.org/' + item + '" target="_blank">' + item + \
            '<img src="/external_link.png" alt="external link" title="external link" />' \
            '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += f'<input type="text" name="{thing}_{item}_ImageObject" />\n'
+    txt += '<input type="text" name="' + thing + '_' + item + '_ImageObject" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
@@ -57,9 +57,9 @@ def frequent_things(thing):
     txt += '&nbsp;'
     txt += '</div>\n'
     txt += '<div class="td">\n'
-    txt += f'<a href="javascript:ShowNextSchema(\'ImageObject\', \'{thing}_image_ImageObject\', 10000);">' \
-           f'ImageObject</a>\n'
-    txt += f'<div class="td_property" id="{thing}_image_ImageObject"></div>\n'
+    txt += '<a href="javascript:ShowNextSchema(\'ImageObject\', \'' + thing + '_image_ImageObject\', 10000);">' \
+           'ImageObject</a>\n'
+    txt += '<div class="td_property" id="' + thing + '_image_ImageObject"></div>\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
@@ -67,14 +67,13 @@ def frequent_things(thing):
     txt += '\t<div class="tr_even">\n'
     # txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
-           '<img src="/external_link.png" alt="external link" title="external link" />' \
-           '</a>\n'
+    txt += '<a href="http://schema.org/' + item + '" target="_blank">' + item
+    txt += ' <img src="/external_link.png" alt="external link" title="external link" /></a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += f'<input type="text" name="{thing}_{item}_Text" />\n'
+    txt += '<input type="text" name="' + thing + '_' + item + '_Text" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
@@ -82,14 +81,14 @@ def frequent_things(thing):
     # txt += '\t<div class="tr_even">\n'
     txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
-           '<img src="/external_link.png" alt="external link" title="external link" />' \
+    txt += '<a href="http://schema.org/' + item + '" target="_blank">' + item
+    txt += '<img src="/external_link.png" alt="external link" title="external link" />' \
            '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/Text" target="_blank">Text ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += f'<input type="text" name="{thing}_{item}_Text" />\n'
+    txt += '<input type="text" name="' + thing + '_' + item + '_Text" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
 
@@ -97,14 +96,14 @@ def frequent_things(thing):
     txt += '\t<div class="tr_even">\n'
     # txt += '<div class="tr_odd">\n'
     txt += '<div class="td">\n'
-    txt += f'<a href="http://schema.org/{item}" target="_blank">{item} ' \
+    txt += '<a href="http://schema.org/' + item + '" target="_blank">' + item + ' ' \
            '<img src="/external_link.png" alt="external link" title="external link" />' \
            '</a>\n'
     txt += '</div>\n'
     txt += '<div class="td">\n'
     txt += '<a href="http://schema.org/URL" target="_blank">URL ' \
            '<img src="/external_link.png" alt="external link" title="external link" /></a>\n'
-    txt += f'<input type="text" name="{thing}_{item}_URL" />\n'
+    txt += '<input type="text" name="' + thing + '_' + item + '_URL" />\n'
     txt += '</div>\n'
     txt += '</div>\n'  # Close row
     return txt
@@ -151,7 +150,7 @@ class SchemaView:
             breadcrumb = list_hierarchy[0]
             while x < len(list_hierarchy):
                 txt += '<li>\n'
-                txt += f'<a href="/{list_hierarchy[x]}">{list_hierarchy[x]}</a>\n'
+                txt += '<a href="/' + list_hierarchy[x] + '">' + list_hierarchy[x] + '</a>\n'
                 # Recursive call
                 if list_hierarchy[x + 1]:
                     if level:
@@ -193,10 +192,11 @@ class SchemaView:
                     txt += '<li>\n'
                     # txt += f'<a href="/{list_hierarchy[x]}">{list_hierarchy[x]}</a>\n'
                     if TOP_LEVEL == level:
-                        txt += f'<a href="javascript:ShowNextLevel(\'{list_hierarchy[x]}\', \'{breadcrumb}\');">' \
-                               f'{list_hierarchy[x]}</a>\n'
+                        txt += '<a href="javascript:ShowNextLevel(\'' \
+                               + list_hierarchy[x] + '\', \'' + breadcrumb + '\');">' \
+                               + list_hierarchy[x] + '</a>\n'
                     else:
-                        txt += f'<a href="{list_hierarchy[x]}">{list_hierarchy[x]}</a>\n'
+                        txt += '<a href="' + list_hierarchy[x] + '">' + list_hierarchy[x] + '</a>\n'
                     x += 2
                     txt += '</li>\n'
                 txt += '</ul>\n'
@@ -229,16 +229,17 @@ class SchemaView:
         while x < len(properties):
             types = schema.properties[properties[x]]
             # {{types}} to insert the types later
-            txt += f'<option value="{types[0]}{properties[x]};{web_hierarchy}_{properties[x]}_Text||{{types}}">' \
-                   f'{properties[x]}</option>\n'
+            txt += '<option value="' + types[0] + properties[x] + ';' + web_hierarchy + '_' + properties[x] \
+                   + '_Text||{{types}}">' \
+                   + properties[x] + '</option>\n'
 
             output_types = ''
             for a_type in types[1]:
-                name = f'{web_hierarchy}_{properties[x]}_{a_type}'
+                name = web_hierarchy + '_' + properties[x] + '_' + a_type
                 if a_type not in PROPERTY_TYPES:
                     if output_types:
                         output_types += ','
-                    output_types += f'{a_type};{name}'
+                    output_types += a_type + ';' + name
             txt = txt.format_map({'types': output_types})
             x += 1
         txt += '\t\t</select>\n'
@@ -256,10 +257,10 @@ class SchemaView:
         :rtype: str - html
         """
         try:
-            with open(f'schemas/{schema.name}_{breadcrumb}.txt') as f:
+            with open('schemas/' + schema.name + '_' + breadcrumb + '.txt') as f:
                 txt = f.read()
         except FileNotFoundError:
-            txt = f'<input type="hidden" name="path" value="{schema.name}" />\n'
+            txt = '<input type="hidden" name="path" value="' + schema.name + '" />\n'
             txt += '<input type="hidden" name="type" id="type" value="" />\n'
             txt += '<input type="hidden" name="breadcrumb" id="breadcrumb" value="" />\n'
 
@@ -268,12 +269,12 @@ class SchemaView:
             txt += self._traverse_lvl(list_hierarchy, breadcrumb)
             txt += self._buttons()
 
-            txt += f'<h4>Properties: {schema.name}</h4>\n'
+            txt += '<h4>Properties: ' + schema.name + '</h4>\n'
             txt += self.ajax_properties(schema, schema.name, True)
             txt += '<br />\n'
             txt += self._buttons()
             if self.cloud:
-                with open(f'schemas/{schema.name}_{breadcrumb}.txt', WRITE) as f:
+                with open('schemas/' + schema.name + '_' + breadcrumb + '.txt', WRITE) as f:
                     f.write(txt)
 
         with open(HIERARCHY_FILE) as f:
@@ -334,7 +335,7 @@ class SchemaView:
 
         schema_name = schema.name
         txt += '<textarea>\n'
-        txt += f'<div itemscope itemtype="{schema.url}{schema_name}">\n'
+        txt += '<div itemscope itemtype="' + schema.url + schema_name + '">\n'
         current_div_levels = [schema_name]
         current_lvl = 1
 
@@ -372,7 +373,8 @@ class SchemaView:
                     # Open next div
                     current_div_levels.append(key_divs[j])
                     txt += '\t' * current_lvl
-                    txt += f'<div itemprop="{key_divs[j - 1]}" itemscope itemtype="{schema.url}{key_divs[j]}">\n'
+                    txt += '<div itemprop="' + key_divs[j - 1] + '" itemscope itemtype="' + \
+                           schema.url + key_divs[j] + '">\n'
                     current_lvl += 1
 
             # If this key has more levels than the current level
@@ -382,21 +384,23 @@ class SchemaView:
                 j = current_lvl * 2
                 current_div_levels.append(key_divs[j])
                 txt += '\t' * current_lvl
-                txt += f'<div itemprop="{key_divs[j - 1]}" itemscope itemtype="{schema.url}{key_divs[j]}">\n'
+                txt += '<div itemprop="' + key_divs[j - 1] + '" itemscope itemtype="' + \
+                       schema.url + key_divs[j] + '">\n'
                 current_lvl += 1
 
             # Add the key / value
             # Sanitize output
             txt += '\t' * current_lvl
-            txt += f'<span itemprop="{key_divs[-2]}">{unquote_plus(ctx.get(p)).replace("</textarea", "")}</span>\n'
+            txt += '<span itemprop="' + key_divs[-2] + '">' + \
+                   unquote_plus(ctx.get(p)).replace("</textarea", "") + '</span>\n'
 
         # After the last key, close all divs
         txt += self._close_tabs(current_lvl)
         txt += '</textarea>'
 
         txt_output = '<p>'
-        txt_output += 'You can check the generated Schema <a href="https://developers.google.com/structured-data/' \
-                      'testing-tool/" target="_blank">here</a>.'
+        txt_output += 'You can check the generated Schema <a href="https://validator.schema.org/"' \
+                      ' target="_blank">here</a>.'
         txt_output += '</p>'
 
         with open(HIERARCHY_FILE) as f:
@@ -433,7 +437,7 @@ class SchemaView:
 
         schema_name = schema.name
         txt += '<textarea>\n'
-        txt += f'<div vocab="{schema.url}" typeof="{schema_name}">\n'
+        txt += '<div vocab="' + schema.url + '" typeof="' + schema_name + '">\n'
         current_div_levels = [schema_name]
         current_lvl = 1
 
@@ -471,7 +475,7 @@ class SchemaView:
                     # Open next div
                     current_div_levels.append(key_divs[j])
                     txt += '\t' * current_lvl
-                    txt += f'<div property="{key_divs[j - 1]}" typeof="{key_divs[j]}">\n'
+                    txt += '<div property="' + key_divs[j - 1] + '" typeof="' + key_divs[j] + '">\n'
                     current_lvl += 1
 
             # If this key has more levels than the current level
@@ -481,21 +485,22 @@ class SchemaView:
                 j = current_lvl * 2
                 current_div_levels.append(key_divs[j])
                 txt += '\t' * current_lvl
-                txt += f'<div property="{key_divs[j - 1]}" typeof="{key_divs[j]}">\n'
+                txt += '<div property="' + key_divs[j - 1] + '" typeof="' + key_divs[j] + '">\n'
                 current_lvl += 1
 
             # Add the key / value
             # Sanitize output
             txt += '\t' * current_lvl
-            txt += f'<span property="{key_divs[-2]}">{unquote_plus(ctx.get(p)).replace("</textarea", "")}</span>\n'
+            txt += '<span property="' + key_divs[-2] + '">' + \
+                   unquote_plus(ctx.get(p)).replace("</textarea", "") + '</span>\n'
 
         # After the last key, close all divs
         txt += self._close_tabs(current_lvl)
         txt += '</textarea>'
 
         txt_output = '<p>'
-        txt_output += 'You can check the generated Schema <a href="https://developers.google.com/structured-data/' \
-                      'testing-tool/" target="_blank">here</a>.'
+        txt_output += 'You can check the generated Schema <a href="https://validator.schema.org/"' \
+                      ' target="_blank">here</a>.'
         txt_output += '</p>'
 
         with open(HIERARCHY_FILE) as f:
@@ -536,7 +541,7 @@ class SchemaView:
         txt += '{\n'
         # txt += f'\t"@context": "{schema.url}",\n'
         txt += '\t"@context": "http://schema.org/",\n'
-        txt += f'\t"@type": "{schema_name}"'
+        txt += '\t"@type": "' + schema_name + '"'
         current_bracket_levels = [schema_name]
         current_lvl = 1
 
@@ -575,9 +580,9 @@ class SchemaView:
                     current_bracket_levels.append(key_brackets[j])
                     txt += ',\n'
                     txt += '\t' * (current_lvl + 1)
-                    txt += f'"{key_brackets[j - 1]}": {{\n'
+                    txt += '"' + key_brackets[j - 1] + '": {{\n'
                     txt += '\t' * (current_lvl + 2)
-                    txt += f'"@type": "{key_brackets[j]}"'
+                    txt += '"@type": "' + key_brackets[j] + '"'
                     current_lvl += 1
 
             # If this key has more levels than the current level
@@ -588,16 +593,16 @@ class SchemaView:
                 current_bracket_levels.append(key_brackets[j])
                 txt += ',\n'
                 txt += '\t' * (current_lvl + 1)
-                txt += f'"{key_brackets[j - 1]}": {{\n'
+                txt += '"' + key_brackets[j - 1] + '": {{\n'
                 txt += '\t' * (current_lvl + 2)
-                txt += f'"@type": "{key_brackets[j]}"'
+                txt += '"@type": "' + key_brackets[j] + '"'
                 current_lvl += 1
 
             # Add the key / value
             # Sanitize output
             txt += ',\n'
             txt += '\t' * (current_lvl + 1)
-            txt += f'"{key_brackets[-2]}":"{unquote_plus(ctx.get(p)).replace("</textarea", "")}"'
+            txt += '"' + key_brackets[-2] + '":"' + unquote_plus(ctx.get(p)).replace("</textarea", "") + '"'
 
         # After the last key, close all brackets
         txt += self._close_brackets(current_lvl, 1)
@@ -606,8 +611,8 @@ class SchemaView:
         txt += '</textarea>'
 
         txt_output = '<p>'
-        txt_output += 'You can check the generated Schema <a href="https://developers.google.com/structured-data/' \
-                      'testing-tool/" target="_blank">here</a>.'
+        txt_output += 'You can check the generated Schema <a href="https://validator.schema.org/"' \
+                      ' target="_blank">here</a>.'
         txt_output += '</p>'
 
         with open(HIERARCHY_FILE) as f:
@@ -633,10 +638,10 @@ class SchemaView:
         if schema_bot.updated:
             # This is the good stuff
             # Update the hierarchy and go on your merry way
-            return f'Finished - Updated to schema.org version {schema_bot.version}'
+            return 'Finished - Updated to schema.org version ' + schema_bot.version + ''
 
         # False alarm, the version is unchanged
-        return f'Finished - nothing there, still schema.org version {schema_bot.version}'
+        return 'Finished - nothing there, still schema.org version ' + schema_bot.version + ''
 
     @staticmethod
     def get_schema_bot_html():
@@ -679,8 +684,8 @@ class SchemaView:
     @staticmethod
     def _breadcrumbs(schema):
         # Add the Canonical URL
-        txt = f'Canonical URL: <a href="http://schema.org/{schema.name}" target="_blank">' \
-              f'http://schema.org/{schema.name} ' \
+        txt = 'Canonical URL: <a href="http://schema.org/' + schema.name + '" target="_blank">' \
+              'http://schema.org/' + schema.name + ' ' \
               '<img src="/external_link.png" alt="external link" title="external link" />' \
               '</a><br/><br/>\n'
 
@@ -695,8 +700,9 @@ class SchemaView:
                     txt += '    <li> > </li>\n'
 
                 txt += '    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">\n'
-                txt += f'        <a itemprop="item" href="/{parent}"><span itemprop="name">{parent}</span></a>\n'
-                txt += f'        <meta itemprop="position" content="{count}" />\n'
+                txt += '        <a itemprop="item" href="/' + parent + '"><span itemprop="name">' + parent + \
+                       '</span></a>\n'
+                txt += '        <meta itemprop="position" content="' + str(count) + '" />\n'
                 txt += '    </li>\n'
 
             txt += '</ol>\n'

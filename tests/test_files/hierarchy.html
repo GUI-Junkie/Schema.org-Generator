@@ -2,62 +2,101 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Schema Generator"/>
+        <meta name="robots" content="index, follow"/>
+        <link type="image/png" rel="icon" href="/favicon.ico"/>
         <title>Hierarchy</title>
-        <link rel="stylesheet" type="text/css" href="http://schema.org/docs/schemaorg.css" />
-        <script type="text/javascript" defer src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-        <script type="text/javascript" async src="/schema.js"></script>
-        <style>
-            .button a{background:#990000}
-            #selectionbar a:hover {background:#4B0000}
-            .header {position:fixed;width:100%;top:0px}
-        </style>
+        <link rel="stylesheet" type="text/css" href="/gen_style.css" />
+        <script type="text/javascript" src="/schema.js"></script>
     </head>
-    <body onload="javascript:onLoad('');" style="height:40em;min-height:20em">
+    <body onload="javascript:onLoad('');">
         <div class="header">
-            <div id="container">
-                <div id="intro">
-                    <div id="pageHeader">
-                        <div class="wrapper">
-                            <div id="sitename">
-                            <h1>
-                                <a href="/">schema.org &lt;Generator&gt;</a>
-                            </h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <a class="logo_link" href="/">
+                <img src="/logo_gen.jpg" alt="schema.org &lt;Generator&gt;" title="schema.org &lt;Generator&gt;" class="logo"/>
+            </a>
+            <div class="wrap_release">
+                <span class="release">schema.org release: 12</span>
             </div>
-            <div id="selectionbar">
-                <div class="wrapper">
-                    <ul>
-                        <li>
-                            <a href="http://schema.org/docs/documents.html">Documentation</a>
-                        </li>
-                        <li>
-                            <a href="http://schema.org/docs/schemas.html">Schemas</a>
-                        </li>
-                        <li class="button" id="ClearButton" style="display:none">
-                            <a href="javascript:ClearData();">Clear Data</a>
-                        </li>
-                        <li class="button" id="RecoveryButton" style="display:none">
-                            <a href="javascript:RecoverData();">Recover Data</a>
-                        </li>
-                        <li class="button" id="GenerateButton" style="display:none">
-                            <a href="javascript:GenerateSchema();">Generate Schema</a>
-                        </li>
-                        <li class="button" id="SaveButton" style="display:none">
-                            <a href="javascript:SaveSchema();">Save Schema</a>
-                        </li>
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div style="text-align:left;margin-top:11em">
-            <form method="POST" action="/GenerateSchema">
+            <div id="saved" style="display:none"><p>The Schema has been saved in Local Storage</p></div>
+        </div> <!-- Fin div header !-->
+        <div class="wrapper">
+            <nav>
                 <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://polak.es/gen_help/index.html" target="_blank">Online help <img src="/external_link.png" alt="external link" title="external link" /></a>
+                    </li>
+                    <li id="SaveButton" style="display:none">
+                        <a href="javascript:SaveSchema(true);">Save Schema</a>
+                    </li>
+                    <li id="GenerateButton" style="display:none">
+                        <span>Generate</span>
+                        <a href="javascript:GenerateSchema('Microdata');">&nbsp;&nbsp;&nbsp;&nbsp;Microdata</a>
+                        <a href="javascript:GenerateSchema('RDFa');">&nbsp;&nbsp;&nbsp;&nbsp;RDFa</a>
+                        <a href="javascript:GenerateSchema('JSON');">&nbsp;&nbsp;&nbsp;&nbsp;JSON-LD</a>
+                    </li>
+                    <li id="RecoveryButton" style="display:none">
+                        <a href="javascript:RecoverData();">Recover Data</a>
+                    </li>
+                    <li id="ClearButton" style="display:none">
+                        <a href="javascript:ClearData();">Clear Data</a>
+                    </li>
+                    <li>
+                        <a href="http://schema.org/" target="_blank">Schema.org <img src="/external_link.png" alt="external link" title="external link" /></a>
+                    </li>
+                    <li>
+                        <a href="http://polak.es/en/generator.html" target="_blank">About <img src="/external_link.png" alt="external link" title="external link" /></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="right_col" id="right_col" tabindex="0">
+                <form method="POST" action="/GenerateSchema">
+                    <input type="hidden" name="breadcrumb" id="breadcrumb" value="" />
+<ul>
+<li>
+<a href="/Thing">Thing</a>
+<h4>Sublevel:</h4>
+<ul class="properties">
+<li>
+<a href="javascript:ShowNextLevel('Action', 'Thing');">Action</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('CreativeWork', 'Thing');">CreativeWork</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('Event', 'Thing');">Event</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('Intangible', 'Thing');">Intangible</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('MedicalEntity', 'Thing');">MedicalEntity</a>
+</li>
+</ul>
+<ul class="properties">
+<li>
+<a href="javascript:ShowNextLevel('Organization', 'Thing');">Organization</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('Person', 'Thing');">Person</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('Place', 'Thing');">Place</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('Product', 'Thing');">Product</a>
+</li>
+<li>
+<a href="javascript:ShowNextLevel('StupidType', 'Thing');">StupidType</a>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Full hierarchy</h4>
+<ul>
 <li>
 <a href="/Thing">Thing</a>
 <ul>
@@ -345,6 +384,12 @@
 <a href="/SearchAction">SearchAction</a>
 </li>
 <li>
+<a href="/SeekToAction">SeekToAction</a>
+</li>
+<li>
+<a href="/SolveMathAction">SolveMathAction</a>
+</li>
+<li>
 <a href="/TradeAction">TradeAction</a>
 <ul>
 <li>
@@ -358,6 +403,9 @@
 </li>
 <li>
 <a href="/PayAction">PayAction</a>
+</li>
+<li>
+<a href="/PreOrderAction">PreOrderAction</a>
 </li>
 <li>
 <a href="/QuoteAction">QuoteAction</a>
@@ -387,6 +435,9 @@
 </li>
 <li>
 <a href="/LendAction">LendAction</a>
+</li>
+<li>
+<a href="/MoneyTransfer">MoneyTransfer</a>
 </li>
 <li>
 <a href="/ReceiveAction">ReceiveAction</a>
@@ -435,13 +486,45 @@
 <a href="/CreativeWork">CreativeWork</a>
 <ul>
 <li>
+<a href="/AmpStory">AmpStory</a>
+</li>
+<li>
+<a href="/ArchiveComponent">ArchiveComponent</a>
+</li>
+<li>
 <a href="/Article">Article</a>
 <ul>
 <li>
+<a href="/AdvertiserContentArticle">AdvertiserContentArticle</a>
+</li>
+<li>
 <a href="/NewsArticle">NewsArticle</a>
+<ul>
+<li>
+<a href="/AnalysisNewsArticle">AnalysisNewsArticle</a>
+</li>
+<li>
+<a href="/AskPublicNewsArticle">AskPublicNewsArticle</a>
+</li>
+<li>
+<a href="/BackgroundNewsArticle">BackgroundNewsArticle</a>
+</li>
+<li>
+<a href="/OpinionNewsArticle">OpinionNewsArticle</a>
+</li>
+<li>
+<a href="/ReportageNewsArticle">ReportageNewsArticle</a>
+</li>
+<li>
+<a href="/ReviewNewsArticle">ReviewNewsArticle</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/Report">Report</a>
+</li>
+<li>
+<a href="/SatiricalArticle">SatiricalArticle</a>
 </li>
 <li>
 <a href="/ScholarlyArticle">ScholarlyArticle</a>
@@ -478,10 +561,24 @@
 </ul>
 </li>
 <li>
+<a href="/Atlas">Atlas</a>
+</li>
+<li>
 <a href="/Blog">Blog</a>
 </li>
 <li>
 <a href="/Book">Book</a>
+<ul>
+<li>
+<a href="/Audiobook">Audiobook</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Chapter">Chapter</a>
+</li>
+<li>
+<a href="/Claim">Claim</a>
 </li>
 <li>
 <a href="/Clip">Clip</a>
@@ -504,21 +601,49 @@
 <a href="/Code">Code</a>
 </li>
 <li>
+<a href="/Collection">Collection</a>
+<ul>
+<li>
+<a href="/ProductCollection">ProductCollection</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ComicStory">ComicStory</a>
+<ul>
+<li>
+<a href="/ComicCoverArt">ComicCoverArt</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/Comment">Comment</a>
 <ul>
 <li>
 <a href="/Answer">Answer</a>
 </li>
+<li>
+<a href="/CorrectionComment">CorrectionComment</a>
+</li>
+<li>
+<a href="/Question">Question</a>
+</li>
 </ul>
+</li>
+<li>
+<a href="/Conversation">Conversation</a>
+</li>
+<li>
+<a href="/Course">Course</a>
 </li>
 <li>
 <a href="/CreativeWorkSeason">CreativeWorkSeason</a>
 <ul>
 <li>
-<a href="/RadioSeason">RadioSeason</a>
+<a href="/PodcastSeason">PodcastSeason</a>
 </li>
 <li>
-<a href="/TVSeason">TVSeason</a>
+<a href="/RadioSeason">RadioSeason</a>
 </li>
 <li>
 <a href="/TVSeason">TVSeason</a>
@@ -536,6 +661,17 @@
 </li>
 <li>
 <a href="/Periodical">Periodical</a>
+<ul>
+<li>
+<a href="/ComicSeries">ComicSeries</a>
+</li>
+<li>
+<a href="/Newspaper">Newspaper</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PodcastSeries">PodcastSeries</a>
 </li>
 <li>
 <a href="/RadioSeries">RadioSeries</a>
@@ -545,9 +681,6 @@
 </li>
 <li>
 <a href="/VideoGameSeries">VideoGameSeries</a>
-</li>
-<li>
-<a href="/TVSeries">TVSeries</a>
 </li>
 </ul>
 </li>
@@ -559,6 +692,19 @@
 <ul>
 <li>
 <a href="/DataFeed">DataFeed</a>
+<ul>
+<li>
+<a href="/CompleteDataFeed">CompleteDataFeed</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/DefinedTermSet">DefinedTermSet</a>
+<ul>
+<li>
+<a href="/CategoryCodeSet">CategoryCodeSet</a>
 </li>
 </ul>
 </li>
@@ -566,11 +712,34 @@
 <a href="/Diet">Diet</a>
 </li>
 <li>
-<a href="/EmailMessage">EmailMessage</a>
+<a href="/DigitalDocument">DigitalDocument</a>
+<ul>
+<li>
+<a href="/NoteDigitalDocument">NoteDigitalDocument</a>
+</li>
+<li>
+<a href="/PresentationDigitalDocument">PresentationDigitalDocument</a>
+</li>
+<li>
+<a href="/SpreadsheetDigitalDocument">SpreadsheetDigitalDocument</a>
+</li>
+<li>
+<a href="/TextDigitalDocument">TextDigitalDocument</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Drawing">Drawing</a>
+</li>
+<li>
+<a href="/EducationalOccupationalCredential">EducationalOccupationalCredential</a>
 </li>
 <li>
 <a href="/Episode">Episode</a>
 <ul>
+<li>
+<a href="/PodcastEpisode">PodcastEpisode</a>
+</li>
 <li>
 <a href="/RadioEpisode">RadioEpisode</a>
 </li>
@@ -588,19 +757,78 @@
 <li>
 <a href="/VideoGame">VideoGame</a>
 </li>
+</ul>
+</li>
 <li>
-<a href="/VideoGame">VideoGame</a>
+<a href="/Guide">Guide</a>
+</li>
+<li>
+<a href="/HowTo">HowTo</a>
+<ul>
+<li>
+<a href="/Recipe">Recipe</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="/HowToDirection">HowToDirection</a>
+</li>
+<li>
+<a href="/HowToSection">HowToSection</a>
+</li>
+<li>
+<a href="/HowToStep">HowToStep</a>
+</li>
+<li>
+<a href="/HowToTip">HowToTip</a>
+</li>
+<li>
+<a href="/HyperToc">HyperToc</a>
+</li>
+<li>
+<a href="/HyperTocEntry">HyperTocEntry</a>
+</li>
+<li>
+<a href="/LearningResource">LearningResource</a>
+<ul>
+<li>
+<a href="/Course">Course</a>
+</li>
+<li>
+<a href="/Quiz">Quiz</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Legislation">Legislation</a>
+<ul>
+<li>
+<a href="/LegislationObject">LegislationObject</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Manuscript">Manuscript</a>
 </li>
 <li>
 <a href="/Map">Map</a>
 </li>
 <li>
+<a href="/MathSolver">MathSolver</a>
+</li>
+<li>
 <a href="/MediaObject">MediaObject</a>
 <ul>
 <li>
+<a href="/3DModel">3DModel</a>
+</li>
+<li>
 <a href="/AudioObject">AudioObject</a>
+<ul>
+<li>
+<a href="/Audiobook">Audiobook</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/DataDownload">DataDownload</a>
@@ -614,10 +842,27 @@
 </ul>
 </li>
 <li>
+<a href="/LegislationObject">LegislationObject</a>
+</li>
+<li>
 <a href="/MusicVideoObject">MusicVideoObject</a>
 </li>
 <li>
 <a href="/VideoObject">VideoObject</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Menu">Menu</a>
+</li>
+<li>
+<a href="/MenuSection">MenuSection</a>
+</li>
+<li>
+<a href="/Message">Message</a>
+<ul>
+<li>
+<a href="/EmailMessage">EmailMessage</a>
 </li>
 </ul>
 </li>
@@ -648,19 +893,52 @@
 <a href="/Photograph">Photograph</a>
 </li>
 <li>
+<a href="/Play">Play</a>
+</li>
+<li>
+<a href="/Poster">Poster</a>
+</li>
+<li>
 <a href="/PublicationIssue">PublicationIssue</a>
+<ul>
+<li>
+<a href="/ComicIssue">ComicIssue</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/PublicationVolume">PublicationVolume</a>
 </li>
 <li>
-<a href="/Question">Question</a>
-</li>
-<li>
-<a href="/Recipe">Recipe</a>
+<a href="/Quotation">Quotation</a>
 </li>
 <li>
 <a href="/Review">Review</a>
+<ul>
+<li>
+<a href="/ClaimReview">ClaimReview</a>
+</li>
+<li>
+<a href="/CriticReview">CriticReview</a>
+<ul>
+<li>
+<a href="/ReviewNewsArticle">ReviewNewsArticle</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/EmployerReview">EmployerReview</a>
+</li>
+<li>
+<a href="/MediaReview">MediaReview</a>
+</li>
+<li>
+<a href="/Recommendation">Recommendation</a>
+</li>
+<li>
+<a href="/UserReview">UserReview</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/Sculpture">Sculpture</a>
@@ -669,13 +947,19 @@
 <a href="/Season">Season</a>
 </li>
 <li>
-<a href="/Series">Series</a>
+<a href="/SheetMusic">SheetMusic</a>
+</li>
+<li>
+<a href="/ShortStory">ShortStory</a>
 </li>
 <li>
 <a href="/SoftwareApplication">SoftwareApplication</a>
 <ul>
 <li>
 <a href="/MobileApplication">MobileApplication</a>
+</li>
+<li>
+<a href="/VideoGame">VideoGame</a>
 </li>
 <li>
 <a href="/WebApplication">WebApplication</a>
@@ -686,7 +970,37 @@
 <a href="/SoftwareSourceCode">SoftwareSourceCode</a>
 </li>
 <li>
+<a href="/SpecialAnnouncement">SpecialAnnouncement</a>
+</li>
+<li>
+<a href="/TVSeason">TVSeason</a>
+</li>
+<li>
+<a href="/TVSeries">TVSeries</a>
+</li>
+<li>
+<a href="/Thesis">Thesis</a>
+</li>
+<li>
 <a href="/VisualArtwork">VisualArtwork</a>
+<ul>
+<li>
+<a href="/CoverArt">CoverArt</a>
+<ul>
+<li>
+<a href="/ComicCoverArt">ComicCoverArt</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/WebContent">WebContent</a>
+<ul>
+<li>
+<a href="/HealthTopicContent">HealthTopicContent</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/WebPage">WebPage</a>
@@ -701,6 +1015,9 @@
 <a href="/CollectionPage">CollectionPage</a>
 <ul>
 <li>
+<a href="/MediaGallery">MediaGallery</a>
+<ul>
+<li>
 <a href="/ImageGallery">ImageGallery</a>
 </li>
 <li>
@@ -708,8 +1025,13 @@
 </li>
 </ul>
 </li>
+</ul>
+</li>
 <li>
 <a href="/ContactPage">ContactPage</a>
+</li>
+<li>
+<a href="/FAQPage">FAQPage</a>
 </li>
 <li>
 <a href="/ItemPage">ItemPage</a>
@@ -722,6 +1044,9 @@
 </li>
 <li>
 <a href="/QAPage">QAPage</a>
+</li>
+<li>
+<a href="/RealEstateListing">RealEstateListing</a>
 </li>
 <li>
 <a href="/SearchResultsPage">SearchResultsPage</a>
@@ -754,12 +1079,6 @@
 <li>
 <a href="/WebSite">WebSite</a>
 </li>
-<li>
-<a href="/Diet">Diet</a>
-</li>
-<li>
-<a href="/ExercisePlan">ExercisePlan</a>
-</li>
 </ul>
 </li>
 <li>
@@ -775,6 +1094,9 @@
 <a href="/ComedyEvent">ComedyEvent</a>
 </li>
 <li>
+<a href="/CourseInstance">CourseInstance</a>
+</li>
+<li>
 <a href="/DanceEvent">DanceEvent</a>
 </li>
 <li>
@@ -784,6 +1106,9 @@
 <a href="/EducationEvent">EducationEvent</a>
 </li>
 <li>
+<a href="/EventSeries">EventSeries</a>
+</li>
+<li>
 <a href="/ExhibitionEvent">ExhibitionEvent</a>
 </li>
 <li>
@@ -791,6 +1116,9 @@
 </li>
 <li>
 <a href="/FoodEvent">FoodEvent</a>
+</li>
+<li>
+<a href="/Hackathon">Hackathon</a>
 </li>
 <li>
 <a href="/LiteraryEvent">LiteraryEvent</a>
@@ -865,6 +1193,9 @@
 <a href="/Intangible">Intangible</a>
 <ul>
 <li>
+<a href="/ActionAccessSpecification">ActionAccessSpecification</a>
+</li>
+<li>
 <a href="/AlignmentObject">AlignmentObject</a>
 </li>
 <li>
@@ -878,25 +1209,35 @@
 </li>
 <li>
 <a href="/MedicalAudience">MedicalAudience</a>
+<ul>
+<li>
+<a href="/Patient">Patient</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/PeopleAudience">PeopleAudience</a>
 <ul>
+<li>
+<a href="/MedicalAudience">MedicalAudience</a>
+<ul>
+<li>
+<a href="/Patient">Patient</a>
+</li>
+</ul>
+</li>
 <li>
 <a href="/ParentAudience">ParentAudience</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/MedicalAudience">MedicalAudience</a>
-</li>
-<li>
-<a href="/MedicalAudience">MedicalAudience</a>
-</li>
-<li>
-<a href="/MedicalAudience">MedicalAudience</a>
+<a href="/Researcher">Researcher</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="/BedDetails">BedDetails</a>
 </li>
 <li>
 <a href="/Brand">Brand</a>
@@ -906,6 +1247,14 @@
 <ul>
 <li>
 <a href="/RadioChannel">RadioChannel</a>
+<ul>
+<li>
+<a href="/AMRadioChannel">AMRadioChannel</a>
+</li>
+<li>
+<a href="/FMRadioChannel">FMRadioChannel</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/TelevisionChannel">TelevisionChannel</a>
@@ -913,16 +1262,46 @@
 </ul>
 </li>
 <li>
-<a href="/BusTrip">BusTrip</a>
+<a href="/BroadcastFrequencySpecification">BroadcastFrequencySpecification</a>
 </li>
 <li>
 <a href="/Class">Class</a>
 </li>
 <li>
+<a href="/ComputerLanguage">ComputerLanguage</a>
+</li>
+<li>
 <a href="/DataFeedItem">DataFeedItem</a>
 </li>
 <li>
+<a href="/DefinedTerm">DefinedTerm</a>
+<ul>
+<li>
+<a href="/CategoryCode">CategoryCode</a>
+<ul>
+<li>
+<a href="/MedicalCode">MedicalCode</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <a href="/Demand">Demand</a>
+</li>
+<li>
+<a href="/DigitalDocumentPermission">DigitalDocumentPermission</a>
+</li>
+<li>
+<a href="/EducationalOccupationalProgram">EducationalOccupationalProgram</a>
+<ul>
+<li>
+<a href="/WorkBasedProgram">WorkBasedProgram</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/EnergyConsumptionDetails">EnergyConsumptionDetails</a>
 </li>
 <li>
 <a href="/EntryPoint">EntryPoint</a>
@@ -930,9 +1309,6 @@
 <li>
 <a href="/Enumeration">Enumeration</a>
 <ul>
-<li>
-<a href="/ActionStatusType">ActionStatusType</a>
-</li>
 <li>
 <a href="/BoardingPolicyType">BoardingPolicyType</a>
 </li>
@@ -946,6 +1322,9 @@
 <a href="/BusinessFunction">BusinessFunction</a>
 </li>
 <li>
+<a href="/CarUsageType">CarUsageType</a>
+</li>
+<li>
 <a href="/ContactPointOption">ContactPointOption</a>
 </li>
 <li>
@@ -953,35 +1332,35 @@
 </li>
 <li>
 <a href="/DeliveryMethod">DeliveryMethod</a>
-<ul>
-<li>
-<a href="/LockerDelivery">LockerDelivery</a>
 </li>
 <li>
-<a href="/ParcelService">ParcelService</a>
+<a href="/DigitalDocumentPermissionType">DigitalDocumentPermissionType</a>
+</li>
+<li>
+<a href="/EnergyEfficiencyEnumeration">EnergyEfficiencyEnumeration</a>
+<ul>
+<li>
+<a href="/EUEnergyEfficiencyEnumeration">EUEnergyEfficiencyEnumeration</a>
+</li>
+<li>
+<a href="/EnergyStarEnergyEfficiencyEnumeration">EnergyStarEnergyEfficiencyEnumeration</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/DrugCostCategory">DrugCostCategory</a>
-</li>
-<li>
-<a href="/DrugPregnancyCategory">DrugPregnancyCategory</a>
-</li>
-<li>
-<a href="/DrugPrescriptionStatus">DrugPrescriptionStatus</a>
-</li>
-<li>
-<a href="/EventStatusType">EventStatusType</a>
+<a href="/EventAttendanceModeEnumeration">EventAttendanceModeEnumeration</a>
 </li>
 <li>
 <a href="/GamePlayMode">GamePlayMode</a>
 </li>
 <li>
-<a href="/GameServerStatus">GameServerStatus</a>
+<a href="/GenderType">GenderType</a>
 </li>
 <li>
-<a href="/InfectiousAgentClass">InfectiousAgentClass</a>
+<a href="/GovernmentBenefitsType">GovernmentBenefitsType</a>
+</li>
+<li>
+<a href="/HealthAspectEnumeration">HealthAspectEnumeration</a>
 </li>
 <li>
 <a href="/ItemAvailability">ItemAvailability</a>
@@ -990,79 +1369,28 @@
 <a href="/ItemListOrderType">ItemListOrderType</a>
 </li>
 <li>
+<a href="/LegalValueLevel">LegalValueLevel</a>
+</li>
+<li>
 <a href="/MapCategoryType">MapCategoryType</a>
 </li>
 <li>
-<a href="/MedicalDevicePurpose">MedicalDevicePurpose</a>
+<a href="/MeasurementTypeEnumeration">MeasurementTypeEnumeration</a>
+<ul>
+<li>
+<a href="/BodyMeasurementTypeEnumeration">BodyMeasurementTypeEnumeration</a>
+</li>
+<li>
+<a href="/WearableMeasurementTypeEnumeration">WearableMeasurementTypeEnumeration</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MediaManipulationRatingEnumeration">MediaManipulationRatingEnumeration</a>
 </li>
 <li>
 <a href="/MedicalEnumeration">MedicalEnumeration</a>
 <ul>
-<li>
-<a href="/MedicalEvidenceLevel">MedicalEvidenceLevel</a>
-</li>
-<li>
-<a href="/MedicalImagingTechnique">MedicalImagingTechnique</a>
-</li>
-<li>
-<a href="/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>
-</li>
-<li>
-<a href="/MedicalProcedureType">MedicalProcedureType</a>
-</li>
-<li>
-<a href="/MedicalSpecialty">MedicalSpecialty</a>
-</li>
-<li>
-<a href="/MedicalStudyStatus">MedicalStudyStatus</a>
-</li>
-<li>
-<a href="/MedicalTrialDesign">MedicalTrialDesign</a>
-</li>
-<li>
-<a href="/MedicineSystem">MedicineSystem</a>
-</li>
-<li>
-<a href="/PhysicalActivityCategory">PhysicalActivityCategory</a>
-</li>
-<li>
-<a href="/PhysicalExam">PhysicalExam</a>
-</li>
-<li>
-<a href="/MedicalEvidenceLevel">MedicalEvidenceLevel</a>
-</li>
-<li>
-<a href="/MedicalImagingTechnique">MedicalImagingTechnique</a>
-</li>
-<li>
-<a href="/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>
-</li>
-<li>
-<a href="/MedicalProcedureType">MedicalProcedureType</a>
-</li>
-<li>
-<a href="/MedicalSpecialty">MedicalSpecialty</a>
-</li>
-<li>
-<a href="/MedicalStudyStatus">MedicalStudyStatus</a>
-</li>
-<li>
-<a href="/MedicalTrialDesign">MedicalTrialDesign</a>
-</li>
-<li>
-<a href="/MedicineSystem">MedicineSystem</a>
-</li>
-<li>
-<a href="/PhysicalActivityCategory">PhysicalActivityCategory</a>
-</li>
-<li>
-<a href="/PhysicalExam">PhysicalExam</a>
-</li>
-<li>
-<a href="/MedicalSpecialty">MedicalSpecialty</a>
-</li>
-</ul>
-</li>
 <li>
 <a href="/DrugCostCategory">DrugCostCategory</a>
 </li>
@@ -1076,7 +1404,42 @@
 <a href="/InfectiousAgentClass">InfectiousAgentClass</a>
 </li>
 <li>
+<a href="/MedicalAudienceType">MedicalAudienceType</a>
+</li>
+<li>
 <a href="/MedicalDevicePurpose">MedicalDevicePurpose</a>
+</li>
+<li>
+<a href="/MedicalEvidenceLevel">MedicalEvidenceLevel</a>
+</li>
+<li>
+<a href="/MedicalImagingTechnique">MedicalImagingTechnique</a>
+</li>
+<li>
+<a href="/MedicalObservationalStudyDesign">MedicalObservationalStudyDesign</a>
+</li>
+<li>
+<a href="/MedicalProcedureType">MedicalProcedureType</a>
+</li>
+<li>
+<a href="/MedicalSpecialty">MedicalSpecialty</a>
+</li>
+<li>
+<a href="/MedicalStudyStatus">MedicalStudyStatus</a>
+</li>
+<li>
+<a href="/MedicalTrialDesign">MedicalTrialDesign</a>
+</li>
+<li>
+<a href="/MedicineSystem">MedicineSystem</a>
+</li>
+<li>
+<a href="/PhysicalExam">PhysicalExam</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MerchantReturnEnumeration">MerchantReturnEnumeration</a>
 </li>
 <li>
 <a href="/MusicAlbumProductionType">MusicAlbumProductionType</a>
@@ -1088,30 +1451,58 @@
 <a href="/MusicReleaseFormatType">MusicReleaseFormatType</a>
 </li>
 <li>
+<a href="/NonprofitType">NonprofitType</a>
+<ul>
+<li>
+<a href="/NLNonprofitType">NLNonprofitType</a>
+</li>
+<li>
+<a href="/UKNonprofitType">UKNonprofitType</a>
+</li>
+<li>
+<a href="/USNonprofitType">USNonprofitType</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/OfferItemCondition">OfferItemCondition</a>
 </li>
 <li>
-<a href="/OrderStatus">OrderStatus</a>
-</li>
-<li>
 <a href="/PaymentMethod">PaymentMethod</a>
+<ul>
+<li>
+<a href="/PaymentCard">PaymentCard</a>
 <ul>
 <li>
 <a href="/CreditCard">CreditCard</a>
 </li>
 </ul>
 </li>
+</ul>
+</li>
 <li>
-<a href="/PaymentStatusType">PaymentStatusType</a>
+<a href="/PhysicalActivityCategory">PhysicalActivityCategory</a>
+</li>
+<li>
+<a href="/PriceComponentTypeEnumeration">PriceComponentTypeEnumeration</a>
+</li>
+<li>
+<a href="/PriceTypeEnumeration">PriceTypeEnumeration</a>
+</li>
+<li>
+<a href="/ProductReturnEnumeration">ProductReturnEnumeration</a>
 </li>
 <li>
 <a href="/QualitativeValue">QualitativeValue</a>
 <ul>
 <li>
-<a href="/CarUsageType">CarUsageType</a>
+<a href="/BedType">BedType</a>
 </li>
 <li>
 <a href="/DriveWheelConfigurationValue">DriveWheelConfigurationValue</a>
+</li>
+<li>
+<a href="/SizeSpecification">SizeSpecification</a>
 </li>
 <li>
 <a href="/SteeringPositionValue">SteeringPositionValue</a>
@@ -1119,27 +1510,100 @@
 </ul>
 </li>
 <li>
-<a href="/ReservationStatusType">ReservationStatusType</a>
+<a href="/RefundTypeEnumeration">RefundTypeEnumeration</a>
+</li>
+<li>
+<a href="/RestrictedDiet">RestrictedDiet</a>
+</li>
+<li>
+<a href="/ReturnFeesEnumeration">ReturnFeesEnumeration</a>
 </li>
 <li>
 <a href="/RsvpResponseType">RsvpResponseType</a>
 </li>
 <li>
-<a href="/Specialty">Specialty</a>
-</li>
+<a href="/SizeGroupEnumeration">SizeGroupEnumeration</a>
+<ul>
 <li>
-<a href="/WarrantyScope">WarrantyScope</a>
-</li>
-<li>
-<a href="/MedicalEnumeration">MedicalEnumeration</a>
+<a href="/WearableSizeGroupEnumeration">WearableSizeGroupEnumeration</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="/Flight">Flight</a>
+<a href="/SizeSystemEnumeration">SizeSystemEnumeration</a>
+<ul>
+<li>
+<a href="/WearableSizeSystemEnumeration">WearableSizeSystemEnumeration</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Specialty">Specialty</a>
+<ul>
+<li>
+<a href="/MedicalSpecialty">MedicalSpecialty</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/StatusEnumeration">StatusEnumeration</a>
+<ul>
+<li>
+<a href="/ActionStatusType">ActionStatusType</a>
+</li>
+<li>
+<a href="/EventStatusType">EventStatusType</a>
+</li>
+<li>
+<a href="/GameServerStatus">GameServerStatus</a>
+</li>
+<li>
+<a href="/LegalForceStatus">LegalForceStatus</a>
+</li>
+<li>
+<a href="/OrderStatus">OrderStatus</a>
+</li>
+<li>
+<a href="/PaymentStatusType">PaymentStatusType</a>
+</li>
+<li>
+<a href="/ReservationStatusType">ReservationStatusType</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/WarrantyScope">WarrantyScope</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FloorPlan">FloorPlan</a>
 </li>
 <li>
 <a href="/GameServer">GameServer</a>
+</li>
+<li>
+<a href="/GeospatialGeometry">GeospatialGeometry</a>
+</li>
+<li>
+<a href="/Grant">Grant</a>
+<ul>
+<li>
+<a href="/MonetaryGrant">MonetaryGrant</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HealthInsurancePlan">HealthInsurancePlan</a>
+</li>
+<li>
+<a href="/HealthPlanCostSharingSpecification">HealthPlanCostSharingSpecification</a>
+</li>
+<li>
+<a href="/HealthPlanFormulary">HealthPlanFormulary</a>
+</li>
+<li>
+<a href="/HealthPlanNetwork">HealthPlanNetwork</a>
 </li>
 <li>
 <a href="/Invoice">Invoice</a>
@@ -1149,6 +1613,12 @@
 <ul>
 <li>
 <a href="/BreadcrumbList">BreadcrumbList</a>
+</li>
+<li>
+<a href="/HowToSection">HowToSection</a>
+</li>
+<li>
+<a href="/HowToStep">HowToStep</a>
 </li>
 <li>
 <a href="/OfferCatalog">OfferCatalog</a>
@@ -1163,12 +1633,61 @@
 </li>
 <li>
 <a href="/ListItem">ListItem</a>
+<ul>
+<li>
+<a href="/HowToDirection">HowToDirection</a>
+</li>
+<li>
+<a href="/HowToItem">HowToItem</a>
+<ul>
+<li>
+<a href="/HowToSupply">HowToSupply</a>
+</li>
+<li>
+<a href="/HowToTool">HowToTool</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HowToSection">HowToSection</a>
+</li>
+<li>
+<a href="/HowToStep">HowToStep</a>
+</li>
+<li>
+<a href="/HowToTip">HowToTip</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MediaSubscription">MediaSubscription</a>
+</li>
+<li>
+<a href="/MenuItem">MenuItem</a>
+</li>
+<li>
+<a href="/MerchantReturnPolicy">MerchantReturnPolicy</a>
+</li>
+<li>
+<a href="/Observation">Observation</a>
+</li>
+<li>
+<a href="/Occupation">Occupation</a>
+</li>
+<li>
+<a href="/OccupationalExperienceRequirements">OccupationalExperienceRequirements</a>
 </li>
 <li>
 <a href="/Offer">Offer</a>
 <ul>
 <li>
 <a href="/AggregateOffer">AggregateOffer</a>
+</li>
+<li>
+<a href="/OfferForLease">OfferForLease</a>
+</li>
+<li>
+<a href="/OfferForPurchase">OfferForPurchase</a>
 </li>
 </ul>
 </li>
@@ -1188,6 +1707,9 @@
 <a href="/GovernmentPermit">GovernmentPermit</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="/ProductReturnPolicy">ProductReturnPolicy</a>
 </li>
 <li>
 <a href="/ProgramMembership">ProgramMembership</a>
@@ -1220,12 +1742,23 @@
 <ul>
 <li>
 <a href="/AggregateRating">AggregateRating</a>
+<ul>
+<li>
+<a href="/EmployerAggregateRating">EmployerAggregateRating</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/EndorsementRating">EndorsementRating</a>
 </li>
 </ul>
 </li>
 <li>
 <a href="/Reservation">Reservation</a>
 <ul>
+<li>
+<a href="/BoatReservation">BoatReservation</a>
+</li>
 <li>
 <a href="/BusReservation">BusReservation</a>
 </li>
@@ -1259,6 +1792,9 @@
 <a href="/Role">Role</a>
 <ul>
 <li>
+<a href="/LinkRole">LinkRole</a>
+</li>
+<li>
 <a href="/OrganizationRole">OrganizationRole</a>
 <ul>
 <li>
@@ -1272,16 +1808,121 @@
 </ul>
 </li>
 <li>
+<a href="/Schedule">Schedule</a>
+</li>
+<li>
 <a href="/Seat">Seat</a>
+</li>
+<li>
+<a href="/Series">Series</a>
+<ul>
+<li>
+<a href="/CreativeWorkSeries">CreativeWorkSeries</a>
+<ul>
+<li>
+<a href="/BookSeries">BookSeries</a>
+</li>
+<li>
+<a href="/MovieSeries">MovieSeries</a>
+</li>
+<li>
+<a href="/Periodical">Periodical</a>
+<ul>
+<li>
+<a href="/ComicSeries">ComicSeries</a>
+</li>
+<li>
+<a href="/Newspaper">Newspaper</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PodcastSeries">PodcastSeries</a>
+</li>
+<li>
+<a href="/RadioSeries">RadioSeries</a>
+</li>
+<li>
+<a href="/TVSeries">TVSeries</a>
+</li>
+<li>
+<a href="/VideoGameSeries">VideoGameSeries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/EventSeries">EventSeries</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/Service">Service</a>
 <ul>
 <li>
 <a href="/BroadcastService">BroadcastService</a>
+<ul>
+<li>
+<a href="/RadioBroadcastService">RadioBroadcastService</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/CableOrSatelliteService">CableOrSatelliteService</a>
+</li>
+<li>
+<a href="/FinancialProduct">FinancialProduct</a>
+<ul>
+<li>
+<a href="/BankAccount">BankAccount</a>
+<ul>
+<li>
+<a href="/DepositAccount">DepositAccount</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/CurrencyConversionService">CurrencyConversionService</a>
+</li>
+<li>
+<a href="/InvestmentOrDeposit">InvestmentOrDeposit</a>
+<ul>
+<li>
+<a href="/BrokerageAccount">BrokerageAccount</a>
+</li>
+<li>
+<a href="/DepositAccount">DepositAccount</a>
+</li>
+<li>
+<a href="/InvestmentFund">InvestmentFund</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/LoanOrCredit">LoanOrCredit</a>
+<ul>
+<li>
+<a href="/CreditCard">CreditCard</a>
+</li>
+<li>
+<a href="/MortgageLoan">MortgageLoan</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PaymentCard">PaymentCard</a>
+<ul>
+<li>
+<a href="/CreditCard">CreditCard</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PaymentService">PaymentService</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FoodService">FoodService</a>
 </li>
 <li>
 <a href="/GovernmentService">GovernmentService</a>
@@ -1292,14 +1933,26 @@
 <li>
 <a href="/TaxiService">TaxiService</a>
 </li>
+<li>
+<a href="/WebAPI">WebAPI</a>
+</li>
 </ul>
 </li>
 <li>
 <a href="/ServiceChannel">ServiceChannel</a>
 </li>
 <li>
+<a href="/SpeakableSpecification">SpeakableSpecification</a>
+</li>
+<li>
+<a href="/StatisticalPopulation">StatisticalPopulation</a>
+</li>
+<li>
 <a href="/StructuredValue">StructuredValue</a>
 <ul>
+<li>
+<a href="/CDCPMDRecord">CDCPMDRecord</a>
+</li>
 <li>
 <a href="/ContactPoint">ContactPoint</a>
 <ul>
@@ -1312,7 +1965,16 @@
 <a href="/DatedMoneySpecification">DatedMoneySpecification</a>
 </li>
 <li>
+<a href="/DefinedRegion">DefinedRegion</a>
+</li>
+<li>
+<a href="/DeliveryTimeSettings">DeliveryTimeSettings</a>
+</li>
+<li>
 <a href="/EngineSpecification">EngineSpecification</a>
+</li>
+<li>
+<a href="/ExchangeRateSpecification">ExchangeRateSpecification</a>
 </li>
 <li>
 <a href="/GeoCoordinates">GeoCoordinates</a>
@@ -1329,7 +1991,13 @@
 <a href="/InteractionCounter">InteractionCounter</a>
 </li>
 <li>
+<a href="/MonetaryAmount">MonetaryAmount</a>
+</li>
+<li>
 <a href="/NutritionInformation">NutritionInformation</a>
+</li>
+<li>
+<a href="/OfferShippingDetails">OfferShippingDetails</a>
 </li>
 <li>
 <a href="/OpeningHoursSpecification">OpeningHoursSpecification</a>
@@ -1338,8 +2006,14 @@
 <a href="/OwnershipInfo">OwnershipInfo</a>
 </li>
 <li>
+<a href="/PostalCodeRangeSpecification">PostalCodeRangeSpecification</a>
+</li>
+<li>
 <a href="/PriceSpecification">PriceSpecification</a>
 <ul>
+<li>
+<a href="/CompoundPriceSpecification">CompoundPriceSpecification</a>
+</li>
 <li>
 <a href="/DeliveryChargeSpecification">DeliveryChargeSpecification</a>
 </li>
@@ -1353,9 +2027,31 @@
 </li>
 <li>
 <a href="/PropertyValue">PropertyValue</a>
+<ul>
+<li>
+<a href="/LocationFeatureSpecification">LocationFeatureSpecification</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/QuantitativeValue">QuantitativeValue</a>
+</li>
+<li>
+<a href="/QuantitativeValueDistribution">QuantitativeValueDistribution</a>
+<ul>
+<li>
+<a href="/MonetaryAmountDistribution">MonetaryAmountDistribution</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/RepaymentSpecification">RepaymentSpecification</a>
+</li>
+<li>
+<a href="/ShippingDeliveryTime">ShippingDeliveryTime</a>
+</li>
+<li>
+<a href="/ShippingRateSettings">ShippingRateSettings</a>
 </li>
 <li>
 <a href="/TypeAndQuantityNode">TypeAndQuantityNode</a>
@@ -1369,7 +2065,27 @@
 <a href="/Ticket">Ticket</a>
 </li>
 <li>
+<a href="/Trip">Trip</a>
+<ul>
+<li>
+<a href="/BoatTrip">BoatTrip</a>
+</li>
+<li>
+<a href="/BusTrip">BusTrip</a>
+</li>
+<li>
+<a href="/Flight">Flight</a>
+</li>
+<li>
+<a href="/TouristTrip">TouristTrip</a>
+</li>
+<li>
 <a href="/TrainTrip">TrainTrip</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/VirtualLocation">VirtualLocation</a>
 </li>
 </ul>
 </li>
@@ -1417,6 +2133,28 @@
 <a href="/AnatomicalSystem">AnatomicalSystem</a>
 </li>
 <li>
+<a href="/DrugClass">DrugClass</a>
+</li>
+<li>
+<a href="/DrugCost">DrugCost</a>
+</li>
+<li>
+<a href="/LifestyleModification">LifestyleModification</a>
+<ul>
+<li>
+<a href="/Diet">Diet</a>
+</li>
+<li>
+<a href="/PhysicalActivity">PhysicalActivity</a>
+<ul>
+<li>
+<a href="/ExercisePlan">ExercisePlan</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <a href="/MedicalCause">MedicalCause</a>
 </li>
 <li>
@@ -1424,6 +2162,22 @@
 <ul>
 <li>
 <a href="/InfectiousDisease">InfectiousDisease</a>
+</li>
+<li>
+<a href="/MedicalSignOrSymptom">MedicalSignOrSymptom</a>
+<ul>
+<li>
+<a href="/MedicalSign">MedicalSign</a>
+<ul>
+<li>
+<a href="/VitalSign">VitalSign</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalSymptom">MedicalSymptom</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -1479,9 +2233,6 @@
 </ul>
 </li>
 <li>
-<a href="/DrugCost">DrugCost</a>
-</li>
-<li>
 <a href="/DrugLegalStatus">DrugLegalStatus</a>
 </li>
 <li>
@@ -1505,16 +2256,38 @@
 <a href="/PalliativeProcedure">PalliativeProcedure</a>
 </li>
 <li>
-<a href="/TherapeuticProcedure">TherapeuticProcedure</a>
+<a href="/PhysicalExam">PhysicalExam</a>
 </li>
 <li>
-<a href="/DiagnosticProcedure">DiagnosticProcedure</a>
+<a href="/SurgicalProcedure">SurgicalProcedure</a>
+</li>
+<li>
+<a href="/TherapeuticProcedure">TherapeuticProcedure</a>
+<ul>
+<li>
+<a href="/MedicalTherapy">MedicalTherapy</a>
+<ul>
+<li>
+<a href="/OccupationalTherapy">OccupationalTherapy</a>
 </li>
 <li>
 <a href="/PalliativeProcedure">PalliativeProcedure</a>
 </li>
 <li>
-<a href="/TherapeuticProcedure">TherapeuticProcedure</a>
+<a href="/PhysicalTherapy">PhysicalTherapy</a>
+</li>
+<li>
+<a href="/RadiationTherapy">RadiationTherapy</a>
+</li>
+<li>
+<a href="/RespiratoryTherapy">RespiratoryTherapy</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/PsychologicalTreatment">PsychologicalTreatment</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -1531,17 +2304,6 @@
 </li>
 <li>
 <a href="/MedicalRiskFactor">MedicalRiskFactor</a>
-</li>
-<li>
-<a href="/MedicalSignOrSymptom">MedicalSignOrSymptom</a>
-<ul>
-<li>
-<a href="/MedicalSign">MedicalSign</a>
-</li>
-<li>
-<a href="/MedicalSymptom">MedicalSymptom</a>
-</li>
-</ul>
 </li>
 <li>
 <a href="/MedicalStudy">MedicalStudy</a>
@@ -1572,33 +2334,13 @@
 </ul>
 </li>
 <li>
-<a href="/MedicalTherapy">MedicalTherapy</a>
+<a href="/Substance">Substance</a>
 <ul>
 <li>
 <a href="/DietarySupplement">DietarySupplement</a>
 </li>
 <li>
 <a href="/Drug">Drug</a>
-</li>
-<li>
-<a href="/DrugClass">DrugClass</a>
-</li>
-<li>
-<a href="/LifestyleModification">LifestyleModification</a>
-<ul>
-<li>
-<a href="/PhysicalActivity">PhysicalActivity</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="/PhysicalTherapy">PhysicalTherapy</a>
-</li>
-<li>
-<a href="/PsychologicalTreatment">PsychologicalTreatment</a>
-</li>
-<li>
-<a href="/RadiationTherapy">RadiationTherapy</a>
 </li>
 </ul>
 </li>
@@ -1612,6 +2354,9 @@
 <ul>
 <li>
 <a href="/Airline">Airline</a>
+</li>
+<li>
+<a href="/Consortium">Consortium</a>
 </li>
 <li>
 <a href="/Corporation">Corporation</a>
@@ -1640,13 +2385,22 @@
 </ul>
 </li>
 <li>
+<a href="/FundingScheme">FundingScheme</a>
+</li>
+<li>
 <a href="/GovernmentOrganization">GovernmentOrganization</a>
+</li>
+<li>
+<a href="/LibrarySystem">LibrarySystem</a>
 </li>
 <li>
 <a href="/LocalBusiness">LocalBusiness</a>
 <ul>
 <li>
 <a href="/AnimalShelter">AnimalShelter</a>
+</li>
+<li>
+<a href="/ArchiveOrganization">ArchiveOrganization</a>
 </li>
 <li>
 <a href="/AutomotiveBusiness">AutomotiveBusiness</a>
@@ -1678,13 +2432,13 @@
 <li>
 <a href="/MotorcycleRepair">MotorcycleRepair</a>
 </li>
-<li>
-<a href="/AutoPartsStore">AutoPartsStore</a>
-</li>
 </ul>
 </li>
 <li>
 <a href="/ChildCare">ChildCare</a>
+</li>
+<li>
+<a href="/Dentist">Dentist</a>
 </li>
 <li>
 <a href="/DryCleaningOrLaundry">DryCleaningOrLaundry</a>
@@ -1692,18 +2446,6 @@
 <li>
 <a href="/EmergencyService">EmergencyService</a>
 <ul>
-<li>
-<a href="/FireStation">FireStation</a>
-</li>
-<li>
-<a href="/Hospital">Hospital</a>
-</li>
-<li>
-<a href="/PoliceStation">PoliceStation</a>
-</li>
-<li>
-<a href="/Hospital">Hospital</a>
-</li>
 <li>
 <a href="/FireStation">FireStation</a>
 </li>
@@ -1742,9 +2484,6 @@
 <li>
 <a href="/NightClub">NightClub</a>
 </li>
-<li>
-<a href="/MovieTheater">MovieTheater</a>
-</li>
 </ul>
 </li>
 <li>
@@ -1778,6 +2517,9 @@
 </li>
 <li>
 <a href="/CafeOrCoffeeShop">CafeOrCoffeeShop</a>
+</li>
+<li>
+<a href="/Distillery">Distillery</a>
 </li>
 <li>
 <a href="/FastFoodRestaurant">FastFoodRestaurant</a>
@@ -1821,9 +2563,6 @@
 </li>
 <li>
 <a href="/TattooParlor">TattooParlor</a>
-</li>
-<li>
-<a href="/HealthClub">HealthClub</a>
 </li>
 </ul>
 </li>
@@ -1880,6 +2619,9 @@
 <a href="/BedAndBreakfast">BedAndBreakfast</a>
 </li>
 <li>
+<a href="/Campground">Campground</a>
+</li>
+<li>
 <a href="/Hostel">Hostel</a>
 </li>
 <li>
@@ -1888,22 +2630,71 @@
 <li>
 <a href="/Motel">Motel</a>
 </li>
+<li>
+<a href="/Resort">Resort</a>
+<ul>
+<li>
+<a href="/SkiResort">SkiResort</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<a href="/MedicalOrganization">MedicalOrganization</a>
+<a href="/MedicalBusiness">MedicalBusiness</a>
 <ul>
+<li>
+<a href="/CommunityHealth">CommunityHealth</a>
+</li>
 <li>
 <a href="/Dentist">Dentist</a>
 </li>
 <li>
-<a href="/DiagnosticLab">DiagnosticLab</a>
+<a href="/Dermatology">Dermatology</a>
+</li>
+<li>
+<a href="/DietNutrition">DietNutrition</a>
+</li>
+<li>
+<a href="/Emergency">Emergency</a>
+</li>
+<li>
+<a href="/Geriatric">Geriatric</a>
+</li>
+<li>
+<a href="/Gynecologic">Gynecologic</a>
 </li>
 <li>
 <a href="/MedicalClinic">MedicalClinic</a>
+<ul>
+<li>
+<a href="/CovidTestingFacility">CovidTestingFacility</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Midwifery">Midwifery</a>
+</li>
+<li>
+<a href="/Nursing">Nursing</a>
+</li>
+<li>
+<a href="/Obstetric">Obstetric</a>
+</li>
+<li>
+<a href="/Oncologic">Oncologic</a>
 </li>
 <li>
 <a href="/Optician">Optician</a>
+</li>
+<li>
+<a href="/Optometric">Optometric</a>
+</li>
+<li>
+<a href="/Otolaryngologic">Otolaryngologic</a>
+</li>
+<li>
+<a href="/Pediatric">Pediatric</a>
 </li>
 <li>
 <a href="/Pharmacy">Pharmacy</a>
@@ -1912,7 +2703,22 @@
 <a href="/Physician">Physician</a>
 </li>
 <li>
-<a href="/VeterinaryCare">VeterinaryCare</a>
+<a href="/Physiotherapy">Physiotherapy</a>
+</li>
+<li>
+<a href="/PlasticSurgery">PlasticSurgery</a>
+</li>
+<li>
+<a href="/Podiatric">Podiatric</a>
+</li>
+<li>
+<a href="/PrimaryCare">PrimaryCare</a>
+</li>
+<li>
+<a href="/Psychiatric">Psychiatric</a>
+</li>
+<li>
+<a href="/PublicHealth">PublicHealth</a>
 </li>
 </ul>
 </li>
@@ -1947,6 +2753,9 @@
 <a href="/GolfCourse">GolfCourse</a>
 </li>
 <li>
+<a href="/HealthClub">HealthClub</a>
+</li>
+<li>
 <a href="/PublicSwimmingPool">PublicSwimmingPool</a>
 </li>
 <li>
@@ -1961,14 +2770,14 @@
 <li>
 <a href="/TennisComplex">TennisComplex</a>
 </li>
-<li>
-<a href="/StadiumOrArena">StadiumOrArena</a>
-</li>
 </ul>
 </li>
 <li>
 <a href="/Store">Store</a>
 <ul>
+<li>
+<a href="/AutoPartsStore">AutoPartsStore</a>
+</li>
 <li>
 <a href="/BikeStore">BikeStore</a>
 </li>
@@ -2070,7 +2879,41 @@
 </ul>
 </li>
 <li>
+<a href="/MedicalOrganization">MedicalOrganization</a>
+<ul>
+<li>
+<a href="/Dentist">Dentist</a>
+</li>
+<li>
+<a href="/DiagnosticLab">DiagnosticLab</a>
+</li>
+<li>
+<a href="/Hospital">Hospital</a>
+</li>
+<li>
+<a href="/MedicalClinic">MedicalClinic</a>
+<ul>
+<li>
+<a href="/CovidTestingFacility">CovidTestingFacility</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Pharmacy">Pharmacy</a>
+</li>
+<li>
+<a href="/Physician">Physician</a>
+</li>
+<li>
+<a href="/VeterinaryCare">VeterinaryCare</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/NGO">NGO</a>
+</li>
+<li>
+<a href="/NewsMediaOrganization">NewsMediaOrganization</a>
 </li>
 <li>
 <a href="/PerformingGroup">PerformingGroup</a>
@@ -2087,6 +2930,17 @@
 </ul>
 </li>
 <li>
+<a href="/Project">Project</a>
+<ul>
+<li>
+<a href="/FundingAgency">FundingAgency</a>
+</li>
+<li>
+<a href="/ResearchProject">ResearchProject</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/SportsOrganization">SportsOrganization</a>
 <ul>
 <li>
@@ -2095,16 +2949,54 @@
 </ul>
 </li>
 <li>
-<a href="/LocalBusiness">LocalBusiness</a>
+<a href="/WorkersUnion">WorkersUnion</a>
 </li>
 </ul>
 </li>
 <li>
 <a href="/Person">Person</a>
+<ul>
+<li>
+<a href="/Patient">Patient</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="/Place">Place</a>
 <ul>
+<li>
+<a href="/Accommodation">Accommodation</a>
+<ul>
+<li>
+<a href="/Apartment">Apartment</a>
+</li>
+<li>
+<a href="/CampingPitch">CampingPitch</a>
+</li>
+<li>
+<a href="/House">House</a>
+<ul>
+<li>
+<a href="/SingleFamilyResidence">SingleFamilyResidence</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Room">Room</a>
+<ul>
+<li>
+<a href="/HotelRoom">HotelRoom</a>
+</li>
+<li>
+<a href="/MeetingRoom">MeetingRoom</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Suite">Suite</a>
+</li>
+</ul>
+</li>
 <li>
 <a href="/AdministrativeArea">AdministrativeArea</a>
 <ul>
@@ -2113,6 +3005,9 @@
 </li>
 <li>
 <a href="/Country">Country</a>
+</li>
+<li>
+<a href="/SchoolDistrict">SchoolDistrict</a>
 </li>
 <li>
 <a href="/State">State</a>
@@ -2130,6 +3025,9 @@
 </li>
 <li>
 <a href="/Beach">Beach</a>
+</li>
+<li>
+<a href="/BoatTerminal">BoatTerminal</a>
 </li>
 <li>
 <a href="/Bridge">Bridge</a>
@@ -2150,7 +3048,33 @@
 <a href="/Crematorium">Crematorium</a>
 </li>
 <li>
+<a href="/EducationalOrganization">EducationalOrganization</a>
+<ul>
+<li>
+<a href="/CollegeOrUniversity">CollegeOrUniversity</a>
+</li>
+<li>
+<a href="/ElementarySchool">ElementarySchool</a>
+</li>
+<li>
+<a href="/HighSchool">HighSchool</a>
+</li>
+<li>
+<a href="/MiddleSchool">MiddleSchool</a>
+</li>
+<li>
+<a href="/Preschool">Preschool</a>
+</li>
+<li>
+<a href="/School">School</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/EventVenue">EventVenue</a>
+</li>
+<li>
+<a href="/FireStation">FireStation</a>
 </li>
 <li>
 <a href="/GovernmentBuilding">GovernmentBuilding</a>
@@ -2171,6 +3095,12 @@
 <a href="/LegislativeBuilding">LegislativeBuilding</a>
 </li>
 </ul>
+</li>
+<li>
+<a href="/Hospital">Hospital</a>
+</li>
+<li>
+<a href="/MovieTheater">MovieTheater</a>
 </li>
 <li>
 <a href="/Museum">Museum</a>
@@ -2194,10 +3124,12 @@
 <a href="/BuddhistTemple">BuddhistTemple</a>
 </li>
 <li>
+<a href="/Church">Church</a>
+<ul>
+<li>
 <a href="/CatholicChurch">CatholicChurch</a>
 </li>
-<li>
-<a href="/Church">Church</a>
+</ul>
 </li>
 <li>
 <a href="/HinduTemple">HinduTemple</a>
@@ -2214,7 +3146,16 @@
 <a href="/Playground">Playground</a>
 </li>
 <li>
+<a href="/PoliceStation">PoliceStation</a>
+</li>
+<li>
+<a href="/PublicToilet">PublicToilet</a>
+</li>
+<li>
 <a href="/RVPark">RVPark</a>
+</li>
+<li>
+<a href="/StadiumOrArena">StadiumOrArena</a>
 </li>
 <li>
 <a href="/SubwayStation">SubwayStation</a>
@@ -2277,6 +3218,491 @@
 <a href="/LandmarksOrHistoricalBuildings">LandmarksOrHistoricalBuildings</a>
 </li>
 <li>
+<a href="/LocalBusiness">LocalBusiness</a>
+<ul>
+<li>
+<a href="/AnimalShelter">AnimalShelter</a>
+</li>
+<li>
+<a href="/ArchiveOrganization">ArchiveOrganization</a>
+</li>
+<li>
+<a href="/AutomotiveBusiness">AutomotiveBusiness</a>
+<ul>
+<li>
+<a href="/AutoBodyShop">AutoBodyShop</a>
+</li>
+<li>
+<a href="/AutoDealer">AutoDealer</a>
+</li>
+<li>
+<a href="/AutoPartsStore">AutoPartsStore</a>
+</li>
+<li>
+<a href="/AutoRental">AutoRental</a>
+</li>
+<li>
+<a href="/AutoRepair">AutoRepair</a>
+</li>
+<li>
+<a href="/AutoWash">AutoWash</a>
+</li>
+<li>
+<a href="/GasStation">GasStation</a>
+</li>
+<li>
+<a href="/MotorcycleDealer">MotorcycleDealer</a>
+</li>
+<li>
+<a href="/MotorcycleRepair">MotorcycleRepair</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ChildCare">ChildCare</a>
+</li>
+<li>
+<a href="/Dentist">Dentist</a>
+</li>
+<li>
+<a href="/DryCleaningOrLaundry">DryCleaningOrLaundry</a>
+</li>
+<li>
+<a href="/EmergencyService">EmergencyService</a>
+<ul>
+<li>
+<a href="/FireStation">FireStation</a>
+</li>
+<li>
+<a href="/Hospital">Hospital</a>
+</li>
+<li>
+<a href="/PoliceStation">PoliceStation</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/EmploymentAgency">EmploymentAgency</a>
+</li>
+<li>
+<a href="/EntertainmentBusiness">EntertainmentBusiness</a>
+<ul>
+<li>
+<a href="/AdultEntertainment">AdultEntertainment</a>
+</li>
+<li>
+<a href="/AmusementPark">AmusementPark</a>
+</li>
+<li>
+<a href="/ArtGallery">ArtGallery</a>
+</li>
+<li>
+<a href="/Casino">Casino</a>
+</li>
+<li>
+<a href="/ComedyClub">ComedyClub</a>
+</li>
+<li>
+<a href="/MovieTheater">MovieTheater</a>
+</li>
+<li>
+<a href="/NightClub">NightClub</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FinancialService">FinancialService</a>
+<ul>
+<li>
+<a href="/AccountingService">AccountingService</a>
+</li>
+<li>
+<a href="/AutomatedTeller">AutomatedTeller</a>
+</li>
+<li>
+<a href="/BankOrCreditUnion">BankOrCreditUnion</a>
+</li>
+<li>
+<a href="/InsuranceAgency">InsuranceAgency</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/FoodEstablishment">FoodEstablishment</a>
+<ul>
+<li>
+<a href="/Bakery">Bakery</a>
+</li>
+<li>
+<a href="/BarOrPub">BarOrPub</a>
+</li>
+<li>
+<a href="/Brewery">Brewery</a>
+</li>
+<li>
+<a href="/CafeOrCoffeeShop">CafeOrCoffeeShop</a>
+</li>
+<li>
+<a href="/Distillery">Distillery</a>
+</li>
+<li>
+<a href="/FastFoodRestaurant">FastFoodRestaurant</a>
+</li>
+<li>
+<a href="/IceCreamShop">IceCreamShop</a>
+</li>
+<li>
+<a href="/Restaurant">Restaurant</a>
+</li>
+<li>
+<a href="/Winery">Winery</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/GovernmentOffice">GovernmentOffice</a>
+<ul>
+<li>
+<a href="/PostOffice">PostOffice</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HealthAndBeautyBusiness">HealthAndBeautyBusiness</a>
+<ul>
+<li>
+<a href="/BeautySalon">BeautySalon</a>
+</li>
+<li>
+<a href="/DaySpa">DaySpa</a>
+</li>
+<li>
+<a href="/HairSalon">HairSalon</a>
+</li>
+<li>
+<a href="/HealthClub">HealthClub</a>
+</li>
+<li>
+<a href="/NailSalon">NailSalon</a>
+</li>
+<li>
+<a href="/TattooParlor">TattooParlor</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/HomeAndConstructionBusiness">HomeAndConstructionBusiness</a>
+<ul>
+<li>
+<a href="/Electrician">Electrician</a>
+</li>
+<li>
+<a href="/GeneralContractor">GeneralContractor</a>
+</li>
+<li>
+<a href="/HVACBusiness">HVACBusiness</a>
+</li>
+<li>
+<a href="/HousePainter">HousePainter</a>
+</li>
+<li>
+<a href="/Locksmith">Locksmith</a>
+</li>
+<li>
+<a href="/MovingCompany">MovingCompany</a>
+</li>
+<li>
+<a href="/Plumber">Plumber</a>
+</li>
+<li>
+<a href="/RoofingContractor">RoofingContractor</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/InternetCafe">InternetCafe</a>
+</li>
+<li>
+<a href="/LegalService">LegalService</a>
+<ul>
+<li>
+<a href="/Attorney">Attorney</a>
+</li>
+<li>
+<a href="/Notary">Notary</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Library">Library</a>
+</li>
+<li>
+<a href="/LodgingBusiness">LodgingBusiness</a>
+<ul>
+<li>
+<a href="/BedAndBreakfast">BedAndBreakfast</a>
+</li>
+<li>
+<a href="/Campground">Campground</a>
+</li>
+<li>
+<a href="/Hostel">Hostel</a>
+</li>
+<li>
+<a href="/Hotel">Hotel</a>
+</li>
+<li>
+<a href="/Motel">Motel</a>
+</li>
+<li>
+<a href="/Resort">Resort</a>
+<ul>
+<li>
+<a href="/SkiResort">SkiResort</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="/MedicalBusiness">MedicalBusiness</a>
+<ul>
+<li>
+<a href="/CommunityHealth">CommunityHealth</a>
+</li>
+<li>
+<a href="/Dentist">Dentist</a>
+</li>
+<li>
+<a href="/Dermatology">Dermatology</a>
+</li>
+<li>
+<a href="/DietNutrition">DietNutrition</a>
+</li>
+<li>
+<a href="/Emergency">Emergency</a>
+</li>
+<li>
+<a href="/Geriatric">Geriatric</a>
+</li>
+<li>
+<a href="/Gynecologic">Gynecologic</a>
+</li>
+<li>
+<a href="/MedicalClinic">MedicalClinic</a>
+<ul>
+<li>
+<a href="/CovidTestingFacility">CovidTestingFacility</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Midwifery">Midwifery</a>
+</li>
+<li>
+<a href="/Nursing">Nursing</a>
+</li>
+<li>
+<a href="/Obstetric">Obstetric</a>
+</li>
+<li>
+<a href="/Oncologic">Oncologic</a>
+</li>
+<li>
+<a href="/Optician">Optician</a>
+</li>
+<li>
+<a href="/Optometric">Optometric</a>
+</li>
+<li>
+<a href="/Otolaryngologic">Otolaryngologic</a>
+</li>
+<li>
+<a href="/Pediatric">Pediatric</a>
+</li>
+<li>
+<a href="/Pharmacy">Pharmacy</a>
+</li>
+<li>
+<a href="/Physician">Physician</a>
+</li>
+<li>
+<a href="/Physiotherapy">Physiotherapy</a>
+</li>
+<li>
+<a href="/PlasticSurgery">PlasticSurgery</a>
+</li>
+<li>
+<a href="/Podiatric">Podiatric</a>
+</li>
+<li>
+<a href="/PrimaryCare">PrimaryCare</a>
+</li>
+<li>
+<a href="/Psychiatric">Psychiatric</a>
+</li>
+<li>
+<a href="/PublicHealth">PublicHealth</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/ProfessionalService">ProfessionalService</a>
+</li>
+<li>
+<a href="/RadioStation">RadioStation</a>
+</li>
+<li>
+<a href="/RealEstateAgent">RealEstateAgent</a>
+</li>
+<li>
+<a href="/RecyclingCenter">RecyclingCenter</a>
+</li>
+<li>
+<a href="/SelfStorage">SelfStorage</a>
+</li>
+<li>
+<a href="/ShoppingCenter">ShoppingCenter</a>
+</li>
+<li>
+<a href="/SportsActivityLocation">SportsActivityLocation</a>
+<ul>
+<li>
+<a href="/BowlingAlley">BowlingAlley</a>
+</li>
+<li>
+<a href="/ExerciseGym">ExerciseGym</a>
+</li>
+<li>
+<a href="/GolfCourse">GolfCourse</a>
+</li>
+<li>
+<a href="/HealthClub">HealthClub</a>
+</li>
+<li>
+<a href="/PublicSwimmingPool">PublicSwimmingPool</a>
+</li>
+<li>
+<a href="/SkiResort">SkiResort</a>
+</li>
+<li>
+<a href="/SportsClub">SportsClub</a>
+</li>
+<li>
+<a href="/StadiumOrArena">StadiumOrArena</a>
+</li>
+<li>
+<a href="/TennisComplex">TennisComplex</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/Store">Store</a>
+<ul>
+<li>
+<a href="/AutoPartsStore">AutoPartsStore</a>
+</li>
+<li>
+<a href="/BikeStore">BikeStore</a>
+</li>
+<li>
+<a href="/BookStore">BookStore</a>
+</li>
+<li>
+<a href="/ClothingStore">ClothingStore</a>
+</li>
+<li>
+<a href="/ComputerStore">ComputerStore</a>
+</li>
+<li>
+<a href="/ConvenienceStore">ConvenienceStore</a>
+</li>
+<li>
+<a href="/DepartmentStore">DepartmentStore</a>
+</li>
+<li>
+<a href="/ElectronicsStore">ElectronicsStore</a>
+</li>
+<li>
+<a href="/Florist">Florist</a>
+</li>
+<li>
+<a href="/FurnitureStore">FurnitureStore</a>
+</li>
+<li>
+<a href="/GardenStore">GardenStore</a>
+</li>
+<li>
+<a href="/GroceryStore">GroceryStore</a>
+</li>
+<li>
+<a href="/HardwareStore">HardwareStore</a>
+</li>
+<li>
+<a href="/HobbyShop">HobbyShop</a>
+</li>
+<li>
+<a href="/HomeGoodsStore">HomeGoodsStore</a>
+</li>
+<li>
+<a href="/JewelryStore">JewelryStore</a>
+</li>
+<li>
+<a href="/LiquorStore">LiquorStore</a>
+</li>
+<li>
+<a href="/MensClothingStore">MensClothingStore</a>
+</li>
+<li>
+<a href="/MobilePhoneStore">MobilePhoneStore</a>
+</li>
+<li>
+<a href="/MovieRentalStore">MovieRentalStore</a>
+</li>
+<li>
+<a href="/MusicStore">MusicStore</a>
+</li>
+<li>
+<a href="/OfficeEquipmentStore">OfficeEquipmentStore</a>
+</li>
+<li>
+<a href="/OutletStore">OutletStore</a>
+</li>
+<li>
+<a href="/PawnShop">PawnShop</a>
+</li>
+<li>
+<a href="/PetStore">PetStore</a>
+</li>
+<li>
+<a href="/ShoeStore">ShoeStore</a>
+</li>
+<li>
+<a href="/SportingGoodsStore">SportingGoodsStore</a>
+</li>
+<li>
+<a href="/TireShop">TireShop</a>
+</li>
+<li>
+<a href="/ToyStore">ToyStore</a>
+</li>
+<li>
+<a href="/WholesaleStore">WholesaleStore</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="/TelevisionStation">TelevisionStation</a>
+</li>
+<li>
+<a href="/TouristInformationCenter">TouristInformationCenter</a>
+</li>
+<li>
+<a href="/TravelAgency">TravelAgency</a>
+</li>
+</ul>
+</li>
+<li>
 <a href="/Residence">Residence</a>
 <ul>
 <li>
@@ -2285,13 +3711,13 @@
 <li>
 <a href="/GatedResidenceCommunity">GatedResidenceCommunity</a>
 </li>
-<li>
-<a href="/SingleFamilyResidence">SingleFamilyResidence</a>
-</li>
 </ul>
 </li>
 <li>
 <a href="/TouristAttraction">TouristAttraction</a>
+</li>
+<li>
+<a href="/TouristDestination">TouristDestination</a>
 </li>
 </ul>
 </li>
@@ -2300,6 +3726,12 @@
 <ul>
 <li>
 <a href="/IndividualProduct">IndividualProduct</a>
+</li>
+<li>
+<a href="/ProductCollection">ProductCollection</a>
+</li>
+<li>
+<a href="/ProductGroup">ProductGroup</a>
 </li>
 <li>
 <a href="/ProductModel">ProductModel</a>
@@ -2311,19 +3743,65 @@
 <a href="/Vehicle">Vehicle</a>
 <ul>
 <li>
+<a href="/BusOrCoach">BusOrCoach</a>
+</li>
+<li>
 <a href="/Car">Car</a>
 </li>
+<li>
+<a href="/Motorcycle">Motorcycle</a>
+</li>
+<li>
+<a href="/MotorizedBicycle">MotorizedBicycle</a>
+</li>
 </ul>
 </li>
 </ul>
+</li>
+<li>
+<a href="/StupidType">StupidType</a>
 </li>
 </ul>
 </li>
 </ul>
 
+                </form>
+                <br />
+                
+            </div>
+        <noscript>Your browser does not support JavaScript!</noscript>
+        </div>
+        <div itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address" class="footer">
+            <span itemprop="name" class="footer_item">Hans Polak</span>
+            <span class="footer_item"><a href="tel:+34669765160">+34 669.765.160</a></span>
+            <span itemprop="streetAddress" class="footer_item">AP 34, Avda. Ramón y Cajal S/N</span>
+            <span itemprop="postalCode" class="footer_item">05.480</span>
+            <span itemprop="addressLocality" class="footer_item">Candeleda</span>
+            <span class="footer_item">Ávila, Spain</span>
+            <span class="footer_item"><a href="mailto:info@polak.es?subject=Generator">Contact me</a></span>
+            <span itemprop="addressRegion" hidden="">AV</span>
+            <span itemprop="addressCountry" hidden="">ES</span>
+        </div>
+        <span itemprop="currenciesAccepted" hidden="">EUR</span>
+        <span itemprop="email" hidden="">info@polak.es</span>
+        <span itemprop="foundingDate" hidden="">2015-01-01</span>
+        <span itemprop="name" hidden="">Hans Polak</span>
+        <span itemprop="paymentAccepted" hidden="">Paypal, Electronic Funds Transfer</span>
+        <span itemprop="taxID" hidden="">X2.125.374J</span>
+        <span itemprop="telephone" hidden="">+34 669.765.160</span>
+        <span itemprop="url" hidden="">http://polak.es</span>
+        <span itemprop="vatID" hidden="">ES.X21.253.74J</span>
+        <div class="under_footer">
+            <form target="_top" method="post" action="https://www.paypal.com/cgi-bin/webscr">
+                <input value="_s-xclick" name="cmd" type="hidden"/>
+                <input value="RXHPLLAMU2XYC" name="hosted_button_id" type="hidden"/>
+                <input name="submit" type="image" src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" alt="PayPal - The safer, easier way to pay online!" border="0"/>
+                <img border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1"/>
             </form>
         </div>
-        
-        <noscript>Your browser does not support JavaScript!</noscript>
+        <div class="under_footer">© Copyright 2016 - 2021, Hans Polak.<br/>&nbsp;</div>
+        <script>
+            document.getElementById("right_col").focus();
+        </script>
     </body>
 </html>

@@ -5,9 +5,9 @@ Generate valid HTML5 schema's:
 * RDFa
 * JSON-LD
 
-Tool for generating a valid Scheme as proposed by Schema.org - testing here: https://generator-1260.appspot.com/
+Tool for generating a valid Scheme as proposed by Schema.org: https://schema.pythonanywhere.com/
 
-Copyright (C) 2016  Hans Polak
+Copyright (C) 2016 - 2021  Hans Polak
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 __author__ = "Hans Polak"
 
-__copyright__ = "Copyright 2016"
+__copyright__ = "Copyright 2016 - 2021"
 
 __credits__ = ["Hans Polak"]
 
@@ -29,5 +29,5 @@ __maintainer__ = "Hans Polak"
 
 __email__ = "info@polak.es"
 
-__status__ = "Beta testing"
+__status__ = "Stable Release"
 
